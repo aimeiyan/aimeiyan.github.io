@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="imitate-website.css">
+</head>
+<body>
+<div id="imitate-website-page">
+    <div id="header">
+        <h1>imitate website</h1>
+
+    </div>
+    <div id="list">
+        <ul>
+            <li class="first">以下实例都是我在自学期间模仿的一些作品，主要学习CSS的网页部署技能、jQuery effect效果的制作，包括：</li>
+            <li><a href="#website-01">电子商务网站</a></li>
+            <li><a href="#website-02">模仿PM 2.5(<a href="http://www.chapm25.com" target="_blank"
+                                                  style="font-weight: bold">http://www.chapm25.com</a>)网站制作的网页</a></li>
+            <li><a href="#website-03">模仿京东首页制作的网页</a></li>
+            <li><a href="#website-04">练习制作的网页</a></li>
+            <li><a href="#website-05">模仿锤子科技(<a href="http://www.smartisan.cn" target="_blank"
+                                                style="font-weight: bold">http://www.smartisan.cn</a>)制作的网页</a></li>
+            <li class="last">每个网站中都有jQuery的效果，可以多多点击查看。</li>
+        </ul>
+    </div>
+    <div id="content">
+        <iframe id="website-01" class="zoom iframe" scrolling="no"
+                src="jquery-exercise-websites/commodity_website/index.html"></iframe>
+        <iframe id="website-01-01" class="zoom iframe" scrolling="no"
+                src="jquery-exercise-websites/commodity_website/details.html"></iframe>
+        <iframe id="website-02" class="zoom iframe" scrolling="yes"
+                src="jquery-exercise-websites/pm25/chapm25_backup_vision2.html"></iframe>
+        <iframe id="website-03" class="zoom iframe" scrolling="yes"
+                src="jquery-exercise-websites/jd/jd_another_version.html"></iframe>
+        <iframe id="website-04" class="zoom iframe" scrolling="no"
+                src="jquery-exercise-websites/tea/the_tea_history.html"></iframe>
+        <iframe id="website-05" class="zoom iframe" scrolling="no"
+                src="jquery-exercise-websites/hammer-luo/hammer-luo-indexpage.html"></iframe>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        function loadTimer() {
+            setTimeout(function() {
+                $("#website-05").attr("src", "jquery-exercise-websites/hammer-luo/hammer-luo-indexpage.html")
+
+                $("#website-05").load(loadTimer);
+            }, 7000)
+
+        }
+
+        $("#website-05").load(loadTimer);
+    })
+</script>
+</html>

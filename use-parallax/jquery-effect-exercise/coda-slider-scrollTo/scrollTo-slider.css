@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:#EDEDEC;
+    color:#111;
+}
+
+h1,h2{
+    line-height: 2em;
+}
+p{
+    line-height: 1.5em;
+}
+#wrapper{
+    width: 800px;
+    margin: 0 auto;
+}
+
+#slider{
+    width: 80%;
+    margin: 20px auto;
+}
+
+#slider ul{
+    display: block;
+}
+
+#slider ul li{
+    display: inline-block;
+}
+#slider ul li a{
+    display: block;
+    text-decoration: none;
+    color:#111;
+    padding: 10px;
+}
+#slider ul li a:hover{
+    background: rgba(138, 138, 138, 0.48);
+}
+.visited{
+    background: #ffffff;
+}
+#listContent{
+    background-color: #ffffff;
+    padding: 10px 20px;
+    height: 300px;
+    overflow: auto;
+}

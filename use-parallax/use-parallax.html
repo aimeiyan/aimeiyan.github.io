@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="blog-css.css" type="text/css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" type="text/css">
+</head>
+
+<body>
+<div id="header">
+    <div class="leftSideBar"><i id="logo"></i><span id="blog-txt">博客</span></div>
+    <div class="rightSideBar">
+        <!--<a href="#sigup" class="text-btn">注册</a>-->
+        <!--<a href="#login" class="text-btn">登录</a>-->
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div id="wrapper">
+    <div id="container" class="container">
+        <ul id="scene" class="scene">
+            <li class="layer" data-depth="1.00">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.80">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.60">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.40">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.50">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.20">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.70">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.05">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="2.00">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.69">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.60">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.40">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.50">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.20">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.90">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.35">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer" data-depth="0.65">
+                <div class="list-item"></div>
+            </li>
+            <li class="layer text" data-depth="0">
+                <div class="abstract">
+                    <h1>All things are difficult before they are easy.</h1>
+                    <p> —— 记录所学、所想的个人博客</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="jqueryExercise">
+        <ul>
+            <li class="leftSubNav"><a href="myblog-intro.html" target="_blank">MyBlog制作</a></li>
+            <li><a href="create-jQuery-effect-02.html" target="_blank">jQuery Effects制作</a></li>
+            <li class="rightSubNav"><a href="imitate-website-02.html" target="_blank">Websites模仿制作</a></li>
+            <li class="rightSubNav"><a href="technology-document/css-named-02.html" target="_blank">技术文档collection</a></li>
+            <li class="resume"><a href="resume/resume.html" target="_blank">Resume</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="jquery-1.10.2.js"></script>
+<script src="jquery.parallax.js"></script>
+<script>
+
+    // Yep, that's it!
+    $('#scene').parallax({
+        calibrateX: true,
+        calibrateY: true,
+        invertX: true,
+        invertY: true,
+        limitX: 20,
+        limitY: 20,
+        scalarX: 9,
+        scalarY: 9,
+        frictionX: 0.6,
+        frictionY: 0.8
+    });
+    $(function () {
+        var $abstractTxt = $("#scene .abstract ")
+        $("#container").hover(function () {
+            console.log($(this), "-------------");
+            $abstractTxt.addClass("fontColor");
+            $(this).addClass("hoverCol");
+        }, function () {
+            $(this).removeClass("hoverCol");
+            $abstractTxt.removeClass("fontColor")
+        })
+    })
+</script>
+
+</body>
+</html>

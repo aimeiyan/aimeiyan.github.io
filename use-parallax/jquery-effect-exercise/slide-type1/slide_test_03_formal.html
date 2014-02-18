@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $control = $('.slides-control a');
+//            console.log($control)
+            var $slides = $("#slide-tabs li");
+//            console.log($slides)
+            var $slides_hover = false;
+
+            $("#slides").hover(function () {
+                $slides_hover = true;
+            }, function () {
+                $slides_hover = false;
+            });
+
+            $control.hover(function () {
+                var txt = $(this).text();
+                var index = parseInt(txt) - 1;
+
+                $slides.hide();
+                $($slides[index]).show();
+
+                $($control).removeClass("active");
+                $(this).addClass("active");
+            });
+
+
+            var $show_index = 1;
+            var $count = $slides.length;
+            setInterval(function () {
+                if (!$slides_hover) {
+                    var index = $show_index % $count;
+                    $slides.hide();
+                    $($slides[index]).show();
+
+                    $show_index += 1;
+//                console.log($show_index);
+                    $($control).removeClass("active");
+                    $($control[index]).addClass("active");
+
+                }
+            }, 2000);
+
+        })
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 1200px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        #slides {
+            width: 1200px;
+            margin: 0 auto;
+            height: auto;
+        }
+
+        #alllist {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .item {
+
+            position: relative;
+            list-style: none;
+            display: inline-block;
+            float: left;
+        }
+
+        .item img {
+            display: block;
+            margin-top: 50px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .slides-control {
+            position: absolute;
+            top: 360px;
+            left: 45%;
+
+        }
+
+        a {
+
+            display: inline-block;
+            background: url("images/bullet.png") left top;
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+            color: transparent;
+        }
+
+        .active {
+            background: url("images/bullet.png") 0 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="slides">
+    <div id="alllist">
+        <ul id="slide-tabs">
+            <li class="item show "><img width="" src="images/castle.jpg"></li>
+            <li class="item hide"><img src="images/castlewall.jpg"></li>
+            <li class="item hide"><img src="images/landscape.jpg"></li>
+            <li class="item hide"><img src="images/panorama.jpg"></li>
+            <li class="item hide"><img src="images/terrestrialtelescope.jpg"></li>
+            <li class="item hide"><img src="images/view.jpg"></li>
+        </ul>
+        <div class="slides-control">
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

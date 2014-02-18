@@ -1,0 +1,46 @@
+$(function () {
+    var $main = $("#contentWidth");
+    $("li", $main).each(function () {
+        var distance = 30;
+        var $popTxt = $(".popup", this);
+        var $iconImg = $(".icon", this);
+        var beingShow = false;
+        var hideDelay = 50;
+        var delayTimer = null;
+        var visible = false;
+        $([$popTxt[0], $iconImg[0]]).mouseover(function () {
+            if (delayTimer)clearTimeout(delayTimer);
+            if (beingShow || visible) {
+                return null;
+            } else {
+                beingShow = true;
+                $popTxt.css({
+                    display: 'block',
+                    top: -50
+                }).animate({
+                        opacity: 1,
+                        top: "-=" + distance + "px"
+                    }, '', function () {
+                        beingShow = false;
+                        visible = true;
+                    })
+            }
+        }).mouseout(function () {
+                if (delayTimer)clearTimeout(delayTimer);
+                console.log("mouseout");
+                delayTimer = setTimeout(function () {
+                    delayTimer = null;
+                    $popTxt.css.stop(true, true).animate({
+                            opacity: 0,
+                            top: "+=" + distance + "px"
+                        }, '', function () {
+                            visible = false;
+                            $popTxt.css({
+                                display: 'none'
+                            })
+                        })
+                }, hideDelay);
+                console.log(delayTimer, '----')
+            });
+    });
+})

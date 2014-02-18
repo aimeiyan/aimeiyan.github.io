@@ -1,0 +1,56 @@
+    $(function () {
+        $(".dropdown-menu").menuAim({
+            exit: function () {
+                console.log('exit -00------------------------');
+            },
+            exitMenu: function () {
+                console.log('exit metnu-------------------');
+            },
+            activate: activateSubmenu,
+            deactivate: deactivateSubmenu
+        });
+    });
+    var $menu = $(".dropdown-menu");
+    function activateSubmenu(row) {
+        var $row = $(row),
+                submenuId = $row.data("submenuId"),
+                $submenu = $("#" + submenuId),
+                offset = $menu.offset(),
+                height = $menu.outerHeight(),
+                width = $menu.outerWidth();
+        $submenu.css({
+            display: "block",
+            top: offset.top,
+            left: offset.left + width - 5,  // main should overlay submenu
+            height: height - 8  // padding for main dropdown's arrow
+        });
+        $row.find("span").addClass("maintainHover");
+    }
+    function deactivateSubmenu(row) {
+        console.log('--------------------')
+        var $row = $(row),
+                submenuId = $row.data("submenuId"),
+                $submenu = $("#" + submenuId);
+        $submenu.css("display", "none");
+        $row.find("span").removeClass("maintainHover");
+    }
+    $(document).click(function () {
+        $(".detail").css("display", "none");
+        $("li.item>span").removeClass("maintainHover");
+    });
+
+    (function () {
+        var leave = false;
+        $('#filter').hover(function () { // over
+            leave = false;
+        }, function () { // out
+            console.log('leaving---------------------');
+            leave = true;
+            window.setTimeout(function () {
+                if (leave == true) {
+                    $(".detail").css("display", "none");
+                    $("li.item>span").removeClass("maintainHover");
+                }
+            }, 200);
+        });
+    })();

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    background: #ffffff;
+    color: #555;
+    /*height: 120000px;*/
+}
+
+#list li {
+    text-indent: 20px;
+    line-height: 2.5em;
+    list-style: circle;
+    list-style-position: inside;
+}
+
+#list li.first {
+    list-style: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+#create-jquery-effect {
+    width: 1200px;
+    /*min-width: 1000px;*/
+    margin: 0 auto 20px;
+}
+
+#content iframe {
+    margin: 10px auto;
+    /*width: 1200px;*/
+    /*border: 1px solid #000;*/
+    border: 0;
+}
+
+.row{
+    margin: 50px 0;
+}

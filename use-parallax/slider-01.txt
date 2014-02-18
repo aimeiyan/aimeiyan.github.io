@@ -1,0 +1,39 @@
+       $(document).ready(function () {
+            var $control = $('.slides-control a');
+            var $slides = $("#slide-tabs li");
+            var $slides_hover = false;
+
+            $("#slides").hover(function () {
+                $slides_hover = true;
+            }, function () {
+                $slides_hover = false;
+            });
+
+            $control.hover(function () {
+                var txt = $(this).text();
+                var index = parseInt(txt) - 1;
+
+                $slides.hide();
+                $($slides[index]).show();
+
+                $($control).removeClass("active");
+                $(this).addClass("active");
+            });
+
+
+            var $show_index = 1;
+            var $count = $slides.length;
+            setInterval(function () {
+                if (!$slides_hover) {
+                    var index = $show_index % $count;
+                    $slides.hide();
+                    $($slides[index]).show();
+
+                    $show_index += 1;
+                    $($control).removeClass("active");
+                    $($control[index]).addClass("active");
+
+                }
+            }, 2000);
+
+        })

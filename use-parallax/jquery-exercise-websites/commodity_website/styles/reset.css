@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body,button,input,select,textarea{
+    font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: 1em;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

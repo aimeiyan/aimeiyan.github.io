@@ -1,0 +1,103 @@
+#show-comments{
+    margin: 30px auto;
+}
+
+.post-self{
+    padding: 10px;
+}
+#show-comments ul li{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    font-size: 14px;
+}
+
+.account-face{
+    float: left;
+}
+.account-face img{
+    display: block;
+    border-radius: 3px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.22);
+}
+.comment-body{
+    padding-left: 60px;
+}
+.comment-body p{
+    line-height:17px;
+    margin: 6px 0;
+}
+#reply-box{
+    margin-top: 10px;
+    position: relative;
+    padding: 5px;
+}
+#reply-box .id-pic{
+    position: absolute;
+}
+.author{
+    border-bottom: 1px solid #000;
+
+}
+.author input{
+    width: 90%;
+    border: 0;
+    color: #b3b3b3;
+    padding-left: 12px;
+}
+#reply-text{
+    margin-left: 60px;
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+#reply-box .id-pic img{
+    border-radius: 3px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.22);
+}
+.textarea-wrapper{
+    /*border: 1px solid #000;*/
+    /*border-radius: 5px 5px 0 0;*/
+    width: 100%;
+    height: 80px;
+}
+.textarea-wrapper textarea{
+    height:54px;
+    width: 98%;
+    padding: 5px;
+    border: 0;
+    margin: 7px 4px 3px 6px;
+    /*vertical-align: middle;*/
+}
+.post-toolbar{
+height: 30px;
+    border-top: 1px solid #000000;
+    position: relative;
+
+}
+.faces{
+    float: left;
+    position: absolute;
+    left: 3px;
+    top: 6px;
+}
+
+.insert-smiles{
+    display: block;
+    background: url("/s/images/sprites.png") no-repeat 0 -12px !important;
+    width: 19px;
+    height: 19px;
+}
+
+.post-button{
+    float: right;
+    position: absolute;
+    right: 1px;
+
+}
+
+.post-button .put-on{
+    width: 80px;
+    height: 29px;
+
+}
+

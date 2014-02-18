@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+
+@media (max-width: 1000px) {
+    .pull-right {
+        overflow: hidden;
+    }
+
+    body {
+        background: #efacea;
+    }
+}
+
+body {
+    min-width: 1000px;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    font-size: 14px;
+}
+
+    /*-------------------header style---------------------------*/
+#navbar {
+    /*overflow: auto;*/
+    /*min-width: 700px;*/
+    margin: 0;
+    width: 100%;
+    position: fixed
+
+}
+
+.navbar-inner {
+    background: #034482;
+    min-height: 30px;
+    padding: 0 15px;
+}
+
+.logo_button {
+    float: left;
+    min-height: 30px
+
+}
+
+.logo_button .brand {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 20px 0 0;
+    text-decoration: none;
+    min-height: 30px;
+    position: relative;
+    top: 12px;
+}
+
+.nav-right {
+    float: right;
+    min-height: 50px;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 0 6px;
+    min-height: 50px;
+
+}
+
+.nav a {
+    position: relative;
+    top: 16px;
+}
+
+.nav li:hover {
+    background: #022c55;
+}
+
+.nav {
+    margin: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2)
+}
+
+    /*------------------ -content------------------------*/
+
+#contain-fluid {
+    /*position: relative;*/
+    padding: 70px 20px 0 20px;
+}
+
+.nav-list{
+    padding: 0 15px;
+}
+
+.nav-list li {
+    display: block;
+    list-style: none;
+
+}
+
+.nav-list a {
+    text-decoration: none;
+
+}
+
+.nav-list a:hover {
+    color: #157ab5;
+}
+
+.span {
+    width: 6%;
+    float: left;
+    background: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    /*box-shadow: inset 0 1px 1px rgba0, 0, 0, 0.05);*/
+
+}
+
+.spa .nav-list {
+    padding: 0 15px;
+}
+
+.province {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #999;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.content {
+    float: right;
+    width: 92.5%;
+
+    /*min-width: 1000px;*/
+}
+
+.span-top {
+    background: #eb8a14;
+    padding: 10px 10px 10px 20px;
+    border-radius: 6px;
+}
+
+#contain-fluid .pre-intro {
+    float: left;
+    width: 65%;
+    padding-right: 2%;
+    line-height: 40px;
+}
+
+#contain-fluid .face {
+    float: left;
+    width: 31%;
+    margin-left: 2%;
+    margin-top: 35px;
+    line-height: 60px;
+}
+
+.center-area {
+    margin-top: 7px;
+}
+
+.content h1 {
+    font-size: 55px;
+}
+
+.content h2 {
+    font-size: 28px;
+    line-height: 40px;
+    /*text-rendering: optimizeLegibility;*/
+    margin: 0;
+}
+
+.content .face h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.content .face .grade {
+    font-size: 45px;
+
+}
+
+.pmblock:first-child {
+    margin-left: 0;
+}
+
+.pmblock {
+
+    width: 31%;
+    float: left;
+    min-height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /*box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07)*/
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-left: 3.2%;
+}
+
+.tabheader {
+    font-size: 20px;
+    font-weight: bold;
+    background: #f7f7f7;
+    background-clip: padding-box;
+    padding: 10px 14px 3px 14px;
+    border-bottom: 1px solid #ebebeb;
+
+}
+
+.tabheader .staname {
+    float: left;
+    width: 80%;
+    /*height: 20px;*/
+}
+
+.tabheader .lab {
+    float: right;
+    width: 10%;
+    height: 40px;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.tabheader .lab span {
+    background: #FF4A4A
+}
+
+.pmblock a {
+    text-decoration: none;
+    color: #222;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.table {
+    width: 100%;
+    padding: 8px 14px;
+    margin-bottom: 2px;
+
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 8px;
+}
+
+.table td {
+    border-top: 1px solid #ddd
+}
+
+.table .ppleft{
+    font-size: 14px;
+}
+
+.addscroll {
+    height: 242px;
+    overflow-y: scroll;
+}
+
+.content hr {
+    margin: 30px 0;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #fff;
+}
+
+.all-province a {
+    text-decoration: none;
+    color: #2fa4e7;
+    line-height: 20px;
+
+}
+
+.all-province a:hover {
+    text-decoration: underline;
+    color: #0000ff;
+}
+
+</style>
+
+</head>
+<body>
+<!--------------------header----------------------------->
+<div id="navbar">
+    <div class="navbar-inner">
+        <div class="logo_button">
+            <a class="brand" href="http://www.chapm25.com">查PM2.5</a></div>
+        <div class="nav-right">
+            <ul class="nav pull-right">
+                <li><a href="http://www.chapm25.com/redirect/5" target="_blank">京东夏普Z380净化器2000台</a></li>
+                <li><a href="http://www.chapm25.com/redirect/2" target="_blank">3M口罩特价</a></li>
+                <li><a href="http://www.chapm25.com/redirect/901" target="_blank">PM2.5微博</a></li>
+                <li><a href="http://www.ip150.com" target="_blank">虎牙网</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-left">
+            <ul class="nav pull-left">
+                <li><a href="http://www.chapm25.com/">PM2.5</a></li>
+                <li><a href="http://www.chapm25.com/rank/">排行榜</a></li>
+                <li><a href="ttp://www.chapm25.com/map/">地图</a></li>
+                <li><a href="http://www.chapm25.com/article/">小知识</a></li>
+                <li><a href="http://www.chapm25.com/ext/">安装到浏览器<img src="hot.gif"
+                                                                     style="vertical-align:top"></a>
+                </li>
+            </ul>
+        </div>
+        <!--<div style="clear: both"></div>-->
+    </div>
+
+
+</div>
+<!--------------------content------------------------>
+<div id="contain-fluid">
+<div class="row-fluid">
+<div class="span">
+    <ul class="nav-list">
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/beijing.html">北京</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/shanghai.html">上海</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/tianjin.html">天津</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/chongqing.html">重庆</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/hefei.html">安徽</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/47.html">福建</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/lanzhou.html">甘肃</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/55.html">广东</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/64.html">广西</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/guiyang.html">贵州</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/haikou.html">海南</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/5.html">河北</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/haerbin.html">黑龙江</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/zhengzhou.html">河南</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/wuhan.html">湖北</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/54.html">湖南</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/22.html">江苏</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/nanchang.html">江西</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/changchun.html">吉林</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/18.html">辽宁</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/17.html">内蒙古</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/yinchuan.html">宁夏</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/xining.html">青海</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/70.html">陕西</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/50.html">山东</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/16.html">山西</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/chengdu.html">四川</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/lasa.html">西藏</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/city/wulumuqi.html">新疆</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/68.html">云南</a></li>
+        <li class="nav-header"><a class="province" href="http://www.chapm25.com/province/35.html">浙江</a></li>
+    </ul>
+</div>
+<div class="content">
+<div>
+<div class="span-top">
+    <div class="pre-intro">
+        <h1>北京PM2.5为
+            <span class="number">149<img src="rise.png"></span>
+        </h1>
+
+        <h2>儿童、老年人及心脏病、呼吸系统疾病患者应减少长时间、高强度的户外锻炼</h2>
+
+        <h2>北京的好空气打败了全国 47% 的城市 (排名 61/114)</h2>
+    </div>
+    <div class="face">
+        <h1>(︶︿︶)</h1>
+
+        <h1 class="grade">较不健康 </h1>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="center-area">
+<div class="area-fluid">
+    <div class="area1 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area2 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area3 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="area-fluid">
+    <div class="area1 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area2 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area3 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="area-fluid">
+    <div class="area1 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area2 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area3 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="area-fluid">
+    <div class="area1 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area2 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area3 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="area-fluid">
+    <div class="area1 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area2 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="area3 pmblock">
+        <div class="tabheader">
+            <div class="staname">
+                <a href="#">海淀区万柳</a>
+            </div>
+            <div class="lab">
+                <span>163</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="tabcontent">
+            <table class="table" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>指标</th>
+                    <th>实时数值</th>
+                    <th>24小时均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>PM2.5浓度</td>
+                    <td>78 ug/m<sup>3</sup></td>
+                    <td>113 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM2.5指数</td>
+                    <td>163</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>PM10浓度</td>
+                    <td>132 ug/m<sup>3</sup></td>
+                    <td>145 ug/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td>PM10指数</td>
+                    <td>89</td>
+                    <td>96</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="area-fluid">
+<div class="area1 pmblock">
+<div class="tabheader" style="height: 40px">
+    <div class="staname" style="font-size: 30px">
+        所有监测站列表
+    </div>
+
+</div>
+<div class="tabcontent addscroll">
+<table class="table" cellspacing="0">
+<thead>
+<tr>
+
+    <th>站点</th>
+    <th>PM2.5</th>
+    <th>PM10</th>
+    <th>AQI</th>
+</tr>
+
+</thead>
+<tbody>
+<tr>
+    <td>
+        <div class="allstaname" title="大兴"><a class="popoverchart ppleft" href="javascript:;" staid="9018"
+                                              data-original-title="" title="">大兴</a></div>
+    </td>
+    <td>143 ug/m<sup>3</sup></td>
+    <td>201 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">196</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="永乐店"><a class="popoverchart ppleft" href="javascript:;" staid="9003"
+                                               data-original-title="" title="">永乐店</a></div>
+    </td>
+    <td>134 ug/m<sup>3</sup></td>
+    <td>175 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">192</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="亦庄"><a class="popoverchart ppleft" href="javascript:;" staid="9005"
+                                              data-original-title="" title="">亦庄</a></div>
+    </td>
+    <td>132 ug/m<sup>3</sup></td>
+    <td>200 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">190</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="通州"><a class="popoverchart ppleft" href="javascript:;" staid="201"
+                                              data-original-title="" title="">通州</a></div>
+    </td>
+    <td>109 ug/m<sup>3</sup></td>
+    <td>164 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">179</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="南三环"><a class="popoverchart ppleft" href="javascript:;" staid="9010"
+                                               data-original-title="" title="">南三环</a></div>
+    </td>
+    <td>107 ug/m<sup>3</sup></td>
+    <td>155 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">178</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="琉璃河"><a class="popoverchart ppleft" href="javascript:;" staid="9014"
+                                               data-original-title="" title="">琉璃河</a></div>
+    </td>
+    <td>104 ug/m<sup>3</sup></td>
+    <td>118 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">176</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="平谷"><a class="popoverchart ppleft" href="javascript:;" staid="9009"
+                                              data-original-title="" title="">平谷</a></div>
+    </td>
+    <td>102 ug/m<sup>3</sup></td>
+    <td>152 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">175</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="丰台花园"><a class="popoverchart ppleft" href="javascript:;" staid="202"
+                                                data-original-title="" title="">丰台花园</a></div>
+    </td>
+    <td>89 ug/m<sup>3</sup></td>
+    <td>184 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">168</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="榆垡"><a class="popoverchart ppleft" href="javascript:;" staid="9002"
+                                              data-original-title="" title="">榆垡</a></div>
+    </td>
+    <td>86 ug/m<sup>3</sup></td>
+    <td>118 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">167</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="东高村"><a class="popoverchart ppleft" href="javascript:;" staid="9017"
+                                               data-original-title="" title="">东高村</a></div>
+    </td>
+    <td>86 ug/m<sup>3</sup></td>
+    <td>152 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">167</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="万寿西宫"><a class="popoverchart ppleft" href="javascript:;" staid="1001"
+                                                data-original-title="" title="">万寿西宫</a></div>
+    </td>
+    <td>80 ug/m<sup>3</sup></td>
+    <td>150 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">164</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="永定门内"><a class="popoverchart ppleft" href="javascript:;" staid="9004"
+                                                data-original-title="" title="">永定门内</a></div>
+    </td>
+    <td>80 ug/m<sup>3</sup></td>
+    <td>87 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">164</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="奥体中心"><a class="popoverchart ppleft" href="javascript:;" staid="1011"
+                                                data-original-title="" title="">奥体中心</a></div>
+    </td>
+    <td>76 ug/m<sup>3</sup></td>
+    <td>154 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">162</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="北部新区"><a class="popoverchart ppleft" href="javascript:;" staid="9019"
+                                                data-original-title="" title="">北部新区</a></div>
+    </td>
+    <td>75 ug/m<sup>3</sup></td>
+    <td>160 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">161</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="海淀区万柳"><a class="popoverchart ppleft" href="javascript:;" staid="1007"
+                                                 data-original-title="" title="">海淀区万柳</a></div>
+    </td>
+    <td>74 ug/m<sup>3</sup></td>
+    <td>106 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">161</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="延庆"><a class="popoverchart ppleft" href="javascript:;" staid="9006"
+                                              data-original-title="" title="">延庆</a></div>
+    </td>
+    <td>72 ug/m<sup>3</sup></td>
+    <td>148 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">160</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="东四"><a class="popoverchart ppleft" href="javascript:;" staid="1003"
+                                              data-original-title="" title="">东四</a></div>
+    </td>
+    <td>70 ug/m<sup>3</sup></td>
+    <td>151 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">158</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="美国大使馆"><a class="popoverchart ppleft" href="javascript:;" staid="101"
+                                                 data-original-title="" title="">美国大使馆</a></div>
+    </td>
+    <td>67 ug/m<sup>3</sup></td>
+    <td>-</td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">157</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="八达岭"><a class="popoverchart ppleft" href="javascript:;" staid="9020"
+                                               data-original-title="" title="">八达岭</a></div>
+    </td>
+    <td>65 ug/m<sup>3</sup></td>
+    <td>176 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">156</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="门头沟"><a class="popoverchart ppleft" href="javascript:;" staid="9013"
+                                               data-original-title="" title="">门头沟</a></div>
+    </td>
+    <td>64 ug/m<sup>3</sup></td>
+    <td>148 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">155</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="东四环"><a class="popoverchart ppleft" href="javascript:;" staid="9016"
+                                               data-original-title="" title="">东四环</a></div>
+    </td>
+    <td>64 ug/m<sup>3</sup></td>
+    <td>113 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">155</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="顺义新城"><a class="popoverchart ppleft" href="javascript:;" staid="1008"
+                                                data-original-title="" title="">顺义新城</a></div>
+    </td>
+    <td>63 ug/m<sup>3</sup></td>
+    <td>156 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">155</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="植物园"><a class="popoverchart ppleft" href="javascript:;" staid="9001"
+                                               data-original-title="" title="">植物园</a></div>
+    </td>
+    <td>63 ug/m<sup>3</sup></td>
+    <td>132 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">155</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="古城"><a class="popoverchart ppleft" href="javascript:;" staid="1012"
+                                              data-original-title="" title="">古城</a></div>
+    </td>
+    <td>64 ug/m<sup>3</sup></td>
+    <td>109 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">155</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="官园"><a class="popoverchart ppleft" href="javascript:;" staid="1006"
+                                              data-original-title="" title="">官园</a></div>
+    </td>
+    <td>60 ug/m<sup>3</sup></td>
+    <td>130 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">153</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="西直门北"><a class="popoverchart ppleft" href="javascript:;" staid="9007"
+                                                data-original-title="" title="">西直门北</a></div>
+    </td>
+    <td>59 ug/m<sup>3</sup></td>
+    <td>131 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">153</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="怀柔镇"><a class="popoverchart ppleft" href="javascript:;" staid="1009"
+                                               data-original-title="" title="">怀柔镇</a></div>
+    </td>
+    <td>57 ug/m<sup>3</sup></td>
+    <td>172 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">152</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="密云"><a class="popoverchart ppleft" href="javascript:;" staid="9012"
+                                              data-original-title="" title="">密云</a></div>
+    </td>
+    <td>58 ug/m<sup>3</sup></td>
+    <td>133 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">152</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="昌平镇"><a class="popoverchart ppleft" href="javascript:;" staid="1010"
+                                               data-original-title="" title="">昌平镇</a></div>
+    </td>
+    <td>58 ug/m<sup>3</sup></td>
+    <td>162 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">152</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="农展馆"><a class="popoverchart ppleft" href="javascript:;" staid="1005"
+                                               data-original-title="" title="">农展馆</a></div>
+    </td>
+    <td>56 ug/m<sup>3</sup></td>
+    <td>148 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FF4A4A;"
+              title="不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群减少户外运动 - 首要污染物 PM2.5">151</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="定陵"><a class="popoverchart ppleft" href="javascript:;" staid="1002"
+                                              data-original-title="" title="">定陵</a></div>
+    </td>
+    <td>50 ug/m<sup>3</sup></td>
+    <td>162 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #eb8a14;"
+              title="较不健康 - 儿童、老年人及心脏病、呼吸系统疾病患者应减少长时间、高强度的户外锻炼 - 首要污染物 PM2.5">137</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="密云水库"><a class="popoverchart ppleft" href="javascript:;" staid="9011"
+                                                data-original-title="" title="">密云水库</a></div>
+    </td>
+    <td>34 ug/m<sup>3</sup></td>
+    <td>123 ug/m<sup>3</sup></td>
+    <td><span class="label pmdata" style="background-color: #FFFF93;"
+              title="中 - 极少数异常敏感人群应减少户外活动 - 首要污染物 PM2.5">97</span></td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="房山"><a class="popoverchart ppleft" href="javascript:;" staid="9015"
+                                              data-original-title="" title="">房山</a></div>
+    </td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="前门"><a class="popoverchart ppleft" href="javascript:;" staid="9008"
+                                              data-original-title="" title="">前门</a></div>
+    </td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td>
+        <div class="allstaname" title="天坛"><a class="popoverchart ppleft" href="javascript:;" staid="1004"
+                                              data-original-title="" title="">天坛</a></div>
+    </td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div style="clear: both"></div>
+</div>
+</div>
+</div>
+<hr>
+<div class="all-province" style="width:100%;">
+    <a href="http://www.chapm25.com/city/beijing.html">北京</a>
+    <a href="http://www.chapm25.com/city/shanghai.html">上海</a>
+    <a href="http://www.chapm25.com/city/tianjin.html">天津</a>
+    <a href="http://www.chapm25.com/city/chongqing.html">重庆</a>
+    <a href="http://www.chapm25.com/city/baoding.html">保定</a>
+    <a href="http://www.chapm25.com/city/baoji.html">宝鸡</a>
+    <a href="http://www.chapm25.com/city/baotou.html">包头</a>
+    <a href="http://www.chapm25.com/city/beihai.html">北海</a>
+    <a href="http://www.chapm25.com/city/binzhou.html">滨州</a>
+    <a href="http://www.chapm25.com/city/cangzhou.html">沧州</a>
+    <a href="http://www.chapm25.com/city/changchun.html">长春</a>
+    <a href="http://www.chapm25.com/city/changsha.html">长沙</a>
+    <a href="http://www.chapm25.com/city/changzhi.html">长治</a>
+    <a href="http://www.chapm25.com/city/changzhou.html">常州</a>
+    <a href="http://www.chapm25.com/city/chengde.html">承德</a>
+    <a href="http://www.chapm25.com/city/chengdu.html">成都</a>
+    <a href="http://www.chapm25.com/city/dalian.html">大连</a>
+    <a href="http://www.chapm25.com/city/dandong.html">丹东</a>
+    <a href="http://www.chapm25.com/city/datong.html">大同</a>
+    <a href="http://www.chapm25.com/city/dezhou.html">德州</a>
+    <a href="http://www.chapm25.com/city/dongguan.html">东莞</a>
+    <a href="http://www.chapm25.com/city/dongying.html">东营</a>
+    <a href="http://www.chapm25.com/city/eeds.html">鄂尔多斯</a>
+    <a href="http://www.chapm25.com/city/foshan.html">佛山</a>
+    <a href="http://www.chapm25.com/city/fuzhou.html">福州</a>
+    <a href="http://www.chapm25.com/city/guangzhou.html">广州</a>
+    <a href="http://www.chapm25.com/city/guiyang.html">贵阳</a>
+    <a href="http://www.chapm25.com/city/haerbin.html">哈尔滨</a>
+    <a href="http://www.chapm25.com/city/haikou.html">海口</a>
+    <a href="http://www.chapm25.com/city/handan.html">邯郸</a>
+    <a href="http://www.chapm25.com/city/hangzhou.html">杭州</a>
+    <a href="http://www.chapm25.com/city/hefei.html">合肥</a>
+    <a href="http://www.chapm25.com/city/hengshui.html">衡水</a>
+    <a href="http://www.chapm25.com/city/heyuan.html">河源</a>
+    <a href="http://www.chapm25.com/city/heze.html">菏泽</a>
+    <a href="http://www.chapm25.com/city/huaian.html">淮安</a>
+    <a href="http://www.chapm25.com/city/huhehaote.html">呼和浩特</a>
+    <a href="http://www.chapm25.com/city/huizhou.html">惠州</a>
+    <a href="http://www.chapm25.com/city/huludao.html">葫芦岛</a>
+    <a href="http://www.chapm25.com/city/huzhou.html">湖州</a>
+    <a href="http://www.chapm25.com/city/jiangmen.html">江门</a>
+    <a href="http://www.chapm25.com/city/jiaxing.html">嘉兴</a>
+    <a href="http://www.chapm25.com/city/jinan.html">济南</a>
+    <a href="http://www.chapm25.com/city/jinhua.html">金华</a>
+    <a href="http://www.chapm25.com/city/jining.html">济宁</a>
+    <a href="http://www.chapm25.com/city/kunming.html">昆明</a>
+    <a href="http://www.chapm25.com/city/laiwu.html">莱芜</a>
+    <a href="http://www.chapm25.com/city/langfang.html">廊坊</a>
+    <a href="http://www.chapm25.com/city/lanzhou.html">兰州</a>
+    <a href="http://www.chapm25.com/city/lasa.html">拉萨</a>
+    <a href="http://www.chapm25.com/city/lianyungang.html">连云港</a>
+    <a href="http://www.chapm25.com/city/liaocheng.html">聊城</a>
+    <a href="http://www.chapm25.com/city/linfen.html">临汾</a>
+    <a href="http://www.chapm25.com/city/linyi.html">临沂</a>
+    <a href="http://www.chapm25.com/city/lishui.html">丽水</a>
+    <a href="http://www.chapm25.com/city/liuzhou.html">柳州</a>
+    <a href="http://www.chapm25.com/city/nanchang.html">南昌</a>
+    <a href="http://www.chapm25.com/city/nanjing.html">南京</a>
+    <a href="http://www.chapm25.com/city/nanning.html">南宁</a>
+    <a href="http://www.chapm25.com/city/nantong.html">南通</a>
+    <a href="http://www.chapm25.com/city/ningbo.html">宁波</a>
+    <a href="http://www.chapm25.com/city/panjin.html">盘锦</a>
+    <a href="http://www.chapm25.com/city/qingdao.html">青岛</a>
+    <a href="http://www.chapm25.com/city/qingyuan.html">清远</a>
+    <a href="http://www.chapm25.com/city/qinhuangdao.html">秦皇岛</a>
+    <a href="http://www.chapm25.com/city/quanzhou.html">泉州</a>
+    <a href="http://www.chapm25.com/city/quzhou.html">衢州</a>
+    <a href="http://www.chapm25.com/city/rizhao.html">日照</a>
+    <a href="http://www.chapm25.com/city/shantou.html">汕头</a>
+    <a href="http://www.chapm25.com/city/shaoguan.html">韶关</a>
+    <a href="http://www.chapm25.com/city/shaoxing.html">绍兴</a>
+    <a href="http://www.chapm25.com/city/shenyang.html">沈阳</a>
+    <a href="http://www.chapm25.com/city/shenzhen.html">深圳</a>
+    <a href="http://www.chapm25.com/city/shijiazhuang.html">石家庄</a>
+    <a href="http://www.chapm25.com/city/suqian.html">宿迁</a>
+    <a href="http://www.chapm25.com/city/suzhou.html">苏州</a>
+    <a href="http://www.chapm25.com/city/taian.html">泰安</a>
+    <a href="http://www.chapm25.com/city/taiyuan.html">太原</a>
+    <a href="http://www.chapm25.com/city/taizhou.html">泰州</a>
+    <a href="http://www.chapm25.com/city/taizhou2.html">台州</a>
+    <a href="http://www.chapm25.com/city/tangshan.html">唐山</a>
+    <a href="http://www.chapm25.com/city/tongchuan.html">铜川</a>
+    <a href="http://www.chapm25.com/city/weifang.html">潍坊</a>
+    <a href="http://www.chapm25.com/city/weihai.html">威海</a>
+    <a href="http://www.chapm25.com/city/weinan.html">渭南</a>
+    <a href="http://www.chapm25.com/city/wenzhou.html">温州</a>
+    <a href="http://www.chapm25.com/city/wuhan.html">武汉</a>
+    <a href="http://www.chapm25.com/city/wulumuqi.html">乌鲁木齐</a>
+    <a href="http://www.chapm25.com/city/wuxi.html">无锡</a>
+    <a href="http://www.chapm25.com/city/xiamen.html">厦门</a>
+    <a href="http://www.chapm25.com/city/xian.html">西安</a>
+    <a href="http://www.chapm25.com/city/xiangtan.html">湘潭</a>
+    <a href="http://www.chapm25.com/city/xianyang.html">咸阳</a>
+    <a href="http://www.chapm25.com/city/xingtai.html">邢台</a>
+    <a href="http://www.chapm25.com/city/xining.html">西宁</a>
+    <a href="http://www.chapm25.com/city/xuzhou.html">徐州</a>
+    <a href="http://www.chapm25.com/city/yanan.html">延安</a>
+    <a href="http://www.chapm25.com/city/yancheng.html">盐城</a>
+    <a href="http://www.chapm25.com/city/yangquan.html">阳泉</a>
+    <a href="http://www.chapm25.com/city/yangzhou.html">扬州</a>
+    <a href="http://www.chapm25.com/city/yantai.html">烟台</a>
+    <a href="http://www.chapm25.com/city/yinchuan.html">银川</a>
+    <a href="http://www.chapm25.com/city/yingkou.html">营口</a>
+    <a href="http://www.chapm25.com/city/yuxi.html">玉溪</a>
+    <a href="http://www.chapm25.com/city/zaozhuang.html">枣庄</a>
+    <a href="http://www.chapm25.com/city/zhangjiakou.html">张家口</a>
+    <a href="http://www.chapm25.com/city/zhaoqing.html">肇庆</a>
+    <a href="http://www.chapm25.com/city/zhengzhou.html">郑州</a>
+    <a href="http://www.chapm25.com/city/zhenjiang.html">镇江</a>
+    <a href="http://www.chapm25.com/city/zhongshan.html">中山</a>
+    <a href="http://www.chapm25.com/city/zhoushan.html">舟山</a>
+    <a href="http://www.chapm25.com/city/zhuhai.html">珠海</a>
+    <a href="http://www.chapm25.com/city/zhuzhou.html">株洲</a>
+    <a href="http://www.chapm25.com/city/zibo.html">淄博</a>
+</div>
+</div>
+<div style="clear: both"></div>
+
+</div>
+</div>
+</body>
+</html>

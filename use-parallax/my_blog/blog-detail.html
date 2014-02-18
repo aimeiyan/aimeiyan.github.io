@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALqm9/+6pvf/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqb3/7qm9/+6pvf/uqb3/7qm9//Syuv00srrBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0srr9Lqm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/9LK6/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/wAAAAAAAAAAAAAAAAAAAAAAAAAAuqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9//Syuv0AAAAAAAAAAAAAAAA0srr9Lqm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/+DX+vQAAAAAAAAAALqm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/AAAAAAAAAAC6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/wAAAAAAAAAAuqb3//fm6/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/8AAAAAAAAAALqm9/+6pvf/+Ofr/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/AAAAAAAAAADg1/r0uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/4Nf69AAAAAAAAAAAAAAAANLK6/S6pvf/uqb3/7qm9//Syuv/AAAAAAAAAADSyuv/uqb3/7qm9/+6pvf/0srr9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPby7//28u//AAAAAAAAAAAAAAAAAAAAAPby7//28u//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP5/AAD4HwAA8A8AAOAHAADAAwAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwYMAAPPPAAD//wAA//8AAA=="
+      rel="icon" type="image/x-icon"/>
+<title>只为给心安个家,制作回忆</title>
+<meta name="keywords" content="给自己的心安个家，给生活留下痕迹，创造回忆。">
+<meta name="description" content="努力的写博客，就是好好的经营生活。">
+<link href="/s/comments.css" rel="stylesheet" type="text/css">
+<link href="/s/confirm.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        width: 100%;
+        margin-bottom: 50px;
+        font: 400 14px/1.55 "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: red !important;
+    }
+
+    a:active {
+        color: red;
+    }
+
+    a:link {
+        color: #3676ff;
+    }
+
+    a:visited {
+        color: #3676ff;
+    }
+
+    #header {
+        width: 100%;
+        height: 60px;
+        background: rgba(147, 206, 222, 1);
+        background: -moz-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(147, 206, 222, 1)), color-stop(41%, rgba(117, 189, 209, 1)), color-stop(100%, rgba(73, 165, 191, 1)));
+        background: -webkit-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+        background: -o-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+        background: linear-gradient(to bottom, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#93cede', endColorstr='#49a5bf', GradientType=0);
+    }
+
+    #index {
+        position: absolute;
+        right: 30px;
+        top: 35px;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    #index li {
+        display: inline-block;
+        padding-left: 5px;
+    }
+
+    #index li a:link {
+        color: #ffffff;
+    }
+
+    #index li a:visited {
+        color: #ffffff;
+    }
+
+    #main-body {
+        width: 99%;
+        margin: 0 auto;
+    }
+
+    #links-body {
+        float: left;
+        width: 15%;
+        color: #50afff;
+        /*margin-left: 30px;*/
+        padding-right: 15px;
+        padding-top: 15px;
+        border-right: 1px solid #eeeeee;
+        box-shadow: 1px 0px 2px #eeeeee;
+    }
+
+    #links-body .links-lists li {
+        margin: 5px 10px 5px 5px;
+        padding: 5px 5px 5px 10px;
+        border-bottom: 1px dotted #cccccc;
+    }
+
+    #links-body .links-letters {
+        margin-left: 5px;
+        margin-top: 5px;
+        padding: 5px;
+        /*background-color: #eeeeee;*/
+        font-size: 1.2em;
+        font-weight: bold;
+        /*border: 1px solid #cccccc;*/
+    }
+
+    #context {
+        float: right;
+        width: 82%;
+        margin-left: 10px;
+        /*color: #444;*/
+    }
+
+    #lists .title-time {
+        font-size: 1.2em;
+        padding: 5px;
+        margin: 20px 10px 10px 10px;
+        border-bottom: 1px dashed #b0d742;
+    }
+
+    .title-time .title {
+        float: left;
+    }
+
+    .title-time .time {
+        float: right;
+        font-size: 12px;
+        padding-top: 8px;
+    }
+
+    #lists .article-header {
+        font-size: 14px;
+        margin: 10px;
+        padding: 5px;
+        line-height: 20px;
+    }
+
+    .article-header .article {
+        text-indent: 15px;
+    }
+
+    #login-button {
+        margin-top: 30px;
+    }
+
+    #login-button p {
+        font-size: 14px;
+        float: left;
+    }
+
+    #login-button .login-select {
+        float: left;
+        margin-left: 5px;
+    }
+
+    #login-button li {
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 5px;
+        width: 40px;
+
+    }
+
+    #login-button li a {
+        color: #666;
+    }
+
+    #login-button li a.more {
+        color: #d32 !important
+    }
+
+    .ds-more-service li {
+        /*display: none;*/
+    }
+
+
+</style>
+<script src="/s/js/jquery-1.10.2.js"></script>
+<script src="/s/js/jquery.simplemodal.js"></script>
+<script src="/s/js/confirm.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var $category = $('.ds-more-service li');
+        $category.hide();
+
+        $('.more').click(function () {
+            if ($category.is(':visible')) {
+                $category.hide();
+            }
+            else {
+                $category.show()
+            }
+            return false
+        });
+
+        $("#author_name").focus(function () {
+            if ($(this).val() == this.defaultValue) {
+                $(this).val('')
+            }
+        }).blur(function () {
+                    if ($(this).val() == '') {
+                        $(this).val(this.defaultValue)
+                    }
+                })
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#submit").click(function () {
+            var data = {
+                author: $("#author_name").val(),
+                id_name: $("#blog_detail_id").val(),
+                message: $("#comment_message").val()
+            };
+            var b = data['message'];
+            if (b != "") {
+                $.post("/commentpart", data, function (data, textStauts) {
+                    var author = data.author;
+                    var comment_id_num = data.commentid;
+                    var message = data.message;
+                    console.log(author);
+                    console.log(message);
+                    var txtHtml = '<li class="post-comment" id="comment-' + comment_id_num + '"><div class="post-self"><div class="account-face"><a><img src="/s/images/57024.jpg"></a></div><div class="comment-body"><div class="comment-header"><a>' + author + '</a></div><p>' + message + '</p><div class="comment-footer"><span class="post-time"></span><a class="post-reply"><span class="icon-reply">回复</span></a><a class="post-like"><span class="icon-like">赞</span></a><a class="post-repost"><span class="icon-repost">转发</span></a><a class="post-report"><span class="icon-report">举报</span></a></div></div></div></li>'
+                    $("#show-comments .comments-list").append(txtHtml)
+                }, "json")
+            }
+            $("#author_name").val("author");
+            $("#comment_message").val("")
+        })
+    })
+</script>
+</head>
+<body>
+<div id="header">
+    <div id="index">
+        <ul>
+            <li>
+                <a style="color: red">{{login_email_address}}</a>
+            </li>
+            <li>
+                <a href="/bloglist">主页</a>
+            </li>
+            <li>
+                <a href="/create">创建博客</a>
+            </li>
+            <!--<li>-->
+            <!--<a href="/register">注册</a>-->
+            <!--</li>-->
+            <li>
+                <a href="/exit">退出登录</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="main-body">
+    <div id="links-body">
+        <div class="links-letters"><p>近期博客</p></div>
+        <div class="links-lists">
+            <ul>
+                {%for list in lists%}
+                <li><a href="/blog/{{list.id}}">{{list.title}}</a></li>
+                {%end%}
+            </ul>
+        </div>
+    </div>
+    <div id="context">
+        <!--<div id="big-title">-->
+        <!--<a href="/bloglist">博客列表</a>-->
+        <!--</div>-->
+        <div id="lists">
+
+            <div class="title-time">
+
+                <div class="title">{{blog_detail_id}}{{blog_detail_title}}<span id="edit"><a
+                        href="/edit/{{blog_detail_id}}" class="edit-blog">编辑</a></span><span id="delete"><a
+                        class="del-confirm"><input type="hidden" value="{{blog_detail_id}}">删除</a></span></div>
+                <div class="time">{{blog_detail_create_time}}</div>
+                <div style="clear: both"></div>
+            </div>
+            {% autoescape None %}
+            <div class="article-header"><p class="article">{{blog_detail_article}}</p></div>
+
+        </div>
+        <div id="show-comments">
+            <ul class="comments-list">
+                {%for comment in comments%}
+                <li class="post-comment" id="comment-{{comment.id}}">
+                    <div class="post-self">
+                        <div class="account-face">
+                            <a>
+                                <img src="/s/images/57024.jpg">
+                            </a>
+                        </div>
+                        <div class="comment-body">
+                            <div class="comment-header">
+                                <a>{{comment.author}}</a>
+                            </div>
+                            <p>{{comment.message}}</p>
+
+                            <div class="comment-footer">
+                                <span class="post-time"></span>
+                                <a class="post-reply">
+                                    <span class="icon-reply">回复</span>
+                                </a>
+                                <a class="post-like">
+                                    <span class="icon-like">赞</span>
+                                </a>
+                                <a class="post-repost">
+                                    <span class="icon-repost">转发</span>
+                                </a>
+                                <a class="post-report">
+                                    <span class="icon-report">举报</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {%end%}
+            </ul>
+        </div>
+        <div id="login-button">
+            <p>社交帐号登录:</p>
+
+            <div class="login-select">
+                <ul class="ds-service">
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">QQ</a></li>
+                    <li><a href="#">人人</a></li>
+                    <li><a href="#">豆瓣</a></li>
+                    <li><a href="#" class="more">更多»</a></li>
+                </ul>
+                <ul class="ds-more-service">
+                    <li><a href="#">开心</a></li>
+                    <li><a href="#">网易</a></li>
+                    <li><a href="#">搜狐</a></li>
+                    <li><a href="#">百度</a></li>
+                    <li><a href="#">谷歌</a></li>
+                </ul>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div id="reply-box">
+            <a class="id-pic"><img src="/s/images/57024.jpg"></a>
+
+            <form id="reply-text" action="#">
+                <div class="author">
+                    <input name="author" value="author" id="author_name">
+                </div>
+                <div class="textarea-wrapper">
+                    <input type="hidden" value="{{blog_detail_id}}" name="blogid" id="blog_detail_id">
+                    <textarea name="message" placeholder="comments" id="comment_message"></textarea>
+                </div>
+                <div class="post-toolbar">
+                    <div class="faces"><a class="insert-smiles"></a></div>
+                    <div class="post-button">
+                        <button class="put-on" type="button" id="submit">吐槽</button>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+            </form>
+        </div>
+        <!-- modal content -->
+        <div id='confirm'>
+            <div class='header'><span>Confirm</span></div>
+            <div class='message'></div>
+            <div class='buttons'>
+                <div class='no simplemodal-close'>No</div>
+                <div class='yes'>Yes</div>
+            </div>
+        </div>
+        <!-- preload the images -->
+        <div style='display:none'>
+            <img src='/s/images/header.gif' alt=''/>
+            <img src='/s/images/button.gif' alt=''/>
+        </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+</div>
+
+</body>
+</html>

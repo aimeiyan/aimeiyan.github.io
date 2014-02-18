@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        .btn-ttc,
+        .btn-ttc:hover,
+        .btn-ttc:active {
+            color: white;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #007da7;
+        }
+
+            /* Apply the custom-colored gradients */
+            /* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+        .btn-ttc {
+            background-repeat: repeat-x;
+            background-image: linear-gradient(top, #009ED2 0%, #007DA7 100%);
+        }
+
+            /* Set the hover state */
+            /* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+        .btn-ttc:hover {
+            background-position: 0 -15px;
+        }
+    </style>
+</head>
+<body>
+<button type="button" class="btn btn-ttc"><code>Save changes</code></button>
+<div role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10"><abbr title="jjiwoju">进度条</abbr></div>
+</body>
+</html>

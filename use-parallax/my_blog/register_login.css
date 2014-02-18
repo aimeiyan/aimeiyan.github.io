@@ -1,0 +1,90 @@
+#login{
+    width: 750px;
+    margin: 100px auto 0 auto;
+}
+#lg-letter{
+    font-size: 2.5em;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+#login-form{
+    width: 600px;
+    padding: 40px 20px 40px;
+    background-color: #E6E2D5;
+    border: 1px solid #B9B9B9;
+    margin:20px auto 10px auto;
+}
+#login-form .clearfix{
+    margin-left: 15px;
+}
+#login-form .clearfix input{
+    width: 400px;
+    border: 1px solid #B9B9B9;
+    padding: 3px 5px;
+    margin: 5px;
+    height: 23px;
+}
+
+.btn{
+    width: 200px;
+    font-size: 20px;
+    margin: 40px auto 0 auto ;
+}
+.btn input{
+    text-align: center;
+    background-color: #86c300;
+    border: 1px solid #64792a;
+    box-shadow: inset 0 1px 2px #e2f0bc;
+    border-radius: 3px;
+    height: 30px;
+    width: 60px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+#register{
+    width: 650px;
+    margin: 20px auto 0 auto;
+}
+
+#regs-form{
+    width: 600px;
+    padding: 40px 20px 40px;
+    background-color: #E6E2D5;
+    border: 1px solid #B9B9B9;
+    margin:10px auto 10px auto;
+}
+#register-part{
+    width: 750px;
+    margin: 0 auto;
+}
+#rg-letter{
+    font-size: 2.5em;
+    margin-top: 70px;
+    margin-left: 50px;
+}
+#regs-form .clearfix{
+    margin-left: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+#regs-form .clearfix input{
+    position: absolute;
+    left: 100px;
+    width: 350px;
+    border: 1px solid #B9B9B9;
+    padding: 3px 5px;
+    margin: 5px;
+    height: 23px;
+}
+
+.clearfix .alarm{
+    font-size: 10px;
+    color: #ff3816;
+    position: absolute;
+    right: 25px;
+    display: block;
+    top: 12px;
+}

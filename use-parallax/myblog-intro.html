@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" type="text/css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            color: #444;
+            line-height: 2em;
+
+        }
+
+        p {
+            line-height: 2em;
+        }
+
+
+
+        li {
+            list-style-position: inside;
+        }
+
+        h3 {
+            line-height: 3em;
+        }
+        #content>p a:hover{
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header">
+        <h1>MyBlog 介绍</h1>
+        <a href="#">MyBlog网址，欢迎试用。</a>
+    </div>
+    <div id="content">
+        <p>
+            MyBlog的前端是由HTML、CSS和JavaScript的核心技术Javascript语言核心技术DOM、BOM、Ajax、JSON等，后端采用Python语言支持，数据库采用的是mySQL技术。MyBlog分为<a href="#register">注册</a>、<a href="#login">登录</a>、<a href="#create-blog">创建博客</a>、<a href="#blog-list">博客列表（主页）</a>、<a href="#blog-detail"> 博文详情</a>五个部分。此博客还用了<a href="#session">session</a>和<a href="#cookie">cookie技术</a>。</p>
+        <div id="register">
+            <h3>注册</h3>
+            <img class="img-thumbnail" src="myblog-images/register-blog.png">
+            <ul>
+                <li><p>“邮箱”：输入正确格式的邮箱，否则就会报错，如果该邮箱已经存在于数据库中，则提示此邮箱已存在。</p></li>
+                <li><p>“设置密码”：密码强度算法为评分算法，即根据密码长度、字母个数、数字个数、特殊字符个数评分和，将密码强度分为very Weak、Weak、Average、Strong、Very
+                    Strong、Secure和Very Secure。</p></li>
+                <li><p>“重新输入密码”：校正此处输入的字符是否与“设置密码”处的字符一致。</p></li>
+                <li><p>注册信息填写正确后，点击“立即注册”按钮，则会再数据库中建立一个新的用户。</p></li>
+            </ul>
+        </div>
+        <div id="login">
+            <h3>登录</h3>
+            <img class="img-thumbnail" src="myblog-images/login-blog.png">
+
+            <p></p>
+        </div>
+        <div id="create-blog">
+            <h3>创建博客</h3>
+            <img class="img-thumbnail" src="myblog-images/create-blog.png" width="900" height="500">
+
+            <p></p>
+        </div>
+        <div id="blog-list">
+            <h3>博客列表</h3>
+            <img class="thumbnail" src="myblog-images/list-blog.png" width="900" height="500">
+
+            <p></p>
+        </div>
+        <div id="blog-detail">
+            <h3>博文详情</h3>
+            <img class="thumbnail" src="myblog-images/detail-blog.png" width="900" height="400">
+            <!--<img class="thumbnail" src="myblog-images/comment-blog.png" width="900" height="400">-->
+
+            <p>对比上面两幅图片，第二张比第一张多了评论部分，此处评论用了Ajax技术</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

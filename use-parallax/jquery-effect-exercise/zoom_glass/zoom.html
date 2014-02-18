@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="zoom.css" type="text/css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #zoom {
+            position: relative;
+            width: 750px;
+            margin: 20px auto 0;
+        }
+
+        #small {
+            width: 240px;
+            height: 320px;
+            border: 4px solid #AAA
+        }
+
+        #smallImg {
+            cursor: crosshair;
+        }
+
+        #big {
+            position: absolute;
+            width: 240px;
+            height: 320px;
+            overflow: hidden;
+            border: 4px solid #ccc;
+            top: 0;
+            left: 260px;
+            display: none;
+            z-index: 100;
+        }
+
+        #bigImg {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #cloud-zoom-big {
+            position: absolute;
+            border: 4px solid #ccc;
+            width: 76.8px;
+            height: 102.4px;
+            background: #ffffff;
+            opacity: 0.8;
+            top: 0;
+            left: 0;
+            z-index: 88;
+            cursor: crosshair;
+            display: none;
+        }
+    </style>
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+
+        function with_bound(top_left, right_bottom, p) {
+
+            return p.x > top_left.x && p.y > top_left.y && p.x < right_bottom.x && p.y < right_bottom.y;
+        }
+
+        function fix_bound(top_left, right_bottom, p) {
+            p.x = Math.min(p.x, right_bottom.x)
+            p.x = Math.max(p.x, top_left.x)
+
+            p.y = Math.min(p.y, right_bottom.y)
+            p.y = Math.max(p.y, top_left.y)
+        }
+
+        $(function () {
+            var $small_img = $('#smallImg');
+            var $small_zone = $('#small');
+            var $cloud_zoo = $("#cloud-zoom-big");
+            $("#small, #cloud-zoom-big").mousemove(function (e) {
+                $("#cloud-zoom-big").show();
+                $("#big").show();
+//                console.log(e.pageX, e.pageY, e.offsetX, e.offsetY, e);
+
+                var img_off = $small_img.offset();
+                var img_zone_off = $small_zone.offset();
+//                console.log(img_off, '**************&&&&&&&&&&')
+//                console.log("img_zone_off", img_zone_off)
+
+                var x = e.pageX, y = e.pageY;
+
+                var top_left = {x: img_zone_off.left, y: img_zone_off.top};
+                var bottom_right = {x: img_zone_off.left + $small_zone.outerWidth(), y: img_zone_off.top + $small_zone.outerHeight()};
+                var current = {x: x, y: y};
+                var zoomer_width = $cloud_zoo.outerWidth(), zoomer_height = $cloud_zoo.outerHeight();
+
+                if (with_bound(top_left, bottom_right, current)) {
+                    var zoomer_x = x - zoomer_width / 2, zoomer_y = y - zoomer_height / 2;
+
+                    var pos = {x: zoomer_x, y: zoomer_y};
+                    var b_r = {x: bottom_right.x - zoomer_width, y: bottom_right.y - zoomer_height};
+                    fix_bound(top_left, b_r, pos);
+
+                    $cloud_zoo.show().css({left: pos.x, top: pos.y});
+                    $("#bigImg").show().css({"left": -(pos.x - img_zone_off.left) * 3.2, "top": -(pos.y - img_zone_off.top) * 3.2})
+
+                } else {
+                    console.log('out');
+                    $("#bigImg").hide();
+                    $cloud_zoo.hide();
+                }
+
+                return;
+
+                if (img_zone_off.left <= x && (x + zoomer_width) <= (img_zone_off.left + $small_zone.outerWidth()) &&
+                        img_zone_off.top <= y && (y + zoomer_height) <= (img_zone_off.top + $small_zone.outerHeight())) {
+
+                    $cloud_zoo.show().css({left: zoomer_x, top: zoomer_y});
+                    $("#bigImg").show().css({"left": -(zoomer_x - img_off.left) * 3.2, "top": -(zoomer_y - img_off.top) * 3.2})
+                } else {
+                    $("#bigImg").hide();
+                    $cloud_zoo.hide();
+                }
+                return
+
+//
+//                var zoomer_width = $cloud_zoo.outerWidth(), zoomer_height = $cloud_zoo.outerHeight();
+//
+//                var zoomer_x = x - zoomer_width / 2, zoomer_y = y - zoomer_height / 2;
+
+                $cloud_zoo.show().css({left: zoomer_x, top: zoomer_y});
+
+                zoomer_x = Math.min(img_off.left + $small_zone.outerWidth, zoomer_x)
+                zoomer_x = Math.max(img_off.left, zoomer_x)
+
+
+                $("#bigImg").show().css({"left": -(zoomer_x - img_off.left) * 3.2, "top": -(zoomer_y - img_off.top) * 3.2})
+
+
+                if (img_zone_off.left <= zoomer_x && (zoomer_x + zoomer_width) <= (img_zone_off.left + $small_zone.outerWidth()) &&
+                        img_zone_off.top <= zoomer_y && (zoomer_y + zoomer_height) <= (img_zone_off.top + $small_zone.outerHeight())) {
+                    $cloud_zoo.show().css({left: zoomer_x, top: zoomer_y});
+                    $("#bigImg").show().css({"left": -(zoomer_x - img_off.left) * 3.2, "top": -(zoomer_y - img_off.top) * 3.2})
+                } else {
+//                    $("#bigImg").hide();
+//                    $cloud_zoo.hide();
+                }
+
+                console.log(x, y);
+                console.log(zoomer_x, zoomer_y)
+
+//                var cloud_zoo_big_width = $("#cloud-zoom-big").width();
+//                var cloud_zoo_big_height = $("#cloud-zoom-big").height();
+//                var diff_width = $small_img.width() - cloud_zoo_big_width;
+//                var diff_height = $small_img.height() - cloud_zoo_big_height;
+//                if (e.offsetX <= diff_width && e.offsetY <= diff_height) {
+////                    $("#cloud-zoom-big").css({"left": e.offsetX, "top": e.offsetY});
+////                    $("#bigImg").css({"left": -e.offsetX * 3.2, "top": -e.offsetY * 3.2})
+//                }
+            }).mouseleave(function () {
+                        $("#big").hide();
+                        $cloud_zoo.hide();
+                    });
+
+
+//            $("#bigImg").mousemove(function(e){
+//                console.log(e.pageX, e.pageY, e.clientX, e.clientY, e.offsetX, e.offsetY)
+//                $(this).css({"left":-e.offsetX/5,"top":-e.offsetY/5})
+//            })
+        })
+    </script>
+</head>
+<body>
+<div id="zoom">
+    <div id="small">
+        <img id="smallImg" src="images/smallimage-0.jpg">
+
+    </div>
+    <div id="big">
+        <img id="bigImg" src="images/bigimage00.jpg">
+    </div>
+
+
+</div>
+<div id="cloud-zoom-big"></div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5"> <!-- Refresh every 5 seconds -->
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #1a1a1a url("images/background.gif") repeat;
+        }
+
+        #wrapper {
+            background: url("images/down-bg.png") center bottom no-repeat;
+            min-height: 1000px;
+            overflow: auto;
+            opacity: 0;
+        }
+
+        #appear {
+            width: 1000px;
+            margin: 0 auto;
+            background: url("images/down-bg.png") center bottom no-repeat;
+            opacity: 0;
+            min-height: 1000px;
+            overflow: auto;
+        }
+
+        #appear .phone {
+            margin-top:30px;
+            float: left;
+            width: 400px;
+            height: 727px;
+            background: url("images/phone.png") no-repeat;
+            background-size: 400px 700px;
+        }
+
+        #appear .down {
+            float: right;
+            margin-top: 250px;
+            background: url("images/smartisan_text.png") no-repeat;
+            width: 400px;
+            height: 500px;
+            text-align: center;
+            text-indent: -999em;
+        }
+
+        #appear .down a {
+            display: block;
+            background: url("images/download.png") no-repeat;
+            width: 250px;
+            height: 80px;
+            margin: 120px 75px 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="appear">
+        <div class="phone"></div>
+        <div class="down">
+            <a href="#">download</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script>
+    $(function () {
+        $("#appear").delay(600).animate({
+            width: '870px',
+            opacity: '1'
+        }, 2500);
+        $("#wrapper").delay(1000).animate({
+            opacity: '1'
+        });
+        $("#appear .down a").hover(function () {
+            $(this).animate({
+                opacity: '0.7'
+            }, 500);
+        }, function () {
+            $(this).animate({
+                opacity: '1'
+            }, 500);
+        })
+    })
+</script>
+</body>
+</html>

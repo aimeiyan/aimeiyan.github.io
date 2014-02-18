@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="scrollTo-slider.css" type="text/css">
+    <script src="../js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../js/jquery.scrollTo-1.4.3.1.js" type="text/javascript"></script>
+    <!--<script src="js/jquery.localScroll-1.2.5.js" type="text/javascript"></script>-->
+    <!--<script src="js/jquery.serialScroll-1.2.1.js" type="text/javascript"></script>-->
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <h1>jquery.scrollTo-1.4.3.1.js example</h1>
+    </div>
+    <div id="intro">
+        <p>This technique demonstrates an accessible 'Coda'-like slider interface, but in addition, allows you to place
+            links to the sliding content anywhere on the page and have the effect (and navigation) still work.Read the
+            article, and see the screencast this demonstration relates to</p>
+    </div>
+    <div id="slider">
+        <ul>
+            <li><a href="#sites" class="nav-sites navlink">Sites</a></li>
+            <li><a href="#files" class="nav-files navlink">Files</a></li>
+            <li><a href="#editor" class="nav-editor navlink">Editor</a></li>
+            <li><a href="#preview" class="nav-preview navlink">Preview</a></li>
+            <li><a href="#css" class="nav-css navlink">CSS</a></li>
+            <li><a href="#terminal" class="nav-terminal navlink">Terminal</a></li>
+            <li><a href="#books" class="nav-books navlink">Books</a></li>
+        </ul>
+        <div id="listContent">
+            <div class="panel" id="sites">
+                <h2>Sites</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="panel" id="files">
+                <h2>Files</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="panel" id="editor">
+                <h2>Editor</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="panel" id="preview">
+                <h2>Preview</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="panel" id="css">
+                <h2>CSS</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="panel" id="terminal">
+                <h2>Terminal</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="panel" id="books">
+                <h2>Books</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+        </div>
+
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, <a href="#books" id="text-books">books</a> consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco <a href="#sites" id="text-sites">sites</a> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure <a
+            href="#terminal" id="text-terminal">terminal</a> dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var $scrollTarget=$('#listContent');
+        var targetSites=document.getElementById('sites');
+//        var targetSites=$("#sites").get(0);
+        var targetFiles=document.getElementById('files');
+        var targetEditor=document.getElementById('editor');
+        var targetPreview=document.getElementById('preview');
+        var targetCss=document.getElementById('css');
+        var targetTerminal=document.getElementById('terminal');
+        var targetBooks=document.getElementById('books');
+        var $nav=$(".navlink");
+//        $scrollTarget.sc(function(){
+//            $nav.removeClass('visited');
+//        })
+        $(".nav-sites").click(function(){
+            $scrollTarget.stop().scrollTo( targetSites, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited');
+        });
+        $(".nav-files").click(function(){
+            $scrollTarget.stop().scrollTo( targetFiles, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+        $(".nav-editor").click(function(){
+            $scrollTarget.stop().scrollTo( targetEditor, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+        $(".nav-preview").click(function(){
+            $scrollTarget.stop().scrollTo( targetPreview, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+        $(".nav-css").click(function(){
+            $scrollTarget.stop().scrollTo( targetCss, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+        $(".nav-terminal").click(function(){
+            $scrollTarget.stop().scrollTo( targetTerminal, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+        $(".nav-books").click(function(){
+            $scrollTarget.stop().scrollTo( targetBooks, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+        $("#text-books").click(function(){
+            $scrollTarget.stop().scrollTo( targetBooks, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+        $("#text-sites").click(function(){
+            $scrollTarget.stop().scrollTo( targetSites, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+        $("#text-terminal").click(function(){
+            $scrollTarget.stop().scrollTo( targetTerminal, 800);
+            $(this).addClass('visited').parent().siblings().find('a').removeClass('visited')
+        });
+    })
+</script>
+</body>
+</html>

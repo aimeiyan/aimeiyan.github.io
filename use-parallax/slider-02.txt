@@ -1,0 +1,60 @@
+    window.onload = function () {
+        $(document).ready(function () {
+            appear = function () {
+                $("#alllist").mousemove(function () {
+                    $(".title").show();
+                    blut_appear = true
+                }).mouseleave(function () {
+                            $(".title").hide();
+                            blut_appear = false
+                        });
+            };
+            appear();
+            $(".pre").hover(function () {
+                $(this).css("background-position", " 0 -100%");
+            }, function () {
+                $(this).css("background-position", " 0 0")
+            });
+
+            $(".nex").hover(function () {
+                $(this).css("background-position", " -100% -100%");
+            }, function () {
+                $(this).css("background-position", " -100% 0")
+            });
+
+            var $content = $('#alllist');
+            var $items = $('li', $content);
+
+            var width = $('li:first', $content).outerWidth(true);
+
+            var current_pic = 0;
+            $('.pre').click(function () {
+                current_pic -= 1;
+                current_pic = jump_to_item(current_pic);
+            });
+
+            $('.nex').click(function () {
+                current_pic += 1;
+                current_pic = jump_to_item(current_pic);
+            });
+
+            $('.control-item').hover(function (e) {
+                current_pic = +$(this).text() - 1;
+                current_pic = jump_to_item(current_pic);
+            });
+
+            function jump_to_item(pos) {
+                if (pos < 0) {
+                    pos = $items.length - 1;
+                }
+                if (pos >= $items.length) {
+                    pos = 0;
+                }
+
+                $(".control-item").removeClass("active");
+                $($(".control-item")[pos]).addClass("active");
+                $content.stop(true, true).animate({scrollLeft: pos * width});
+                return pos;
+            }
+        })
+    }

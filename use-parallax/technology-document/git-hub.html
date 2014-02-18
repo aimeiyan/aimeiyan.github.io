@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap-theme.css" type="text/css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font: 14/16 Helvetica Neue ",Helvetica,Arial,sans-serif;
+        }
+
+        h1 {
+            margin: 30px 0 20px;
+        }
+
+        h3 {
+            margin-top: 16px;
+            line-height: 25px;
+        }
+
+        p {
+            line-height: 25px;
+        }
+
+        .code {
+            color: #444;
+            font-size: 0.9em;
+            background: #eee;
+            margin: 5px 0;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+            width: 250px;
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+    <h1>How To Use Git on Ubuntu 12.04</h1>
+</div>
+<div class="row">
+<div class="col-lg-8">
+    <!--<p>What the Red Means</p>-->
+
+    <!--<p> The lines that the user needs to enter or customize will be in red in this tutorial!</p>-->
+
+    <!--<p> The rest should mostly be copy-and-pastable.</p>-->
+
+    <h3>About Git</h3>
+
+    <p>Git is a distributed version control system released to the public in 2005. The program allows for non-linear
+        development of projects, and can handle large amounts of data effectively by storing it on the local server.</p>
+
+    <p>This tutorial will cover two ways to install Git.</p>
+
+    <h3>How to Install Git with Apt-Get</h3>
+
+    <p>Installing Git with apt-get is a quick and easy process. The program installs on the virtual private server with
+        one
+        command:</p>
+
+    <p class="code">sudo apt-get install git-core</p>
+
+    <p></p>
+
+    <p>After it finishes downloading, you will have Git installed and ready to use.
+    </p>
+
+    <h3>How to Install Git from Source</h3>
+
+    <p>If you are eager to download the most recent version of Git, it is generally a good idea to install it from the
+        source. </p>
+
+    <p>Quickly run apt-get update to make sure that you download the most recent packages to your VPS.</p>
+
+    <p class="code">sudo apt-get update</p>
+
+    <p></p>
+
+    <p>Prior to installing Git itself, download all of the required dependancies:</p>
+
+    <p class="code">sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+        build-essential</p>
+
+    <p>Once they are installed, you can download the latest version of Git from the <a
+            href="https://code.google.com/p/git-core/downloads/list">google code page</a>.</p>
+
+    <p class="code">wget https://git-core.googlecode.com/files/git-1.8.1.2.tar.gz</p>
+
+    <p>After it downloads, untar the file and switch into that directory:</p>
+
+    <p class="code">tar -zxf git-1.8.1.2.tar.gz</p>
+
+    <p class="code">cd git-1.8.1.2</p>
+
+    <p>If you want to do a global install, install it once as yourself and once as root, using the sudo prefix:</p>
+
+    <p class="code">make prefix=/usr/local all</p>
+
+    <p class="code">sudo make prefix=/usr/local install</p>
+
+    <p>If you need to update Git in the future, you can use Git itself to do it.</p>
+
+    <p class="code">git clone git://git.kernel.org/pub/scm/git/git.git</p>
+
+    <h3>How to Setup Git</h3>
+
+    <p>After Git is installed, whether from apt-get or from the source, you need to copy your username and email in the
+        gitconfig file. You can access this file at ~/.gitconfig.
+    </p>
+
+    <p>Opening it following a fresh Git install would reveal a completely blank page:</p>
+
+    <p class="code">sudo nano ~/.gitconfig</p>
+
+    <p>You can use the follow commands to add in the required information.</p>
+
+    <p class="code">git config --global user.name "NewUser"</p>
+
+    <p class="code">git config --global user.email newuser@example.com </p>
+
+    <p>You can see all of your settings with this command:</p>
+
+    <p class="code">git config --list</p>
+
+    <p>If you avoid putting in your username and email, git will later attempt to fill it in for you, and you may end up
+        with a message like this:</p>
+
+    <p class="code">[master 0d9d21d] initial project version </p>
+
+    <p class="code">Committer: root </p>
+
+    <p class="code">Your name and email address were configured automatically based </p>
+
+    <p class="code">on your username and hostname. Please check that they are accurate. </p>
+
+    <p class="code">You can suppress this message by setting them explicitly: </p>
+
+    <p class="code"></p>
+
+    <p class="code">git config --global user.name "Your Name" </p>
+
+    <p class="code">git config --global user.email you@example.com </p>
+
+    <p class="code"></p>
+
+    <p class="code">After doing this, you may fix the identity used for this commit with:</p>
+
+    <p class="code"></p>
+
+    <p class="code">git commit --amend --reset-author </p>
+
+    <h3>See More</h3>
+
+    <p>This tutorial covered how to install Git on your virtual private server. Stay tuned for a second tutorial on Git
+        Basics. </p>
+
+    <!--<h3>git log</h3>-->
+
+    <!--<h3>git lg</h3>-->
+    <hr>
+    <hr>
+    <h2>How To Use Git Effectively</h2>
+
+    <p>This article assumes that you have git installed and that your global configuration settings (namely username and
+        email) are properly set. If this is not the case, please refer to the git introduction tutorial. </p>
+
+    <p>Git is a very useful piece of software to help streamline development for programming projects. It comes with no
+        language requirements nor file structure requirements, leaving it open for the developers to decide how they
+        want to structure their workflow. </p>
+
+    <p>Before using git for your development, it's a good idea to plan out your workflow. The workflow decision is
+        typically based on the size and scale of your project. To gain a basic understanding of git for now, a simple,
+        single-branch workflow will suffice. By default, the first branch on any git project is called "master". In a
+        following tutorial in this series, you will learn how to create other branches. </p>
+
+    <p>Let's create our first project and call it "testing". (If you already have a project that you want to import to
+        git you can skip down to that section.)</p>
+
+    <h3>Creating your workspace</h3>
+
+    <p>Just like you want to have a good, clean work environment, the same idea applies to where you do your coding,
+        especially if you're going to contribute to a number of projects at the same time. A good suggestion might be to
+        have a folder called git in your home directory which has subfolders for each of your individual projects. </p>
+
+    <p>The first thing we need to do is create our workspace environment:</p>
+
+    <p class="code">user@host ~ $ mkdir -p ~/git/testing ; cd ~/git/testing</p>
+
+    <p>The above commands will accomplish two things:
+        1) It creates a directory called "git" in our home directory and then creates a subdirectory inside of that
+        called "testing" (this is where our project will actually be stored).
+        2) It brings us to our project's base directory.
+    </p>
+
+    <p>Once inside that directory, we need to create a few files that will be in our project. In this step, you can
+        either follow along and create a few dummy files for testing purposes or you can create files/directories you
+        wish that are going to be part of your project.
+    </p>
+
+    <p>We are going to create a test file to use in our repository:</p>
+
+    <p class="code">user@host ~/git/testing $ touch file</p>
+
+    <p>Once all your project files are in your workspace, you need to start tracking your files with git. The next step
+        explains that process.</p>
+
+    <h3>Converting an existing project into a workspace environment</h3>
+
+    <p>Once all the files are in your git workspace, you need to tell git that you want to use your current directory as
+        a git environment.</p>
+
+    <p class="code">user@host ~/git/testing $ git init</p>
+
+    <p class="code"> Initialized empty Git repository in /home/user/git/testing/.git/</p>
+
+    <p>Once your have initialized your new empty repository, you can add your files. The following will add all files
+        and directories to your newly created repository:</p>
+
+    <p class="code">user@host ~/git/testing $ git add .</p>
+
+    <p>In this case, no output is good output. Unfortunately, git does not always inform you if something worked. </p>
+
+    <p>Every time you add or make changes to files, you need to write a commit message. The next section describes what
+        a commit message is and how to write one.</p>
+
+    <h3>Creating a commit message</h3>
+
+    <p>A commit message is a short message explaining the changes that you've made. It is required before sending your
+        coding changes off (which is called a push) and it is a good way to communicate to your co-developers what to
+        expect from your changes. This section will explain how to create them. </p>
+
+    <p>Commit messages are generally rather short, between one and two sentences explaining what your change did. It is
+        good practice to commit each individual change before you do a push. You can push as many commits as you like.
+        The only requirement for any commit is that it involves at least one file and it has a message. A push must have
+        at least one commit. </p>
+
+    <p>Continuing with our example, we are going to create the message for our initial commit:</p>
+
+    <p class="code">user@host ~/git/testing $ git commit -m "Initial Commit" -a</p>
+
+    <p class="code">[master (root-commit) 1b830f8] initial commit</p>
+
+    <p class="code"> 0 files changed</p>
+
+    <p class="code"> create mode 100644 file</p>
+
+    <p>There are two important parameters of the above command. The first is -m, which signifies that our commit message
+        (in this case "Initial Commit") is going to follow. Secondly, the -a signifies that we want our commit message
+        to be applied to all added or modified files. This is okay for the first commit, but generally you should
+        specify the individual files or directories that we want to commit. </p>
+
+    <p>We could have also done:</p>
+    <p class="code">user@host ~/git/testing $ git commit -m "Initial Commit" file</p>
+    <p>To specify a particular file to commit. To add additional files or directories, you just add a space separated list to the end of that command.</p>
+    <h3>Pushing changes to a remote server</h3>
+    <p>Up until this point, we have done everything on our local server. That's certainly an option to use git locally, if you want to have any easy way to have version control of your files. If you want to work with a team of developers, however, you're going to need to push changes to a remote server. This section will explain how to do that. </p>
+    <p>The first step to being able to push code to a remote server is providing the URL where the repository lives and giving it a name. To configure a remote repository to use and to see a list of all remotes (you can have more than one), type the following:</p>
+    <p class="code">user@host ~/git/testing $ git remote add origin ssh://git@git.domain.tld/repository.git </p>
+    <p class="code">user@host ~/git/testing $ git remote -v</p>
+    <p class="code">origin	ssh://git@git.domain.tld/repository.git (fetch)</p>
+    <p class="code">origin	ssh://git@git.domain.tld/repository.git (push)</p>
+    <p>The first command adds a remote, called "origin", and sets the URL to ssh://git@git.domain.tld/repository.git. </p>
+    <p>You can name your remote whatever you'd like, but the URL needs to point to an actual remote repository. For example, if you wanted to push code to GitHub, you would need to use the repository URL that they provide. </p>
+    <p>Once you have a remote configured, you are now able to push your code. You can push code to a remote server by typing the following:</p>
+    <p class="code">user@host ~/git/testing $ git push origin master</p>
+    <p class="code">Counting objects: 4, done.</p>
+    <p class="code">Delta compression using up to 2 threads.</p>
+    <p class="code">Compressing objects: 100% (2/2), done.</p>
+    <p class="code">Writing objects: 100% (3/3), 266 bytes, done.</p>
+    <p class="code">Total 3 (delta 1), reused 1 (delta 0)</p>
+    <p class="code">To ssh://git@git.domain.tld/repository.git</p>
+    <p class="code">   0e78fdf..e6a8ddc  master -> master</p>
+    <p>"git push" tells git that we want to push our changes, "origin" is the name of our newly-configured remote server and "master" is the name of the first branch. </p>
+    <p>In the future, when you have commits that you want to push to the server, you can simply type "git push". </p>
+    <p>I hope this article provided you with a basic understanding of how git can be used effectively for a team of a developers. The next article in this series will provide a more in-depth analysis of git branches and why they are so effective.</p>
+    <hr>
+    <hr>
+    <h2>How To Use Git Branches</h2>
+    <p>This article is the third installment in the "Using Git" series. </p>
+    <p>It assumes that you have read both the installation article and the article on how to use git effectively. </p>
+    <p>In the world of version control systems, GIT is arguably one of the best in terms of flexbility. It's very easy to learn the syntax and to figure out how git can best serve your workflow and your environment. </p>
+    <p>This tutorial will teach you how to create two branches (master and develop) and how to merge code from the development stage to production.
+    </p>
+    <p>A branch, at its core, is a unique series of code changes with a unique name. </p>
+    <p>Each repository can have one or more branches. </p>
+    <p>By default, the first branch is called "master".</p>
+    <h3>Viewing branches</h3>
+    <p>Prior to creating new branches, we want to see all the branches that exist. </p>
+    <p>We can view all existing branches by typing the following:</p>
+    <p class="code">git branch -a</p>
+    <p>Adding the "-a" to the end of our command tells GIT that we want to see all branches that exist, including ones that we do not have in our local workspace. </p>
+    <p>The output will look similiar to the following:</p>
+    <p class="code">* master</p>
+    <p class="code">  remotes/origin/master</p>
+    <p>The asterisk next to "master" in the first line of the output indicates that we are currently on that branch. </p>
+    <p>The second line simply indicates that on our remote, named origin, there is a single branch, also called master.</p>
+    <p>Now that we know how to view branches, it time create our first one.</p>
+    <h3>Creating branches</h3>
+    <p>As stated in the beginning of this article, we want to have a development and a production setup for our coding environment. </p>
+    <p>We are going to treat the default "master" branch as our production and therefore need to create a single branch for development, or pre-production. </p>
+    <p>To create a new branch, named develop, type the following:
+    </p>
+    <p class="code">git checkout -b develop</p>
+    <p>Assuming we do not yet have a branch named "develop", the output would be as follows:</p>
+    <p class="code">Switched to a new branch 'develop'</p>
+    <p>In the case of a branch by that name already existing, GIT would tell us so:</p>
+    <p class="code">fatal: A branch named 'develop' already exists.</p>
+    <p>You can switch back and forth between your two branches, by using the git checkout command:</p>
+    <p class="code">git checkout master</p>
+    <p>or</p>
+    <p class="code">git checkout develop</p>
+    <p>Assuming the branch that you are trying to switch to exists, you'll see output similiar to the following:</p>
+    <p class="code">Switched to branch 'master'</p>
+    <p>If you try to switch to a branch that doesn't exist, such as</p>
+    <p class="code">git checkout nosuchbranch</p>
+    <p>Git will tell you:</p>
+    <p class="code">error: pathspec 'nosuchbranch' did not match any file(s) known to git.</p>
+    <p>Now that we have multiple branches, we need to put them to good use.
+    </p>
+    <p>In our scenario, we are going to use our "develop" branch for testing out our changes and the master branch for releasing them to the public. </p>
+    <p>To illustrate this process, we need to switch back to our develop branch:</p>
+    <p class="code">git checkout develop</p>
+    <h3>Making changes to our develop branch</h3>
+    <p>On this branch, we are going to create a new blank file, named "develop". </p>
+    <p>Until we merge it to the master branch (in the following step), it will not exist there.</p>
+    <p class="code">touch develop </p>
+    <p>Just as in the previous tutorial, we need to tell git that we want to track this new file.
+    </p>
+    <p>We can add the "develop" file, by typing:</p>
+    <p class="code">git add develop </p>
+    <p>The above set of commands will create a blank file, named "develop", and add it to GIT.</p>
+    <p>We also need to commit this file, which will attach this file to the branch we're currently on, which is "develop".</p>
+    <p class="code">git commit -m "develop file" develop </p>
+    <p>This file now exists on the develop branch; as we're about to find out, it doesn't exist on the master branch.</p>
+    <p>First, we are going to confirm that we are currently on the develop branch. We can do this by typing the following:
+    </p>
+    <p class="code">git branch</p>
+    <p>The output should appear similar to the following:</p>
+    <p class="code">* develop</p>
+    <p class="code">  master</p>
+    <p>We learned earlier that the asterisk next to the branch name indicates that we are currently on that branch. </p>
+    <p>Running the "ls" command will show us that the two files exist:</p>
+    <p class="code">ls</p>
+    <p>The output will show us that both of our files, respectively named "file" and "develop", are found:</p>
+    <p class="code">develop file</p>
+    <h3>Merging code between branches</h3>
+    <p>The interesting part comes after we switch back to our master branch, which we can do with the git checkout command:</p>
+    <p class="code">git checkout master</p>
+    <p>To ensure that we are on the master branch, we can run type the following:</p>
+    <p class="code">git branch </p>
+    <p>The output will tell us which branch we are one, indicated by the asterisk.</p>
+    <p class="code">  develop </p>
+    <p class="code">* master</p>
+    <p>Running "ls" again, it appears that our new file is missing.</p>
+    <p class="code">file</p>
+    <p>It's not missing - it's on our develop branch and we are on our master branch. </p>
+    <p>In our scenario, this file represents any change to any file (or a whole new file) that has passed all testing on our development branch,
+        and is ready to be in production. </p>
+    <p>The process of moving code between branches (often from development to production) is known as merging. </p>
+    <p>It is important to remember when merging, that we want to be on the branch that we want to merge to.
+    </p>
+    <p>In this case, we want to merge from our develop branch, where the "develop" file exists, to our master branch.
+    </p>
+    <p>Keeping that in mind, considering that we are already on the master branch, all we have to do is run the merge command. </p>
+    <p>One of the options that we can pass to the merge command, namely "--no-ff", means we want git to retain all of the commit messages prior to the merge. This will make tracking changes easier in the future. </p>
+    <p>To merge the changes from the develop branch to the master branch, type the following:</p>
+    <p class="code">git merge develop --no-ff</p>
+    <p>The output of the command will be similiar to the following:</p>
+    <p class="code">Merge made by the 'recursive' strategy.</p>
+    <p class="code"> 0 files changed</p>
+    <p class="code"> create mode 100644 develop</p>
+    <p>Running the ls command again will confirm that our "develop" file is now on our master branch. </p>
+    <p class="code">develop file</p>
+    <p>The last thing we now need to do, to make this change on our remote server is to push our changes, which we can do with the help of the
+        git push command.</p>
+    <p class="code">git push</p>
+    <p>You will see output similar to following, confirming that your the merge from your develop branch to the master branch on your remote server:</p>
+    <p class="code">Counting objects: 4, done.</p>
+    <p class="code">Delta compression using up to 2 threads.</p>
+    <p class="code">Compressing objects: 100% (3/3), done.</p>
+    <p class="code">Writing objects: 100% (3/3), 332 bytes, done.</p>
+    <p class="code">Total 3 (delta 1), reused 0 (delta 0)</p>
+    <p class="code">To ssh://git@git.domain.tld/repository</p>
+    <p class="code">   9af2dcb..53649cf  master -> master</p>
+    <h3>Conclusion</h3>
+    <p>By following the above tutorial, you should have a working dual-branch workflow setup and hopefully a working understanding about how branching works in GIT. Let us know what you think in the comments!</p>
+    <!--<img src="/home/nancy/Pictures/git.png">-->
+</div>
+<div class="col-lg-4">
+    <div class="sidebar-module">
+        <h4>其他收集的文章</h4>
+        <ol class="list-unstyled">
+            <li><a href="css-named-02.html">网页前端关于如何命名css样式</a></li>
+            <li><a href="meta-name-keywords.html">meta name keywords</a></li>
+        </ol>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

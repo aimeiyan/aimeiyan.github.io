@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>meta name keywords</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap-theme.css" type="text/css">
+    <meta charset="utf-8">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /*width: 900px;*/
+            /*margin: 20px auto 0;*/
+            font: 14px "Helvetica Neue", "STHeiti", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, sans-serif;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            width: 250px;
+            margin: 5px 10px;
+        }
+
+        p {
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+    <h2>meta name keywords</h2>
+</div>
+<div class="row">
+    <div class="col-lg-8">
+        <p>meta是html语言head区的一个辅助性标签。几乎所有的网页里，我们可以看到类似下面这段的html代码： </p>
+
+        <p>＜head＞ </p>
+
+        <p>＜meta http-equiv="content-Type" content="text/html; charset=gb2312"＞ </p>
+
+        <p>＜/head＞ </p>
+
+        <p>也许你认为这些代码可有可无。其实如果你能够用好meta标签，会给你带来意想不到的效果，例如加入关键字会自动被大型搜索网站自动搜集；可以设定页面格式及刷新等等。 </p>
+
+        <p>一、meta标签的组成 </p>
+
+        <p>meta标签共有两个属性，它们分别是http-equiv属性和name属性，不同的属性又有不同的参数值，这些不同的参数值就实现了不同的网页功能。 </p>
+
+        <p>1、name属性 </p>
+
+        <p>name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。 </p>
+
+        <p>meat标签的name属性语法格式是：＜meta name="参数" content="具体的参数值"＞ 。 </p>
+
+        <p>其中name属性主要有以下几种参数： </p>
+
+        <p>A、Keywords(关键字) </p>
+
+        <p>说明：keywords用来告诉搜索引擎你网页的关键字是什么。 </p>
+
+        <p>举例：＜meta name ="keywords" content="science, education,culture,politics,ecnomics，relationships,
+            entertaiment,
+            human"＞</p>
+
+        <p>B、description(网站内容描述) </p>
+
+        <p>说明：description用来告诉搜索引擎你的网站主要内容。 </p>
+
+        <p>举例：＜meta name="description" content="This page is about the meaning of science, education,culture."＞ </p>
+
+        <p>C、robots(机器人向导) </p>
+
+        <p>说明：robots用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。 </p>
+
+        <p>content的参数有all,none,index,noindex,follow,nofollow。默认是all。 </p>
+
+        <p>举例：＜meta name="robots" content="none"＞ </p>
+
+        <p>D、author(作者) </p>
+
+        <p>说明：标注网页的作者 </p>
+
+        <p>举例：＜meta name="author" content="bluebox,web@7dspace.com"＞ </p>
+
+        <p>2、http-equiv属性</p>
+
+        <p>
+            http-equiv顾名思义，相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容，与之对应的属性值为content，content中的内容其实就是各个参数的变量值。</p>
+
+        <p>meta标签的http-equiv属性语法格式是：
+            ＜meta http-equiv="参数" content="参数变量值"＞
+            ；其中http-equiv属性主要有以下几种参数：
+        </p>
+
+        <p>A、Expires（期限） </p>
+
+        <p>说明：可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输。 </p>
+
+        <p>用法：
+            ＜meta http-equiv="expires" content="Fri,12 Jan 2001 18:18:18 GMT"＞
+        </p>
+
+        <p>注意：必须使用GMT的时间格式。 </p>
+
+        <p>B、Pragma(cache模式） </p>
+
+        <p>说明：禁止浏览器从本地计算机的缓存中访问页面内容。 </p>
+
+        <p>用法：
+            ＜meta http-equiv="Pragma" content="no-cache">
+        </p>
+
+        <p>注意：这样设定，访问者将无法脱机浏览。 </p>
+
+        <p>C、Refresh（刷新） </p>
+
+        <p>说明：自动刷新并指向新页面。 </p>
+
+        <p>用法：
+            ＜meta http-equiv="Refresh" content="2;URL">
+            ；（注意后面的引号，分别在秒数的前面和网址的后面）
+        </p>
+
+        <p>注意：其中的2是指停留2秒钟后自动刷新到URL网址。 </p>
+
+        <p>D、Set-Cookie(cookie设定） </p>
+
+        <p>说明：如果网页过期，那么存盘的cookie将被删除。 </p>
+
+        <p>用法：
+            ＜meta http-equiv="Set-Cookie"
+            content="cookievalue=xxx; expires=Friday,12-Jan-2001 18:18:18 GMT; path=/"＞
+        </p>
+
+        <p>注意：必须使用GMT的时间格式。 </p>
+
+        <p>E、Window-target（显示窗口的设定） </p>
+
+        <p>说明：强制页面在当前窗口以独立页面显示。 </p>
+
+        <p>用法：
+            ＜meta http-equiv="Window-target" content="_top"＞
+        </p>
+
+        <p>注意：用来防止别人在框架里调用自己的页面。 </p>
+
+        <p>F、content-Type（显示字符集的设定） </p>
+
+        <p>说明：设定页面使用的字符集。 </p>
+
+        <p>用法：＜meta http-equiv="content-Type" content="text/html; charset=gb2＞</p>
+
+        <p>G、content-Language（显示语言的设定） </p>
+
+        <p>用法：＜meta http-equiv="Content-Language" content="zh-cn" /＞ </p>
+
+        <p>二、功能
+
+        <p>
+
+        <p>上面我们介绍了meta标签的一些基本组成，接着我们再来一起看看meta标签的常见功能： </p>
+
+        <p>1、帮助主页被各大搜索引擎登录 </p>
+
+        <p>
+            meta标签的一个很重要的功能就是设置关键字，来帮助你的主页被各大搜索引擎登录，提高网站的访问量。在这个功能中，最重要的就是对Keywords和description的设置。因为按照搜索引擎的工作原理，搜索引擎首先派出机器人自动检索页面中的keywords和description，并将其加入到自己的数据库，然后再根据关键词的密度将网站排序。因此，我们必须设置好关键字，来提高页面的搜索点击率。下面我们来举一个例子供大家参考：＜meta
+            name="keywords" content="政治，经济，科技，文化，卫生，情感，心灵，娱乐，生活，社会，企业，交通"＞ </p>
+
+        <p>＜meta name="description" content="政治，经济，科技，文化，卫生，情感，心灵，娱乐，生活，社会，企业，交通"＞ </p>
+
+        <p>设置好这些关键字后，搜索引擎将会自动把这些关键字添加到数据库中，并根据这些关键字的密度来进行合适的排序。 </p>
+
+        <p>2、 定义页面的使用语言 </p>
+
+        <p>
+            这是meta标签最常见的功能，在制作网页时，我们在纯HTML代码下都会看到它，它起的作用是定义你网页的语言，当浏览者访问你的网页时，浏览器会自动识别并设置网页中的语言，如果你网页设置的是GB码，而浏览者没有安装GB码，这时网页只会呈现浏览者所设置的浏览器默认语言。同样的，如果该网页是英语，那么charset=en。下面就是一个具有代表性的例子： </p>
+
+        <p>＜meta http-equiv=″content－Type″ content=″text/html; charset=gb2312″＞ </p>
+
+        <p>该代码就表示将网页的语言设置成国标码。 </p>
+
+        <p>3.3 自动刷新并指向新的页面 </p>
+
+        <p>如果你想使您的网页在无人控制的情况下，能自动在指定的时间内去访问指定的网页，就可以使用meta标签的自动刷新网页的功能。下面我们来看一段代码： </p>
+
+        <p>〈meta http-equiv=″refresh″ content=″2; URL= </p>
+
+        <p>这段代码可以使当前某一个网页在2秒后自动转到页面中去，这就是meta的刷新作用，在content中，2代表设置的时间（单位为秒），而URL就是在指定的时间后自动连接的网页地址。 </p>
+
+        <p>三、动画效果</p>
+
+        <p>使用meta标签，我们还可以在进入网页或者离开网页的一刹那实现动画效果，我们只要在页面的html代码中的＜head＞＜/head＞；标签之间添加如下代码就可以了： </p>
+
+        <p>＜meta http-equiv="Page-Enter" content="revealTrans(duration=5.0,transition=20)"＞ </p>
+
+        <p>一旦上述代码被加到一个网页中后，我们再进出页面时就会看到一些特殊效果，这个功能其实与FrontPage2000中的Format/Page Transition一样，但我们要注意的是所加网页不能是一个Frame页；
+            RevealTrans动态滤镜 </p>
+
+        <p>Duration表示滤镜特效的持续时间（单位：秒） </p>
+
+        <p>Transition滤镜类型。表示使用哪种特效，取值为0-23: </p>
+
+        <p>0矩形缩小 </p>
+
+        <p>1矩形扩大 </p>
+
+        <p>2 圆形缩小 </p>
+
+        <p>3 圆形扩大 </p>
+
+        <p>4 下到上刷新 </p>
+
+        <p>5 上到下刷新 </p>
+
+        <p>6 左到右刷新 </p>
+
+        <p>7 右到左刷新 </p>
+
+        <p>8 竖百叶窗 </p>
+
+        <p>9 横百叶窗 </p>
+
+        <p>10 错位横百叶窗 </p>
+
+        <p>11 错位竖百叶窗 </p>
+
+        <p>12 点扩散 </p>
+
+        <p>13 左右到中间刷新 </p>
+
+        <p>14 中间到左右刷新 </p>
+
+        <p>15 中间到上下 </p>
+
+        <p>16 上下到中间 </p>
+
+        <p>17 右下到左上 </p>
+
+        <p>18 右上到左下 </p>
+
+        <p>19 左上到右下 </p>
+
+        <p>20 左下到右上 </p>
+
+        <p>21 横条 </p>
+
+        <p>22 竖条 </p>
+
+        <p>23 以上22种随机选择一种 </p>
+    </div>
+    <div class="col-lg-4">
+        <div class="sidebar-module">
+            <h4>其他收集的文章</h4>
+            <ol class="list-unstyled">
+                <li><a href="css-named-02.html">网页前端关于如何命名css样式</a></li>
+                <li><a href="git-hub.html">How To Use Git on Ubuntu</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

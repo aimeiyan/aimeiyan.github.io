@@ -1,0 +1,632 @@
+/*头部样式*/
+#header {
+    background: url("../images/headerbg.png") repeat-x scroll 0 0 #FFFFFF;
+    height: 105px;
+}
+
+#header .contWidth {
+    /*border: 1px solid red;*/
+    height: 105px;
+    width: 990px;
+    margin: 0 auto;
+    z-index: 100;
+    position: relative;
+}
+
+#header .logo {
+    float: left;
+    color: #FFFFFF;
+    margin: 0 0 0 10px;
+    /*line-height: 80px;*/
+}
+
+#header .search {
+    position: absolute;
+    left: 198px;
+    top: 20px;
+}
+
+/* 切换皮肤控件样式 */
+
+#skin {
+    float: right;
+    width: 130px;
+    margin: 10px;
+    padding: 4px;
+}
+
+#skin li {
+    margin-right: 4px;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    background-image: url("../images/theme.gif");
+}
+
+#skin_0 {
+    background-position: 0px 0px;
+}
+
+#skin_1 {
+    background-position: 15px 0px;
+}
+
+#skin_2 {
+    background-position: 35px 0px;
+}
+
+#skin_3 {
+    background-position: 55px 0px;
+}
+
+#skin_4 {
+    background-position: 75px 0px;
+}
+
+#skin_5 {
+    background-position: 95px 0px;
+}
+
+#skin_0.selected {
+    background-position: 0px 15px;
+}
+
+#skin_1.selected {
+    background-position: 15px 15px;
+}
+
+#skin_2.selected {
+    background-position: 35px 15px;
+}
+
+#skin_3.selected {
+    background-position: 55px 15px;
+}
+
+#skin_4.selected {
+    background-position: 75px 15px;
+}
+
+#skin_5.selected {
+    background-position: 95px 15px;
+}
+
+/*导航样式开始*/
+.mainnav {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    background-color: #4A4A4A;
+    height: 37px;
+    line-height: 37px;
+    width: 990px;
+}
+
+.mainnav .nav {
+    margin-left: 25px;
+}
+
+.mainnav .nav li {
+    display: inline-block;
+    margin-right: 14px;
+    z-index: 100;
+    position: relative;
+}
+
+.mainnav .nav li a {
+    color: #ffffff;
+    display: block;
+    padding: 0 8px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* 二级菜单 */
+.jnNav {
+    border: 1px solid #B1B1B1;
+    width: 474px;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    display: none;
+    background: #ffffff;
+}
+
+.jnNav .subitem {
+    float: left;
+    padding: 10px 12px;
+    width: 450px;
+    height: auto !important;
+    min-height: 100px;
+}
+
+.jnNav .subitem dl {
+    border-top: 1px dashed #C4C4C4;
+    float: left;
+    padding: 8px 0;
+    /*overflow: hidden;*/
+}
+
+.jnNav .subitem dl.top {
+    border-top: 0;
+}
+
+.jnNav .subitem dt {
+    float: left;
+    /*text-align: center;*/
+}
+
+.jnNav .subitem dt a {
+    font-size: 12px;
+    color: #000;
+}
+
+.jnNav .subitem dd {
+    float: left;
+    width: 364px;
+}
+
+.jnNav .subitem em {
+    float: left;
+    font-style: normal;
+}
+
+.jnNav .subitem em a {
+    color: #666666;
+    font-size: 12px;
+    font-weight: normal;
+    /*white-space: nowrap;*/
+
+}
+
+/*搜索框设计*/
+
+#inputSearch {
+    border: 1px solid #BABEBF;
+    color: #999999;
+    font-size: 14px;
+    height: 17px;
+    padding: 3px 6px 5px 6px;
+    width: 200px;
+}
+
+.focus {
+    background: rgba(59, 207, 255, 0.11);
+}
+
+/*主要内容设计*/
+
+/*商品分类设计*/
+#content {
+    /*clear: left; *//*notice!!!!!!!!!!!!!!*/
+    width: 990px;
+    margin: 0 auto;
+}
+
+.janeshop {
+    padding: 10px 0;
+    height: auto;
+}
+
+#jnCatalog {
+    width: 187px;
+    float: left;
+}
+
+#jnCatalog h2 {
+    font-size: 12px;
+    text-indent: 12px;
+    background: #6E6E6E;
+    color: #ffffff;
+    line-height: 30px;
+    height: 30px;
+}
+
+.jnCatainfro {
+    border: 1px solid #6E6E6E;
+    padding: 5px 10px 0;
+    border-style: none solid solid;
+
+}
+
+.jnCatainfro h3 {
+    border-bottom: 1px solid #DDDDDD;
+    width: 167px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.jnCatainfro ul {
+    /*float: left;*/
+    padding: 0 2px 8px;
+}
+
+.jnCatainfro li {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    width: 79px;
+}
+
+.jnCatainfro li a {
+    color: #444;
+}
+
+.jnCatainfro li a:hover {
+    text-decoration: none;
+    color: #008CD7;
+}
+
+/* details.html */
+#jdProitem {
+    float: left;
+    width: 320px;
+    height: 560px;
+    margin-left: 11px;
+}
+
+#zoomWrap {
+    border: 1px solid #BBBBBB;
+}
+
+#zoomPicGlass {
+    margin: 10px 0 5px;
+}
+
+#zoomPicGlass span {
+    display: block;
+    text-align: center;
+
+}
+#imgList{
+
+}
+#imgList li {
+    float: left;
+    margin-right: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+#imgList li a {
+    display: block;
+    height: 60px;
+    width: 60px;
+}
+#imgList li.blue_hideImg{
+    /*display: none;*/
+}
+#imgList li.hide {
+    display: none;
+}
+
+#imgList li a:hover {
+    border: 1px solid #999;
+    padding: 1px;
+}
+
+#imgList img {
+    width: 60px;
+    height: 60px;
+}
+
+#introduce {
+    margin-top: 7px;
+}
+
+#introduce .introTab li {
+    display: inline-block;
+    border: 1px solid #BBBBBB;
+    border-bottom-style: none;
+    padding: 2px;
+}
+
+#introduce .introTab li:hover {
+    background: #DFDFDF;
+}
+
+#introduce .introTab li.appearence {
+    color: #ffffff;
+    background: #4da1cc;
+}
+
+#introduce .introContent div {
+    border: 1px solid #BBBBBB;
+    padding: 3px 5px;
+}
+
+#jnDetails {
+    float: left;
+    margin-left: 11px;
+    width: 460px;
+}
+
+#detailSort li {
+    line-height: 25px;
+}
+
+#detailSort strong {
+    font-weight: normal;
+}
+
+#detailSort .del {
+    text-decoration: line-through;
+    font-weight: normal;
+
+}
+
+#detailSort .promote {
+    color: #ff784b;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+#jnDetails .selectColor li {
+    display: inline-block;
+    margin-right: 10px;
+    /*border: 1px solid #dddddd;*/
+}
+
+#jnDetails .selectColor li a {
+    display: block;
+    border: 1px solid #AAA;
+}
+
+#jnDetails .selectColor li a:hover {
+    border: 1px solid #ff3e3f;;
+}
+
+#jnDetails .selectColor img {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+#jnDetails .selectSize li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+#jnDetails .selectSize li a.cur {
+    background: #ee9547;
+}
+
+#jnDetails .selectSize a {
+    display: block;
+    border: 1px solid #AAA;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+#jnDetails .selectScore {
+    /*position: relative;*/
+    height: 16px;
+    background: url("../images/star-matrix.gif") no-repeat 0 0;
+}
+
+/*#jnDetails .onestar {*/
+    /*background-position: 0 -16px;*/
+/*}*/
+
+/*#jnDetails .twostar {*/
+    /*background-position: 0 -32px;*/
+/*}*/
+
+/*#jnDetails .threestar {*/
+    /*background-position: 0 -48px;*/
+/*}*/
+
+/*#jnDetails .fourstar {*/
+    /*background-position: 0 -64px;*/
+/*}*/
+
+/*#jnDetails .fivestar {*/
+    /*background-position: 0 -80px;*/
+/*}*/
+
+#jnDetails .selectScore li {
+    float: left;
+    width: 16px;
+    height: 16px;
+    /*background: rgba(228, 64, 114, 0.28);*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    text-align: center;
+    vertical-align: middle;
+    text-indent: -999em;
+    cursor: pointer;
+}
+
+/*#jnDetails .selectScore li a {*/
+/*position: absolute;*/
+/*display: block;*/
+/*width: 16px;*/
+/*height: 16px;*/
+/*border: 1px solid #BBBBBB;*/
+/*text-align: center;*/
+/*z-index: 10;*/
+/*}*/
+
+/*#jnDetails .selectScore li.one a {*/
+/*left: 0;*/
+/*}*/
+
+/*#jnDetails .selectScore li.two a {*/
+/*left: 16px;*/
+/*}*/
+
+/*#jnDetails .selectScore li.three a {*/
+/*left: 32px;*/
+/*}*/
+
+/*#jnDetails .selectScore li.four a {*/
+/*left: 48px;*/
+/*}*/
+
+/*#jnDetails .selectScore li.five a {*/
+/*left: 64px;*/
+/*}*/
+
+#jnDetails .selectScore li a:hover {
+    background: url("../images/star-matrix.gif") no-repeat;
+    background-position: 0 0;
+    left: 0;
+    width: 80px;
+    overflow: hidden;
+    height: 16px;
+    z-index: 1;
+
+}
+
+/*#jnDetails .selectScore li.one a:hover {*/
+    /*background-position: 0 -96px;*/
+/*}*/
+
+/*#jnDetails .selectScore li.two a:hover {*/
+    /*background-position: 0 -112px;*/
+/*}*/
+
+/*#jnDetails .selectScore li.three a:hover {*/
+    /*background-position: 0 -128px;*/
+/*}*/
+
+/*#jnDetails .selectScore li.four a:hover {*/
+    /*background-position: 0 -146px;*/
+/*}*/
+
+/*#jnDetails .selectScore li.five a:hover {*/
+    /*background-position: 0 -160px;*/
+/*}*/
+
+/*#jnDetails .selectScore a:hover {*/
+    /*cursor: pointer;*/
+/*}*/
+
+#cart {
+    margin-top: 20px;
+}
+
+/*footer设计*/
+#footer {
+    margin-top: 30px;
+}
+
+#footerContent p {
+    text-align: center;
+    color: #999999;
+}
+
+.zoomPad{
+    position:relative;
+    float:left;
+    z-index:99;
+    cursor:crosshair;
+}
+.zoomPreload{
+    -moz-opacity:0.8;
+    opacity: 0.8;
+    filter: alpha(opacity = 80);
+    color: #333;
+    font-size: 12px;
+    font-family: Tahoma;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    background-color: white;
+    padding: 8px;
+    text-align:center;
+    background-image: url(../images/zoomloader.gif);
+    background-repeat: no-repeat;
+    background-position: 43px 30px;
+    z-index:110;
+    width:90px;
+    height:43px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    * width:100px;
+    * height:49px;
+}
+.zoomPup{
+    overflow:hidden;
+    background-color: #FFF;
+    -moz-opacity:0.6;
+    opacity: 0.6;
+    filter: alpha(opacity = 60);
+    z-index:120;
+    position:absolute;
+    border:1px solid #CCC;
+    z-index:101;
+    cursor:crosshair;
+}
+.zoomOverlay{
+    position:absolute;
+    left:0px;
+    top:0px;
+    background:#FFF;
+    /*opacity:0.5;*/
+    z-index:5000;
+    width:100%;
+    height:100%;
+    display:none;
+    z-index:101;
+}
+.zoomWindow{
+    position:absolute;
+    left:110%;
+    top:40px;
+    background:#FFF;
+    z-index:6000;
+    height:auto;
+    z-index:10000;
+    z-index:110;
+}
+.zoomWrapper{
+    position:relative;
+    border:1px solid #999;
+    z-index:110;
+}
+.zoomWrapperTitle{
+    display:block;
+    background:#999;
+    color:#FFF;
+    height:18px;
+    line-height:18px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+    font-size:12px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:120;
+    -moz-opacity:0.6;
+    opacity: 0.6;
+    filter: alpha(opacity = 60);
+}
+.zoomWrapperImage{
+    display:block;
+    position:relative;
+    overflow:hidden;
+    z-index:110;
+
+}
+.zoomWrapperImage img{
+    border:0px;
+    display:block;
+    position:absolute;
+    z-index:101;
+}
+.zoomIframe{
+    z-index: -1;
+    filter:alpha(opacity=0);
+    -moz-opacity: 0.80;
+    opacity: 0.80;
+    position:absolute;
+    display:block;
+}

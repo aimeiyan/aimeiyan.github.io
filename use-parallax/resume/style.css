@@ -1,0 +1,90 @@
+/*work hard*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #222;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 2em;
+}
+
+#page-wrap {
+    width: 900px;
+    margin: 20px auto;
+}
+#page-wrap h1{
+    text-align: center;
+}
+#page-wrap h2{
+    line-height: 2em;
+    margin-top: 20px;
+}
+#profile {
+    float: right;
+    width: 104px;
+    height:151px;
+    border-radius: 5px;
+}
+
+#self-info td:first-child {
+    width: 80px;
+    font-weight: bold;
+    vertical-align: text-top;
+}
+
+.date{
+    font-size: 12px;
+    font-weight: normal;
+    color: #777;
+}
+
+h3 a,h4 a{
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#the-first-job td{
+    vertical-align: bottom;
+}
+
+li{
+    text-indent: 10px;
+    list-style: circle;
+    list-style-position: inside;
+}
+
+li.describe{
+    text-indent: 0;
+    list-style-type:decimal ;
+    /*list-style-position: inside;*/
+}
+
+li.describe p{
+    display: block;
+    padding-left: 30px;
+}
+li.company{
+    list-style: none;
+    margin-bottom: 0.5em;
+}
+li.boomSense{
+    list-style-type: decimal;
+}
+
+li.boomSense p{
+    display: block;
+    padding-left: 20px;
+}
+
+li.action{
+    list-style-type: decimal;
+}
+
+li.action p{
+    display: block;
+
+    padding-left: 20px ;
+}

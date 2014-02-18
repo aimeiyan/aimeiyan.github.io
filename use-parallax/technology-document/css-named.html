@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #222;
+        }
+
+        #main {
+            width: 1000px;
+            margin: 40px auto;
+        }
+
+        p {
+            line-height: 30px;
+            text-indent: 30px;
+        }
+
+        #head-info {
+            text-indent: 9px;
+        }
+
+
+        li {
+            list-style: none;
+            display: inline-block;
+            width: 250px;
+            margin: 5px 10px;
+        }
+
+        h3 {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <h2>网页前端关于如何命名css样式</h2>
+
+    <h3>网页制作中规范使用DIV+CSS命名规则，可以改善优化功效特别是团队合作时候可以提供合作制作效率，具体DIV CSS命名规则CSS命名大全内容如下：</h3>
+
+    <p id="head-info">页头：header 如：#header{属性:属性值;}或.header{属性:属性值;},也许你需要了解class与id区别及用法</p>
+    <ul>
+    <li>登录条：loginBar</li>
+    <li>标志：logo</li>
+    <li>侧栏：sideBar</li>
+    <li>广告：banner</li>
+    <li>导航：nav</li>
+    <li>子导航：subNav</li>
+    <li>菜单：menu</li>
+    <li>子菜单：subMenu</li>
+    <li>搜索：search</li>
+    <li>滚动：scroll</li>
+    <li>页面主体：main</li>
+    <li>内容：content</li>
+    <li>标签页：tab</li>
+    <li>文章列表：list</li>
+    <li>提示信息：msg</li>
+    <li>小技巧：tips</li>
+    <li>栏目标题：title</li>
+    <li>加入：joinus</li>
+    <li>指南：guild</li>
+    <li>服务：service</li>
+    <li>热点：hot</li>
+    <li>新闻：news</li>
+    <li>下载：download</li>
+    <li>注册：regsiter</li>
+    <li>状态：status</li>
+    <li>按钮：btn</li>
+    <li>投票：vote</li>
+    <li>合作伙伴：partner</li>
+    <li>友情链接：friendLink</li>
+    <li>页脚：footer</li>
+    <li>版权：copyRight</li>
+    </ul>
+    <div style="clear: both"></div>
+    <p>常用配合标签div、h1、h2、h3、h4、span、em、b、strong、font、u</p>
+
+    <h3>1.CSS的 ID 的命名 也许你需要了解class与Id区别</h3>
+
+    <div id="seconde-content">
+        <ul>
+            <li>外　套：wrap</li>
+            <li>主导航：mainNav</li>
+            <li>子导航：subnav</li>
+            <li>页　脚：footer</li>
+            <li>整个页面：content</li>
+            <li>页　眉：header</li>
+            <li>版 权：copyRight</li>
+            <li>商　标：label</li>
+            <li>标　题：title</li>
+            <li>主导航：mainNav(globalNav)</li>
+            <li>顶导航：topnav</li>
+            <li>边导航：sidebar</li>
+            <li>左导航：leftsideBar</li>
+            <li>右导航：rightsideBar</li>
+            <li>旗　志：logo</li>
+            <li>标　语：banner</li>
+            <li>菜单内容1：menu1Content</li>
+            <li>菜单容量：menuContainer</li>
+            <li>子菜单：submenu</li>
+            <li>边导航图标：sidebarIcon</li>
+            <li>注释：note</li>
+            <li>面包屑：breadCrumb(即页面所处位置导航提示)</li>
+            <li>容器：container</li>
+            <li>内容：content</li>
+            <li>搜索：search</li>
+            <li>登陆：login</li>
+            <li>功能区：shop(如购物车，收银台)</li>
+            <li>当前：current</li>
+        </ul>
+    </div>
+    <div>
+        <p>
+            DIV+CSS命名小结：无论是使用“.”（小写句号）选择符号开头命名，还是使用“#”(井号)选择符号开头命名都无所谓，但我们最好遵循，主要的、重要的、特殊的、最外层的盒子用“#”(井号)选择符号开头命名，其它都用“.”（小写句号）选择符号开头命名，同时考虑命名的CSS选择器在HTML中重复使用调用。</p>
+
+        <p>通常我们最常用主要命名有：wrap（外套、最外层）、header（页眉、头部）、nav(导航条)、menu(菜单)、title(栏目标题、一般配合h1h2h3h4标签使用)
+            、content (内容区)、footer(页脚、底部)、logo（标志、可以配合h1标签使用）、banner（广告条，一般在顶部）、copyRight（版权）。其它可根据自己需要选择性使用。</p>
+
+        <p>DIVCSS5建议：主要的、重要的、最外层的盒子用“#”(井号)选择符号开头命名，其它都用“.”（小写句号）选择符号开头命名。</p>
+    </div>
+
+    <h3>2.CSS样式文件命名如下</h3>
+    <ul>
+        <li>主要的 master.css</li>
+
+        <li>布局，版面 layout.css</li>
+
+        <li>专栏 columns.css</li>
+
+        <li>文字 font.css</li>
+
+        <li>打印样式 print.css</li>
+
+        <li>主题 themes.css</li>
+    </ul>
+</div>
+</body>
+</html>

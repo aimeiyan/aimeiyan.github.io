@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: normal 14px/1.5 Arial, Verdana, "\5b8b\4f53";
+    color: #111;
+    background: #ffffff;
+}
+
+#category {
+    width: 1000px;
+    margin: 10px auto;
+
+}
+#filter{
+    height: 500px;
+}
+#title {
+    font-size: 16px;
+    font-weight: bold;
+    padding:10px 2px 10px 10px;
+    background: #DDD;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px solid #ccc;
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
+    width: 20%;
+}
+
+#allsort{
+    position: relative;
+    z-index: 20;
+}
+
+.dropdown-menu{
+    position: absolute;
+    z-index: 1000;
+    min-width: 120px;
+    padding: 5px 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#allsort .item {
+    display: block;
+    cursor: pointer;
+    width: 211px;
+    margin-top: 5px;
+    position: relative;
+}
+
+#allsort ul>li>span {
+    display: block;
+    /*border: 1px solid #cccccc;*/
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+#allsort .item s{
+    display: block;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    left: 180px;
+    top: 12px;
+    background: url("images/20130330A_1.png") no-repeat -110px -45px;
+}
+.dropdown-menu li span:hover, .maintainHover {
+    color: #fff;
+    text-decoration: none;
+    background: #39f
+}
+
+.detail {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 210px;
+    padding: 5px 10px 0 10px;
+    display: none;
+    width: 600px;
+    font-size: 12px;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+.detail dl{
+margin: 8px 0;
+}
+
+.detail dt{
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    width: 10%;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.detail dd{
+    float: left;
+    width: 80%;
+}
+
+.detail dd em{
+    font-style: normal;
+    display: inline-block;
+    border-left: 1px solid #AAAAAA;
+    padding: 0 8px;
+    margin-top: 5px;
+}

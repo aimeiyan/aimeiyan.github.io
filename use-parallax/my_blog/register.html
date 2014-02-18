@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALqm9/+6pvf/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqb3/7qm9/+6pvf/uqb3/7qm9//Syuv00srrBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0srr9Lqm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/9LK6/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/wAAAAAAAAAAAAAAAAAAAAAAAAAAuqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9//Syuv0AAAAAAAAAAAAAAAA0srr9Lqm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/+DX+vQAAAAAAAAAALqm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/AAAAAAAAAAC6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/wAAAAAAAAAAuqb3//fm6/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/8AAAAAAAAAALqm9/+6pvf/+Ofr/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/AAAAAAAAAADg1/r0uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/uqb3/7qm9/+6pvf/4Nf69AAAAAAAAAAAAAAAANLK6/S6pvf/uqb3/7qm9//Syuv/AAAAAAAAAADSyuv/uqb3/7qm9/+6pvf/0srr9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPby7//28u//AAAAAAAAAAAAAAAAAAAAAPby7//28u//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP5/AAD4HwAA8A8AAOAHAADAAwAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwYMAAPPPAAD//wAA//8AAA=="
+          rel="icon" type="image/x-icon"/>
+    <title>只为给心安个家,制作回忆</title>
+    <meta name="keywords" content="给自己的心安个家，给生活留下痕迹，创造回忆。">
+    <meta name="description" content="努力的写博客，就是好好的经营生活。">
+    <link href="/s/register_login.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            font: 400 14px/1.55 "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #222;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            color: red !important;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:link {
+            color: #ffffff;
+        }
+
+        a:visited {
+            color: #ffffff;
+        }
+
+        #header {
+            width: 100%;
+            height: 60px;
+            background: rgba(147, 206, 222, 1);
+            background: -moz-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(147, 206, 222, 1)), color-stop(41%, rgba(117, 189, 209, 1)), color-stop(100%, rgba(73, 165, 191, 1)));
+            background: -webkit-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+            background: -o-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+            background: -ms-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+            background: linear-gradient(to bottom, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#93cede', endColorstr='#49a5bf', GradientType=0);
+
+        }
+
+        #index {
+            position: absolute;
+            right: 30px;
+            top: 35px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        #index li {
+            display: inline-block;
+            padding-left: 5px;
+        }
+
+        #emailNote, #password1, #repassNote, #accountInfo {
+            margin-top: 10px;
+            width: 110px;
+            float: right;
+            color: #777;
+            font-size: 11px;
+            vertical-align: bottom;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="index">
+        <ul>
+            <li>
+                <!--<a href="/bloglist">主页</a>-->
+            </li>
+            <li>
+                <!--<a href="/">创建博客</a>-->
+            </li>
+            <li>
+                <!--<a href="#">注册</a>-->
+            </li>
+            <li>
+                <a href="/exit">登录</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="main-part">
+    <div id="register-part">
+        <div id="rg-letter">
+            <span class="regst-letter">注册</span>
+            <!--<span class="login-letter">登录</span>-->
+        </div>
+        <div id="register">
+            <div id="form-register">
+                <form id="regs-form" method="post" action="/signup">
+                    <p class="clearfix"><label>邮箱：</label><input type="text" id="e-mail" name="email"><span
+                            class="alarm">{{notealer}}</span></p>
+
+                    <p class="clearfix"><label>设置密码：</label><input type="password" id="passwd" name="password"></p>
+
+                    <p class="clearfix"><label>重新输入密码：</label><input type="password" id="repasswd" name="repassword">
+                    </p>
+
+                    <p class="clearfix"><label>昵称：</label><input type="text" id="user" name="username"></p>
+
+                    <div class="btn"><a href="/"><input type="submit" value="立即注册"></a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/s/js/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+$(function () {
+    function validateEmail(sEmail) {
+        var filter = /^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i;
+        if (filter.test(sEmail)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    var emailNoteHtml = "<i id='emailNote'>请输入邮箱</i> ";
+    var emailValidNote = "<i id='emailNote'>valid</i> ";
+    var emailInvalidNote = "<i id='emailNote'>Invalid</i> ";
+
+    var $email = $("#e-mail");
+    var sEmail = $email.val();
+
+    $email.blur(function () {
+        $("#emailNote").remove();
+        sEmail=$(this).val();
+//        var sEmail = $("#e-mail").val();
+        if (sEmail == "") {
+            $(this).parent().append(emailNoteHtml);
+            e.preventDefault();
+        }
+        else if (validateEmail(sEmail)) {
+            $(this).parent().append(emailValidNote);
+        }
+        else if (sEmail !== "" && !validateEmail(sEmail)) {
+            $(this).parent().append(emailInvalidNote);
+            e.preventDefault();
+        }
+    });
+
+//        Password Strength Algorithm:
+//
+//        Password Length:
+//         5 Points: Less than 4 characters
+//        10 Points: 5 to 7 characters
+//        25 Points: 8 or more
+//
+//        Letters:
+//         0 Points: No letters
+//        10 Points: Letters are all lower case
+//        20 Points: Letters are upper case and lower case
+//
+//        Numbers:
+//         0 Points: No numbers
+//        10 Points: 1 number
+//        20 Points: 3 or more numbers
+//
+//        Characters:
+//         0 Points: No characters
+//        10 Points: 1 character
+//        25 Points: More than 1 character
+//
+//        Bonus:
+//        2 Points: Letters and numbers
+//        3 Points: Letters, numbers, and characters
+//        5 Points: Mixed case letters, numbers, and characters
+//
+//        Password Text Range:
+//        >= 90: Very Secure
+//        >= 80: Secure
+//        >= 70: Very Strong
+//        >= 60: Strong
+//        >= 50: Average
+//        >= 25: Weak
+//        >= 0: Very Weak
+
+    var m_strUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var m_strLowerCase = "abcdefghijklmnopqrstuvwxyz";
+    var m_strNumber = "0123456789";
+    var m_strCharacters = "!@#$%^&*?~";
+
+    function checkPassword(strPassword) {
+//            Password Length
+        var nScore = 0;
+        if (strPassword.length < 5) {
+            nScore += 5;
+        }
+        else if (4 < strPassword.length < 8) {
+            nScore += 10;
+        }
+        else(strPassword.length > 8)
+        {
+            nScore += 25;
+        }
+
+//            Letters
+        var nUpperCount = countContain(strPassword, m_strUpperCase);
+        var nLowerCount = countContain(strPassword, m_strLowerCase);
+        var nLowerUpperCount = nUpperCount + nLowerCount;
+        if (nUpperCount == 0 && nLowerCount !== 0) {
+            nScore += 10;
+        }
+        else if (nUpperCount !== 0 && nLowerCount !== 0) {
+            nScore += 20;
+        }
+
+//            Numbers
+        var nNumberCount = countContain(strPassword, m_strNumber);
+        if (nNumberCount == 1) {
+            nScore += 10;
+        }
+        else if (nNumberCount >= 3) {
+            nScore += 20;
+        }
+
+//            Characters
+        var nCharacterNumber = countContain(strPassword, m_strCharacters);
+        if (nCharacterNumber == 1) {
+            nScore += 10;
+        }
+        else if (nCharacterNumber >= 3) {
+            nScore += 25;
+        }
+
+//            Bonus
+        if (nNumberCount !== 0 && nLowerUpperCount != 0) {
+            nScore += 2;
+        }
+        if (nNumberCount !== 0 && nLowerUpperCount !== 0 && nCharacterNumber) {
+            nScore += 3
+        }
+        if (nCharacterNumber !== 0 && nLowerCount !== 0 && nUpperCount !== 0 && nNumberCount) {
+            nScore += 5;
+        }
+
+        return nScore;
+    }
+
+    function countContain(strPassword, strCheck) {
+        var nCount = 0;
+        for (i = 0; i < strPassword.length; i++) {
+            if (strCheck.indexOf(strPassword.charAt(i)) > -1) {
+                nCount++;
+            }
+        }
+        return nCount;
+    }
+
+    function runPassword(strPassword) {
+        var nScore = checkPassword(strPassword);
+//        >= 90: Very Secure
+//        >= 80: Secure
+//        >= 70: Very Strong
+//        >= 60: Strong
+//        >= 50: Average
+//        >= 25: Weak
+//        >= 0: Very Weak
+        if (nScore >= 90) {
+            var strText = "Very Secure"
+        }
+        else if (nScore >= 80) {
+            var strText = "Secure"
+        }
+        else if (nScore >= 70) {
+            var strText = "Very Strong"
+        }
+        else if (nScore >= 60) {
+            var strText = "Strong"
+        }
+        else if (nScore >= 50) {
+            var strText = "Average"
+        }
+        else if (nScore >= 25) {
+            var strText = "Weak"
+        }
+        else {
+            var strText = " very Weak"
+        }
+        return strText;
+    }
+
+    var $strpass = $("#passwd");
+    var strPassword = $("#passwd").val();
+    var strPass2 = $("#repasswd").val();
+    var passHtml = "<i id='password1'>请输入密码</i>";
+    $("#passwd").focus(function(){
+        $("#password1").remove();
+        var passwordInfoHtml = "<i id='password1'>6-20位字母 数字 符号</i>";
+        $(this).parent().append(passwordInfoHtml)
+    })
+//        $("#password1").remove();
+//        var strPassword = $("#passwd").val();
+//        var passHtml = "<i id='password1'>请输入密码</i>";
+//        if (strPassword == "") {
+//            $(this).parent().append(passHtml)
+
+//        }
+            .blur(function () {
+                $("#password1").remove();
+                strPassword = $(this).val();
+                if (strPassword) {
+                    var passNote = runPassword(strPassword);
+                }
+                else {
+                    var passNote = "请输入密码"
+                }
+                var passHtmlstr = "<i id='password1'>" + passNote + "</i>";
+                $(this).parent().append(passHtmlstr)
+            });
+
+    $("#repasswd").blur(function () {
+        $("#repassNote").remove();
+        var strPassword = $("#passwd").val();
+        var strPass2 = $(this).val();
+        if (strPassword !== "" && strPass2 !== "") {
+            if (strPassword == strPass2) {
+                var str = "密码一致"
+
+            } else {
+                var str = "密码不一致"
+            }
+            var rePassNoteHtml = "<i id='repassNote'>" + str + "</i>";
+            $("#repasswd").parent().append(rePassNoteHtml)
+        }
+
+    });
+    var $user = $("#user");
+    var accInfoAlarm = "<i id='accountInfo'>请输入昵称</i>";
+    $user.focus(function () {
+        $("#accountInfo").remove();
+        var accountInfoHtml = "<i id='accountInfo'>6-20位字母 数字 符号</i>";
+        $(this).parent().append(accountInfoHtml)
+    }).blur(function () {
+                $("#accountInfo").remove();
+                if (this.value == "") {
+                    var accInfoAlarm = "<i id='accountInfo'>请输入昵称</i>";
+                    $(this).parent().append(accInfoAlarm)
+                }
+            });
+
+    $("#regs-form .btn input").click(function () {
+        if (strPassword == "") {
+            $("#password1").remove();
+            $strpass.parent().append(passHtml);
+        }
+        if (sEmail == "") {
+            $("#emailNote").remove();
+            $email.parent().append(emailNoteHtml);
+        }
+        if ($user.val() == "") {
+            $("#accountInfo").remove();
+            $user.parent().append(accInfoAlarm)
+        }
+    });
+
+
+})
+</script>
+
+</html>

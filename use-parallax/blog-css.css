@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    /*height: 12000px;*/
+}
+a{
+    cursor: pointer;
+}
+/*header*/
+#header{
+    width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 10px;
+}
+#header .leftSideBar{
+    float: left;
+}
+#header .rightSideBar{
+    float: right;
+}
+
+#header .rightSideBar .text-btn{
+    color: #8a8a8a;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 2px;
+    width: 40px;
+    height: 40px;
+}
+#logo{
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url("images/rose.jpg") no-repeat 50% 70%;
+    background-size:  85px 85px;
+    border-radius: 45% 45%;
+}
+#blog-txt{
+    display: block;
+    float: left;
+    color: #0f1ce5;
+    font-weight: bold;
+    margin: 10px 2px;
+}
+
+/*parallax */
+.container {
+    background: #eaf4fa;
+    transition-delay:0.5s;
+    /*transition:background .5s ease .1s,color .2s ease;*/
+    transition:background-color .2s ease-out,background-color .2s ease-out;
+}
+
+#scene {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 450px;
+    padding: 0;
+    position: relative;
+
+}
+
+#scene .layer .list-item {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #92c2ee;
+    border-radius: 50% 50%;
+}
+
+#scene .layer:nth-of-type(1) .list-item {
+    opacity: 0.3;
+    left: 120px;
+    top: 25%;
+    width: 110px;
+    height: 110px;
+    transition-delay: 0.1s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(2) .list-item {
+    opacity: 0.55;
+    left: 220px;
+    top: 35%;
+    width: 80px;
+    height: 80px;
+    transition-delay: 0.2s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(3) .list-item {
+    opacity: 0.63;
+    left: 320px;
+    top: 5%;
+    width: 100px;
+    height: 100px;
+    transition-delay: 0.6s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(4) .list-item {
+    opacity: 0.36;
+    left: 280px;
+    top: 69%;
+    width: 100px;
+    height: 100px;
+    transition-delay: 0.8s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(5) .list-item {
+    opacity: 0.46;
+    right: 80px;
+    top: 69%;
+    width: 100px;
+    height: 100px;
+    transition-delay: 0.05s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(6) .list-item {
+    opacity: 0.56;
+    right: 120px;
+    top: 30%;
+    width: 100px;
+    height: 100px;
+    transition-delay: 0.3s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(7) .list-item {
+    opacity: 0.5;
+    left: 130px;
+    top: 59%;
+    width: 100px;
+    height: 100px;
+    transition-delay: 0.15s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(8) .list-item {
+    opacity: 0.4;
+    left: 400px;
+    top: 55%;
+    width: 70px;
+    height: 70px;
+    transition-delay: 0.41s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(9) .list-item {
+    opacity: 0.45;
+    left: 200px;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    transition-delay: 0.15s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(10) .list-item {
+    opacity: 0.4;
+    right: 140px;
+    top: 75%;
+    width: 70px;
+    height: 70px;
+    transition-delay: 0.41s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(11) .list-item {
+    opacity: 0.5;
+    left: 540px;
+    top: 8px;
+    width: 70px;
+    height: 70px;
+    transition-delay: 0.15s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(12) .list-item {
+    opacity: 0.4;
+    right: 240px;
+    top: 15%;
+    width: 70px;
+    height: 70px;
+    transition-delay: 0.41s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(13) .list-item {
+    opacity: 0.6;
+    left: 580px;
+    bottom: 15%;
+    width: 120px;
+    height: 120px;
+    transition-delay: 0.15s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(14) .list-item {
+    opacity: 0.4;
+    left: 300px;
+    top: 25%;
+    width: 70px;
+    height: 70px;
+    transition-delay: 0.41s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(15) .list-item {
+    opacity: 0.4;
+    right: 80px;
+    top: 15%;
+    width: 70px;
+    height: 70px;
+    transition-delay: 1.5s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(16) .list-item {
+    opacity: 0.6;
+    right: 440px;
+    top: 35%;
+    width: 40px;
+    height: 40px;
+    transition-delay: 1.2s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(17) .list-item {
+    opacity: 0.6;
+    left: 400px;
+    top: 28%;
+    width: 80px;
+    height: 80px;
+    transition-delay: 1.2s;
+    transition: all 1s ease;
+}
+
+#scene .layer:nth-of-type(18) .abstract {
+    position: absolute;
+    opacity: 0.6;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    transition-delay: 1.2s;
+    transition: all 1s ease;
+    color: #0f1ce5;
+    font-weight: bold;
+    z-index: 10000;
+}
+#scene .layer:nth-of-type(18) .abstract h1{
+    font-size: 3em;
+}
+
+.hoverCol {
+    background-color: #0b79e5;
+    z-index: 10;
+}
+.fontColor{
+    color: rgb(255, 255, 255) !important;
+    z-index: 99999;
+}
+
+/*jqueryExercise*/
+#jqueryExercise{
+    max-width: 1000px;
+    margin: 40px auto;
+
+}
+#jqueryExercise ul{
+    text-align: center;
+}
+#jqueryExercise ul li{
+    display: inline-block;
+    float: left;
+    width: 200px;
+    height: 40px;
+}
+
+#jqueryExercise ul li a{
+    color: #8a8a8a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#jqueryExercise ul li a:hover{
+    color: #0b79e5;
+    font-size: 1.2em;
+}
