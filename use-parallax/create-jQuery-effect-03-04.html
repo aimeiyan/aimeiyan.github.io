@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="create-jquery-effect.css" type="text/css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap-theme.css" type="text/css">
+    <!--<link rel="stylesheet" href="prettify.css" type="text/css">-->
+    <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+    <!--<script type="text/javascript" src="prettify.js"></script>-->
+    <script type="text/javascript" src="Bootstrap/js/bootstrap.js"></script>
+    <style type="text/css">
+        .source-code {
+            display: none;
+        }
+
+            /*#source-code:target {*/
+            /*display: block;*/
+            /*}*/
+    </style>
+</head>
+<body>
+<div id="create-jquery-effect">
+    <div class="page-header">
+        <h1>Create jQuery effect by myself</h1>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-10">
+                <h2>slider&nbsp;动画效果-02</h2>
+
+                <p>点击pre和next箭头，或者图片下部的控制圆圈，切换图片。</p>
+
+                <p><a class="btn btn-default" href="#source-code-04" role="button">View source »</a></p>
+
+                <div id="source-code-04" class="source-code">
+                    <pre class="view-source"></pre>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="sidebar-module">
+                    <h4>其他动画效果</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="create-jQuery-effect-03-01.html">菜单栏动画效果</a></li>
+                        <li><a href="create-jQuery-effect-03-02.html">放大镜效果</a></li>
+                        <li><a href="create-jQuery-effect-03-03.html">slider&nbsp;动画效果-01</a></li>
+                        <li><a href="create-jQuery-effect-03-05.html">scrollTo动画效果</a></li>
+                        <li><a href="create-jQuery-effect-03-06.html">Bubble Popup 效果</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="effect-03-02">
+                    <iframe width="100%" frameborder="0" height="430" scrolling="yes"
+                            src="jquery-effect-exercise/slide-type1/slide_test_04_formal.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    $(function () {
+
+        $(".btn-default").click(function () {
+            $(this).parent().next().toggle();
+        })
+//        var file = (function func1() {
+//            var result;
+//            $.ajax({
+//                type: "GET",
+//                url: 'bubbleTxt.txt',
+//                async: false,
+//                success: function (data) {
+//                    result = data;
+//                }
+//            });
+//            return result;
+//        })();
+        var txtFile = ['slider-02'];
+        for (var i = 0; i < txtFile.length; i++) {
+            var eveTxt = txtFile[i];
+            var he = eveTxt + ".txt";
+            console.log(eveTxt);
+            console.log(he);
+            var file = (function func1(he) {
+                var result;
+                $.ajax({
+                    type: "GET",
+                    url: he,
+                    async: false,
+                    success: function (data) {
+                        result = data;
+//                        console.log(result)
+                    }
+                });
+                return result;
+            })(he);
+//            console.log(file,'[[[]]]]')
+            console.log(i);
+            if (file) {
+                var pre = document.getElementsByClassName('view-source')[i];
+                pre.innerHTML = file.replace(/[<>]/g, function (m) {
+                    return {'<': '&lt;', '>': '&gt;'}[m]
+                });
+            }
+        }
+    });
+</script>
+</html>
