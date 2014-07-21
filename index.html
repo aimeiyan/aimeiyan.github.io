@@ -1,130 +1,177 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title></title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="use-parallax/blog-css.css" type="text/css">
-    <link rel="stylesheet" href="use-parallax/Bootstrap/css/bootstrap.css" type="text/css">
+    <meta charset="utf-8"/>
+    <!--<meta http-equiv="X-UA-COMPATIBLE" content="IE=8">-->
     <style>
-        #jqueryExercise li{
-            line-height: 40px;
+        @import url(http://fast.fonts.com/cssapi/c2bdb8b7-c98e-4328-b2cb-7d5a1fee9b44.css);
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        body {
+            font-size: 10px;
+            font-family: "Volta W01 Medium Italic", sans-serif, "microsoft yahei", 'Lato', Calibri, Arial;
+            line-height: 1.8em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container h1 {
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 23%;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            font-size: 3em;
+        }
+
+        .slogon {
+            width: 100%
+            text-align: center;
+        }
+
+        .slogon img {
+            display: block;
+            width: 182px;
+            margin: 0 auto -35px;
+            padding-right: 8px;
+        }
+
+        .container .line {
+            display: block;
+            height: 4px;
+            width: 40%;
+            margin: 30px auto;
+            background: #fff;
+        }
+
+        .container .quote {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: block;
+            line-height: 1.8em;
+        }
+
+        /*jqueryExercise*/
+        #jqueryExercise {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            z-index: 999;
+        }
+
+        #jqueryExercise ul {
+            text-align: center;
+        }
+
+        #jqueryExercise ul li {
+            display: inline-block;
+            display: inline;
+            float: left;
+            width: 16.6%;
+            height: 80px;
+            line-height: 80px;
+            background: #3f3f3f;
+            margin-right: 1px;
+            opacity: 0.7;
+            filter: Alpha(Opacity=0.7);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        #jqueryExercise ul li:last-child {
+            margin-right: 0;
+        }
+
+        #jqueryExercise ul li a {
+            /*font-family: "Volta W01 Medium Italic",sans-serif;*/
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.8em;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        #jqueryExercise ul li:hover {
+            background: #fff;
+            opacity: 1;
+            filter: Alpha(Opacity=1);
+            transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
+            -moz-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
+            -webkit-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
+            -o-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
+        }
+
+        #jqueryExercise ul li:hover a {
+            color: #15cde5;
+            background: #ffffff;
+            font-weight: 700;
+            transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
+            -moz-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
+            -webkit-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
+            -o-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
         }
     </style>
 </head>
-
 <body>
-<div id="header">
-    <div class="leftSideBar"><i id="logo"></i><span id="blog-txt">博客</span></div>
-    <div class="rightSideBar">
-        <!--<a href="#sigup" class="text-btn">注册</a>-->
-        <!--<a href="#login" class="text-btn">登录</a>-->
-    </div>
-    <div style="clear: both"></div>
-</div>
-<div id="wrapper">
-    <div id="container" class="container">
-        <ul id="scene" class="scene">
-            <li class="layer" data-depth="1.00">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.80">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.60">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.40">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.50">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.20">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.70">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.05">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="2.00">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.69">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.60">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.40">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.50">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.20">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.90">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.35">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer" data-depth="0.65">
-                <div class="list-item"></div>
-            </li>
-            <li class="layer text" data-depth="0">
-                <div class="abstract">
-                    <h1>All things are difficult before they are easy.</h1>
-                    <p> —— 记录所学、所想的个人博客</p>
-                </div>
-            </li>
-        </ul>
-    </div>
+<div class="container">
+    <h1>
+        <div class="slogon"><img src="homeImgs/slogon.png" alt="Loyalty, Quality, Discipline">
+        </div>
+        <span class="line"></span>
+        <span class="quote">“Learning does not stop as long as a man live, unless his learning 
+power atrophies because he does not use it.”</span>
+        <span class="line"></span>
+        <small>Hutchins</small>
+    </h1>
+
     <div id="jqueryExercise">
         <ul>
             <li class="leftSubNav"><a href="use-parallax/myblog-intro.html" target="_blank">MyBlog制作</a></li>
             <li><a href="use-parallax/create-jQuery-effect-03-01.html" target="_blank">jQuery效果制作</a></li>
             <li class="rightSubNav"><a href="use-parallax/imitate-website-02.html" target="_blank">PC版网页制作</a></li>
             <li class="rightSubNav"><a href="use-parallax/mobile-website.html" target="_blank">移动版网页制作</a></li>
-            <li class="rightSubNav"><a href="use-parallax/technology-document/css-named-02.html" target="_blank">技术文档收集</a></li>
+            <li class="rightSubNav"><a href="use-parallax/technology-document/css-named-02.html"
+                                       target="_blank">技术文档收集</a>
+            </li>
             <li class="resume"><a href="use-parallax/resume/resume.html" target="_blank">简历</a></li>
         </ul>
     </div>
+
 </div>
-
-<!-- Scripts -->
-<script src="use-parallax/jquery-1.10.2.js"></script>
-<script src="use-parallax/jquery.parallax.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.backstretch.js"></script>
 <script>
-
-    // Yep, that's it!
-    $('#scene').parallax({
-        calibrateX: true,
-        calibrateY: true,
-        invertX: true,
-        invertY: true,
-        limitX: 20,
-        limitY: 20,
-        scalarX: 9,
-        scalarY: 9,
-        frictionX: 0.6,
-        frictionY: 0.8
+    $.backstretch([
+        "homeImgs/background_04.jpg",
+        "homeImgs/background_03.jpg",
+        "homeImgs/background_01.jpg",
+        "homeImgs/background_05.jpg"
+    ], {
+        fade: 750,
+        duration: 2000
     });
-    $(function () {
-        var $abstractTxt = $("#scene .abstract ")
-        $("#container").hover(function () {
-            console.log($(this), "-------------");
-            $abstractTxt.addClass("fontColor");
-            $(this).addClass("hoverCol");
-        }, function () {
-            $(this).removeClass("hoverCol");
-            $abstractTxt.removeClass("fontColor")
-        })
-    })
 </script>
-
 </body>
 </html>
