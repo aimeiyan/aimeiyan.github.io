@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>淘宝网触屏版</title>
+<meta charset="utf-8">
+
+<!--以下两句删除苹果默认的工具栏和菜单栏 -->
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="yes" name="apple-mobile-web-app-capable">
+
+<!--告诉设备，忽略将页面中的数字识别为电话号码 -->
+<meta content="telephone=no" name="format-detection">
+
+<!--默认是白色，设定状态栏为黑色，可以定为black（黑色）和black-translucent（灰色半透明）。
+注意： 若值为“black-translucent”将会占据页面px位置，浮在页面上方（会覆盖页面20px高度–iphone4和itouch4的Retina屏幕为40px）。 -->
+<!--在iOS中有两个meta值，apple-mobile-web-app-capable和apple-mobile-web-app-status-bar-style，这两个会让网页内容以应用程序风格显示，并使状态栏透明。-->
+<!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+<!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+
+<!--设置web app的放置主屏幕上icon文件路径。图片尺寸可以设定为57×57（px）或者Retina可以设定为114×114，ipad尺寸为72×72 -->
+<link rel="apple-touch-icon-precomposed" href="tao_imgs/touch-icon.png">
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="author" content="m.taobao.com">
+<meta name="copyright" content="Copyright ©m.taobao.com 版权所有">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<!--　这个标签主要是用来控制搜索引擎抓取网站的频率，告诉搜索引擎多长时间来网站抓取一次。假如我设置，那这样搜索引擎就是7天来一次。使用这个标签的网站，通常是因为网站数据量非常大，被搜索引擎过于频繁的抓取，会占用过大的资源，影响网站的访问。所以，希望搜索引擎不要天天过来，抓取过一次了，那么等7天后再来。一般的网站是不需要这个标签的。-->
+<meta name="visit-after" content="1 days">
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<style type="text/css">
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font: normal 12px/1.5 Arial, Helvetica, "Microsoft YaHei", STHeiti, "Droid Sans Fallback", sans-serif;
+    color: #343434;
+    overflow-x: hidden;
+    background-color: #F1F1F1;
+    height: 100%;
+}
+
+iframe, a, img, button {
+    border: 0;
+}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+    display: block;
+}
+
+a {
+    color: #343434;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+em, i, s {
+    font-style: normal;
+}
+
+input[type=submit], input[type=button], input[type=text], textarea, button, select {
+    font-size: 1em;
+    outline: none;
+    -webkit-appearance: none;
+    border: 0;
+}
+
+input, img {
+    vertical-align: middle;
+}
+
+#bar {
+    width: 100%;
+    height: 48px;
+    -webkit-box-shadow: 0 1px 2px #B1B1B1;
+    -moz-box-shadow: 0 1px 2px #B1B1B1;
+    background: #ffffff;
+    display: -webkit-box;
+    display: -moz-box;
+}
+
+#bar .tao-logo {
+    width: 48px;
+    height: 100%;
+    background: url("tao_imgs/tao-logo.gif") no-repeat #FF4300;;
+    background-position: -3px 7px;
+}
+
+.search {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    padding: 10px 12px;
+}
+
+.s-w {
+    position: relative;
+    border: 1px solid #939495;
+    height: 20px;
+    padding: 4px 30px 4px 10px;
+    -webkit-box-shadow: inset 0 2px 2px #d7dbdf;
+    -moz-box-shadow: inset 0 2px 2px #d7dbdf;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8fafe), to(#fff), color-stop(0.5, #fefeff));
+    background: -moz-linear-gradient(top, #f8fafe, #fff);
+}
+
+.s-content {
+    line-height: 20px;
+    width: 100%;
+
+}
+
+.submit {
+    position: absolute;
+    top: 0;
+    display: block;
+    right: 0;
+    background: url("tao_imgs/submit.png") no-repeat center center;
+    width: 31px;
+    height: 31px;
+}
+
+#guide {
+    width: 320px;
+    padding: 12px 0 6px;
+    margin: 0 auto;
+
+}
+
+#first-view {
+    position: relative;
+}
+
+#first-view .swiper-container {
+    width: 296px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+
+}
+
+#first-view .swiper-container img {
+    width: 296px !important;
+    height: 100px !important;
+}
+
+#first-view .pagination {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    bottom: 5px;
+    z-index: 1;
+}
+
+#app {
+    width: 296px;
+    position: relative;
+    margin: 14px auto 0;
+}
+
+#app .swiper-container {
+    width: 296px;
+    height: 183px;
+    overflow: hidden;
+}
+
+#app .swiper-container img {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+#app .indicator {
+    text-align: center;
+    width: 100%;
+    /*height: 10px;*/
+    margin-top: 7px;
+}
+
+div.l-top {
+    display: -webkit-box;
+    display: -moz-box;
+    padding: 0 0 16px 10px;
+}
+
+div.l-bottom {
+    display: -webkit-box;
+    display: -moz-box;
+    padding: 0 0 0 10px;
+}
+
+a.list {
+    width: 60px;
+    height: 83px;
+    margin-left: 13px;
+}
+
+a.list:first-child {
+    margin-left: 0;
+}
+
+a.list span {
+    display: block;
+    text-align: center;
+    height: 23px;
+    line-height: 23px;
+    font-size: 12px;
+}
+
+.swiper-slide a {
+    display: block;
+}
+
+.swiper-pagination-switch {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background: rgba(230, 230, 230, 0.58);
+    box-shadow: 0px 1px 2px #555;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.swiper-active-switch {
+    background: #FF4300;
+}
+
+#title {
+    background: url("tao_imgs/dot-line.png") repeat-x 0 center;
+    text-align: center;
+    margin: 10px auto;
+    width: 296px;
+}
+
+#title span {
+    color: #999;
+    display: inline-block;
+    background: #F1F1F1;
+    width: 60px;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+
+}
+
+#channel {
+    padding: 8px 7px 0px;
+}
+
+#channel .row1col2 {
+    display: -webkit-box;
+    display: -moz-box;
+}
+
+.category {
+    display: -webkit-box;
+    display: -moz-box;
+    padding: 0 0 0 2px;
+
+}
+
+#channel .row1col2 a {
+    /*width: 145px;*/
+    display: block;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#channel .category a {
+    display: block;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #666;
+    border: 1px solid #ccc;
+    width: 68px;
+    /*padding: 2px 10px;*/
+    text-align: center;
+    /*padding: 4px 0;*/
+    height: 32px;
+    line-height: 32px;
+}
+
+#channel .row1col2 img {
+    width: 144px;
+}
+
+.decoration {
+    background: url("tao_imgs/dot-line.png") repeat-x 0 center;
+    height: 12px;
+    width: 296px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.decoration span {
+    display: inline-block;
+    background: url("tao_imgs/dec.gif") no-repeat center center #F1F1F1;
+    width: 32px;
+    height: 12px;
+    line-height: 12px;
+}
+
+#cards, #market, #special, #other {
+    width: 320px;
+    margin: 0 auto;
+    padding-bottom: 6px;
+}
+
+.top {
+    background: url("tao_imgs/bolang.gif") repeat-x 0 0;
+    padding: 28px 12px 6px;
+    background-size: 7px 15px;
+}
+
+.top .title {
+    text-align: center;
+}
+
+.top .title span {
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+}
+
+.imga {
+
+    display: block;
+
+}
+
+.img1, .img3 {
+    width: 296px;
+    display: block;
+    border-radius: 4px;
+}
+
+.img2 {
+    width: 146px;
+    display: block;
+    border-radius: 4px;
+}
+
+.imga .img2 {
+    height: 149px;
+}
+
+.row2 {
+    display: -webkit-box;
+    display: -moz-box;
+    margin-top: 5px;
+}
+
+.col2 .img2 {
+    padding-left: 5px;
+    height: 72px;
+}
+
+.col2 .img2:first-child, .img3:first-child {
+    padding-bottom: 5px;
+}
+
+.app-down {
+    display: block;
+    font-size: 14px;
+    color: red;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+}
+
+.app-down:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: #656565 solid;
+    border-width: 2px 2px 0 0;
+    position: absolute;
+    right: 2px;
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    vertical-align: middle;
+}
+
+.app-sort {
+    display: -webkit-box;
+    display: -moz-box;
+    padding: 2px 12px 6px;
+}
+
+.app-sort a {
+    display: block;
+    width: 100px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.fc {
+    color: #000;
+}
+
+.feedback {
+    padding: 20px 12px 6px;
+
+}
+
+.feedback h2 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.footer-menu {
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    display: -webkit-box;
+    display: -moz-box;
+    padding: 0 8px 0 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#ededed));
+    background: -moz-linear-gradient(top, #fefefe, #ededed)
+}
+
+.menu-user {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    font-size: 14px;
+}
+
+.backtop {
+    display: block;
+    width: 80px;
+    position: relative;
+    text-align: right;
+    font-weight: 700;
+    padding-right: 15px;
+}
+
+.backtop b {
+    display: block;
+    height: 0;
+    width: 0;
+    border: 4px solid transparent;
+    border-bottom-color: #999;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.copyright{
+    text-align: center;
+    height: 58px;
+    background: #ccc;
+    font-size: 10px;
+}
+
+.copyright p:first-child{
+    font-size: 14px;
+    padding-top: 10px;
+}
+</style>
+</head>
+<body>
+<header id="bar">
+    <div class="tao-logo"></div>
+    <div class="search">
+        <div class="s-w">
+            <form action="" method="post">
+                <input class="s-content" type="text" name="q" value="">
+                <input class="submit" type="submit" value="">
+            </form>
+        </div>
+    </div>
+</header>
+<section id="guide">
+    <div id="first-view">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#"><img src="tao_imgs/slider_01.gif"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="tao_imgs/slider_02.jpg"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="tao_imgs/slider_03.jpg"></a></div>
+            </div>
+        </div>
+        <div class="pagination"></div>
+    </div>
+    <div id="app">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="l-top">
+                        <a class="list" href="#"><img src="tao_imgs/tao.png">
+                            <span>我的淘宝</span>
+                        </a>
+                        <a class="list" href="#"><img src="tao_imgs/tmall.png"><span>天猫</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/ju.png"><span>聚划算</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/weitao.png"><span>微淘</span></a>
+                    </div>
+                    <div class="l-bottom">
+                        <a class="list" href="#"><img src="tao_imgs/app.png"><span>免费APP</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/yeshi.png"><span>夜淘宝</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/chongzhi.png"><span>充值中心</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/caipiao.png"><span>彩票</span></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="l-top">
+                        <a class="list" href="#"><img src="tao_imgs/tao.png">
+                            <span>我的淘宝</span>
+                        </a>
+                        <a class="list" href="#"><img src="tao_imgs/tmall.png"><span>天猫</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/ju.png"><span>聚划算</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/weitao.png"><span>微淘</span></a>
+                    </div>
+                    <div class="l-bottom">
+                        <a class="list" href="#"><img src="tao_imgs/app.png"><span>免费APP</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/yeshi.png"><span>夜淘宝</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/chongzhi.png"><span>充值中心</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/caipiao.png"><span>彩票</span></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="l-top">
+                        <a class="list" href="#"><img src="tao_imgs/tao.png">
+                            <span>我的淘宝</span>
+                        </a>
+                        <a class="list" href="#"><img src="tao_imgs/tmall.png"><span>天猫</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/ju.png"><span>聚划算</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/weitao.png"><span>微淘</span></a>
+                    </div>
+                    <div class="l-bottom">
+                        <a class="list" href="#"><img src="tao_imgs/app.png"><span>免费APP</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/yeshi.png"><span>夜淘宝</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/chongzhi.png"><span>充值中心</span></a>
+                        <a class="list" href="#"><img src="tao_imgs/caipiao.png"><span>彩票</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="indicator"></div>
+    </div>
+    <h4 id="title"><span>导购</span></h4>
+
+    <div id="channel">
+        <div class="row1col2">
+            <a href="#"><img src="tao_imgs/daogou_01.png"></a>
+            <a href="#"><img src="tao_imgs/daogou_02.png"></a>
+        </div>
+        <div class="row1col2">
+            <a href="#"><img src="tao_imgs/daogou_03.png"></a>
+            <a href="#"><img src="tao_imgs/daogou_04.jpg"></a>
+        </div>
+        <div class="category">
+            <a href="#">连衣裙</a>
+            <a href="#">单鞋</a>
+            <a href="#">打底裤</a>
+            <a href="#">女包</a>
+        </div>
+    </div>
+    <h4 class="decoration">
+        <span></span>
+    </h4>
+</section>
+<section id="cards">
+    <div class="cards1 top">
+        <div class="title"><span>精彩推荐</span></div>
+        <div class="row1">
+            <a class="imga" href="#"><img class="img1" src="tao_imgs/pinpai.png"></a>
+        </div>
+        <div class="row2">
+            <a class="imga" href="#"><img class="img2" src="tao_imgs/daren.jpg"></a>
+
+            <div class="col2">
+                <a class="imga" href="#"><img class="img2" src="tao_imgs/hangjia.jpg"></a>
+                <a class="imga" href="#"><img class="img2" src="tao_imgs/jingxuan.jpg"></a>
+            </div>
+        </div>
+    </div>
+    <h4 class="decoration">
+        <span></span>
+    </h4>
+</section>
+<section id="market">
+    <div class="cards1 top">
+        <div class="title"><span>特色市场</span></div>
+        <div class="row1">
+            <a class="imga" href="#"><img class="img1" src="tao_imgs/foriegn.jpg"></a>
+        </div>
+        <div class="row2">
+            <a class="imga" href="#"><img class="img3" src="tao_imgs/zuishi.jpg"></a>
+        </div>
+        <div class="row3">
+            <a class="imga" href="#"><img class="img3" src="tao_imgs/shuiguo.png"></a>
+        </div>
+    </div>
+    <h4 class="decoration">
+        <span></span>
+    </h4>
+</section>
+<section id="special">
+    <div class="cards1 top">
+        <div class="title"><span>特享专场</span></div>
+        <div class="row1">
+            <a class="imga" href="#"><img class="img1" src="tao_imgs/1zhe.png"></a>
+        </div>
+        <div class="row2">
+            <a class="imga" href="#"><img class="img3" src="tao_imgs/jiaokeli.png"></a>
+        </div>
+        <div class="row3">
+            <a class="imga" href="#"><img class="img3" src="tao_imgs/bags.png"></a>
+        </div>
+    </div>
+    <h4 class="decoration">
+        <span></span>
+    </h4>
+</section>
+<section id="other">
+    <div class="cards1 top">
+        <a class="app-down" href="#">手机淘宝官方多版本下载</a>
+    </div>
+
+    <div class="app-sort">
+        <a href="#">应用下载</a>
+        <a href="#">iPhone应用</a>
+        <a href="#">Android应用</a>
+    </div>
+    <div class="feedback">
+        <ul>
+            <h2>用户反馈</h2>
+            <li><a class="app-down fc" href="#">触屏版2.0全新上线，期待您的反馈</a></li>
+            <li><a class="app-down fc" href="#">回首页不方便、找不到旺旺购物车的请进</a></li>
+        </ul>
+    </div>
+</section>
+<footer id="footer">
+    <section class="footer-menu">
+        <p class="menu-user">
+            <span><a href="#">登录</a></span>
+            <span><a href="#">注册</a></span>
+        </p>
+        <a class="backtop" href="#"><span>TOP</span><b></b></a>
+    </section>
+    <section class="copyright">
+        <p><a href="#">电脑版</a></p>
+        <p>© 2014 浙B2-20080224服务中心</p>
+    </section>
+</footer>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/idangerous.swiper-2.1.min.js"></script>
+<script>
+    var mySwiper1 = new Swiper('#first-view .swiper-container', {
+        pagination: '.pagination',
+        loop: true,
+        grabCursor: true,
+        autoplay: '3000',
+        updateOnImagesReady: true,
+        paginationClickable: true
+    });
+
+    var mySwiper2 = new Swiper('#app .swiper-container', {
+        pagination: '.indicator',
+        loop: true,
+        grabCursor: true,
+//        autoplay: '3000',
+        updateOnImagesReady: true,
+        paginationClickable: true
+    });
+
+    $(function(){
+        $("a.backtop").click(function(){
+            $("html body").animate({scrollTop:0},400);
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>看准，你再跳</title>
+<meta name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no">
+<style type="text/css">
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, pre, form, p, blockquote, input, textarea, abbr, article, aside, figcaption, figure, footer, header, mark, meter, menu, nav, output, progress, section, summary, time {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    font: normal 14px/1.5 Arial, Helvetica, "Microsoft YaHei", STHeiti, "Droid Sans Fallback", sans-serif;
+    color: #343434;
+    overflow-x: hidden;
+    background-color: #e5e5e5;
+    height: 100%;
+}
+
+iframe, a, img, button {
+    border: 0;
+}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+    display: block;
+}
+
+a {
+    color: #343434;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+em, i, s {
+    font-style: normal;
+}
+
+input[type=submit], input[type=button], input[type=text], textarea, button, select {
+    font-size: 1em;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+div.kanzhun {
+    height: 100%;
+    width: 100%;
+    background-color: #7cb228;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+aside.slide_menu {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+i.i {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background-image: url("images/icons_2.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: 100px;
+    -moz-background-size: 100px;
+    -o-background-size: 100px;
+    background-size: 100px;
+    background-position: -43px -178px;
+    vertical-align: -3px;
+    margin-left: 10px;
+    display: none;
+}
+
+aside.slide_menu .logo {
+    height: 35px;
+    width: 100%;
+    display: block;
+    padding-left: 15px;
+    padding-top: 9px;
+    border-bottom: 1px solid #395b04;
+}
+
+aside.slide_menu a {
+    display: block;
+    height: 40px;
+    color: #fff;
+    border-top: 1px solid #99d738;
+    border-bottom: 1px solid #5d900f;
+    line-height: 40px;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+#container {
+    height: 100%;
+    -webkit-box-shadow: -20px 0 50px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -20px 0 50px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: -20px 0 50px rgba(0, 0, 0, 0.3);
+    box-shadow: -20px 0 50px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    margin-left: 0;
+    top: 0;
+    width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#container.show {
+    -webkit-transform: translate3d(70%, 0, 0);
+    -moz-transform: translate3d(70%, 0, 0);
+    -ms-transform: translate3d(70%, 0, 0);
+    -o-transform: translate3d(70%, 0, 0);
+    transform: translate3d(70%, 0, 0);
+}
+
+#container.ease {
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+div.wrapper {
+    background: url("images/index_iphoneBg.jpg") no-repeat 0 0;
+    background-size: 100%;
+    min-height: 100%;
+    height: auto;
+}
+
+div.content {
+    padding-bottom: 46px;
+}
+
+header.page_hd {
+    background-color: #7cb228;
+    padding: 9px 10px;
+    text-align: center;
+    position: relative;
+}
+
+header.page_hd a {
+    border-radius: 2px;
+    position: absolute;
+    top: 9px;
+    cursor: pointer;
+}
+
+a.current {
+    background-color: #6b9c1e
+}
+
+header.page_hd .menu {
+    display: block;
+    left: 10px;
+}
+
+header.page_hd .menu img {
+    width: 16px;
+    height: 16px;
+    padding: 5px 10px;
+    border: 1px solid #96c153;
+}
+
+header.page_hd strong {
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+}
+
+header.page_hd a.fright {
+    right: 10px;
+    border: 1px solid #96c153;
+    color: #fff;
+    width: 60px;
+    height: 26px;
+    line-height: 26px;
+    display: block;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1;
+}
+
+section.index_content h1 {
+    padding-top: 35px;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    text-shadow: 3px 3px 7px #000, -3px -3px 7px #000;
+}
+
+section.index_content h2 {
+    padding-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-shadow: 3px 3px 7px #000, -3px -3px 7px #000;
+}
+
+.search {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    padding: 10px 40px 10px .5em;
+    position: relative;
+    margin: 10px 20px 0;
+    border-radius: 4px;
+}
+
+.search input[type=text] {
+    display: block;
+    width: 100%;
+    border: 0;
+    font-size: 1em;
+}
+
+.search input[type=submit] {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 0;
+    background: transparent url("images/icons_2.png") no-repeat;
+    background-size: 100px;
+    right: 1em;
+    top: 50%;
+    margin-top: -11px;
+}
+
+.index_menu {
+    margin-top: 30px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.7);;
+}
+
+section.index_content .index_menu ul li {
+    float: left;
+    margin-left: 10px;
+}
+
+section.index_content .index_menu ul li a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+i.ib {
+    display: block;
+    margin: 12px auto 0;
+    background-image: url("images/icons-b.png");
+    background-repeat: no-repeat;
+    background-size: 185px;
+    vertical-align: middle;
+}
+
+i.i_man {
+    width: 39px;
+    height: 39px;
+    background-position: 0 0;
+}
+
+i.i_wx {
+    width: 46px;
+    height: 36px;
+    background-position: -43px 0;
+}
+
+i.i_money {
+    width: 29px;
+    height: 39px;
+    background-position: -97px 0;
+}
+
+i.i_book {
+    width: 39px;
+    height: 39px;
+    background-position: -128px 0;
+}
+
+section.index_content .index_menu ul {
+    width: 310px;
+    margin: 0 auto;
+    padding: 18px 0 0 10px;
+}
+
+section.index_content .index_menu ul li em {
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+
+footer.page_ft {
+    background-color: #6f6e6e;
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+    line-height: 18px;
+    width: 100%;
+    height: 36px;
+    margin-top: -46px;
+    /*position: relative;*/
+    clear: both;
+}
+
+footer.page_ft p {
+    color: #7d7d7d;
+}
+
+footer.page_ft a {
+    color: #fff;
+
+}
+</style>
+</head>
+<body>
+<div class="kanzhun">
+    <aside class="slide_menu">
+        <span class="logo"><img src="images/kanzhun.jpg" width="189"></span>
+        <a ka="home" href="/">首页</a>
+        <a ka="ugc" href="/uh/">我要点评<i class="i i_edit_g ml10"></i></a>
+        <a ka="content" href="/usercenter/content/">我发布的内容</a>
+        <a ka="resume" href="/resume/index/">我的简历</a>
+        <a ka="order" href="/usercenter/jobsearcher/index/">职位订阅</a>
+        <a ka="com" href="/company/focus/">我关注的公司</a>
+        <a ka="job" href="/usercenter/deliverjobs/">我的职位</a>
+        <a ka="feedback" href="/contact_us.html">意见反馈</a>
+        <a ka="login" href="/login/">登录 | 注册</a>
+    </aside>
+
+    <div id="container" class="ease">
+        <div class="wrapper">
+            <div class="content">
+                <header class="page_hd">
+                    <a class="menu">
+                        <img src="images/menu.jpg">
+                    </a>
+                    <strong>看准网</strong>
+                    <a class="fright" href="#">北京</a>
+                </header>
+                <section class="index_content">
+                    <h1>看准网</h1>
+
+                    <h2>m.kanzhun.com</h2>
+
+                    <div class="search">
+                        <form action="/gs.html" method="get" id="searchForm">
+                            <input type="text" name="q" placeholder="输入公司名称，搜索公司">
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+                    <div class="index_menu">
+                        <ul>
+                            <li><a href="#">
+                                <i class="ib i_man"></i>
+                            </a>
+                                <em>搜职位</em>
+                            </li>
+                            <li><a href="#">
+                                <i class="ib i_wx"></i>
+                            </a>
+                                <em>评公司</em>
+                            </li>
+                            <li><a href="#">
+                                <i class="ib i_money"></i>
+                            </a>
+                                <em>查工资</em>
+                            </li>
+                            <li><a href="#">
+                                <i class="ib i_book"></i>
+                            </a>
+                                <em>聊面试</em>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="page_ft">
+            <p><a href="#">电脑版</a> | <a href="#">移动版</a></p>
+
+            <p><a href="#">关于我们 </a> | <a href="#">帮助</a> | <a href="#">反馈</a> | <a href="#">登录</a> | <a href="#">注册</a>
+            </p>
+        </footer>
+    </div>
+</div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/slide-menu.js"></script>
+</body>
+</html>
