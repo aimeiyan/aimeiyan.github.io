@@ -1,139 +1,1441 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>用jquery仿京东商城导航菜单</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <style type="text/css">
-        html {
-            color: #666;
-            background: #FFF;
-        }
+    <meta charset="utf-8">
+    <title>京东menudropdown</title>
+    <link rel="stylesheet" type="text/css" href="jd_menubar.css">
 
-        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, i, fieldset, legend, input, textarea, p, blockquote, th, td {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font: 12px/1.3 arial, helvetica, clean, sans-serif, \5b8b\4f53;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-size: 100%;
-            font-weight: normal
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        img {
-            border: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #666;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #FF6600;
-        }
-
-        ul, li {
-            list-style-type: none;
-        }
-
-        q:before, q:after {
-            content: '';
-        }
-
-        sup {
-            vertical-align: text-top;
-        }
-
-        sub {
-            vertical-align: text-bottom;
-        }
-
-        /* All reset */
-        body {
-            margin: 100px;
-        }
-
-        ul li {
-            line-height: 30px;
-            border: 1px solid #E5D1A1;
-            text-align: center;
-            margin-top: -1px;
-            width: 200px;
-            background: #FFFDD2;
-            position: relative;
-            z-index: 1;
-        }
-
-        .tips {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border: 1px solid #E5D1A1;
-            background: #fff;
-            z-index: 2;
-            display: none;
-        }
-    </style>
 </head>
+<!--<script src="jquery-1.10.2.js" type="text/javascript"></script>-->
+<!--<script type="text/javascript" src="normal_method.js"></script>-->
 <body>
-<ul>
-    <li><a href="#">baidu</a></li>
-    <div class="tips">
-        <p><a href="http://www.baidu.com">baidu</a></p>
-    </div>
-    <li>goolge</li>
-    <div class="tips">
-        <p><a href="http://www.google.com">google</a></p>
-    </div>
-    <li>yahoo</li>
-    <div class="tips">
-        <p><a href="http://www.yahoo.com">yahoo</a></p>
-    </div>
-    <li>microsoft</li>
-    <div class="tips">
-        <p><a href="http://www.microsoft.com">microsoft</a></p>
-    </div>
-</ul>
+<div id="category">
+<div id="title"><span>全部商品分类</span></div>
+<div id="filter">
+<div id="allsort">
+    <ul class="dropdown-menu" role="menu">
+        <li data-submenu-id="submenu-ebook" class="item"><span
+                class="fore1"><a>图书</a>、<a>音像</a>、<a>数字商品</a></span><s></s></li>
+        <li data-submenu-id="submenu-home-electric" class="item"><span class="fore1"><a>家用电器</a></span><s></s></li>
+        <li data-submenu-id="submenu-telephone" class="item"><span class="fore1"><a>手机</a>、<a>数码</a></span><s></s></li>
+        <li data-submenu-id="submenu-computer" class="item"><span class="fore1"><a>电脑</a>、<a>办公</a></span><s></s></li>
+        <li data-submenu-id="submenu-kitchen" class="item"><span
+                class="fore1"><a>家居</a>、<a>家具</a>、<a>家装</a>、<a>厨具</a></span><s></s></li>
+        <li data-submenu-id="submenu-woman-cloth" class="item"><span class="fore1"><a>服饰内衣</a></span><s></s></li>
+        <li data-submenu-id="submenu-face-protect" class="item"><span class="fore1"><a>个护化妆</a></span><s></s></li>
+        <li data-submenu-id="submenu-woman-shoes" class="item"><span
+                class="fore1"><a>鞋靴</a>、<a>箱包</a>、<a>钟表</a>、<a>珠宝</a></span><s></s></li>
+        <li data-submenu-id="submenu-outer-cloth" class="item"><span class="fore1"><a>运动健康</a></span><s></s></li>
+        <li data-submenu-id="submenu-electrics" class="item"><span class="fore1"><a>汽车用品</a></span><s></s></li>
+        <li data-submenu-id="submenu-child-food" class="item"><span class="fore1"><a>母婴</a>、<a>玩具乐器</a></span><s></s>
+        </li>
+        <li data-submenu-id="submenu-food-paper" class="item"><span class="fore1"><a>食品饮料</a>、<a>保健食品</a></span><s></s>
+        </li>
+        <li data-submenu-id="submenu-caipiao" class="item"><span
+                class="fore1"><a>彩票</a>、<a>旅行</a>、<a>充值</a>、<a>票务</a></span><s></s></li>
+    </ul>
+</div>
+<div class="detail" id="submenu-ebook">
+    <dl>
+        <dt>电子书</dt>
+        <dd>
+            <em>免费 </em>
+            <em>小说 </em>
+            <em>励志与成功 </em>
+            <em>婚恋/两性 </em>
+            <em>文学 </em>
+            <em>经管 </em>
+            <em class="last">畅读VIP </em>
+        </dd>
+        <div style="clear: both"></div>
+    </dl>
+    <dl>
+        <dt>数字音乐</dt>
+        <dd>
+            <em>通俗流行 </em>
+            <em>古典音乐 </em>
+            <em>摇滚说唱 </em>
+            <em>爵士蓝调 </em>
+            <em>乡村民谣 </em>
+            <em class="last">有声读物 </em>
+
+        </dd>
+    </dl>
+    <dl>
+        <dt>音像</dt>
+        <dd>
+            <em>音乐</em>
+            <em>影视</em>
+            <em>教育</em>
+            <em>音像</em>
+            <em class="last">游戏</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>文艺</dt>
+        <dd>
+            <em>小说 </em>
+            <em>文学 </em>
+            <em>青春文学 </em>
+            <em>传记 </em>
+            <em class="last">艺术 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>人文社科</dt>
+        <dd>
+            <em>历史 </em>
+            <em>心理学 </em>
+            <em>政治/军事</em>
+            <em>国学/古籍</em>
+            <em>哲学/宗教</em>
+            <em class="last">社会科学 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>经管励志</dt>
+        <dd>
+            <em>经济 </em>
+            <em>金融与投资</em>
+            <em>管理 </em>
+            <em class="last">励志与成功</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>生活</dt>
+        <dd>
+            <em>家教与育儿</em>
+            <em>旅游/地图</em>
+            <em>烹饪/美食</em>
+            <em>时尚/美妆</em>
+            <em>家居 </em>
+            <em>婚恋与两性</em>
+            <em>娱乐/休闲</em>
+            <em>健身与保健</em>
+            <em>动漫/幽默</em>
+            <em class="last">体育/运动</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>科技</dt>
+        <dd>
+            <em>科普 </em>
+            <em>IT </em>
+            <em>建筑 </em>
+            <em>医学 </em>
+            <em>工业技术 </em>
+            <em>电子/通信</em>
+            <em>农林 </em>
+            <em class="last">科学与自然</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>少儿</dt>
+        <dd>
+            <em>少儿 </em>
+            <em>0-2岁 </em>
+            <em>3-6岁 </em>
+            <em>7-10岁</em>
+            <em class="last">11-14</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>教育</dt>
+        <dd>
+            <em>教材 </em>
+            <em>中小学教辅</em>
+            <em>考试 </em>
+            <em class="last">外语学习 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>其它</dt>
+        <dd>
+            <em>英文原版书</em>
+            <em>港台图书 </em>
+            <em>工具书 </em>
+            <em>套装书 </em>
+            <em class="last">杂志/期刊</em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-home-electric">
+    <dl>
+        <dt>大 家 电</dt>
+        <dd>
+            <em>平板电视 </em>
+            <em>空调 </em>
+            <em>冰箱 </em>
+            <em>洗衣机 </em>
+            <em>家庭影院 </em>
+            <em>DVD迷你音响 </em>
+            <em>烟机/灶具 </em>
+            <em>热水器 </em>
+            <em>消毒柜/洗碗机 </em>
+            <em>酒柜/冷柜 </em>
+            <em class="last">家电配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>生活电器</dt>
+        <dd>
+            <em>取暖电器 </em>
+            <em>加湿器 </em>
+            <em>净化器 </em>
+            <em>除湿/干衣机 </em>
+            <em>饮水机 </em>
+            <em>净水设备 </em>
+            <em>挂烫机/熨斗 </em>
+            <em>吸尘器 </em>
+            <em>电话机 </em>
+            <em>插座 </em>
+            <em>收录/音机 </em>
+            <em>清洁机 </em>
+            <em>电风扇 </em>
+            <em>冷风扇 </em>
+            <em class="last">其它生活电器 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>厨房电器</dt>
+        <dd>
+            <em>电压力锅 </em>
+            <em>电饭煲 </em>
+            <em>豆浆机 </em>
+            <em>面包机 </em>
+            <em>咖啡机 </em>
+            <em>微波炉 </em>
+            <em>料理/榨汁机 </em>
+            <em>电烤箱 </em>
+            <em>电磁炉 </em>
+            <em>电饼铛/烧烤盘 </em>
+            <em>煮蛋器 </em>
+            <em>酸奶机 </em>
+            <em>电水壶/热水瓶 </em>
+            <em>电炖锅 </em>
+            <em>多用途锅 </em>
+            <em>果蔬解毒机 </em>
+            <em class="last">其它厨房电器 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>个护健康</dt>
+        <dd>
+            <em>剃须刀 </em>
+            <em>剃/脱毛器 </em>
+            <em>口腔护理 </em>
+            <em>电吹风 </em>
+            <em>美容美发 </em>
+            <em>按摩器 </em>
+            <em>按摩椅 </em>
+            <em>足浴盆 </em>
+            <em>血压计 </em>
+            <em>健康秤/厨房秤 </em>
+            <em>血糖仪 </em>
+            <em>体温计 </em>
+            <em>计步器/脂肪检测仪 </em>
+            <em class="last">其它健康电器 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>五金家装</dt>
+        <dd>
+            <em>电动工具 </em>
+            <em>手动工具 </em>
+            <em>仪器仪表 </em>
+            <em>浴霸/排气扇 </em>
+            <em>灯具 </em>
+            <em>LED灯 </em>
+            <em>洁身器 </em>
+            <em>水槽 </em>
+            <em>龙头 </em>
+            <em>淋浴花洒 </em>
+            <em>厨卫五金 </em>
+            <em>家具五金 </em>
+            <em>门铃 </em>
+            <em>电气开关 </em>
+            <em>插座 </em>
+            <em>电工电料 </em>
+            <em>监控安防 </em>
+            <em class="last">电线/线缆 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-telephone">
+    <dl>
+        <dt>手机通讯</dt>
+        <dd><em>手机</em>
+            <em>对讲机</em></dd>
+    </dl>
+    <dl>
+        <dt> 运营商</dt>
+        <dd><em>购机送费</em>
+            <em>0元购机</em>
+            <em>选号入网</em></dd>
+    </dl>
+    <dl>
+        <dt> 手机配件</dt>
+        <dd><em>电池</em>
+            <em>蓝牙耳机</em>
+            <em> 充电器/数据线</em>
+            <em>手机耳机</em>
+            <em>贴膜</em>
+            <em>存储卡</em>
+            <em>保护套</em>
+            <em>车载</em>
+            <em>iPhone配件</em>
+            <em>创意配件</em>
+            <em>便携/无线音箱</em>
+            <em>手机饰品</em></dd>
+    </dl>
+    <dl>
+        <dt> 摄影摄像</dt>
+        <dd><em>数码相机</em>
+            <em>单电/微单相机</em>
+            <em>单反相机</em>
+            <em>摄像机</em>
+            <em>拍立得</em>
+            <em>镜头</em></dd>
+    </dl>
+    <dl>
+        <dt> 数码配件</dt>
+        <dd><em>存储卡</em>
+            <em>读卡器</em>
+            <em>滤镜</em>
+            <em> 闪光灯/手柄</em>
+            <em>相机包</em>
+            <em>三脚架/云台</em>
+            <em>相机清洁</em>
+            <em>相机贴膜</em>
+            <em> 机身附件</em>
+            <em>镜头附件</em>
+            <em>电池/充电器</em>
+            <em>移动电源</em></dd>
+    </dl>
+    <dl>
+        <dt>时尚影音</dt>
+        <dd><em>MP3/MP4</em>
+            <em>智能设备</em>
+            <em>耳机/耳麦</em>
+            <em>音箱</em>
+            <em>高清播放器</em>
+            <em>电子书</em>
+            <em>电子词典</em>
+            <em> MP3/MP4配件</em>
+            <em>录音笔</em>
+            <em>麦克风</em>
+            <em>专业音频</em>
+            <em>电子教育</em>
+            <em>数码相框</em>
+            <em>苹果配件</em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-computer">
+    <dl>
+        <dt> 电脑整机</dt>
+        <dd><em> 笔记本</em>
+            <em> 超极本</em>
+            <em> 游戏本</em>
+            <em> 平板电脑</em>
+            <em> 平板电脑配件</em>
+            <em> 台式机</em>
+            <em> 服务器</em>
+            <em> 笔记本配件</em></dd>
+    </dl>
+    <dl>
+        <dt> 电脑配件</dt>
+        <dd><em> CPU</em>
+            <em> 主板</em>
+            <em> 显卡</em>
+            <em> 硬盘</em>
+            <em> SSD固态硬盘</em>
+            <em> 内存</em>
+            <em> 机箱</em>
+            <em> 电源</em>
+            <em> 显示器</em>
+            <em> 刻录机/光驱</em>
+            <em> 声卡/扩展卡</em>
+            <em> 散热器</em>
+            <em> 装机配件</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 外设产品</dt>
+        <dd><em> 鼠标</em>
+            <em> 键盘</em>
+            <em> 游戏设备</em>
+            <em> U盘</em>
+            <em> 移动硬盘</em>
+            <em> 电视盒</em>
+            <em> 摄像头</em>
+            <em> 线缆</em>
+            <em> 鼠标垫</em>
+            <em> 手写板</em>
+            <em> 外置盒</em>
+            <em> 电脑工具</em>
+            <em> 电脑清洁</em>
+            <em> UPS</em>
+            <em> 插座</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 网络产品</dt>
+        <dd><em> 路由器</em>
+            <em> 网卡</em>
+            <em> 交换机</em>
+            <em> 网络存储</em>
+            <em> 3G上网</em>
+            <em> 网络盒子</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 办公打印</dt>
+        <dd><em> 打印机</em>
+            <em> 一体机</em>
+            <em> 投影机</em>
+            <em> 投影配件</em>
+            <em> 传真机</em>
+            <em> 复合机</em>
+            <em> 碎纸机</em>
+            <em> 扫描仪</em>
+            <em> 墨盒</em>
+            <em> 硒鼓</em>
+            <em> 墨粉</em>
+            <em> 色带</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 办公文仪</dt>
+        <dd><em> 办公文具</em>
+            <em> 文件管理</em>
+            <em> 笔类</em>
+            <em> 纸类</em>
+            <em> 本册/便签</em>
+            <em> 学生文具</em>
+            <em> 财务用品</em>
+            <em> 计算器</em>
+            <em> 激光笔</em>
+            <em> 白板/封装</em>
+            <em> 考勤机</em>
+            <em> 刻录碟片/附件</em>
+            <em> 点钞机</em>
+            <em> 支付设备/POS机</em>
+            <em> 安防监控</em>
+            <em> 呼叫/会议设备</em>
+            <em> 保险柜</em>
+            <em> 办公家具</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 服务产品</dt>
+        <dd><em> 上门服务</em>
+            <em> 远程服务</em>
+            <em> 电脑软件</em></dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-kitchen">
+    <dl>
+        <dt> 厨具</dt>
+        <dd><em> 烹饪锅具 </em>
+            <em> 刀剪菜板 </em>
+            <em> 保鲜器皿 </em>
+            <em> 水具酒具 </em>
+            <em> 餐具 </em>
+            <em> 茶具/咖啡具 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 宠物生活</dt>
+        <dd><em> 宠物主粮 </em>
+            <em> 宠物零食 </em>
+            <em> 营养品 </em>
+            <em> 家居日用 </em>
+            <em> 玩具服饰 </em>
+            <em> 出行装备 </em>
+            <em> 医护美容 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 家纺</dt>
+        <dd><em> 床品件套 </em>
+            <em> 被子 </em>
+            <em> 枕芯枕套 </em>
+            <em> 床单被罩 </em>
+            <em> 毛巾被/毯 </em>
+            <em> 床垫/床褥 </em>
+            <em> 蚊帐/凉席 </em>
+            <em> 抱枕坐垫 </em>
+            <em> 毛巾家纺 </em>
+            <em> 电热毯 </em>
+            <em> 窗帘/窗纱 </em>
+            <em> 酒店用品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 家具</dt>
+        <dd><em> 卧室家具 </em>
+            <em> 客厅家具 </em>
+            <em> 餐厅家具 </em>
+            <em> 书房家具 </em>
+            <em> 储物家具 </em>
+            <em> 阳台/户外 </em>
+            <em> 商业办公 </em>
+            <em> 床 </em>
+            <em> 床垫 </em>
+            <em> 精品沙发 </em>
+            <em> 电脑桌/托盘/椅 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 灯具</dt>
+        <dd><em> 台灯 </em>
+            <em> 节能灯 </em>
+            <em> 装饰灯 </em>
+            <em> 多用灯 </em>
+            <em> 手电 </em>
+            <em> LED灯 </em>
+            <em> 吸顶灯 </em>
+            <em> 五金电器 </em>
+            <em> 氛围照明 </em>
+            <em> 吊灯 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 生活日用</dt>
+        <dd><em> 收纳用品 </em>
+            <em> 雨伞雨具 </em>
+            <em> 浴室用品 </em>
+            <em> 缝纫用品 </em>
+            <em> 洗晒用品 </em>
+            <em> 净化除味 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 家装软饰</dt>
+        <dd><em> 桌布/罩件 </em>
+            <em> 地毯地垫 </em>
+            <em> 沙发垫套 </em>
+            <em> 相框/相片墙 </em>
+            <em> 墙画墙贴 </em>
+            <em> 节庆饰品 </em>
+            <em> 手工/十字绣 </em>
+            <em> 工艺摆件 </em>
+            <em> 其他 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 清洁用品</dt>
+        <dd><em> 纸品湿巾 </em>
+            <em> 衣物清洁 </em>
+            <em> 清洁工具 </em>
+            <em> 驱虫用品 </em>
+            <em> 居室清洁 </em>
+            <em> 皮具护理 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 家装建材</dt>
+        <dd><em> 灯饰照明 </em>
+            <em> 厨房卫浴 </em>
+            <em> 五金工具 </em>
+            <em> 电工电料 </em>
+            <em> 墙地面材料 </em>
+            <em> 装饰材料 </em>
+            <em> 装修服务 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-woman-cloth">
+    <dl>
+        <dt> 女装</dt>
+        <dd>
+            <em> 羽绒服 </em>
+            <em> 棉服 </em>
+            <em> 大衣 </em>
+            <em> 皮衣皮草 </em>
+            <em> 风衣 </em>
+            <em> 针织衫 </em>
+            <em> 卫衣 </em>
+            <em> 西服 </em>
+            <em> 短外套 </em>
+            <em> T恤 </em>
+            <em> 衬衫 </em>
+            <em> 雪纺衫 </em>
+            <em> 马甲 </em>
+            <em> 牛仔裤 </em>
+            <em> 打底裤 </em>
+            <em> 休闲裤 </em>
+            <em> 正装裤 </em>
+            <em> 连衣裙 </em>
+            <em> 半身裙 </em>
+            <em> 中老年装 </em>
+            <em> 大码装 </em>
+            <em> 婚纱礼服 </em>
+            <em> 孕妇装 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 男装</dt>
+        <dd><em> 羽绒服 </em>
+            <em> 棉服 </em>
+            <em> 皮衣 </em>
+            <em> 针织衫 </em>
+            <em> 羊绒衫 </em>
+            <em> 外套 </em>
+            <em> 风衣 </em>
+            <em> 大衣 </em>
+            <em> 夹克 </em>
+            <em> 西服 </em>
+            <em> 卫衣 </em>
+            <em> 衬衫 </em>
+            <em> T恤 </em>
+            <em> POLO衫 </em>
+            <em> 马甲/背心 </em>
+            <em> 牛仔裤 </em>
+            <em> 休闲裤 </em>
+            <em> 西裤 </em>
+            <em> 西服套装 </em>
+            <em> 大码装 </em>
+            <em> 中老年装 </em>
+            <em> 唐装 </em>
+            <em> 工装 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 内衣</dt>
+        <dd><em> 保暖内衣 </em>
+            <em> 家居 </em>
+            <em> 文胸 </em>
+            <em> 女式内裤 </em>
+            <em> 男式内裤 </em>
+            <em> 男袜 </em>
+            <em> 女袜 </em>
+            <em> 塑身衣 </em>
+            <em> 连裤袜 </em>
+            <em> 美腿袜 </em>
+            <em> 睡衣 </em>
+            <em> 睡袍/浴袍 </em>
+            <em> 抹胸 </em>
+            <em> 背心 </em>
+            <em> 泳衣 </em>
+            <em> 情趣内衣 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 运动</dt>
+        <dd><em> 休闲鞋 </em>
+            <em> 帆布鞋 </em>
+            <em> 跑步鞋 </em>
+            <em> 篮球鞋 </em>
+            <em> 足球鞋 </em>
+            <em> 训练鞋 </em>
+            <em> 乒羽鞋 </em>
+            <em> 拖鞋 </em>
+            <em> 卫衣 </em>
+            <em> 夹克 </em>
+            <em> T恤 </em>
+            <em> 棉服/羽绒服 </em>
+            <em> 运动裤 </em>
+            <em> 套装 </em>
+            <em> 运动包 </em>
+            <em> 运动配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 配饰</dt>
+        <dd><em> 太阳镜 </em>
+            <em> 框镜 </em>
+            <em> 皮带 </em>
+            <em> 围巾 </em>
+            <em> 手套 </em>
+            <em> 帽子 </em>
+            <em> 领带 </em>
+            <em> 袖扣 </em>
+            <em> 其他配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 童装</dt>
+        <dd><em> 套装 </em>
+            <em> 上衣 </em>
+            <em> 裤子 </em>
+            <em> 裙子 </em>
+            <em> 内衣/家居服 </em>
+            <em> 羽绒服/棉服 </em>
+            <em> 亲子装 </em>
+            <em> 儿童配饰 </em>
+            <em> 礼服/演出服 </em>
+            <em> 运动鞋 </em>
+            <em> 单鞋 </em>
+            <em> 靴子 </em>
+            <em> 凉鞋 </em>
+            <em> 功能鞋 </em></dd>
+    </dl>
+
+</div>
+<div class="detail" id="submenu-face-protect">
+    <dl>
+        <dt> 面部护理</dt>
+        <dd><em> 洁面乳 </em>
+            <em> 爽肤水 </em>
+            <em> 精华露 </em>
+            <em> 乳液面霜 </em>
+            <em> 面膜面贴 </em>
+            <em> 眼部护理 </em><em>
+                颈部护理 </em>
+            <em> T区护理 </em>
+            <em> 护肤套装 </em>
+            <em> 防晒隔离 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 身体护理</dt>
+        <dd><em> 洗发护发 </em>
+            <em> 染发/造型 </em>
+            <em> 沐浴 </em>
+            <em> 磨砂/浴盐 </em>
+            <em> 身体乳 </em>
+            <em> 手工/香皂 </em>
+            <em> 香薰精油 </em>
+            <em> 纤体瘦身 </em>
+            <em> 脱毛膏 </em>
+            <em> 手足护理 </em>
+            <em> 洗护套装 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 口腔护理</dt>
+        <dd><em> 牙膏/牙粉 </em>
+            <em> 牙刷/牙线 </em>
+            <em> 漱口水 </em></dd>
+    </dl>
+    <dl>
+        <dt> 女性护理</dt>
+        <dd><em> 卫生巾 </em>
+            <em> 卫生护垫 </em>
+            <em> 洗液 </em>
+            <em> 美容食品 </em>
+            <em> 其它 </em></dd>
+    </dl>
+    <dl>
+        <dt> 男士护理</dt>
+        <dd><em> 脸部 </em>
+            <em> 眼部 </em>
+            <em> 身体护理 </em>
+            <em> 男士香水 </em>
+            <em> 剃须 </em>
+            <em> 防脱洗护 </em>
+            <em> 唇膏 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 魅力彩妆</dt>
+        <dd><em> 粉底/遮瑕 </em>
+            <em> 腮红 </em>
+            <em> 眼影/眼线 </em>
+            <em> 眉笔 </em>
+            <em> 睫毛膏 </em>
+            <em> 唇膏唇彩 </em>
+            <em> 彩妆组合 </em>
+            <em> 卸妆 </em>
+            <em> 美甲 </em>
+            <em> 彩妆工具 </em>
+            <em> 假发 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 香水SPA</dt>
+        <dd><em> 女士香水 </em>
+            <em> 男士香水 </em>
+            <em> 组合套装 </em>
+            <em> 迷你香水 </em>
+            <em> 香体走珠 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-woman-shoes">
+    <dl>
+        <dt> 时尚女鞋</dt>
+        <dd><em> 平底鞋 </em>
+            <em> 高跟鞋 </em>
+            <em> 单鞋 </em>
+            <em> 休闲鞋 </em>
+            <em> 凉鞋 </em>
+            <em> 女靴 </em>
+            <em> 雪地靴 </em>
+            <em> 拖鞋 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 流行男鞋</dt>
+        <dd><em> 商务休闲鞋 </em>
+            <em> 正装鞋 </em>
+            <em> 休闲鞋 </em>
+            <em> 凉鞋/沙滩鞋 </em>
+            <em> 男靴 </em>
+            <em> 功能鞋 </em>
+            <em> 拖鞋 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 潮流女包</dt>
+        <dd><em> 钱包/卡包 </em>
+            <em> 手拿包 </em>
+            <em> 单肩包 </em>
+            <em> 双肩包 </em>
+            <em> 手提包 </em>
+            <em> 斜挎包 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 时尚男包</dt>
+        <dd><em> 钱包/卡包 </em>
+            <em> 男士手包 </em>
+            <em> 腰带/礼盒 </em>
+            <em> 商务公文包 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 功能箱包</dt>
+        <dd><em> 电脑数码包 </em>
+            <em> 拉杆箱 </em>
+            <em> 旅行包 </em>
+            <em> 旅行配件 </em>
+            <em> 休闲运动包 </em>
+            <em> 登山包 </em>
+            <em> 妈咪包 </em>
+            <em> 书包 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 礼品</dt>
+        <dd><em> 火机烟具 </em>
+            <em> 礼品文具 </em>
+            <em> 瑞士军刀 </em>
+            <em> 收藏品 </em>
+            <em> 工艺礼品 </em>
+            <em> 创意礼品 </em>
+            <em> 礼卡礼券 </em>
+            <em> 鲜花速递 </em>
+            <em> 婚庆用品 </em>
+            <em> 京东礼品卡 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 奢侈品</dt>
+        <dd><em> GUCCI </em>
+            <em> PRADA </em>
+            <em> FENDI </em>
+            <em> BURBERRY </em>
+            <em> MONTBLANC </em>
+            <em> ARMANI </em>
+            <em> COACH </em>
+            <em> RIMOWA </em>
+            <em> RAY-BAN </em>
+            <em> 更多品牌 </em>
+            <em> 奢侈品箱包 </em>
+            <em> 钱包 </em>
+            <em> 服饰 </em>
+            <em> 腰带 </em>
+            <em> 太阳镜眼镜 </em>
+            <em> 配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 钟表</dt>
+        <dd><em> 瑞士品牌 </em>
+            <em> 国产品牌 </em>
+            <em> 日本品牌 </em>
+            <em> 时尚品牌 </em>
+            <em> 闹钟挂钟 </em>
+            <em> 儿童手表 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 珠宝首饰</dt>
+        <dd><em> 纯金K金饰品 </em>
+            <em> 金银投资 </em>
+            <em> 银饰 </em>
+            <em> 钻石饰品 </em>
+            <em> 翡翠玉石 </em>
+            <em> 水晶玛瑙 </em>
+            <em> 宝石珍珠 </em>
+            <em> 时尚饰品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 婚庆</dt>
+        <dd><em> 婚嫁首饰 </em>
+            <em> 婚纱摄影 </em>
+            <em> 婚纱礼服 </em>
+            <em> 婚庆服务 </em>
+            <em> 婚庆礼品/用品 </em>
+            <em> 婚宴 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-outer-cloth">
+    <dl>
+        <dt> 户外鞋服</dt>
+        <dd><em> 户外服装 </em>
+            <em> 户外鞋袜 </em>
+            <em> 户外配饰 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 户外装备</dt>
+        <dd><em> 帐篷 </em>
+            <em> 睡袋 </em>
+            <em> 登山攀岩 </em>
+            <em> 户外背包 </em>
+            <em> 户外照明 </em>
+            <em> 户外垫子 </em>
+            <em> 户外仪表 </em>
+            <em> 户外工具 </em>
+            <em> 望远镜 </em>
+            <em> 垂钓用品 </em>
+            <em> 旅游用品 </em>
+            <em> 便携桌椅床 </em>
+            <em> 烧烤用品 </em>
+            <em> 野餐炊具 </em>
+            <em> 军迷用品 </em>
+            <em> 游泳用具 </em>
+            <em> 泳衣 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 运动器械</dt>
+        <dd><em> 健身器械 </em>
+            <em> 运动器材 </em>
+            <em> 防护器具 </em>
+            <em> 骑行运动 </em>
+            <em> 极限轮滑 </em>
+            <em> 武术搏击 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 纤体瑜伽</dt>
+        <dd><em> 瑜伽垫 </em>
+            <em> 瑜伽服 </em>
+            <em> 瑜伽配件 </em>
+            <em> 瑜伽套装 </em>
+            <em> 舞蹈鞋服 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 体育娱乐</dt>
+        <dd><em> 羽毛球 </em>
+            <em> 乒乓球 </em>
+            <em> 篮球 </em>
+            <em> 足球 </em>
+            <em> 网球 </em>
+            <em> 排球 </em>
+            <em> 高尔夫球 </em>
+            <em> 棋牌麻将 </em>
+            <em> 其他 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 成人用品</dt>
+        <dd><em> 安全避孕 </em>
+            <em> 验孕测孕 </em>
+            <em> 人体润滑 </em>
+            <em> 情爱玩具 </em>
+            <em> 情趣内衣 </em>
+            <em> 组合套装 </em></dd>
+    </dl>
+    <dl>
+        <dt> 保健器械</dt>
+        <dd><em> 养生器械 </em>
+            <em> 保健用品 </em>
+            <em> 康复辅助 </em>
+            <em> 家庭护理 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 急救卫生</dt>
+        <dd><em> 跌打损伤 </em>
+            <em> 烫伤止痒 </em>
+            <em> 防裂抗冻 </em>
+            <em> 口腔咽部 </em>
+            <em> 眼部保健 </em>
+            <em> 鼻炎健康 </em>
+            <em> 风湿骨痛 </em>
+            <em> 生殖泌尿 </em>
+            <em> 美体塑身 </em></dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-electrics">
+    <dl>
+        <dt> 电子电器</dt>
+        <dd><em> 便携式GPS导航 </em>
+            <em> 嵌入式导航 </em>
+            <em> 安全预警仪 </em>
+            <em> 行车记录仪 </em>
+            <em> 跟踪防盗器 </em>
+            <em> 倒车雷达 </em>
+            <em> 车载电源 </em>
+            <em> 车载蓝牙 </em>
+            <em> 车载影音 </em>
+            <em> 车载净化器 </em>
+            <em> 车载冰箱 </em>
+            <em> 车载吸尘器 </em>
+            <em> 充气泵 </em>
+            <em> 胎压监测 </em>
+            <em> 车载生活电器 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 系统养护</dt>
+        <dd><em> 机油 </em>
+            <em> 添加剂 </em>
+            <em> 防冻冷却液 </em>
+            <em> 附属油 </em>
+            <em> 底盘装甲 </em>
+            <em> 空调清洗剂 </em>
+            <em> 金属养护 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 改装配件</dt>
+        <dd><em> 雨刷 </em>
+            <em> 车灯 </em>
+            <em> 轮胎 </em>
+            <em> 贴膜 </em>
+            <em> 装饰贴 </em>
+            <em> 后视镜 </em>
+            <em> 机油滤 </em>
+            <em> 空气滤 </em>
+            <em> 空调滤 </em>
+            <em> 燃油滤 </em>
+            <em> 火花塞 </em>
+            <em> 喇叭 </em>
+            <em> 刹车片 </em>
+            <em> 刹车盘 </em>
+            <em> 减震器 </em>
+            <em> 车身装饰 </em>
+            <em> 尾喉/排气管 </em>
+            <em> 踏板 </em>
+            <em> 蓄电池 </em>
+            <em> 其他配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 汽车美容</dt>
+        <dd><em> 漆面美容 </em>
+            <em> 漆面修复 </em>
+            <em> 内饰清洁 </em>
+            <em> 玻璃美容 </em>
+            <em> 补漆笔 </em>
+            <em> 轮胎轮毂清洗 </em>
+            <em> 洗车器 </em>
+            <em> 洗车水枪 </em>
+            <em> 洗车配件 </em>
+            <em> 洗车液 </em>
+            <em> 车掸 </em>
+            <em> 擦车巾/海绵 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 座垫脚垫</dt>
+        <dd><em> 凉垫 </em>
+            <em> 四季垫 </em>
+            <em> 毛垫 </em>
+            <em> 专车专用座垫 </em>
+            <em> 专车专用座套 </em>
+            <em> 通用座套 </em>
+            <em> 多功能垫 </em>
+            <em> 专车专用脚垫 </em>
+            <em> 通用脚垫 </em>
+            <em> 后备箱垫 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 内饰精品</dt>
+        <dd><em> 车用香水 </em>
+            <em> 车用炭包 </em>
+            <em> 空气净化 </em>
+            <em> 颈枕/头枕 </em>
+            <em> 抱枕/腰靠 </em>
+            <em> 方向盘套 </em>
+            <em> 挂件 </em>
+            <em> 摆件 </em>
+            <em> 布艺软饰 </em>
+            <em> 功能用品 </em>
+            <em> 整理收纳 </em>
+            <em> CD夹 </em></dd>
+    </dl>
+    <dl>
+        <dt> 安全自驾</dt>
+        <dd><em> 儿童安全座椅 </em>
+            <em> 应急救援 </em>
+            <em> 汽修工具 </em>
+            <em> 自驾野营 </em>
+            <em> 自驾照明 </em>
+            <em> 保温箱 </em>
+            <em> 置物箱 </em>
+            <em> 车衣 </em>
+            <em> 遮阳挡雪挡 </em>
+            <em> 车锁地锁 </em>
+            <em> 摩托车装备 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-child-food">
+    <dl>
+        <dt> 奶粉</dt>
+        <dd><em> 品牌奶粉 </em>
+            <em> 特殊配方 </em>
+            <em> 妈妈奶粉 </em>
+            <em> 1段奶粉 </em>
+            <em> 2段奶粉 </em>
+            <em> 3段奶粉 </em>
+            <em> 4段奶粉 </em>
+            <em> 羊奶粉 </em>
+            <em> 成人奶粉 </em></dd>
+    </dl>
+    <dl>
+        <dt> 营养辅食</dt>
+        <dd><em> 婴幼营养 </em>
+            <em> 初乳 </em>
+            <em> 米粉/菜粉 </em>
+            <em> 果泥/果汁 </em>
+            <em> 肉松/饼干 </em>
+            <em> 辅食 </em>
+            <em> 面条/粥 </em>
+            <em> 孕期营养 </em>
+            <em> 清火/开胃 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 尿裤湿巾</dt>
+        <dd><em> 品牌尿裤 </em>
+            <em> 新生儿 </em>
+            <em> S号 </em>
+            <em> M号 </em>
+            <em> L号 </em>
+            <em> XL/XXL号 </em>
+            <em> 裤型尿裤 </em>
+            <em> 湿巾 </em>
+            <em> 尿布/尿垫 </em>
+            <em> 成人尿裤 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 洗护用品</dt>
+        <dd><em> 宝宝护肤 </em>
+            <em> 护理用品 </em>
+            <em> 洗发沐浴 </em>
+            <em> 清洁用品 </em>
+            <em> 洗浴用品 </em>
+            <em> 妈妈护肤 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 童车童床</dt>
+        <dd><em> 婴儿推车 </em>
+            <em> 安全座椅 </em>
+            <em> 餐椅摇椅 </em>
+            <em> 婴儿床 </em>
+            <em> 自行车 </em>
+            <em> 学步车 </em>
+            <em> 三轮车 </em>
+            <em> 电动车 </em>
+            <em> 健身车 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 喂养用品</dt>
+        <dd><em> 奶瓶 </em>
+            <em> 奶嘴 </em>
+            <em> 吸奶器 </em>
+            <em> 暖奶/消毒 </em>
+            <em> 餐具 </em>
+            <em> 水具 </em>
+            <em> 牙胶/安抚 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 服饰寝居</dt>
+        <dd><em> 婴儿外出服 </em>
+            <em> . 婴儿内衣 </em>
+            <em> . 婴儿礼盒 </em>
+            <em> 婴儿鞋帽袜 </em>
+            <em> 家居床品 </em>
+            <em> 安全防护 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 妈妈专区</dt>
+        <dd><em> 包/背婴带 </em>
+            <em> 妈妈护理 </em>
+            <em> 产后塑身 </em>
+            <em> 孕妇内衣 </em>
+            <em> 防辐射服 </em>
+            <em> 孕妇装 </em>
+            <em> 孕妇食品 </em>
+            <em> 妈妈美容 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 玩具乐器</dt>
+        <dd><em> 适用年龄 </em>
+            <em> 遥控/电动 </em>
+            <em> 毛绒布艺 </em>
+            <em> 娃娃玩具 </em>
+            <em> 模型玩具 </em>
+            <em> 健身玩具 </em>
+            <em> 动漫玩具 </em>
+            <em> 益智玩具 </em>
+            <em> 积木拼插 </em>
+            <em> DIY玩具 </em>
+            <em> 创意减压 </em>
+            <em> 乐器相关 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-food-paper">
+    <dl>
+        <dt>食尚礼券</dt>
+        <dd><em> 大闸蟹 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 进口食品</dt>
+        <dd><em> 饼干蛋糕 </em>
+            <em> 糖果巧克力 </em>
+            <em> 休闲零食 </em>
+            <em> 冲调饮品 </em>
+            <em> 粮油调味 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 地方特产</dt>
+        <dd><em> 华北 </em>
+            <em> 西北 </em>
+            <em> 西南 </em>
+            <em> 东北 </em>
+            <em> 华南 </em>
+            <em> 华东 </em>
+            <em> 华中 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 休闲食品</dt>
+        <dd><em> 休闲零食 </em>
+            <em> 坚果炒货 </em>
+            <em> 肉干肉松 </em>
+            <em> 蜜饯果脯 </em>
+            <em> 糖果/巧克力 </em>
+            <em> 饼干蛋糕 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 粮油调味</dt>
+        <dd><em> 米面杂粮 </em>
+            <em> 食用油 </em>
+            <em> 调味品 </em>
+            <em> 南北干货 </em>
+            <em> 方便食品 </em>
+            <em> 有机食品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 酒饮冲调</dt>
+        <dd><em> 白酒/黄酒 </em>
+            <em> 葡萄酒 </em>
+            <em> 洋酒 </em>
+            <em> 啤酒 </em>
+            <em> 饮料 </em>
+            <em> 冲调 </em>
+            <em> 咖啡/奶茶 </em>
+            <em> 茗茶 </em>
+            <em> 牛奶 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 营养健康</dt>
+        <dd><em> 基础营养 </em>
+            <em> 美体养颜 </em>
+            <em> 滋补调养 </em>
+            <em> 骨骼健康 </em>
+            <em> 保健茶饮 </em>
+            <em> 成分保健 </em>
+            <em> 无糖食品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 亚健康</dt>
+        <dd><em> 调节三高 </em>
+            <em> 心脑养护 </em>
+            <em> 改善睡眠 </em>
+            <em> 肝肾养护 </em>
+            <em> 免疫调节 </em>
+            <em> 更多调理 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 健康礼品</dt>
+        <dd><em> 参茸礼品 </em>
+            <em> 更多礼品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 生鲜食品</dt>
+        <dd><em> 水果 </em>
+            <em> 蔬菜 </em>
+            <em> 海鲜水产 </em>
+            <em> 禽蛋 </em>
+            <em> 鲜肉 </em>
+            <em> 加工类肉食 </em>
+            <em> 冻品 </em>
+            <em> 半成品 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-caipiao">
+    <dl>
+        <dt> 彩票</dt>
+        <dd><em>双色球 </em>
+            <em> &nbsp;&nbsp;11选5&nbsp;&nbsp; </em>
+            <em>竞彩足球 </em>
+            <em>北单 </em>
+            <em>七乐彩 </em>
+            <em>福彩3D </em>
+            <em>快3 </em>
+            <em>大乐透 </em>
+            <em>新时时彩 </em>
+            <em>竞彩篮球 </em>
+            <em>足彩 </em>
+            <em>七星彩 </em>
+            <em>排列三 </em>
+            <em>更多 </em></dd>
+    </dl>
+    <dl>
+        <dt> 机票</dt>
+        <dd><em>国内机票</em>
+            <em>国际机票</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 酒店</dt>
+        <dd><em>国内酒店</em>
+            <em>酒店团购</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 旅行</dt>
+        <dd><em>度假</em>
+            <em>景点</em>
+            <em>租车</em>
+            <em>旅游团购</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>充值</dt>
+        <dd><em>手机充值</em></dd>
+    </dl>
+    <dl>
+        <dt> 游戏</dt>
+        <dd><em>游戏点卡 </em>
+            <em>QQ充值 </em>
+            <em>网页游戏 </em>
+            <em>游戏周边 </em></dd>
+    </dl>
+    <dl>
+        <dt> 票务</dt>
+        <dd><em>电影票 </em>
+            <em>演唱会 </em>
+            <em>话剧歌剧 </em>
+            <em>音乐会 </em>
+            <em>体育赛事 </em>
+            <em>舞蹈芭蕾 </em>
+            <em>戏曲综艺 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 应用商店</dt>
+        <dd><em>移动游戏 </em>
+            <em>移动软件 </em>
+            <em>网页应用 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 保险</dt>
+        <dd><em>汽车保险 </em>
+            <em>意外保险 </em>
+            <em>健康医疗 </em>
+            <em>少儿女性 </em>
+        </dd>
+    </dl>
+</div>
+<div style="clear: both"></div>
+</div>
+</div>
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript" src="jquery.menu-aim.js"></script>
 <script type="text/javascript">
     $(function () {
-
-        $("ul li").each(function (index) {
-            $(this).mouseover(function () {
-                var obj = $(this).offset();
-                var xobj = obj.left + 190 + "px";
-                var yobj = obj.top - 50 + "px";
-                $(this).css({"width": "190px", "z-index": "9999", "border-right": "none", "background": "#fff"});
-                $("ul > div:eq(" + index + ")").css({"left": xobj, "top": yobj}).show();
-            }).mouseout(function () {
-                $("ul > .tips").hide();
-                $(this).css({"width": "200px", "z-index": "1", "border": "1px solid #E5D1A1", "background": "#FFFDD2"})
-            })
-
-
+        $(".dropdown-menu").menuAim({
+            exitMenu: deactivateSubmenu,
+            enter: activateSubmenu,
+            activate: activateSubmenu,
+            deactivate: deactivateSubmenu
         });
-        $("div").each(function () {
-            $(this).mo0useover(function () {
-                $(this).prev("li").css({"width": "190px", "z-index": "9999", "border-right": "none", "background": "#fff"});
-                $(this).show();
-            }).mouseout(function () {
-                $(this).hide();
-                $(this).prev("li").css({"width": "200px", "z-index": "1", "border": "1px solid #E5D1A1", "background": "#FFFDD2"});
-            })
+    });
+    var $menu = $(".dropdown-menu");
+    function activateSubmenu(row) {
+        var $row = $(row),
+                submenuId = $row.data("submenuId"),
+                $submenu = $("#" + submenuId),
+                offset = $menu.offset(),
+                height = $menu.outerHeight(),
+                width = $menu.outerWidth();
+        $submenu.css({
+            display: "block",
+            top: offset.top,
+            left: offset.left + width - 5,  // main should overlay submenu
+            height: height - 8  // padding for main dropdown's arrow
+        });
+        $row.find("span").addClass("maintainHover");
+    }
+    function deactivateSubmenu(row) {
+//        console.log('--------------------')
+        var $row = $(row),
+                submenuId = $row.data("submenuId"),
+                $submenu = $("#" + submenuId);
+        $submenu.css("display", "none");
+        $row.find("span").removeClass("maintainHover");
+    }
+    $(document).click(function () {
+        $(".detail").css("display", "none");
+        $("li.item>span").removeClass("maintainHover");
+    });
 
-        })
-    })
+    (function () {
+//        return;
+        var leave = false;
+        $('#filter').hover(function () { // over
+            leave = false;
+        }, function () { // out
+            console.log('leaving---------------------');
+            leave = true;
+            window.setTimeout(function () {
+                if (leave == true) {
+                    $(".detail").css("display", "none");
+                    $("li.item>span").removeClass("maintainHover");
+                }
+            }, 50);
+        });
+    })();
 </script>
 </body>
+
 </html>
+
+
+
+
+
+
