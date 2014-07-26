@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>幻灯片效果</title>
+<style type="text/css">
+    html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, pre, form, p, blockquote, input, textarea, abbr, article, aside, figcaption, figure, footer, header, mark, meter, menu, nav, output, progress, section, summary, time {
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+    }
+
+    body {
+        font: normal 14px/1.5 Arial, Helvetica, "Microsoft YaHei", STHeiti, "Droid Sans Fallback", sans-serif;
+        color: #343434;
+        width: 600px;
+        margin: 50px auto;
+    }
+
+    iframe, a, img, button {
+        border: 0;
+    }
+
+    article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+        display: block;
+    }
+
+    a {
+        color: #343434;
+    }
+
+    a, a:hover {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    em, i, s {
+        font-style: normal;
+    }
+
+    input[type=submit], input[type=button], input[type=text], textarea, button, select {
+        font-size: 1em;
+        outline: none;
+        -webkit-appearance: none;
+    }
+
+    .control {
+        height: 36px;
+        background: url("img/btn_cartoon.gif") no-repeat 0 0;
+
+    }
+
+    .control h1 {
+        float: left;
+        width: 100px;
+        height: 36px;
+        text-indent: -9999px;
+        background-image: url("img/btn_cartoon.gif");
+        background-repeat: no-repeat;
+        background-position: 0 -100px;
+    }
+
+    .control > div {
+        float: left;
+    }
+
+    .control > a {
+        float: right;
+    }
+
+    .control-tip {
+        padding: 14px 0;
+    }
+
+    .control-tip span {
+        /*height: 36px;*/
+        /*line-height: 36px;*/
+        display: block;
+        float: left;
+        width: 7px;
+        height: 7px;
+        overflow: hidden;
+        /*border: 1px solid red;*/
+        background: url("img/btn_cartoon.gif") no-repeat 0 -320px;
+        text-indent: -999px;
+        margin-right: 5px;
+    }
+
+    .page {
+        padding: 6px 0;
+
+    }
+
+    .page span {
+        cursor: pointer;
+        display: block;
+        text-indent: -999px;
+        float: left;
+        width: 31px;
+        height: 25px;
+        background-image: url("img/btn_cartoon.gif");
+    }
+
+    .page span.prev {
+        background-position: 0 -400px;
+    }
+
+    .page span.next {
+        background-position: -31px -400px;
+    }
+
+    .content {
+        width: 592px;
+        height: 161px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #E7E7E7;
+        border-top: 0;
+    }
+
+    .content-list {
+        position: absolute;
+        /*width: 25000px;*/
+    }
+
+    .content li {
+        float: left;
+        margin: 10px;
+        padding: 8px 0;
+    }
+
+    .more {
+        height: 36px;
+        line-height: 36px;
+        padding-right: 20px;
+    }
+
+    div.control-tip span.current {
+        background: url("img/btn_cartoon.gif") no-repeat 0 -220px;
+    }
+
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var page = 1;
+        var i = 4;
+        var move = $(".content").width();
+        var len = $("li").length;
+        var pCount = Math.ceil(len / i);
+        var flag = false;
+
+        $("span.next").click(function () {
+
+            if (!$(".content-list").is(":animated")) {
+                if (page == pCount) {
+                    $(".content-list li:not(last)").remove().appendTo($(".content-list ul"));
+                    $(".content-list").animate({left: 0});
+                    page = 1;
+                } else {
+                    $(".content-list").animate({left: "-=" + move});
+                    page++;
+                }
+            }
+            $(".control-tip span").eq(page - 1).addClass("current").siblings().removeClass("current");
+        });
+        $("span.prev").click(function () {
+            if (page == 1) {
+                $(".content-list").animate({left: "-=" + (pCount - 1) * move});
+                page = pCount;
+            } else {
+                $(".content-list").animate({left: "+=" + move});
+                page--;
+            }
+            $(".control-tip span").eq(page - 1).addClass("current").siblings().removeClass("current");
+
+        });
+//
+        $("li").hover(function () {
+            flag = true;
+            console.log(flag, 'flag----');
+        }, function () {
+            flag = false;
+        });
+        console.log(flag, 'flag1111111111');
+//            console.log(flag,'flag');
+//        setInterval(function () {
+//            if (!flag) {
+//                if (page == pCount) {
+//                    $(".content-list").animate({left: 0});
+//                    page = 1;
+//                } else {
+//                    $(".content-list").animate({left: "-=" + move});
+//                    page++;
+//                }
+//                $(".control-tip span").eq(page - 1).addClass("current").siblings().removeClass("current");
+//            }
+//
+//        },8000);
+
+        $(".control-tip span").hover(function () {
+            console.log($(this).index());
+            var idx = $(this).index();
+
+//            $(".content-list").css({left: 0});
+
+            $(".content-list").css({left: -idx * move, opacity: 0}).animate({opacity: 1},1000);
+
+            $(".control-tip span").eq(idx).addClass("current").siblings().removeClass("current");
+        })
+    })
+</script>
+</head>
+<body>
+<div id="slider">
+    <div class="control">
+        <h1>卡通动漫</h1>
+
+        <div class="control-tip">
+            <span class="current">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+        </div>
+        <div class="page">
+            <span class="prev">上一页</span>
+            <span class="next">下一页</span>
+        </div>
+        <a class="more">更多</a>
+    </div>
+    <div class="content">
+        <div class="content-list">
+            <ul>
+                <li>
+                    <img src="img/01.jpg">
+
+                    <p>海贼王</p>
+
+                    <p>播放数：<em>28,276</em></p>
+                </li>
+                <li>
+                    <img src="img/01.jpg">
+
+                    <p>海贼王</p>
+
+                    <p>播放数：<em>28,276</em></p>
+                </li>
+                <li>
+                    <img src="img/01.jpg">
+
+                    <p>海贼王</p>
+
+                    <p>播放数：<em>28,276</em></p>
+                </li>
+                <li>
+                    <img src="img/01.jpg">
+
+                    <p>海贼王</p>
+
+                    <p>播放数：<em>28,276</em></p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

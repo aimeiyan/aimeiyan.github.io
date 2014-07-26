@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="images/jd.jpg">
+<title>京东网上商城-综合网购首选（JD.COM）-正品低价、品质保障、货到付款、配送及时、放心服务、轻松购物！</title>
+<style type="text/css">
+body {
+    margin: 0;
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #222;
+    background: #fff;
+}
+
+    /*------------------------------------------the webpage head*/
+#the_first {
+    padding: 0;
+    border-bottom: 1px solid red;
+    background: rgba(195, 195, 195, 0.37);
+    /*overflow: auto;*/
+    /*min-width: 800px;*/
+}
+
+#shortcut {
+    margin: 0 auto;
+    width: 1100px;
+}
+
+#shortcut .head_left {
+    list-style: none;
+    float: left;
+    margin-left: 30px;
+}
+
+#shortcut .head_left li {
+    position: relative;
+}
+
+#shortcut .head_left li b {
+    top: 3px;
+    left: -15px;
+    width: 13px;
+    height: 13px;
+    background: url("images/star.png") no-repeat;
+    position: absolute;
+}
+
+#shortcut .head_right {
+    float: right;
+    width: 550px;
+    margin-right: 30px;
+    margin-left: -650px;
+}
+
+#shortcut .head_right li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 11px 0 10px;
+    border-right: 1px solid rgba(87, 87, 87, 0.61);
+}
+
+#shortcut .head_right .last {
+    border-right: 0;
+}
+
+#shortcut a {
+    text-decoration: none;
+    color: #222;
+}
+
+    /*<!------------------------------the logo row content-->*/
+
+#the-second {
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+}
+
+#logo img {
+    display: inline-block;
+}
+
+.dog img {
+    position: relative;
+}
+
+.wine img {
+    top: 0;
+    left: 170px;
+    position: absolute;
+}
+
+#search {
+    margin: 0 auto;
+    width: 400px;
+
+}
+
+#logo {
+    float: left;
+}
+
+#hotwords {
+    font-size: smaller;
+}
+
+#hotwords ul {
+    /*list-style: none;*/
+    padding: 0;
+}
+
+#hotwords ul li {
+    display: inline-block;
+    /*text-decoration: none;*/
+}
+
+#hotwords a {
+    text-decoration: none;
+}
+
+form {
+    display: block;
+    width: 350px;
+    background: red;
+}
+
+form .text {
+    margin: 0;
+    width: 270px;
+}
+
+form .find {
+    color: #ffffff;
+    font-size: large;
+    font-weight: bold;
+    background: red;
+    padding: 0 13px;
+    border: 0;
+    /*margin: 0 auto;*/
+}
+
+#my_360buy {
+    float: right;
+
+}
+
+#my_360buy a {
+    display: inline-block;
+    background: rgba(195, 195, 195, 0.37);
+    padding: 10px 15px 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+    /*<!------------------------------the select row content-->*/
+#the_third {
+    margin: 0px auto;
+    padding-top: 5px;
+    width: 1000px;
+}
+
+#classification_of_goods {
+    background: rgba(195, 195, 195, 0.37);
+    float: left;
+    border: 1px solid red;
+    padding-right: 0;
+}
+
+#classification_of_goods h4 {
+    display: block;
+    background: red;
+    margin: 0;
+    padding: 12px 20px 11px 15px;
+    color: #ffffff;
+
+}
+
+#classification_of_goods ul {
+    margin: 5px;
+    padding: 0 30px 0 30px;
+}
+
+#classification_of_goods li {
+    list-style-image: url("images/star.png");
+    line-height: 20px;
+
+}
+
+#middle_right {
+    background: url("images/present.jpg") no-repeat 100% 100%;
+    background-color: red;
+    width: 780px;
+    float: left;
+}
+
+#navitem li {
+    display: inline-block;
+}
+
+#navitem li a {
+    color: #ffffff;
+    text-decoration: none;
+    font: large;
+
+}
+
+#navitem h4:hover {
+    background-color: greenyellow;
+}
+
+#navitem h4 {
+    margin: 0;
+    padding: 0 10px 0 10px;
+}
+
+#middle_pic {
+    float: left;
+}
+
+#sidebar {
+    float: left;
+    width: 330px;
+}
+
+#sidebar table {
+    margin: 6px;
+    border: 1px solid rgba(87, 87, 87, 0.46);;
+}
+
+#sidebar caption {
+    text-align: left;
+    line-height: 25px;
+}
+
+#sidebar td {
+    padding: 1px 21px 1px 4px;
+}
+
+    /*the fourth part*/
+#the_fourth {
+    width: 1000px;
+    margin: 2px auto;
+
+}
+
+.transition {
+    width: 1000px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.transition ul {
+    margin: 0;
+    padding: 0;
+}
+
+.transition li {
+    float: left;
+    display: inline-block;
+    transition: width 1.5s ease-in-out;
+    width: 166px;
+    height: 219px;
+
+}
+
+.transition:hover li {
+    width: 100px;
+}
+
+.transition li:hover {
+    width: 499px;
+}
+
+.opacity {
+    width: 1000px;
+    overflow: hidden;
+}
+
+.opacity a {
+    width: 166px;
+    float: left;
+    box-shadow: -1.5px 1px 1px rgba(204, 204, 204, 0.80);
+    /*transition: opacity 200s ease-in-out;*/
+}
+#the_fourth .item {
+    position: relative;
+}
+
+#the_fourth em {
+    opacity: 0;
+    background: #000;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.2s ease-in-out;
+}
+
+ #pictures:hover em {
+    opacity: 0.1;
+}
+
+ #pictures em:hover {
+    opacity: 0;
+}
+
+    /*.opacity img {*/
+    /*opacity: 0.5;*/
+    /*filter: alpha(opacity=100);*/
+    /*}*/
+
+    /*.opacity a img:hover {*/
+    /*opacity: 1;*/
+    /*filter: alpha(opacity=50);*/
+    /*}*/
+
+#service {
+    width: 1000px;
+    margin: 10px auto;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+#service dl {
+    float: left;
+    width: 120px;
+    margin: 10px 40px;
+}
+
+#service strong {
+    font-size: 14px;
+}
+
+#service dd {
+    margin: 0;
+}
+
+#service dl.fore-1 b {
+    background-position: 0 -55px;
+}
+
+#service dl.fore-2 b {
+    background-position: 0 -102px;
+}
+
+#service dl.fore-3 b {
+    background-position: 0 -149px;
+}
+
+#service dl.fore-4 b {
+    background-position: -50px -102px;
+}
+
+#service dl.fore-5 b {
+    background-position: 0 -55px;
+}
+
+#service dl {
+    position: relative;
+}
+
+#service dl b {
+    position: absolute;
+    top: 1px;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    background: url("images/20130330A_1.png") no-repeat;
+}
+
+.quicknews {
+    padding: 0 10px;
+}
+
+.quicknews h4 {
+    margin: 0;
+    float: left;
+}
+
+.quicknews div {
+    float: right;
+}
+
+.jdnews ul {
+    margin: 5px;
+    padding: 0 5px;
+    border-top: 2px solid #e3edc2;
+    border-left: 1px solid #e3edc2;
+    border-bottom: 1px solid #e3edc2;
+    border-right: 1px solid #e3edc2;
+
+}
+
+    /*em {*/
+    /*opacity: 0;*/
+    /*}*/
+
+    /*#div:hover em {*/
+    /*opacity: 0.2;*/
+    /*}*/
+
+    /*#div li:hover em {*/
+    /*opacity: 0;*/
+    /*}*/
+
+.jdnews li {
+    float: left;
+    list-style: none;
+    width: 133px;
+    padding: 5px 0;
+
+}
+
+.jdnews ul .odd {
+    padding-right: 20px;
+}
+
+.jdnews ul .even {
+    padding-left: 20px;
+    border-left: 1px solid #e3edc2;
+}
+
+
+
+    /*#div {*/
+    /*background: #000;*/
+    /*opacity: 0.1;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top:0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*}*/
+
+
+</style>
+</head>
+<body>
+
+<!------------------------the webpage head-->
+<div id="the_first">
+    <div id="shortcut">
+        <ul class="head_left">
+            <li>
+                <b></b>
+                <a href="#">收藏京东</a></li>
+        </ul>
+        <ul class="head_right">
+            <li>您好，欢迎来到京东！
+                <a href="#">[登录]</a>
+                <a href="#">[免费注册]</a></li>
+            <li>我的订单</li>
+            <li>手机京东</li>
+            <li>客户服务</li>
+            <li class="last">网站导航</li>
+        </ul>
+        <div style="clear: both"></div>
+    </div>
+</div>
+
+<!------------------------------the logo row content-->
+<div id="the-second">
+    <div id="logo">
+        <a class="dog" href="http://www.jd.com"><img src="images/logo-201305.png" width="270" height="60" alt="京东"></a>
+        <a class="wine" href="http://www.jd.com"><img src="images/wine.gif" alt=""></a>
+    </div>
+
+    <div id="my_360buy">
+        <a class="myself" href="#"><img class="person" src="images/person.png" width="20" height="20">我的京东</a>
+        <a href="#"><img class="car" src="images/cart-empty-bg.png" width="20" height="20">去购物车结算</a>
+    </div>
+
+    <div id="search">
+        <form action="ertwtwy" method="post">
+            <input class="text" type="text">
+            <input class="find" type="submit" value="搜索">
+        </form>
+        <div id="hotwords">
+            <ul>
+                <li><strong>热门搜索：</strong></li>
+                <li><a href="#" target="_blank">校园之星</a></li>
+                <li><a href="#" target="_blank">移动硬盘</a></li>
+                <li><a href="#" target="_blank">羽绒服</a></li>
+                <li><a href="#" target="_blank">取暖电器</a></li>
+                <li><a href="#" target="_blank">牛奶</a></li>
+                <li><a href="#" target="_blank">小辣椒</a></li>
+                <li><a href="#" target="_blank">村上春树</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<!------------------------------the select row content-->
+<div id="the_third">
+    <div id="classification_of_goods">
+        <h4>全部商品分类</h4>
+        <ul>
+            <li>图书 音像 数字商品</li>
+            <li>家用电器</li>
+            <li>家用电器</li>
+            <li>手机、数码</li>
+            <li>电脑、办公</li>
+            <li>家居、家具、家装、厨具</li>
+            <li>服饰鞋帽</li>
+            <li>个护化妆</li>
+            <li>礼品箱包、钟表、珠宝</li>
+            <li>运动健康</li>
+            <li>汽车用品</li>
+            <li>母婴、玩具乐器</li>
+            <li>食品饮料、保健食品</li>
+            <li>彩票、旅行、充值、票务</li>
+        </ul>
+    </div>
+    <div id="row_tag">
+        <div id="middle_right">
+
+            <div id="navitem">
+                <ul>
+                    <li><a href="#"><h4>首页</h4></a></li>
+                    <li><a href="#"><h4>服装城</h4></a></li>
+                    <li><a href="#"><h4>京东超市</h4></a></li>
+                    <li><a href="#"><h4>团购</h4></a></li>
+                    <li><a href="#"><h4>夺宝岛</h4></a></li>
+                    <li><a href="#"><h4>在线游戏</h4></a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div>
+            <div id="middle_pic"><img src="images/11-11.jpg" width="450" height="290"></div>
+            <div id="sidebar">
+                <img src="images/clothes.jpg">
+                <table>
+                    <caption>京东快报</caption>
+                    <tbody>
+                    <tr>
+                        <td>手机爆款99元起疯抢</td>
+                        <td>兰州大家电物流中心正式</td>
+                    </tr>
+                    <tr>
+                        <td>钟表快抢 最高减2000元</td>
+                        <td>联想6折起 裸价双十一</td>
+                    </tr>
+                    <tr>
+                        <td>童书全场满300减100</td>
+                        <td>买茶叶送武夷山旅游大奖</td>
+                    </tr>
+                    <tr>
+                        <td>美的先行惠双11快抢</td>
+                        <td>新鲜褚橙全面包邮开售！</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="jdnews">
+                    <div class="quicknews">
+                        <h4>京东快报</h4>
+
+                        <div>更多快报 ></div>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div style="clear: both"></div>
+                    <ul>
+                        <li class="odd">手机爆款99元起疯抢</li>
+                        <li class="even">兰州大家电物流中心正式</li>
+                        <li class="odd">钟表快抢 最高减2000元</li>
+                        <li class="even">联想6折起 裸价双十一</li>
+                        <li class="odd">童书全场满300减100</li>
+                        <li class="even">买茶叶送武夷山旅游大奖</li>
+                        <div style="clear: both"></div>
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+    </div>
+
+</div>
+<!----------------the fourth part-->
+<div id="the_fourth">
+    <div class="quick">
+        <a target="_blank"
+           href="http://c.fa.jd.com/adclick?sid=2&cid=601&aid=4344&bid=0&unit=44363&advid=72909&guv=&url=http://sale.jd.com/act/UDckHL6VA3j.html">
+            <img src="images/quick.jpg">
+        </a>
+    </div>
+    <div id="pictures">
+        <div class="transition">
+            <ul>
+                <li class="item"><em></em><img src="images/electronic.jpg"></li>
+                <li class="item"><em></em><img src="images/cellphone.jpg"></li>
+                <li class="item"><em></em><img src="images/clothe.jpg"></li>
+                <li class="item"><em></em><img src="images/computer.jpg"></li>
+                <li class="item"><em></em><img src="images/facetool.jpg"></li>
+                <li class="item"><em></em><img src="images/furniture.jpg"></li>
+            </ul>
+        </div>
+        <div class="opacity">
+            <a class="item" href="#"><em></em><img src="images/bike.jpg" width="166" height="220"></a>
+            <a class="item" href="#"><em></em><img src="images/beer.jpg" width="166" height="220"></a>
+            <a class="item" href="#"><em></em><img src="images/monitor.jpg" width="166" height="220"></a>
+            <a class="item" href="#"><em></em><img src="images/shoes.jpg" width="166" height="220"></a>
+            <a class="item" href="#"><em></em><img src="images/laptop.jpg" width="166" height="220"></a>
+            <a class="item" href="#"><em></em><img src="images/phone.jpg" width="166" height="220"></a>
+        </div>
+    </div>
+</div>
+<!--------------the service part-->
+<div id="service">
+    <dl class="fore-1">
+        <dt><b></b><strong>购物指南</strong></dt>
+        <dd>
+            <div>购物流程</div>
+        </dd>
+        <dd>
+            <div>会员介绍</div>
+        </dd>
+        <dd>
+            <div>团购/机票</div>
+        </dd>
+        <dd>
+            <div>常见问题</div>
+        </dd>
+        <dd>
+            <div>大家电</div>
+        </dd>
+        <dd>
+            <div>联系客服</div>
+        </dd>
+    </dl>
+    <dl class="fore-2">
+        <dt><b></b><strong>购物指南</strong></dt>
+        <dd>
+            <div>购物流程</div>
+        </dd>
+        <dd>
+            <div>会员介绍</div>
+        </dd>
+        <dd>
+            <div>团购/机票</div>
+        </dd>
+        <dd>
+            <div>常见问题</div>
+        </dd>
+        <dd>
+            <div>大家电</div>
+        </dd>
+        <dd>
+            <div>联系客服</div>
+        </dd>
+    </dl>
+    <dl class="fore-3">
+        <dt><b></b><strong>购物指南</strong></dt>
+        <dd>
+            <div>购物流程</div>
+        </dd>
+        <dd>
+            <div>会员介绍</div>
+        </dd>
+        <dd>
+            <div>团购/机票</div>
+        </dd>
+        <dd>
+            <div>常见问题</div>
+        </dd>
+        <dd>
+            <div>大家电</div>
+        </dd>
+        <dd>
+            <div>联系客服</div>
+        </dd>
+    </dl>
+    <dl class="fore-4">
+        <dt><b></b><strong>购物指南</strong></dt>
+        <dd>
+            <div>购物流程</div>
+        </dd>
+        <dd>
+            <div>会员介绍</div>
+        </dd>
+        <dd>
+            <div>团购/机票</div>
+        </dd>
+        <dd>
+            <div>常见问题</div>
+        </dd>
+        <dd>
+            <div>大家电</div>
+        </dd>
+        <dd>
+            <div>联系客服</div>
+        </dd>
+    </dl>
+    <dl class="fore-5">
+        <dt><b></b><strong>购物指南</strong></dt>
+        <dd>
+            <div>购物流程</div>
+        </dd>
+        <dd>
+            <div>会员介绍</div>
+        </dd>
+        <dd>
+            <div>团购/机票</div>
+        </dd>
+        <dd>
+            <div>常见问题</div>
+        </dd>
+        <dd>
+            <div>大家电</div>
+        </dd>
+        <dd>
+            <div>联系客服</div>
+        </dd>
+    </dl>
+
+    <div style="clear: both"></div>
+</div>
+</body>
+</html>

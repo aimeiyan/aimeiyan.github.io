@@ -1,725 +1,3767 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<link rel="shortcut icon" href="images/jd.jpg">
+<head lang="en">
+<meta charset="UTF-8">
 <title>京东网上商城-综合网购首选（JD.COM）-正品低价、品质保障、货到付款、配送及时、放心服务、轻松购物！</title>
+<meta name="keyword" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东商城">
+<meta name="description"
+      content="京东JD.COM-专业的综合网上购物商城，在线销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品、在线旅游等数万个品牌千万种优质商品。便捷、诚信的服务，为您提供愉悦的网上商城购物体验! ">
+
 <style type="text/css">
-body {
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
     margin: 0;
-    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
-    color: #222;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    font: 12px/1.5em Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #ffffff;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a, a:hover {
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+iframe, a, img, button {
+    border: 0;
+}
+
+input[type=submit], input[type=button], input[type=text], textarea, button, select {
+    font-size: 1em;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+#shortcuts {
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#shortcuts .wrapper {
+    width: 1210px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+#shortcuts .wrapper .sc, #home-area {
+    float: left;
+
+}
+
+#shortcuts .wrapper .sc li {
+    padding-left: 16px;
+    position: relative;
+
+}
+
+#shortcuts .wrapper .sc b {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: url("jdimgs/star.png") no-repeat 0 0;
+    cursor: pointer;
+    transition: transform .2s ease-in 0s;
+    -webkit-transition: -webkit-transform .2s ease-in 0s;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    overflow: hidden;
+}
+
+#shortcuts .wrapper .sc:hover b {
+    transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+}
+
+#home-area {
+    width: 106px;
+    padding-top: 3px;
+}
+
+#home-area .note {
+    height: 26px;
+    line-height: 24px;
+    width: 106px;
+    position: relative;
+    padding-left: 30px;
+}
+
+#home-area .note b {
+    background: url("jdimgs/note.png") no-repeat 0 0;
+    width: 18px;
+    height: 22px;
+    position: absolute;
+    top: 1px;
+    left: 8px;
+}
+
+#citylist {
+    width: 300px;
+    position: relative;
+    display: none;
+}
+
+#citylist ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+#citylist li {
+    float: left;
+    width: 50px;
+    padding-left: 17px;
+}
+
+#citylist li a {
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    padding: 0 4px;
+}
+
+#citylist li a:visited {
+    color: #005ea7;
+}
+
+#citylist li a:hover {
+    background-color: #005ea7;
+    color: #fff;
+}
+
+#citylist .close {
+    text-indent: -999px;
+    position: absolute;
+    background: url("jdimgs/note.png") no-repeat -30px 0;
+    width: 34px;
+    height: 34px;
+    top: -5px;
+    right: -13px;
+    cursor: pointer;
+}
+
+#home-area.hover #citylist {
+    display: block;
+    position: absolute;
+    top: 30px;
+    border: 1px solid #DDD;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .12);
+    border-top: 0;
+    z-index: 15;
     background: #fff;
 }
 
-    /*------------------------------------------the webpage head*/
-#the_first {
-    padding: 0;
-    border-bottom: 1px solid red;
-    background: rgba(195, 195, 195, 0.37);
-    /*overflow: auto;*/
-    /*min-width: 800px;*/
-}
-
-#shortcut {
-    margin: 0 auto;
-    width: 1100px;
-}
-
-#shortcut .head_left {
-    list-style: none;
-    float: left;
-    margin-left: 30px;
-}
-
-#shortcut .head_left li {
+#home-area.hover .note {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    height: 28px;
     position: relative;
 }
 
-#shortcut .head_left li b {
-    top: 3px;
-    left: -15px;
-    width: 13px;
-    height: 13px;
-    background: url("images/star.png") no-repeat;
-    position: absolute;
-}
-
-#shortcut .head_right {
-    float: right;
-    width: 550px;
-    margin-right: 30px;
-    margin-left: -650px;
-}
-
-#shortcut .head_right li {
-    list-style: none;
+#home-area.hover .note .empty {
     display: inline-block;
-    padding: 0 11px 0 10px;
-    border-right: 1px solid rgba(87, 87, 87, 0.61);
-}
-
-#shortcut .head_right .last {
-    border-right: 0;
-}
-
-#shortcut a {
-    text-decoration: none;
-    color: #222;
-}
-
-    /*<!------------------------------the logo row content-->*/
-
-#the-second {
-    position: relative;
-    margin: 20px auto;
-    width: 1000px;
-}
-
-#logo img {
-    display: inline-block;
-}
-
-.dog img {
-    position: relative;
-}
-
-.wine img {
-    top: 0;
-    left: 170px;
-    position: absolute;
-}
-
-#search {
-    margin: 0 auto;
-    width: 400px;
-
-}
-
-#logo {
-    float: left;
-}
-
-#hotwords {
-    font-size: smaller;
-}
-
-#hotwords ul {
-    /*list-style: none;*/
-    padding: 0;
-}
-
-#hotwords ul li {
-    display: inline-block;
-    /*text-decoration: none;*/
-}
-
-#hotwords a {
-    text-decoration: none;
-}
-
-form {
-    display: block;
-    width: 350px;
-    background: red;
-}
-
-form .text {
-    margin: 0;
-    width: 270px;
-}
-
-form .find {
-    color: #ffffff;
-    font-size: large;
-    font-weight: bold;
-    background: red;
-    padding: 0 13px;
-    border: 0;
-    /*margin: 0 auto;*/
-}
-
-#my_360buy {
-    float: right;
-
-}
-
-#my_360buy a {
-    display: inline-block;
-    background: rgba(195, 195, 195, 0.37);
-    padding: 10px 15px 10px 15px;
-    margin: 5px;
-    text-decoration: none;
-}
-
-    /*<!------------------------------the select row content-->*/
-#the_third {
-    margin: 0px auto;
-    padding-top: 5px;
-    width: 1000px;
-}
-
-#classification_of_goods {
-    background: rgba(195, 195, 195, 0.37);
-    float: left;
-    border: 1px solid red;
-    padding-right: 0;
-}
-
-#classification_of_goods h4 {
-    display: block;
-    background: red;
-    margin: 0;
-    padding: 12px 20px 11px 15px;
-    color: #ffffff;
-
-}
-
-#classification_of_goods ul {
-    margin: 5px;
-    padding: 0 30px 0 30px;
-}
-
-#classification_of_goods li {
-    list-style-image: url("images/star.png");
-    line-height: 20px;
-
-}
-
-#middle_right {
-    background: url("images/present.jpg") no-repeat 100% 100%;
-    background-color: red;
-    width: 780px;
-    float: left;
-}
-
-#navitem li {
-    display: inline-block;
-}
-
-#navitem li a {
-    color: #ffffff;
-    text-decoration: none;
-    font: large;
-
-}
-
-#navitem h4:hover {
-    background-color: greenyellow;
-}
-
-#navitem h4 {
-    margin: 0;
-    padding: 0 10px 0 10px;
-}
-
-#middle_pic {
-    float: left;
-}
-
-#sidebar {
-    float: left;
-    width: 330px;
-}
-
-#sidebar table {
-    margin: 6px;
-    border: 1px solid rgba(87, 87, 87, 0.46);;
-}
-
-#sidebar caption {
-    text-align: left;
-    line-height: 25px;
-}
-
-#sidebar td {
-    padding: 1px 21px 1px 4px;
-}
-
-    /*the fourth part*/
-#the_fourth {
-    width: 1000px;
-    margin: 2px auto;
-
-}
-
-.transition {
-    width: 1000px;
-    height: 220px;
-    overflow: hidden;
-}
-
-.transition ul {
-    margin: 0;
-    padding: 0;
-}
-
-.transition li {
-    float: left;
-    display: inline-block;
-    transition: width 1.5s ease-in-out;
-    width: 166px;
-    height: 219px;
-
-}
-
-.transition:hover li {
-    width: 100px;
-}
-
-.transition li:hover {
-    width: 499px;
-}
-
-.opacity {
-    width: 1000px;
-    overflow: hidden;
-}
-
-.opacity a {
-    width: 166px;
-    float: left;
-    box-shadow: -1.5px 1px 1px rgba(204, 204, 204, 0.80);
-    /*transition: opacity 200s ease-in-out;*/
-}
-#the_fourth .item {
-    position: relative;
-}
-
-#the_fourth em {
-    opacity: 0;
-    background: #000;
-    position: absolute;
-    display: block;
-    height: 100%;
+    height: 8px;
     width: 100%;
-    transition: opacity 0.2s ease-in-out;
+    position: absolute;
+    top: 23px;
+    left: 0;
+    background: #fff;
+    z-index: 20;
 }
 
- #pictures:hover em {
-    opacity: 0.1;
+#shortcuts .fr {
+    float: right;
 }
 
- #pictures em:hover {
-    opacity: 0;
+#shortcuts .fr a:hover, #header-search .hotwords a:hover {
+    text-decoration: underline;
+    color: red;
 }
 
-    /*.opacity img {*/
-    /*opacity: 0.5;*/
-    /*filter: alpha(opacity=100);*/
-    /*}*/
-
-    /*.opacity a img:hover {*/
-    /*opacity: 1;*/
-    /*filter: alpha(opacity=50);*/
-    /*}*/
-
-#service {
-    width: 1000px;
-    margin: 10px auto;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
-}
-
-#service dl {
+#shortcuts .fr li {
     float: left;
-    width: 120px;
-    margin: 10px 40px;
+    padding: 0 11px 0 12px;
+    position: relative;
 }
 
-#service strong {
+#shortcuts .fr li s {
+    position: absolute;
+    width: 0;
+    height: 12px;
+    left: 0;
+    top: 9px;
+    border-left: 1px solid red;
+}
+
+#shortcuts .fr li.fore3 i {
+    position: absolute;
+    background: url("jdimgs/vip.png") no-repeat 0 0;
+    width: 24px;
+    height: 12px;
+    left: 12px;
+    top: 9px;
+}
+
+#shortcuts .fr li.fore3 {
+    padding-left: 40px;
+}
+
+#shortcuts .fr li.fore3:hover i {
+    background-position: 0 -15px;
+}
+
+#shortcuts .fr li.fore4 {
+    padding-left: 32px;
+
+    padding-right: 25px;
+}
+
+#shortcuts .fr li.fore4 i {
+    position: absolute;
+    width: 13px;
+    height: 22px;
+    top: 4px;
+    left: 12px;
+    background: url("jdimgs/sprit1.png") no-repeat -128px -360px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+#shortcuts .fr li b {
+    position: absolute;
+    width: 8px;
+    height: 7px;
+    background: url("jdimgs/sprit1.png") no-repeat -95px -52px;
+    top: 11px;
+    right: 11px;
+    transition: transform .2s ease-in 0s;
+    -webkit-transition: -webkit-transform .2s ease-in 0s;
+}
+
+#shortcuts .fr li.fore4:hover i {
+    background-position: -128px -399px;
+}
+
+#shortcuts .fr li:hover b {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+#shortcuts .fr li.fore5 {
+    padding-right: 25px;
+}
+
+/*top banner 广告部分*/
+#top-banner, #middle-banner {
+    width: 1210px;
+    margin: 2px auto 0;
+    position: relative;
+}
+
+#top-banner .close {
+    text-indent: -9999px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#header-search {
+    width: 1210px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 15px 0;
+    /*border: 1px solid red;*/
+}
+
+#header-search > div {
+    float: left;
+}
+
+#header-search .logo {
+    width: 300px;
+}
+
+#header-search .search {
+    width: 510px;
+}
+
+#header-search .search .wrap {
+    height: 30px;
+    border: 3px solid #E4393C;
+    margin-bottom: 3px;
+}
+
+#header-search .search input {
+    height: 30px;
+    border: 0;
+    margin: 0;
+    float: left;
+}
+
+#header-search .search .input {
+    height: 20px;
+    width: 406px;
+    padding: 5px;
+    background: #ffffff;
+}
+
+#header-search .search .input:focus {
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 2px 2px 3px #d2d2d2 inset;
+    -moz-box-shadow: 2px 2px 3px #d2d2d2 inset;
+    box-shadow: 2px 2px 3px #d2d2d2 inset;
+    outline: none;
+}
+
+#header-search .search .submit {
+    width: 88px;
+    background-color: #E4393C;
+    border: 0;
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 700;
     font-size: 14px;
 }
 
-#service dd {
-    margin: 0;
+#header-search .hotwords {
+    color: #999;
+    height: 18px;
+    line-height: 18px;
 }
 
-#service dl.fore-1 b {
-    background-position: 0 -55px;
+#header-search .hotwords > * {
+    float: left;
 }
 
-#service dl.fore-2 b {
-    background-position: 0 -102px;
+#header-search .hotwords a {
+    margin-right: 10px;
 }
 
-#service dl.fore-3 b {
-    background-position: 0 -149px;
+#header-search .mybuy {
+    height: 30px;
+    width: 106px;
+    margin: 5px 0 0 20px;
 }
 
-#service dl.fore-4 b {
-    background-position: -50px -102px;
+#header-search .mybuy .sprit1 {
+    text-align: center;
+    border: 1px solid #efefef;
+    height: 30px;
+    line-height: 30px;
+    width: 60px;
+    background: url("jdimgs/sprit1.png") no-repeat -118px -24px;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: relative;
+    background-color: #f7f7f7;
 }
 
-#service dl.fore-5 b {
-    background-position: 0 -55px;
+#header-search .mybuy .sprit1 b {
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ccc transparent transparent;
+    position: absolute;
+    top: 12px;
+    right: 7px;
 }
 
-#service dl {
+#header-search #car.hover .sprit1 {
+    background-position: -117px -53px;
+    background-color: #ffffff;
+}
+
+#header-search .mybuy #car.hover .sprit1:hover b {
+    border-color: transparent transparent #ccc;
+    top: 8px;
+}
+
+#header-search .settleup {
+    width: 126px;
+    height: 30px;
+    margin: 5px 10px 0 0;
+}
+
+#header-search .settleup .sprit2 {
+    text-align: center;
+    border: 1px solid #efefef;
+    height: 30px;
+    line-height: 30px;
+    width: 90px;
+    background: url("jdimgs/sprit1.png") no-repeat -118px -82px;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: relative;
+    background-color: #f7f7f7;
+}
+
+#header-search .settleup .sprit2 b {
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ccc transparent transparent;
+    position: absolute;
+    top: 12px;
+    right: 7px;
+}
+
+#header-search .settleup #suan.hover .sprit2 {
+    background-position: -117px -112px;
+    background-color: #ffffff;
+}
+
+#header-search .settleup #suan.hover .sprit2:hover b {
+    border-color: transparent transparent #ccc;
+    top: 8px;
+}
+
+#header-search .ypjb {
+    width: 134px;
+    height: 48px;
+}
+
+#navmenu {
+    width: 1210px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+#navmenu .nav {
+    height: 40px;
+    background: #E4393C;
+    padding-left: 210px;
     position: relative;
 }
 
-#service dl b {
-    position: absolute;
-    top: 1px;
-    left: -40px;
-    width: 40px;
-    height: 40px;
-    background: url("images/20130330A_1.png") no-repeat;
-}
-
-.quicknews {
-    padding: 0 10px;
-}
-
-.quicknews h4 {
-    margin: 0;
+#navitems li {
     float: left;
+    height: 40px;
+    line-height: 40px;
 }
 
-.quicknews div {
+#navitems li a {
+    text-align: center;
+    color: #fff;
+    width: 85px;
+    display: inline-block;
+    font: 15px/40px "microsoft yahei";
+    font-weight: 700;
+}
+
+#navitems li:first-child a {
+    background: #A40000;
+}
+
+#navitems li a:hover {
+    background: #A40000;
+}
+
+#category .menu {
+    position: absolute;
+    height: 40px;
+    left: 20px;
+    width: 210px;
+}
+
+#category .menu a {
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    font: 15px/40px "microsoft yahei";
+    font-weight: 700;
+}
+
+#category .menu a:hover {
+    text-decoration: underline;
+}
+
+/*京东弹出菜单*/
+
+#filter {
+    position: absolute;
+    height: 408px;
+    width: 208px;
+    left: 0;
+    top: 40px;
+    border: solid #E4393C;
+    border-width: 0 2px 2px;
+    background-color: #FAFAFA;;
+}
+
+#allsort {
+    position: relative;
+    z-index: 20;
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    min-width: 120px;
+    padding: 5px 0;
+    /*border-bottom-left-radius: 6px;*/
+    /*border-bottom-right-radius: 6px;*/
+    /*border: 1px solid #ccc;*/
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
+}
+
+#allsort .item {
+    display: block;
+    cursor: pointer;
+    width: 206px;
+    position: relative;
+    border-bottom: 1px solid #ffffff;
+}
+
+#allsort ul > li > span {
+    display: block;
+    /*border: 1px solid #cccccc;*/
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+#allsort .item s {
+    display: block;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    left: 180px;
+    top: 12px;
+    background: url("images/20130330A_1.png") no-repeat -110px -45px;
+}
+
+.dropdown-menu li span:hover, .maintainHover {
+    text-decoration: none;
+    background: #ffffff;
+}
+
+.detail {
+    /*border-radius: 6px;*/
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 210px;
+    padding: 5px 10px 0 10px;
+    display: none;
+    width: 600px;
+    font-size: 12px;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+.detail dl {
+    margin: 8px 0;
+}
+
+.detail dt {
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    width: 10%;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.detail dd {
+    float: left;
+    width: 80%;
+}
+
+.detail dd em {
+    font-style: normal;
+    display: inline-block;
+    border-left: 1px solid #AAAAAA;
+    padding: 0 8px;
+    margin-top: 5px;
+}
+
+/*slider banner*/
+#big-banner {
+    width: 1210px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+}
+
+#slide-shortlist {
+    width: 670px;
+    float: left;
+    padding-left: 220px;
+    padding-top: 10px;
+}
+
+#slider {
+    width: 670px;
+    height: 240px;
+    position: relative;
+}
+
+#slider .control-tip {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+#slider .control-tip span {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    background-color: #999;
+    border-radius: 22px;
+    -moz-border-radius: 22px;
+    -webkit-border-radius: 22px;
+    color: #ffffff;
+}
+
+#slider .content {
+    width: 670px;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #E7E7E7;
+    border-top: 0;
+}
+
+#slider .content-list {
+    position: absolute;
+}
+
+#slider .content li {
+    float: left;
+
+}
+
+#slider div.control-tip span.current {
+    background-color: #E4393C;
+}
+
+/*scroll slider*/
+#scroll {
+    width: 609px;
+    height: 159px;
+    padding: 0 30px;
+    position: relative;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    border-color: #EEEEEE;
+}
+
+#scroll .pageNote span {
+    transition: all .2s ease-in 0s;
+    text-indent: -999999px;
+    position: absolute;
+    width: 30px;
+    height: 159px;
+}
+
+#scroll .pageNote span b {
+    display: block;
+    margin: 40px 0 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("jdimgs/sprite2.png");
+}
+
+#scroll .pageNote span.prev {
+    left: 0;
+    top: 0;
+}
+
+#scroll .pageNote span.next {
+    right: 0;
+    top: 0;
+}
+
+#scroll .pageNote span.prev b {
+    background-position: -84px -44px;
+}
+
+#scroll .pageNote span.next b {
+    background-position: -52px -44px;
+}
+
+#scroll .pageNote span.prev:hover b {
+    background-image: url("jdimgs/sprite3.png");
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+}
+
+#scroll .pageNote span.next:hover b {
+    background-image: url("jdimgs/sprite3.png");
+    background-repeat: no-repeat;
+    background-position: 3px -36px;
+}
+
+#scroll .pageNote span:hover {
+    background-color: #EEEEEE;
+
+}
+
+#scroll .scrollcontent {
+    width: 608px;
+    height: 159px;
+    overflow: hidden;
+    position: relative;
+    border-top: 0;
+}
+
+#scroll .scrollitems {
+    position: absolute;
+    width: 3654px;
+}
+
+#scroll .scrollcontent li {
+    float: left;
+    height: 159px;
+    width: 202px;
+    border-right: 1px solid #EEEEEE;
+}
+
+/*banner-right-part*/
+#bnner-slider-right {
+    width: 310px;
+    float: right;
+    margin: 10px 0 10px;
+
+}
+
+#bnner-slider-right .jdnews {
+    line-height: 16px;
+    padding: 7px 0 0;
+}
+
+#bnner-slider-right .jdnews .title {
+    padding: 7px 0 7px;
+    border-bottom: 2px solid #AAA;
+    height: 17px;
+    line-height: 17px;
+}
+
+#bnner-slider-right .jdnews .title h2 {
+    float: left;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+}
+
+#bnner-slider-right .jdnews .title div {
     float: right;
 }
 
-.jdnews ul {
-    margin: 5px;
-    padding: 0 5px;
-    border-top: 2px solid #e3edc2;
-    border-left: 1px solid #e3edc2;
-    border-bottom: 1px solid #e3edc2;
-    border-right: 1px solid #e3edc2;
-
+#bnner-slider-right .jdnews .title div a {
+    color: #005EA7;
 }
 
-    /*em {*/
-    /*opacity: 0;*/
-    /*}*/
+#bnner-slider-right .jdnews .title div a:hover {
+    text-decoration: underline;
+}
 
-    /*#div:hover em {*/
-    /*opacity: 0.2;*/
-    /*}*/
+#bnner-slider-right .mlist {
+    border-style: solid;
+    border-color: #F1F1F1;
+    border-width: 0 1px 1px;
+    padding: 4px 0;
+    width: 310px;
+}
 
-    /*#div li:hover em {*/
-    /*opacity: 0;*/
-    /*}*/
-
-.jdnews li {
+#bnner-slider-right .mlist li {
     float: left;
-    list-style: none;
     width: 133px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+}
+
+#bnner-slider-right .mlist li:nth-child(odd) {
+    border-right: 1px solid #F1F1F1;
+}
+
+#bnner-slider-right .mlist li a:hover {
+    text-decoration: underline;
+    color: #E4393C;
+}
+
+#bnner-slider-right .short-iframe {
+    width: 308px;
+    height: 165px;
+    border: 1px solid #F1F1F1;
+    margin-top: 10px;
+}
+
+#bnner-slider-right .short-iframe > ul {
+    height: 82px;
+}
+
+#bnner-slider-right .short-iframe .fore1 li, #bnner-slider-right .short-iframe .fore2 li {
+    float: left;
+    height: 82px;
+    width: 76px;
+    border-right: 1px solid #F1F1F1;
+    position: relative;
+}
+
+#bnner-slider-right .short-iframe .fore1 li:last-child, #bnner-slider-right .short-iframe .fore2 li:last-child {
+    border-right: 0;
+}
+
+#bnner-slider-right .short-iframe .fore1 li {
+    border-bottom: 1px solid #F1F1F1;
+}
+
+#bnner-slider-right .short-iframe li s {
+    background-image: url("jdimgs/short-tabs.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 42px;
+    height: 34px;
+}
+
+#bnner-slider-right .short-iframe ul.fore1 li.fore1 s {
+    background-position: 0 0;
+}
+
+#bnner-slider-right .short-iframe ul.fore1 li.fore2 s {
+    background-position: -63px 0;
+}
+
+#bnner-slider-right .short-iframe ul.fore1 li.fore3 s {
+    background-position: -126px 0;
+}
+
+#bnner-slider-right .short-iframe ul.fore1 li.fore4 s {
+    background-position: -189px 0;
+}
+
+#bnner-slider-right .short-iframe ul.fore2 li.fore1 s {
+    background-position: 0 -49px;
+}
+
+#bnner-slider-right .short-iframe ul.fore2 li.fore2 s {
+    background-position: -63px -49px;
+}
+
+#bnner-slider-right .short-iframe ul.fore2 li.fore3 s {
+    background-position: -126px -49px;
+}
+
+#bnner-slider-right .short-iframe ul.fore2 li.fore4 s {
+    background-position: -189px -49px;
+}
+
+#bnner-slider-right .short-iframe li a {
+    display: inline-block;
+    height: 67px;
+    width: 42px;
+    padding: 10px 17px 5px;
+}
+
+#bnner-slider-right .short-iframe li a span {
+    position: absolute;
+    top: 50px;
+    width: 42px;
+    text-align: center;
+}
+
+#bnner-slider-right .short-iframe ul.fore1 li i {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    border-color: #aaa transparent transparent;
+    border-style: solid;
+    border-width: 3px;
+    left: 37px;
+}
+
+/*生活的橱窗*/
+#shortcase {
+    width: 1220px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+}
+
+#shortcase .header h1 {
+    display: none;
+}
+
+#shortcase .windows {
+    overflow: hidden;
+    zoom: 1;
+}
+
+#shortcase .windows .item {
+    width: 295px;
+    height: 190px;
+    float: left;
+    overflow: hidden;
+    margin: 0 10px 10px 0;
+}
+
+#shortcase .windows .item .s-link {
+    display: block;
+    width: 295px;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+}
+
+#shortcase .windows .item .s-link .aside {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 160px;
+    padding: 30px 0 0 20px;
+    background: rgba(255, 255, 255, .75);
+    font-family: "microsoft yahei";
+}
+
+#shortcase .windows .item .s-link img {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    left: 0;
+    top: 0;
+}
+
+#shortcase .windows .item:hover img {
+    left: -10px;
+}
+
+#shortcase .windows .item .s-link .aside h3 {
+    font-size: 18px;
+    color: #333;
+    height: 20px;
+    line-height: 20px;
+    padding-bottom: 6px;
+}
+
+#shortcase .windows .item .s-link .aside div {
+    font-size: 13px;
+}
+
+#shortcase .windows .item .s-link .aside .hotwords {
+    padding-top: 20px;
+}
+
+#shortcase .windows .item .s-link .aside .hotwords li {
+    padding-left: 10px;
+    position: relative;
+}
+
+#shortcase .windows .item .s-link .aside .hotwords li i {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #999;
+    left: 2px;
+    top: 8px;
+}
+
+/*floor_01*/
+#floor1 {
+    width: 1210px;
+    margin: 0 auto 10px;
+    padding-top: 10px;
+    font-family: "microsoft yahei";
+    overflow: hidden;
+}
+
+#floor1 > div {
+    float: left;
+}
+
+#home-appliances {
+    width: 210px;
+    height: 396px;
+    border-bottom: 1px solid #F1F1F1;
+    /*overflow: hidden;*/
+}
+
+#home-appliances .floorname {
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    padding-left: 40px;
+}
+
+#home-appliances .floorname > * {
+    float: left;
+}
+
+#home-appliances .floorname .title-tip {
+    width: 26px;
+    height: 34px;
+    text-align: center;
+    background-image: url("jdimgs/floorname.png");
+    background-repeat: no-repeat;
+    background-position: -40px 0;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+
+#home-appliances .floorname .title-tip b {
+    color: #ffffff;
+}
+
+#home-appliances .title-name {
+    font-size: 22px;
+}
+
+#home-appliances ul {
+    height: 207px;
+    border-top: 2px solid #aaa;
+}
+
+#home-appliances li {
+    float: left;
+    height: 25px;
+    width: 98px;
+    line-height: 25px;
+
+}
+
+#selectTab {
+    width: 790px;
+}
+
+#selectTab .tab-arrow {
+    position: relative;
+}
+
+#selectTab .tab-arrow .arrows {
+    height: 11px;
+    width: 157px;
+    position: absolute;
+    bottom: -2px;
+    border-bottom: 2px solid #E4393C;
+    text-align: center;
+    z-index: 2;
+}
+
+#selectTab .tab-arrow .arrows b {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-style: solid;
+    border-color: transparent transparent #E4393C;
+    border-width: 6px;
+}
+
+#tabs {
+    height: 32px;
+    line-height: 32px;
+}
+
+#tabs li {
+    width: 157px;
+    float: left;
+    text-align: center;
+}
+
+#tabs a {
+    font-size: 14px;
+    font-family: "microsoft yahei";
+    font-weight: bold;
+    display: block;
+}
+
+#tabs a.hover {
+    color: #E4393C;
+}
+
+#content {
+    clear: both;
+    height: 362px;
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    border-color: #aaa #F1F1F1 #F1F1F1;
+}
+
+#content .showlist li {
+    width: 156px;
+    height: 170px;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    border-right: 1px solid #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+#content .showlist li.rowlast {
+    border-right: 0;
+}
+
+#content .showlist li.row2 {
+    border-bottom: 0;
+}
+
+#content .showlist .price {
+    color: #E4393C;
+}
+
+#tab1, #tab1 .fore1 {
+    overflow: hidden;
+    zoom: 1;
+}
+
+#tab1 {
+    position: relative;
+}
+
+#tab1 .fore1 li:first-child {
+    padding-right: 471px;
+}
+
+#tab1 .jd-slider {
+    position: absolute;
+    width: 470px;
+    height: 180px;
+    top: 0;
+    left: 156px;
+    border-left: 1px solid #F1F1F1;
+    border-right: 1px solid #F1F1F1;
+    overflow: hidden;
+}
+
+#brands {
+    width: 210px;
+    height: 392px;
+}
+
+#brands .brandtitle {
+    height: 27px;
+    overflow: hidden;
+    line-height: 27px;
+    padding-top: 5px;
+}
+
+#brands .brandtitle b {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url("jdimgs/sprite2.png") no-repeat -126px -41px;;
+}
+
+#brands .brandlist {
+    overflow: hidden;
+    border-top: 2px solid #aaa;
+}
+
+#brands .brandlist li {
+    float: left;
+    width: 105px;
+    height: 35px;
+    border-top: 1px dotted #F1F1F1;
+    overflow: hidden;
+    zoom: 1;
+}
+
+/*服务*/
+#service {
+    width: 1210px;
+    margin: 0 auto;
+}
+
+#service .servicelist {
+    padding: 15px 20px 5px;
+    border-top: 1px solid #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
+    overflow: hidden;
+}
+
+#service .servicelist dl {
+    width: 147px;
+    float: left;
+}
+
+#service .servicelist dl {
+    position: relative;
+    padding-left: 45px;
+}
+
+#service .servicelist dl dt, #service .servicelist .fenbu h3 {
+    font-size: 14px;
+    font-family: "microsoft yahei";
     padding: 5px 0;
-
 }
 
-.jdnews ul .odd {
-    padding-right: 20px;
+#service .servicelist dl dt b {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: -2px;
+    /*border:1px solid red;*/
+    background: url("jdimgs/sprit1.png") no-repeat;
 }
 
-.jdnews ul .even {
-    padding-left: 20px;
-    border-left: 1px solid #e3edc2;
+#service .servicelist dl.fore1 b {
+    background-position: 0 -55px;
 }
 
+#service .servicelist dl.fore2 b {
+    background-position: -50px -55px;
+}
 
+#service .servicelist dl.fore3 b {
+    background-position: 0 -102px;
+}
 
-    /*#div {*/
-    /*background: #000;*/
-    /*opacity: 0.1;*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top:0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*}*/
+#service .servicelist dl.fore4 b {
+    background-position: -50px -102px;
+}
 
+#service .servicelist dl.fore5 b {
+    background-position: -0 -149px;
+}
+
+#service .servicelist dl dd div {
+    line-height: 20px;
+}
+
+#service .servicelist .fenbu {
+    float: right;
+    width: 200px;
+    height: 155px;
+    background: url("jdimgs/sprite2.png") no-repeat 0 -132px;
+}
+#service .servicelist .fenbu p{
+    line-height: 1.8em;
+}
+#service .servicelist .fenbu p.juti{
+    text-align: right;
+}
+#service .servicelist .fenbu p.juti a{
+    color: #0000ff;
+}
+/*页脚*/
+
+#footer {
+    width: 1210px;
+    margin: 0 auto;
+    padding: 20px 0 30px;
+    text-align: center;
+}
+
+#footer .f-link a {
+    margin: 0 10px;
+}
+#footer a:hover{
+    color: #E4393C;
+    text-decoration: underline;
+}
+#footer .copyright {
+    padding: 10px 0;
+}
+
+#footer .copyright a, #footer .copyright span {
+    margin: 0 5px;
+}
+
+#footer .authentication a {
+    margin: 0 5px;
+}
 
 </style>
+<!--[if lte IE 7]>
+<style type="text/css">
+    #allsort UL > LI > SPAN {
+        line-height: 27px;
+    }
+
+</style>
+<![endif]-->
 </head>
 <body>
-
-<!------------------------the webpage head-->
-<div id="the_first">
-    <div id="shortcut">
-        <ul class="head_left">
+<div id="shortcuts">
+    <div class="wrapper">
+        <ul class="fl sc">
             <li>
                 <b></b>
-                <a href="#">收藏京东</a></li>
+                <a>收藏京东</a>
+            </li>
         </ul>
-        <ul class="head_right">
-            <li>您好，欢迎来到京东！
-                <a href="#">[登录]</a>
-                <a href="#">[免费注册]</a></li>
-            <li>我的订单</li>
-            <li>手机京东</li>
-            <li>客户服务</li>
-            <li class="last">网站导航</li>
-        </ul>
-        <div style="clear: both"></div>
-    </div>
-</div>
-
-<!------------------------------the logo row content-->
-<div id="the-second">
-    <div id="logo">
-        <a class="dog" href="http://www.jd.com"><img src="images/logo-201305.png" width="270" height="60" alt="京东"></a>
-        <a class="wine" href="http://www.jd.com"><img src="images/wine.gif" alt=""></a>
-    </div>
-
-    <div id="my_360buy">
-        <a class="myself" href="#"><img class="person" src="images/person.png" width="20" height="20">我的京东</a>
-        <a href="#"><img class="car" src="images/cart-empty-bg.png" width="20" height="20">去购物车结算</a>
-    </div>
-
-    <div id="search">
-        <form action="ertwtwy" method="post">
-            <input class="text" type="text">
-            <input class="find" type="submit" value="搜索">
-        </form>
-        <div id="hotwords">
-            <ul>
-                <li><strong>热门搜索：</strong></li>
-                <li><a href="#" target="_blank">校园之星</a></li>
-                <li><a href="#" target="_blank">移动硬盘</a></li>
-                <li><a href="#" target="_blank">羽绒服</a></li>
-                <li><a href="#" target="_blank">取暖电器</a></li>
-                <li><a href="#" target="_blank">牛奶</a></li>
-                <li><a href="#" target="_blank">小辣椒</a></li>
-                <li><a href="#" target="_blank">村上春树</a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-</div>
-
-<!------------------------------the select row content-->
-<div id="the_third">
-    <div id="classification_of_goods">
-        <h4>全部商品分类</h4>
-        <ul>
-            <li>图书 音像 数字商品</li>
-            <li>家用电器</li>
-            <li>家用电器</li>
-            <li>手机、数码</li>
-            <li>电脑、办公</li>
-            <li>家居、家具、家装、厨具</li>
-            <li>服饰鞋帽</li>
-            <li>个护化妆</li>
-            <li>礼品箱包、钟表、珠宝</li>
-            <li>运动健康</li>
-            <li>汽车用品</li>
-            <li>母婴、玩具乐器</li>
-            <li>食品饮料、保健食品</li>
-            <li>彩票、旅行、充值、票务</li>
-        </ul>
-    </div>
-    <div id="row_tag">
-        <div id="middle_right">
-
-            <div id="navitem">
+        <dl id="home-area">
+            <dt class="note">
+                <b></b>
+                <strong id="place">北京</strong>
+                <a class="citycha">[更换]</a>
+                <span class="empty"></span>
+            </dt>
+            <dd id="citylist">
                 <ul>
-                    <li><a href="#"><h4>首页</h4></a></li>
-                    <li><a href="#"><h4>服装城</h4></a></li>
-                    <li><a href="#"><h4>京东超市</h4></a></li>
-                    <li><a href="#"><h4>团购</h4></a></li>
-                    <li><a href="#"><h4>夺宝岛</h4></a></li>
-                    <li><a href="#"><h4>在线游戏</h4></a></li>
+                    <li><a href="#none" data-id="1">北京</a></li>
+                    <li><a href="#none" data-id="2">上海</a></li>
+                    <li><a href="#none" data-id="3">天津</a></li>
+                    <li><a href="#none" data-id="4">重庆</a></li>
+                    <li><a href="#none" data-id="5">河北</a></li>
+                    <li><a href="#none" data-id="6">山西</a></li>
+                    <li><a href="#none" data-id="7">河南</a></li>
+                    <li><a href="#none" data-id="8">辽宁</a></li>
+                    <li><a href="#none" data-id="9">吉林</a></li>
+                    <li><a href="#none" data-id="10">黑龙江</a></li>
+                    <li><a href="#none" data-id="11">内蒙古</a></li>
+                    <li><a href="#none" data-id="12">江苏</a></li>
+                    <li><a href="#none" data-id="13">山东</a></li>
+                    <li><a href="#none" data-id="14">安徽</a></li>
+                    <li><a href="#none" data-id="15">浙江</a></li>
+                    <li><a href="#none" data-id="16">福建</a></li>
+                    <li><a href="#none" data-id="17">湖北</a></li>
+                    <li><a href="#none" data-id="18">湖南</a></li>
+                    <li><a href="#none" data-id="19">广东</a></li>
+                    <li><a href="#none" data-id="20">广西</a></li>
+                    <li><a href="#none" data-id="21">江西</a></li>
+                    <li><a href="#none" data-id="22">四川</a></li>
+                    <li><a href="#none" data-id="23">海南</a></li>
+                    <li><a href="#none" data-id="24">贵州</a></li>
+                    <li><a href="#none" data-id="25">云南</a></li>
+                    <li><a href="#none" data-id="26">西藏</a></li>
+                    <li><a href="#none" data-id="27">陕西</a></li>
+                    <li><a href="#none" data-id="28">甘肃</a></li>
+                    <li><a href="#none" data-id="29">青海</a></li>
+                    <li><a href="#none" data-id="30">宁夏</a></li>
+                    <li><a href="#none" data-id="31">新疆</a></li>
+                    <li><a href="#none" data-id="32">台湾</a></li>
+                    <li><a href="#none" data-id="42">香港</a></li>
+                    <li><a href="#none" data-id="43">澳门</a></li>
+                    <li><a href="#none" data-id="84">钓鱼岛</a></li>
+                    <li><a href="http://en.jd.com/chinese.html" target="_blank">海外</a></li>
                 </ul>
-
-            </div>
-        </div>
-        <div>
-            <div id="middle_pic"><img src="images/11-11.jpg" width="450" height="290"></div>
-            <div id="sidebar">
-                <img src="images/clothes.jpg">
-                <table>
-                    <caption>京东快报</caption>
-                    <tbody>
-                    <tr>
-                        <td>手机爆款99元起疯抢</td>
-                        <td>兰州大家电物流中心正式</td>
-                    </tr>
-                    <tr>
-                        <td>钟表快抢 最高减2000元</td>
-                        <td>联想6折起 裸价双十一</td>
-                    </tr>
-                    <tr>
-                        <td>童书全场满300减100</td>
-                        <td>买茶叶送武夷山旅游大奖</td>
-                    </tr>
-                    <tr>
-                        <td>美的先行惠双11快抢</td>
-                        <td>新鲜褚橙全面包邮开售！</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="jdnews">
-                    <div class="quicknews">
-                        <h4>京东快报</h4>
-
-                        <div>更多快报 ></div>
-                        <div style="clear: both"></div>
-                    </div>
-                    <div style="clear: both"></div>
-                    <ul>
-                        <li class="odd">手机爆款99元起疯抢</li>
-                        <li class="even">兰州大家电物流中心正式</li>
-                        <li class="odd">钟表快抢 最高减2000元</li>
-                        <li class="even">联想6折起 裸价双十一</li>
-                        <li class="odd">童书全场满300减100</li>
-                        <li class="even">买茶叶送武夷山旅游大奖</li>
-                        <div style="clear: both"></div>
-                    </ul>
-
-
-                </div>
-
-            </div>
-            <div style="clear: both"></div>
-        </div>
-
+                <div class="close">x</div>
+            </dd>
+        </dl>
+        <ul class="fr">
+            <li>您好，欢迎来到京东！<span><a>[登录]</a><a>[注册]</a></span></li>
+            <li><s></s><a>我的订单</a></li>
+            <li class="fore3"><s></s><i></i><a href="#">会员俱乐部</a></li>
+            <li class="fore4"><s></s><i></i><a href="#">手机京东</a><b></b></li>
+            <li class="fore5"><s></s><a href="#">客户服务</a><b></b></li>
+            <li class="fore5"><s></s><a href="#">手机京东</a><b></b></li>
+        </ul>
     </div>
+</div>
+<div id="top-header">
+<div id="top-banner">
+    <a href="#none"><img src="jdimgs/top-banner.jpg"></a>
+
+    <div class="close">x</div>
+</div>
+<div id="header-search">
+    <div class="logo">
+        <a><img src="jdimgs/logo.png"></a>
+    </div>
+    <div class="search">
+        <div class="wrap">
+            <div class="form">
+                <input class="input" type="text">
+                <input class="submit" type="button" value="搜索">
+            </div>
+
+        </div>
+        <div class="hotwords">
+            <strong>热门搜索：</strong>
+            <a href="#none">户外出游</a>
+            <a href="#none">办公文具</a>
+            <a href="#none">家电裸价</a>
+            <a href="#none">防晒隔离</a>
+            <a href="#none">夏装1折</a>
+            <a href="#none">小牛3</a>
+            <a href="#none">童书满减</a>
+            <a href="#none">理财</a>
+        </div>
+    </div>
+    <div class="mybuy">
+        <dl id="car">
+            <dt class="sprit1"><a>我的京东</a><b></b></dt>
+        </dl>
+    </div>
+    <div class="settleup">
+        <dl id="suan">
+            <dt class="sprit2"><a>去购物车结算</a><b></b></dt>
+        </dl>
+    </div>
+    <div class="ypjb">
+        <a><img src="jdimgs/ypjb.png"></a>
+    </div>
+</div>
+
+<div id="navmenu">
+<div class="nav">
+<div id="category">
+<div class="menu"><a>全部商品分类</a></div>
+<div id="filter">
+<div id="allsort">
+    <ul class="dropdown-menu" role="menu">
+        <li data-submenu-id="submenu-ebook" class="item"><span
+                class="fore1"><a>图书</a>、<a>音像</a>、<a>数字商品</a></span><s></s></li>
+        <li data-submenu-id="submenu-home-electric" class="item"><span class="fore1"><a>家用电器</a></span><s></s></li>
+        <li data-submenu-id="submenu-telephone" class="item"><span class="fore1"><a>手机</a>、<a>数码</a></span><s></s></li>
+        <li data-submenu-id="submenu-computer" class="item"><span class="fore1"><a>电脑</a>、<a>办公</a></span><s></s></li>
+        <li data-submenu-id="submenu-kitchen" class="item"><span
+                class="fore1"><a>家居</a>、<a>家具</a>、<a>家装</a>、<a>厨具</a></span><s></s></li>
+        <li data-submenu-id="submenu-woman-cloth" class="item"><span class="fore1"><a>服饰内衣</a></span><s></s></li>
+        <li data-submenu-id="submenu-face-protect" class="item"><span class="fore1"><a>个护化妆</a></span><s></s></li>
+        <li data-submenu-id="submenu-woman-shoes" class="item"><span
+                class="fore1"><a>鞋靴</a>、<a>箱包</a>、<a>钟表</a>、<a>珠宝</a></span><s></s></li>
+        <li data-submenu-id="submenu-outer-cloth" class="item"><span class="fore1"><a>运动健康</a></span><s></s></li>
+        <li data-submenu-id="submenu-electrics" class="item"><span class="fore1"><a>汽车用品</a></span><s></s></li>
+        <li data-submenu-id="submenu-child-food" class="item"><span class="fore1"><a>母婴</a>、<a>玩具乐器</a></span><s></s>
+        </li>
+        <li data-submenu-id="submenu-food-paper" class="item"><span class="fore1"><a>食品饮料</a>、<a>保健食品</a></span><s></s>
+        </li>
+        <li data-submenu-id="submenu-caipiao" class="item"><span
+                class="fore1"><a>彩票</a>、<a>旅行</a>、<a>充值</a>、<a>票务</a></span><s></s></li>
+    </ul>
+</div>
+<div class="detail" id="submenu-ebook">
+    <dl>
+        <dt>电子书</dt>
+        <dd>
+            <em>免费 </em>
+            <em>小说 </em>
+            <em>励志与成功 </em>
+            <em>婚恋/两性 </em>
+            <em>文学 </em>
+            <em>经管 </em>
+            <em class="last">畅读VIP </em>
+        </dd>
+        <div style="clear: both"></div>
+    </dl>
+    <dl>
+        <dt>数字音乐</dt>
+        <dd>
+            <em>通俗流行 </em>
+            <em>古典音乐 </em>
+            <em>摇滚说唱 </em>
+            <em>爵士蓝调 </em>
+            <em>乡村民谣 </em>
+            <em class="last">有声读物 </em>
+
+        </dd>
+    </dl>
+    <dl>
+        <dt>音像</dt>
+        <dd>
+            <em>音乐</em>
+            <em>影视</em>
+            <em>教育</em>
+            <em>音像</em>
+            <em class="last">游戏</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>文艺</dt>
+        <dd>
+            <em>小说 </em>
+            <em>文学 </em>
+            <em>青春文学 </em>
+            <em>传记 </em>
+            <em class="last">艺术 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>人文社科</dt>
+        <dd>
+            <em>历史 </em>
+            <em>心理学 </em>
+            <em>政治/军事</em>
+            <em>国学/古籍</em>
+            <em>哲学/宗教</em>
+            <em class="last">社会科学 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>经管励志</dt>
+        <dd>
+            <em>经济 </em>
+            <em>金融与投资</em>
+            <em>管理 </em>
+            <em class="last">励志与成功</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>生活</dt>
+        <dd>
+            <em>家教与育儿</em>
+            <em>旅游/地图</em>
+            <em>烹饪/美食</em>
+            <em>时尚/美妆</em>
+            <em>家居 </em>
+            <em>婚恋与两性</em>
+            <em>娱乐/休闲</em>
+            <em>健身与保健</em>
+            <em>动漫/幽默</em>
+            <em class="last">体育/运动</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>科技</dt>
+        <dd>
+            <em>科普 </em>
+            <em>IT </em>
+            <em>建筑 </em>
+            <em>医学 </em>
+            <em>工业技术 </em>
+            <em>电子/通信</em>
+            <em>农林 </em>
+            <em class="last">科学与自然</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>少儿</dt>
+        <dd>
+            <em>少儿 </em>
+            <em>0-2岁 </em>
+            <em>3-6岁 </em>
+            <em>7-10岁</em>
+            <em class="last">11-14</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>教育</dt>
+        <dd>
+            <em>教材 </em>
+            <em>中小学教辅</em>
+            <em>考试 </em>
+            <em class="last">外语学习 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>其它</dt>
+        <dd>
+            <em>英文原版书</em>
+            <em>港台图书 </em>
+            <em>工具书 </em>
+            <em>套装书 </em>
+            <em class="last">杂志/期刊</em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-home-electric">
+    <dl>
+        <dt>大 家 电</dt>
+        <dd>
+            <em>平板电视 </em>
+            <em>空调 </em>
+            <em>冰箱 </em>
+            <em>洗衣机 </em>
+            <em>家庭影院 </em>
+            <em>DVD迷你音响 </em>
+            <em>烟机/灶具 </em>
+            <em>热水器 </em>
+            <em>消毒柜/洗碗机 </em>
+            <em>酒柜/冷柜 </em>
+            <em class="last">家电配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>生活电器</dt>
+        <dd>
+            <em>取暖电器 </em>
+            <em>加湿器 </em>
+            <em>净化器 </em>
+            <em>除湿/干衣机 </em>
+            <em>饮水机 </em>
+            <em>净水设备 </em>
+            <em>挂烫机/熨斗 </em>
+            <em>吸尘器 </em>
+            <em>电话机 </em>
+            <em>插座 </em>
+            <em>收录/音机 </em>
+            <em>清洁机 </em>
+            <em>电风扇 </em>
+            <em>冷风扇 </em>
+            <em class="last">其它生活电器 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>厨房电器</dt>
+        <dd>
+            <em>电压力锅 </em>
+            <em>电饭煲 </em>
+            <em>豆浆机 </em>
+            <em>面包机 </em>
+            <em>咖啡机 </em>
+            <em>微波炉 </em>
+            <em>料理/榨汁机 </em>
+            <em>电烤箱 </em>
+            <em>电磁炉 </em>
+            <em>电饼铛/烧烤盘 </em>
+            <em>煮蛋器 </em>
+            <em>酸奶机 </em>
+            <em>电水壶/热水瓶 </em>
+            <em>电炖锅 </em>
+            <em>多用途锅 </em>
+            <em>果蔬解毒机 </em>
+            <em class="last">其它厨房电器 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>个护健康</dt>
+        <dd>
+            <em>剃须刀 </em>
+            <em>剃/脱毛器 </em>
+            <em>口腔护理 </em>
+            <em>电吹风 </em>
+            <em>美容美发 </em>
+            <em>按摩器 </em>
+            <em>按摩椅 </em>
+            <em>足浴盆 </em>
+            <em>血压计 </em>
+            <em>健康秤/厨房秤 </em>
+            <em>血糖仪 </em>
+            <em>体温计 </em>
+            <em>计步器/脂肪检测仪 </em>
+            <em class="last">其它健康电器 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>五金家装</dt>
+        <dd>
+            <em>电动工具 </em>
+            <em>手动工具 </em>
+            <em>仪器仪表 </em>
+            <em>浴霸/排气扇 </em>
+            <em>灯具 </em>
+            <em>LED灯 </em>
+            <em>洁身器 </em>
+            <em>水槽 </em>
+            <em>龙头 </em>
+            <em>淋浴花洒 </em>
+            <em>厨卫五金 </em>
+            <em>家具五金 </em>
+            <em>门铃 </em>
+            <em>电气开关 </em>
+            <em>插座 </em>
+            <em>电工电料 </em>
+            <em>监控安防 </em>
+            <em class="last">电线/线缆 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-telephone">
+    <dl>
+        <dt>手机通讯</dt>
+        <dd><em>手机</em>
+            <em>对讲机</em></dd>
+    </dl>
+    <dl>
+        <dt> 运营商</dt>
+        <dd><em>购机送费</em>
+            <em>0元购机</em>
+            <em>选号入网</em></dd>
+    </dl>
+    <dl>
+        <dt> 手机配件</dt>
+        <dd><em>电池</em>
+            <em>蓝牙耳机</em>
+            <em> 充电器/数据线</em>
+            <em>手机耳机</em>
+            <em>贴膜</em>
+            <em>存储卡</em>
+            <em>保护套</em>
+            <em>车载</em>
+            <em>iPhone配件</em>
+            <em>创意配件</em>
+            <em>便携/无线音箱</em>
+            <em>手机饰品</em></dd>
+    </dl>
+    <dl>
+        <dt> 摄影摄像</dt>
+        <dd><em>数码相机</em>
+            <em>单电/微单相机</em>
+            <em>单反相机</em>
+            <em>摄像机</em>
+            <em>拍立得</em>
+            <em>镜头</em></dd>
+    </dl>
+    <dl>
+        <dt> 数码配件</dt>
+        <dd><em>存储卡</em>
+            <em>读卡器</em>
+            <em>滤镜</em>
+            <em> 闪光灯/手柄</em>
+            <em>相机包</em>
+            <em>三脚架/云台</em>
+            <em>相机清洁</em>
+            <em>相机贴膜</em>
+            <em> 机身附件</em>
+            <em>镜头附件</em>
+            <em>电池/充电器</em>
+            <em>移动电源</em></dd>
+    </dl>
+    <dl>
+        <dt>时尚影音</dt>
+        <dd><em>MP3/MP4</em>
+            <em>智能设备</em>
+            <em>耳机/耳麦</em>
+            <em>音箱</em>
+            <em>高清播放器</em>
+            <em>电子书</em>
+            <em>电子词典</em>
+            <em> MP3/MP4配件</em>
+            <em>录音笔</em>
+            <em>麦克风</em>
+            <em>专业音频</em>
+            <em>电子教育</em>
+            <em>数码相框</em>
+            <em>苹果配件</em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-computer">
+    <dl>
+        <dt> 电脑整机</dt>
+        <dd><em> 笔记本</em>
+            <em> 超极本</em>
+            <em> 游戏本</em>
+            <em> 平板电脑</em>
+            <em> 平板电脑配件</em>
+            <em> 台式机</em>
+            <em> 服务器</em>
+            <em> 笔记本配件</em></dd>
+    </dl>
+    <dl>
+        <dt> 电脑配件</dt>
+        <dd><em> CPU</em>
+            <em> 主板</em>
+            <em> 显卡</em>
+            <em> 硬盘</em>
+            <em> SSD固态硬盘</em>
+            <em> 内存</em>
+            <em> 机箱</em>
+            <em> 电源</em>
+            <em> 显示器</em>
+            <em> 刻录机/光驱</em>
+            <em> 声卡/扩展卡</em>
+            <em> 散热器</em>
+            <em> 装机配件</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 外设产品</dt>
+        <dd><em> 鼠标</em>
+            <em> 键盘</em>
+            <em> 游戏设备</em>
+            <em> U盘</em>
+            <em> 移动硬盘</em>
+            <em> 电视盒</em>
+            <em> 摄像头</em>
+            <em> 线缆</em>
+            <em> 鼠标垫</em>
+            <em> 手写板</em>
+            <em> 外置盒</em>
+            <em> 电脑工具</em>
+            <em> 电脑清洁</em>
+            <em> UPS</em>
+            <em> 插座</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 网络产品</dt>
+        <dd><em> 路由器</em>
+            <em> 网卡</em>
+            <em> 交换机</em>
+            <em> 网络存储</em>
+            <em> 3G上网</em>
+            <em> 网络盒子</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 办公打印</dt>
+        <dd><em> 打印机</em>
+            <em> 一体机</em>
+            <em> 投影机</em>
+            <em> 投影配件</em>
+            <em> 传真机</em>
+            <em> 复合机</em>
+            <em> 碎纸机</em>
+            <em> 扫描仪</em>
+            <em> 墨盒</em>
+            <em> 硒鼓</em>
+            <em> 墨粉</em>
+            <em> 色带</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 办公文仪</dt>
+        <dd><em> 办公文具</em>
+            <em> 文件管理</em>
+            <em> 笔类</em>
+            <em> 纸类</em>
+            <em> 本册/便签</em>
+            <em> 学生文具</em>
+            <em> 财务用品</em>
+            <em> 计算器</em>
+            <em> 激光笔</em>
+            <em> 白板/封装</em>
+            <em> 考勤机</em>
+            <em> 刻录碟片/附件</em>
+            <em> 点钞机</em>
+            <em> 支付设备/POS机</em>
+            <em> 安防监控</em>
+            <em> 呼叫/会议设备</em>
+            <em> 保险柜</em>
+            <em> 办公家具</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 服务产品</dt>
+        <dd><em> 上门服务</em>
+            <em> 远程服务</em>
+            <em> 电脑软件</em></dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-kitchen">
+    <dl>
+        <dt> 厨具</dt>
+        <dd><em> 烹饪锅具 </em>
+            <em> 刀剪菜板 </em>
+            <em> 保鲜器皿 </em>
+            <em> 水具酒具 </em>
+            <em> 餐具 </em>
+            <em> 茶具/咖啡具 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 宠物生活</dt>
+        <dd><em> 宠物主粮 </em>
+            <em> 宠物零食 </em>
+            <em> 营养品 </em>
+            <em> 家居日用 </em>
+            <em> 玩具服饰 </em>
+            <em> 出行装备 </em>
+            <em> 医护美容 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 家纺</dt>
+        <dd><em> 床品件套 </em>
+            <em> 被子 </em>
+            <em> 枕芯枕套 </em>
+            <em> 床单被罩 </em>
+            <em> 毛巾被/毯 </em>
+            <em> 床垫/床褥 </em>
+            <em> 蚊帐/凉席 </em>
+            <em> 抱枕坐垫 </em>
+            <em> 毛巾家纺 </em>
+            <em> 电热毯 </em>
+            <em> 窗帘/窗纱 </em>
+            <em> 酒店用品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 家具</dt>
+        <dd><em> 卧室家具 </em>
+            <em> 客厅家具 </em>
+            <em> 餐厅家具 </em>
+            <em> 书房家具 </em>
+            <em> 储物家具 </em>
+            <em> 阳台/户外 </em>
+            <em> 商业办公 </em>
+            <em> 床 </em>
+            <em> 床垫 </em>
+            <em> 精品沙发 </em>
+            <em> 电脑桌/托盘/椅 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 灯具</dt>
+        <dd><em> 台灯 </em>
+            <em> 节能灯 </em>
+            <em> 装饰灯 </em>
+            <em> 多用灯 </em>
+            <em> 手电 </em>
+            <em> LED灯 </em>
+            <em> 吸顶灯 </em>
+            <em> 五金电器 </em>
+            <em> 氛围照明 </em>
+            <em> 吊灯 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 生活日用</dt>
+        <dd><em> 收纳用品 </em>
+            <em> 雨伞雨具 </em>
+            <em> 浴室用品 </em>
+            <em> 缝纫用品 </em>
+            <em> 洗晒用品 </em>
+            <em> 净化除味 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 家装软饰</dt>
+        <dd><em> 桌布/罩件 </em>
+            <em> 地毯地垫 </em>
+            <em> 沙发垫套 </em>
+            <em> 相框/相片墙 </em>
+            <em> 墙画墙贴 </em>
+            <em> 节庆饰品 </em>
+            <em> 手工/十字绣 </em>
+            <em> 工艺摆件 </em>
+            <em> 其他 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 清洁用品</dt>
+        <dd><em> 纸品湿巾 </em>
+            <em> 衣物清洁 </em>
+            <em> 清洁工具 </em>
+            <em> 驱虫用品 </em>
+            <em> 居室清洁 </em>
+            <em> 皮具护理 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 家装建材</dt>
+        <dd><em> 灯饰照明 </em>
+            <em> 厨房卫浴 </em>
+            <em> 五金工具 </em>
+            <em> 电工电料 </em>
+            <em> 墙地面材料 </em>
+            <em> 装饰材料 </em>
+            <em> 装修服务 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-woman-cloth">
+    <dl>
+        <dt> 女装</dt>
+        <dd>
+            <em> 羽绒服 </em>
+            <em> 棉服 </em>
+            <em> 大衣 </em>
+            <em> 皮衣皮草 </em>
+            <em> 风衣 </em>
+            <em> 针织衫 </em>
+            <em> 卫衣 </em>
+            <em> 西服 </em>
+            <em> 短外套 </em>
+            <em> T恤 </em>
+            <em> 衬衫 </em>
+            <em> 雪纺衫 </em>
+            <em> 马甲 </em>
+            <em> 牛仔裤 </em>
+            <em> 打底裤 </em>
+            <em> 休闲裤 </em>
+            <em> 正装裤 </em>
+            <em> 连衣裙 </em>
+            <em> 半身裙 </em>
+            <em> 中老年装 </em>
+            <em> 大码装 </em>
+            <em> 婚纱礼服 </em>
+            <em> 孕妇装 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 男装</dt>
+        <dd><em> 羽绒服 </em>
+            <em> 棉服 </em>
+            <em> 皮衣 </em>
+            <em> 针织衫 </em>
+            <em> 羊绒衫 </em>
+            <em> 外套 </em>
+            <em> 风衣 </em>
+            <em> 大衣 </em>
+            <em> 夹克 </em>
+            <em> 西服 </em>
+            <em> 卫衣 </em>
+            <em> 衬衫 </em>
+            <em> T恤 </em>
+            <em> POLO衫 </em>
+            <em> 马甲/背心 </em>
+            <em> 牛仔裤 </em>
+            <em> 休闲裤 </em>
+            <em> 西裤 </em>
+            <em> 西服套装 </em>
+            <em> 大码装 </em>
+            <em> 中老年装 </em>
+            <em> 唐装 </em>
+            <em> 工装 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 内衣</dt>
+        <dd><em> 保暖内衣 </em>
+            <em> 家居 </em>
+            <em> 文胸 </em>
+            <em> 女式内裤 </em>
+            <em> 男式内裤 </em>
+            <em> 男袜 </em>
+            <em> 女袜 </em>
+            <em> 塑身衣 </em>
+            <em> 连裤袜 </em>
+            <em> 美腿袜 </em>
+            <em> 睡衣 </em>
+            <em> 睡袍/浴袍 </em>
+            <em> 抹胸 </em>
+            <em> 背心 </em>
+            <em> 泳衣 </em>
+            <em> 情趣内衣 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 运动</dt>
+        <dd><em> 休闲鞋 </em>
+            <em> 帆布鞋 </em>
+            <em> 跑步鞋 </em>
+            <em> 篮球鞋 </em>
+            <em> 足球鞋 </em>
+            <em> 训练鞋 </em>
+            <em> 乒羽鞋 </em>
+            <em> 拖鞋 </em>
+            <em> 卫衣 </em>
+            <em> 夹克 </em>
+            <em> T恤 </em>
+            <em> 棉服/羽绒服 </em>
+            <em> 运动裤 </em>
+            <em> 套装 </em>
+            <em> 运动包 </em>
+            <em> 运动配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 配饰</dt>
+        <dd><em> 太阳镜 </em>
+            <em> 框镜 </em>
+            <em> 皮带 </em>
+            <em> 围巾 </em>
+            <em> 手套 </em>
+            <em> 帽子 </em>
+            <em> 领带 </em>
+            <em> 袖扣 </em>
+            <em> 其他配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 童装</dt>
+        <dd><em> 套装 </em>
+            <em> 上衣 </em>
+            <em> 裤子 </em>
+            <em> 裙子 </em>
+            <em> 内衣/家居服 </em>
+            <em> 羽绒服/棉服 </em>
+            <em> 亲子装 </em>
+            <em> 儿童配饰 </em>
+            <em> 礼服/演出服 </em>
+            <em> 运动鞋 </em>
+            <em> 单鞋 </em>
+            <em> 靴子 </em>
+            <em> 凉鞋 </em>
+            <em> 功能鞋 </em></dd>
+    </dl>
 
 </div>
-<!----------------the fourth part-->
-<div id="the_fourth">
-    <div class="quick">
-        <a target="_blank"
-           href="http://c.fa.jd.com/adclick?sid=2&cid=601&aid=4344&bid=0&unit=44363&advid=72909&guv=&url=http://sale.jd.com/act/UDckHL6VA3j.html">
-            <img src="images/quick.jpg">
-        </a>
+<div class="detail" id="submenu-face-protect">
+    <dl>
+        <dt> 面部护理</dt>
+        <dd><em> 洁面乳 </em>
+            <em> 爽肤水 </em>
+            <em> 精华露 </em>
+            <em> 乳液面霜 </em>
+            <em> 面膜面贴 </em>
+            <em> 眼部护理 </em><em>
+                颈部护理 </em>
+            <em> T区护理 </em>
+            <em> 护肤套装 </em>
+            <em> 防晒隔离 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 身体护理</dt>
+        <dd><em> 洗发护发 </em>
+            <em> 染发/造型 </em>
+            <em> 沐浴 </em>
+            <em> 磨砂/浴盐 </em>
+            <em> 身体乳 </em>
+            <em> 手工/香皂 </em>
+            <em> 香薰精油 </em>
+            <em> 纤体瘦身 </em>
+            <em> 脱毛膏 </em>
+            <em> 手足护理 </em>
+            <em> 洗护套装 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 口腔护理</dt>
+        <dd><em> 牙膏/牙粉 </em>
+            <em> 牙刷/牙线 </em>
+            <em> 漱口水 </em></dd>
+    </dl>
+    <dl>
+        <dt> 女性护理</dt>
+        <dd><em> 卫生巾 </em>
+            <em> 卫生护垫 </em>
+            <em> 洗液 </em>
+            <em> 美容食品 </em>
+            <em> 其它 </em></dd>
+    </dl>
+    <dl>
+        <dt> 男士护理</dt>
+        <dd><em> 脸部 </em>
+            <em> 眼部 </em>
+            <em> 身体护理 </em>
+            <em> 男士香水 </em>
+            <em> 剃须 </em>
+            <em> 防脱洗护 </em>
+            <em> 唇膏 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 魅力彩妆</dt>
+        <dd><em> 粉底/遮瑕 </em>
+            <em> 腮红 </em>
+            <em> 眼影/眼线 </em>
+            <em> 眉笔 </em>
+            <em> 睫毛膏 </em>
+            <em> 唇膏唇彩 </em>
+            <em> 彩妆组合 </em>
+            <em> 卸妆 </em>
+            <em> 美甲 </em>
+            <em> 彩妆工具 </em>
+            <em> 假发 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 香水SPA</dt>
+        <dd><em> 女士香水 </em>
+            <em> 男士香水 </em>
+            <em> 组合套装 </em>
+            <em> 迷你香水 </em>
+            <em> 香体走珠 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-woman-shoes">
+    <dl>
+        <dt> 时尚女鞋</dt>
+        <dd><em> 平底鞋 </em>
+            <em> 高跟鞋 </em>
+            <em> 单鞋 </em>
+            <em> 休闲鞋 </em>
+            <em> 凉鞋 </em>
+            <em> 女靴 </em>
+            <em> 雪地靴 </em>
+            <em> 拖鞋 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 流行男鞋</dt>
+        <dd><em> 商务休闲鞋 </em>
+            <em> 正装鞋 </em>
+            <em> 休闲鞋 </em>
+            <em> 凉鞋/沙滩鞋 </em>
+            <em> 男靴 </em>
+            <em> 功能鞋 </em>
+            <em> 拖鞋 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 潮流女包</dt>
+        <dd><em> 钱包/卡包 </em>
+            <em> 手拿包 </em>
+            <em> 单肩包 </em>
+            <em> 双肩包 </em>
+            <em> 手提包 </em>
+            <em> 斜挎包 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 时尚男包</dt>
+        <dd><em> 钱包/卡包 </em>
+            <em> 男士手包 </em>
+            <em> 腰带/礼盒 </em>
+            <em> 商务公文包 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 功能箱包</dt>
+        <dd><em> 电脑数码包 </em>
+            <em> 拉杆箱 </em>
+            <em> 旅行包 </em>
+            <em> 旅行配件 </em>
+            <em> 休闲运动包 </em>
+            <em> 登山包 </em>
+            <em> 妈咪包 </em>
+            <em> 书包 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 礼品</dt>
+        <dd><em> 火机烟具 </em>
+            <em> 礼品文具 </em>
+            <em> 瑞士军刀 </em>
+            <em> 收藏品 </em>
+            <em> 工艺礼品 </em>
+            <em> 创意礼品 </em>
+            <em> 礼卡礼券 </em>
+            <em> 鲜花速递 </em>
+            <em> 婚庆用品 </em>
+            <em> 京东礼品卡 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 奢侈品</dt>
+        <dd><em> GUCCI </em>
+            <em> PRADA </em>
+            <em> FENDI </em>
+            <em> BURBERRY </em>
+            <em> MONTBLANC </em>
+            <em> ARMANI </em>
+            <em> COACH </em>
+            <em> RIMOWA </em>
+            <em> RAY-BAN </em>
+            <em> 更多品牌 </em>
+            <em> 奢侈品箱包 </em>
+            <em> 钱包 </em>
+            <em> 服饰 </em>
+            <em> 腰带 </em>
+            <em> 太阳镜眼镜 </em>
+            <em> 配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 钟表</dt>
+        <dd><em> 瑞士品牌 </em>
+            <em> 国产品牌 </em>
+            <em> 日本品牌 </em>
+            <em> 时尚品牌 </em>
+            <em> 闹钟挂钟 </em>
+            <em> 儿童手表 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 珠宝首饰</dt>
+        <dd><em> 纯金K金饰品 </em>
+            <em> 金银投资 </em>
+            <em> 银饰 </em>
+            <em> 钻石饰品 </em>
+            <em> 翡翠玉石 </em>
+            <em> 水晶玛瑙 </em>
+            <em> 宝石珍珠 </em>
+            <em> 时尚饰品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 婚庆</dt>
+        <dd><em> 婚嫁首饰 </em>
+            <em> 婚纱摄影 </em>
+            <em> 婚纱礼服 </em>
+            <em> 婚庆服务 </em>
+            <em> 婚庆礼品/用品 </em>
+            <em> 婚宴 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-outer-cloth">
+    <dl>
+        <dt> 户外鞋服</dt>
+        <dd><em> 户外服装 </em>
+            <em> 户外鞋袜 </em>
+            <em> 户外配饰 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 户外装备</dt>
+        <dd><em> 帐篷 </em>
+            <em> 睡袋 </em>
+            <em> 登山攀岩 </em>
+            <em> 户外背包 </em>
+            <em> 户外照明 </em>
+            <em> 户外垫子 </em>
+            <em> 户外仪表 </em>
+            <em> 户外工具 </em>
+            <em> 望远镜 </em>
+            <em> 垂钓用品 </em>
+            <em> 旅游用品 </em>
+            <em> 便携桌椅床 </em>
+            <em> 烧烤用品 </em>
+            <em> 野餐炊具 </em>
+            <em> 军迷用品 </em>
+            <em> 游泳用具 </em>
+            <em> 泳衣 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 运动器械</dt>
+        <dd><em> 健身器械 </em>
+            <em> 运动器材 </em>
+            <em> 防护器具 </em>
+            <em> 骑行运动 </em>
+            <em> 极限轮滑 </em>
+            <em> 武术搏击 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 纤体瑜伽</dt>
+        <dd><em> 瑜伽垫 </em>
+            <em> 瑜伽服 </em>
+            <em> 瑜伽配件 </em>
+            <em> 瑜伽套装 </em>
+            <em> 舞蹈鞋服 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 体育娱乐</dt>
+        <dd><em> 羽毛球 </em>
+            <em> 乒乓球 </em>
+            <em> 篮球 </em>
+            <em> 足球 </em>
+            <em> 网球 </em>
+            <em> 排球 </em>
+            <em> 高尔夫球 </em>
+            <em> 棋牌麻将 </em>
+            <em> 其他 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 成人用品</dt>
+        <dd><em> 安全避孕 </em>
+            <em> 验孕测孕 </em>
+            <em> 人体润滑 </em>
+            <em> 情爱玩具 </em>
+            <em> 情趣内衣 </em>
+            <em> 组合套装 </em></dd>
+    </dl>
+    <dl>
+        <dt> 保健器械</dt>
+        <dd><em> 养生器械 </em>
+            <em> 保健用品 </em>
+            <em> 康复辅助 </em>
+            <em> 家庭护理 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 急救卫生</dt>
+        <dd><em> 跌打损伤 </em>
+            <em> 烫伤止痒 </em>
+            <em> 防裂抗冻 </em>
+            <em> 口腔咽部 </em>
+            <em> 眼部保健 </em>
+            <em> 鼻炎健康 </em>
+            <em> 风湿骨痛 </em>
+            <em> 生殖泌尿 </em>
+            <em> 美体塑身 </em></dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-electrics">
+    <dl>
+        <dt> 电子电器</dt>
+        <dd><em> 便携式GPS导航 </em>
+            <em> 嵌入式导航 </em>
+            <em> 安全预警仪 </em>
+            <em> 行车记录仪 </em>
+            <em> 跟踪防盗器 </em>
+            <em> 倒车雷达 </em>
+            <em> 车载电源 </em>
+            <em> 车载蓝牙 </em>
+            <em> 车载影音 </em>
+            <em> 车载净化器 </em>
+            <em> 车载冰箱 </em>
+            <em> 车载吸尘器 </em>
+            <em> 充气泵 </em>
+            <em> 胎压监测 </em>
+            <em> 车载生活电器 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 系统养护</dt>
+        <dd><em> 机油 </em>
+            <em> 添加剂 </em>
+            <em> 防冻冷却液 </em>
+            <em> 附属油 </em>
+            <em> 底盘装甲 </em>
+            <em> 空调清洗剂 </em>
+            <em> 金属养护 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 改装配件</dt>
+        <dd><em> 雨刷 </em>
+            <em> 车灯 </em>
+            <em> 轮胎 </em>
+            <em> 贴膜 </em>
+            <em> 装饰贴 </em>
+            <em> 后视镜 </em>
+            <em> 机油滤 </em>
+            <em> 空气滤 </em>
+            <em> 空调滤 </em>
+            <em> 燃油滤 </em>
+            <em> 火花塞 </em>
+            <em> 喇叭 </em>
+            <em> 刹车片 </em>
+            <em> 刹车盘 </em>
+            <em> 减震器 </em>
+            <em> 车身装饰 </em>
+            <em> 尾喉/排气管 </em>
+            <em> 踏板 </em>
+            <em> 蓄电池 </em>
+            <em> 其他配件 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 汽车美容</dt>
+        <dd><em> 漆面美容 </em>
+            <em> 漆面修复 </em>
+            <em> 内饰清洁 </em>
+            <em> 玻璃美容 </em>
+            <em> 补漆笔 </em>
+            <em> 轮胎轮毂清洗 </em>
+            <em> 洗车器 </em>
+            <em> 洗车水枪 </em>
+            <em> 洗车配件 </em>
+            <em> 洗车液 </em>
+            <em> 车掸 </em>
+            <em> 擦车巾/海绵 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 座垫脚垫</dt>
+        <dd><em> 凉垫 </em>
+            <em> 四季垫 </em>
+            <em> 毛垫 </em>
+            <em> 专车专用座垫 </em>
+            <em> 专车专用座套 </em>
+            <em> 通用座套 </em>
+            <em> 多功能垫 </em>
+            <em> 专车专用脚垫 </em>
+            <em> 通用脚垫 </em>
+            <em> 后备箱垫 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 内饰精品</dt>
+        <dd><em> 车用香水 </em>
+            <em> 车用炭包 </em>
+            <em> 空气净化 </em>
+            <em> 颈枕/头枕 </em>
+            <em> 抱枕/腰靠 </em>
+            <em> 方向盘套 </em>
+            <em> 挂件 </em>
+            <em> 摆件 </em>
+            <em> 布艺软饰 </em>
+            <em> 功能用品 </em>
+            <em> 整理收纳 </em>
+            <em> CD夹 </em></dd>
+    </dl>
+    <dl>
+        <dt> 安全自驾</dt>
+        <dd><em> 儿童安全座椅 </em>
+            <em> 应急救援 </em>
+            <em> 汽修工具 </em>
+            <em> 自驾野营 </em>
+            <em> 自驾照明 </em>
+            <em> 保温箱 </em>
+            <em> 置物箱 </em>
+            <em> 车衣 </em>
+            <em> 遮阳挡雪挡 </em>
+            <em> 车锁地锁 </em>
+            <em> 摩托车装备 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-child-food">
+    <dl>
+        <dt> 奶粉</dt>
+        <dd><em> 品牌奶粉 </em>
+            <em> 特殊配方 </em>
+            <em> 妈妈奶粉 </em>
+            <em> 1段奶粉 </em>
+            <em> 2段奶粉 </em>
+            <em> 3段奶粉 </em>
+            <em> 4段奶粉 </em>
+            <em> 羊奶粉 </em>
+            <em> 成人奶粉 </em></dd>
+    </dl>
+    <dl>
+        <dt> 营养辅食</dt>
+        <dd><em> 婴幼营养 </em>
+            <em> 初乳 </em>
+            <em> 米粉/菜粉 </em>
+            <em> 果泥/果汁 </em>
+            <em> 肉松/饼干 </em>
+            <em> 辅食 </em>
+            <em> 面条/粥 </em>
+            <em> 孕期营养 </em>
+            <em> 清火/开胃 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 尿裤湿巾</dt>
+        <dd><em> 品牌尿裤 </em>
+            <em> 新生儿 </em>
+            <em> S号 </em>
+            <em> M号 </em>
+            <em> L号 </em>
+            <em> XL/XXL号 </em>
+            <em> 裤型尿裤 </em>
+            <em> 湿巾 </em>
+            <em> 尿布/尿垫 </em>
+            <em> 成人尿裤 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 洗护用品</dt>
+        <dd><em> 宝宝护肤 </em>
+            <em> 护理用品 </em>
+            <em> 洗发沐浴 </em>
+            <em> 清洁用品 </em>
+            <em> 洗浴用品 </em>
+            <em> 妈妈护肤 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 童车童床</dt>
+        <dd><em> 婴儿推车 </em>
+            <em> 安全座椅 </em>
+            <em> 餐椅摇椅 </em>
+            <em> 婴儿床 </em>
+            <em> 自行车 </em>
+            <em> 学步车 </em>
+            <em> 三轮车 </em>
+            <em> 电动车 </em>
+            <em> 健身车 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 喂养用品</dt>
+        <dd><em> 奶瓶 </em>
+            <em> 奶嘴 </em>
+            <em> 吸奶器 </em>
+            <em> 暖奶/消毒 </em>
+            <em> 餐具 </em>
+            <em> 水具 </em>
+            <em> 牙胶/安抚 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 服饰寝居</dt>
+        <dd><em> 婴儿外出服 </em>
+            <em> . 婴儿内衣 </em>
+            <em> . 婴儿礼盒 </em>
+            <em> 婴儿鞋帽袜 </em>
+            <em> 家居床品 </em>
+            <em> 安全防护 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 妈妈专区</dt>
+        <dd><em> 包/背婴带 </em>
+            <em> 妈妈护理 </em>
+            <em> 产后塑身 </em>
+            <em> 孕妇内衣 </em>
+            <em> 防辐射服 </em>
+            <em> 孕妇装 </em>
+            <em> 孕妇食品 </em>
+            <em> 妈妈美容 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 玩具乐器</dt>
+        <dd><em> 适用年龄 </em>
+            <em> 遥控/电动 </em>
+            <em> 毛绒布艺 </em>
+            <em> 娃娃玩具 </em>
+            <em> 模型玩具 </em>
+            <em> 健身玩具 </em>
+            <em> 动漫玩具 </em>
+            <em> 益智玩具 </em>
+            <em> 积木拼插 </em>
+            <em> DIY玩具 </em>
+            <em> 创意减压 </em>
+            <em> 乐器相关 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-food-paper">
+    <dl>
+        <dt>食尚礼券</dt>
+        <dd><em> 大闸蟹 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 进口食品</dt>
+        <dd><em> 饼干蛋糕 </em>
+            <em> 糖果巧克力 </em>
+            <em> 休闲零食 </em>
+            <em> 冲调饮品 </em>
+            <em> 粮油调味 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 地方特产</dt>
+        <dd><em> 华北 </em>
+            <em> 西北 </em>
+            <em> 西南 </em>
+            <em> 东北 </em>
+            <em> 华南 </em>
+            <em> 华东 </em>
+            <em> 华中 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 休闲食品</dt>
+        <dd><em> 休闲零食 </em>
+            <em> 坚果炒货 </em>
+            <em> 肉干肉松 </em>
+            <em> 蜜饯果脯 </em>
+            <em> 糖果/巧克力 </em>
+            <em> 饼干蛋糕 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 粮油调味</dt>
+        <dd><em> 米面杂粮 </em>
+            <em> 食用油 </em>
+            <em> 调味品 </em>
+            <em> 南北干货 </em>
+            <em> 方便食品 </em>
+            <em> 有机食品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 酒饮冲调</dt>
+        <dd><em> 白酒/黄酒 </em>
+            <em> 葡萄酒 </em>
+            <em> 洋酒 </em>
+            <em> 啤酒 </em>
+            <em> 饮料 </em>
+            <em> 冲调 </em>
+            <em> 咖啡/奶茶 </em>
+            <em> 茗茶 </em>
+            <em> 牛奶 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 营养健康</dt>
+        <dd><em> 基础营养 </em>
+            <em> 美体养颜 </em>
+            <em> 滋补调养 </em>
+            <em> 骨骼健康 </em>
+            <em> 保健茶饮 </em>
+            <em> 成分保健 </em>
+            <em> 无糖食品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 亚健康</dt>
+        <dd><em> 调节三高 </em>
+            <em> 心脑养护 </em>
+            <em> 改善睡眠 </em>
+            <em> 肝肾养护 </em>
+            <em> 免疫调节 </em>
+            <em> 更多调理 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 健康礼品</dt>
+        <dd><em> 参茸礼品 </em>
+            <em> 更多礼品 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 生鲜食品</dt>
+        <dd><em> 水果 </em>
+            <em> 蔬菜 </em>
+            <em> 海鲜水产 </em>
+            <em> 禽蛋 </em>
+            <em> 鲜肉 </em>
+            <em> 加工类肉食 </em>
+            <em> 冻品 </em>
+            <em> 半成品 </em>
+        </dd>
+    </dl>
+</div>
+<div class="detail" id="submenu-caipiao">
+    <dl>
+        <dt> 彩票</dt>
+        <dd><em>双色球 </em>
+            <em> &nbsp;&nbsp;11选5&nbsp;&nbsp; </em>
+            <em>竞彩足球 </em>
+            <em>北单 </em>
+            <em>七乐彩 </em>
+            <em>福彩3D </em>
+            <em>快3 </em>
+            <em>大乐透 </em>
+            <em>新时时彩 </em>
+            <em>竞彩篮球 </em>
+            <em>足彩 </em>
+            <em>七星彩 </em>
+            <em>排列三 </em>
+            <em>更多 </em></dd>
+    </dl>
+    <dl>
+        <dt> 机票</dt>
+        <dd><em>国内机票</em>
+            <em>国际机票</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 酒店</dt>
+        <dd><em>国内酒店</em>
+            <em>酒店团购</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 旅行</dt>
+        <dd><em>度假</em>
+            <em>景点</em>
+            <em>租车</em>
+            <em>旅游团购</em>
+        </dd>
+    </dl>
+    <dl>
+        <dt>充值</dt>
+        <dd><em>手机充值</em></dd>
+    </dl>
+    <dl>
+        <dt> 游戏</dt>
+        <dd><em>游戏点卡 </em>
+            <em>QQ充值 </em>
+            <em>网页游戏 </em>
+            <em>游戏周边 </em></dd>
+    </dl>
+    <dl>
+        <dt> 票务</dt>
+        <dd><em>电影票 </em>
+            <em>演唱会 </em>
+            <em>话剧歌剧 </em>
+            <em>音乐会 </em>
+            <em>体育赛事 </em>
+            <em>舞蹈芭蕾 </em>
+            <em>戏曲综艺 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 应用商店</dt>
+        <dd><em>移动游戏 </em>
+            <em>移动软件 </em>
+            <em>网页应用 </em>
+        </dd>
+    </dl>
+    <dl>
+        <dt> 保险</dt>
+        <dd><em>汽车保险 </em>
+            <em>意外保险 </em>
+            <em>健康医疗 </em>
+            <em>少儿女性 </em>
+        </dd>
+    </dl>
+</div>
+<div style="clear: both"></div>
+</div>
+</div>
+<ul id="navitems">
+    <li><a>首页</a></li>
+    <li><a>服装城</a></li>
+    <li><a>食品</a></li>
+    <li><a>团购</a></li>
+    <li><a>夺宝岛</a></li>
+    <li><a>闪购</a></li>
+    <li><a>金融</a></li>
+</ul>
+</div>
+</div>
+
+
+</div>
+<div id="big-banner">
+    <div id="slide-shortlist">
+        <!--slider banner-->
+        <div id="slider">
+            <div class="control-tip">
+                <span class="current">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+            </div>
+            <div class="content">
+                <div class="content-list">
+                    <ul id="slideritems">
+                        <li>
+                            <a><img height="240" width="670" src="jdimgs/slide_01.jpg"></a>
+                        </li>
+                        <li>
+                            <a><img height="240" width="670" src="jdimgs/slide_02.jpg"></a>
+                        </li>
+                        <li>
+                            <a><img height="240" width="670" src="jdimgs/slide_03.jpg"></a>
+                        </li>
+                        <li>
+                            <a> <img height="240" width="670" src="jdimgs/slide_04.jpg"></a>
+                        </li>
+                        <li>
+                            <a><img height="240" width="670" src="jdimgs/slide_05.jpg"></a>
+                        </li>
+                        <li>
+                            <a><img height="240" width="670" src="jdimgs/slide_06.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--scroll slider-->
+        <div id="scroll">
+            <div class="pageNote">
+                <span class="prev">上一页<b></b></span>
+                <span class="next">下一页<b></b></span>
+            </div>
+            <div class="scrollcontent">
+                <div class="scrollitems">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_01.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_02.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_03.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_04.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_05.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_06.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_07.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_08.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_09.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_10.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_11.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_12.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_13.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_14.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_15.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_16.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_17.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="jdimgs/scroll_18.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="pictures">
-        <div class="transition">
-            <ul>
-                <li class="item"><em></em><img src="images/electronic.jpg"></li>
-                <li class="item"><em></em><img src="images/cellphone.jpg"></li>
-                <li class="item"><em></em><img src="images/clothe.jpg"></li>
-                <li class="item"><em></em><img src="images/computer.jpg"></li>
-                <li class="item"><em></em><img src="images/facetool.jpg"></li>
-                <li class="item"><em></em><img src="images/furniture.jpg"></li>
+    <div id="bnner-slider-right">
+        <div class="right-top-corner">
+            <a><img src="jdimgs/r-t-corner.jpg"></a>
+        </div>
+        <div class="jdnews clearfix">
+            <div class="title clearfix">
+                <h2>京东快报</h2>
+
+                <div><a>更多快报&nbsp;></a></div>
+            </div>
+            <div class="mlist clearfix">
+                <ul>
+                    <li><a>鲜切花直送 全年999元</a></li>
+                    <li><a>用户体验调研 邀您参与</a></li>
+                    <li><a>车品夏季清仓299减60！</a></li>
+                    <li><a>进口牛奶低至5折仅1天</a></li>
+                    <li><a>京东大篷车百城行</a></li>
+                    <li><a>199元!皇室玫瑰浪漫首发</a></li>
+                    <li><a>美德乐吸乳器0元试用</a></li>
+                    <li><a>京东平板节 专场特惠</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="short-iframe">
+            <ul class="fore1">
+                <li class="fore1"><a><s></s><span>话费</span><i></i></a></li>
+                <li class="fore2"><a><s></s><span>旅行</span><i></i></a></li>
+                <li class="fore3"><a><s></s><span>彩票</span><i></i></a></li>
+                <li class="fore4"><a><s></s><span>游戏</span><i></i></a></li>
+            </ul>
+            <ul class="fore2">
+                <li class="fore1"><a><s></s><span>机票</span><i></i></a></li>
+                <li class="fore2"><a><s></s><span>电影票</span><i></i></a></li>
+                <li class="fore3"><a><s></s><span>理财</span><i></i></a></li>
+                <li class="fore4"><a><s></s><span>水电煤</span><i></i></a></li>
             </ul>
         </div>
-        <div class="opacity">
-            <a class="item" href="#"><em></em><img src="images/bike.jpg" width="166" height="220"></a>
-            <a class="item" href="#"><em></em><img src="images/beer.jpg" width="166" height="220"></a>
-            <a class="item" href="#"><em></em><img src="images/monitor.jpg" width="166" height="220"></a>
-            <a class="item" href="#"><em></em><img src="images/shoes.jpg" width="166" height="220"></a>
-            <a class="item" href="#"><em></em><img src="images/laptop.jpg" width="166" height="220"></a>
-            <a class="item" href="#"><em></em><img src="images/phone.jpg" width="166" height="220"></a>
+
+    </div>
+</div>
+<div id="shortcase">
+    <div class="header">
+        <h1>生活的橱窗</h1>
+        <img src="jdimgs/life-windows.png" height="24px">
+    </div>
+    <div class="windows">
+        <div class="item">
+            <a class="s-link" href="#none">
+                <div class="aside">
+                    <h3>品牌街</h3>
+
+                    <div><p>苹果专场</p></div>
+                    <div><p>6即出，5S暴降</p></div>
+                    <ul class="hotwords">
+                        <li><i></i>更多品牌</li>
+                        <li><i></i>进入品牌街</li>
+                    </ul>
+                </div>
+                <img class="product" src="jdimgs/showcase_01.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a class="s-link" href="#none">
+                <div class="aside">
+                    <h3>天天低价</h3>
+
+                    <div><p>苹果专场</p></div>
+                    <div><p>6即出，5S暴降</p></div>
+                    <ul class="hotwords">
+                        <li><i></i>更多品牌</li>
+                        <li><i></i>进入品牌街</li>
+                    </ul>
+                </div>
+                <img class="product" src="jdimgs/showcase_02.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a class="s-link" href="#none">
+                <div class="aside">
+                    <h3>精品周刊</h3>
+
+                    <div><p>苹果专场</p></div>
+                    <div><p>6即出，5S暴降</p></div>
+                    <ul class="hotwords">
+                        <li><i></i>更多品牌</li>
+                        <li><i></i>进入品牌街</li>
+                    </ul>
+                </div>
+                <img class="product" src="jdimgs/showcase_03.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a class="s-link" href="#none">
+                <div class="aside">
+                    <h3>今日团购</h3>
+
+                    <div><p>苹果专场</p></div>
+                    <div><p>6即出，5S暴降</p></div>
+                    <ul class="hotwords">
+                        <li><i></i>更多品牌</li>
+                        <li><i></i>进入品牌街</li>
+                    </ul>
+                </div>
+                <img class="product" src="jdimgs/showcase_04.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a class="s-link" href="#none">
+                <div class="aside">
+                    <h3>京东首发</h3>
+
+                    <div><p>苹果专场</p></div>
+                    <div><p>6即出，5S暴降</p></div>
+                    <ul class="hotwords">
+                        <li><i></i>更多品牌</li>
+                        <li><i></i>进入品牌街</li>
+                    </ul>
+                </div>
+                <img class="product" src="jdimgs/showcase_05.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a class="s-link" href="#none">
+                <div class="aside">
+                    <h3>品牌特卖</h3>
+
+                    <div><p>苹果专场</p></div>
+                    <div><p>6即出，5S暴降</p></div>
+                    <ul class="hotwords">
+                        <li><i></i>更多品牌</li>
+                        <li><i></i>进入品牌街</li>
+                    </ul>
+                </div>
+                <img class="product" src="jdimgs/showcase_06.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a class="s-link" href="#none">
+                <div class="aside">
+                    <h3>京东预售</h3>
+
+                    <div><p>苹果专场</p></div>
+                    <div><p>6即出，5S暴降</p></div>
+                    <ul class="hotwords">
+                        <li><i></i>更多品牌</li>
+                        <li><i></i>进入品牌街</li>
+                    </ul>
+                </div>
+                <img class="product" src="jdimgs/showcase_07.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a class="s-link" href="#none">
+                <div class="aside">
+                    <h3>金融精选</h3>
+
+                    <div><p>苹果专场</p></div>
+                    <div><p>6即出，5S暴降</p></div>
+                    <ul class="hotwords">
+                        <li><i></i>更多品牌</li>
+                        <li><i></i>进入品牌街</li>
+                    </ul>
+                </div>
+                <img class="product" src="jdimgs/showcase_08.jpg">
+            </a>
         </div>
     </div>
 </div>
-<!--------------the service part-->
-<div id="service">
-    <dl class="fore-1">
-        <dt><b></b><strong>购物指南</strong></dt>
-        <dd>
-            <div>购物流程</div>
-        </dd>
-        <dd>
-            <div>会员介绍</div>
-        </dd>
-        <dd>
-            <div>团购/机票</div>
-        </dd>
-        <dd>
-            <div>常见问题</div>
-        </dd>
-        <dd>
-            <div>大家电</div>
-        </dd>
-        <dd>
-            <div>联系客服</div>
-        </dd>
-    </dl>
-    <dl class="fore-2">
-        <dt><b></b><strong>购物指南</strong></dt>
-        <dd>
-            <div>购物流程</div>
-        </dd>
-        <dd>
-            <div>会员介绍</div>
-        </dd>
-        <dd>
-            <div>团购/机票</div>
-        </dd>
-        <dd>
-            <div>常见问题</div>
-        </dd>
-        <dd>
-            <div>大家电</div>
-        </dd>
-        <dd>
-            <div>联系客服</div>
-        </dd>
-    </dl>
-    <dl class="fore-3">
-        <dt><b></b><strong>购物指南</strong></dt>
-        <dd>
-            <div>购物流程</div>
-        </dd>
-        <dd>
-            <div>会员介绍</div>
-        </dd>
-        <dd>
-            <div>团购/机票</div>
-        </dd>
-        <dd>
-            <div>常见问题</div>
-        </dd>
-        <dd>
-            <div>大家电</div>
-        </dd>
-        <dd>
-            <div>联系客服</div>
-        </dd>
-    </dl>
-    <dl class="fore-4">
-        <dt><b></b><strong>购物指南</strong></dt>
-        <dd>
-            <div>购物流程</div>
-        </dd>
-        <dd>
-            <div>会员介绍</div>
-        </dd>
-        <dd>
-            <div>团购/机票</div>
-        </dd>
-        <dd>
-            <div>常见问题</div>
-        </dd>
-        <dd>
-            <div>大家电</div>
-        </dd>
-        <dd>
-            <div>联系客服</div>
-        </dd>
-    </dl>
-    <dl class="fore-5">
-        <dt><b></b><strong>购物指南</strong></dt>
-        <dd>
-            <div>购物流程</div>
-        </dd>
-        <dd>
-            <div>会员介绍</div>
-        </dd>
-        <dd>
-            <div>团购/机票</div>
-        </dd>
-        <dd>
-            <div>常见问题</div>
-        </dd>
-        <dd>
-            <div>大家电</div>
-        </dd>
-        <dd>
-            <div>联系客服</div>
-        </dd>
-    </dl>
-
-    <div style="clear: both"></div>
+<div id="middle-banner">
+    <a href="#none"><img src="jdimgs/middle-banner.jpg"></a>
 </div>
+
+<div id="floor1">
+<div id="home-appliances">
+    <div class="floorname">
+        <div class="title-tip"><b>1F</b></div>
+        <h2 class="title-name">家电通讯</h2></div>
+    <ul>
+        <li><a>手机</a></li>
+        <li><a>空调</a></li>
+        <li><a>手机配件</a></li>
+        <li><a>平板电视</a></li>
+        <li><a>话费补贴</a></li>
+        <li><a>冰箱</a></li>
+        <li><a>生活电器</a></li>
+        <li><a>洗衣机</a></li>
+        <li><a>厨房电器</a></li>
+        <li><a>热水器</a></li>
+        <li><a>个护健康</a></li>
+        <li><a>烟机/灶具</a></li>
+        <li><a>五金家装</a></li>
+        <li><a>家庭影院</a></li>
+        <li><a>酒柜冷柜</a></li>
+        <li><a>汽车用品</a></li>
+    </ul>
+    <div>
+        <a><img src="jdimgs/tele.jpg"></a>
+    </div>
+</div>
+
+<div id="selectTab">
+<div class="tab-arrow">
+    <div class="arrows">
+        <b></b>
+    </div>
+    <ul id="tabs">
+        <li><a class="hover" href="#" name="#tab1">特价商品</a></li>
+        <li><a href="#" name="#tab2">大家电</a></li>
+        <li><a href="#" name="#tab3">小家电</a></li>
+        <li><a href="#" name="#tab4">手机通讯</a></li>
+        <li><a href="#" name="#tab5">汽车五金</a></li>
+    </ul>
+</div>
+<div id="content">
+<div id="tab1">
+    <div class="jd-slider">
+        <a><img src="jdimgs/jd-slider-01.jpg"></a>
+    </div>
+    <ul class="fore1 showlist">
+        <li>
+            <div><a><img src="jdimgs/tab1-1.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+
+        <li class="rowlast">
+            <div><a><img src="jdimgs/tab1-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab1-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="jdimgs/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+</div>
+<div id="tab2">
+    <ul class="fore2 showlist">
+        <li>
+            <div><a><img src="jdimgs/tab1-1.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab1-2.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab1-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab1-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="rowlast">
+            <div><a><img src="jdimgs/tab1-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab1-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="jdimgs/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+</div>
+<div id="tab3">
+    <ul class="fore3 showlist">
+        <li>
+            <div><a><img src="jdimgs/tab3-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab3-2.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab3-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab3-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="rowlast">
+            <div><a><img src="jdimgs/tab3-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab3-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab3-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab3-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab3-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="jdimgs/tab3-10.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+
+</div>
+<div id="tab4">
+    <ul class="fore4 showlist">
+        <li>
+            <div><a><img src="jdimgs/tab4-1.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab4-2.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab4-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab4-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="rowlast">
+            <div><a><img src="jdimgs/tab4-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab4-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab4-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab4-8.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab4-9.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="jdimgs/tab4-10.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+</div>
+<div id="tab5">
+    <ul class="fore5 showlist">
+        <li>
+            <div><a><img src="jdimgs/tab5-1.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab5-2.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab5-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="jdimgs/tab5-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="rowlast">
+            <div><a><img src="jdimgs/tab5-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab5-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab5-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab5-8.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="jdimgs/tab5-9.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="jdimgs/tab5-10.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+<div id="brands">
+    <div class="brandtitle">
+        <a>大家电配送<b></b></a><a>合约计划说明<b></b></a>
+    </div>
+    <ul class="brandlist">
+        <li>
+            <a><img src="jdimgs/brand_01.gif"></a>
+        </li>
+        <li>
+            <a><img src="jdimgs/brand_02.gif"></a>
+        </li>
+        <li>
+            <a><img src="jdimgs/brand_03.gif"></a>
+        </li>
+        <li>
+            <a><img src="jdimgs/brand_04.gif"></a>
+        <li>
+            <a><img src="jdimgs/brand_01.gif"></a>
+        </li>
+        <li>
+            <a><img src="jdimgs/brand_02.gif"></a>
+        </li>
+        <li>
+            <a><img src="jdimgs/brand_03.gif"></a>
+        </li>
+        <li>
+            <a><img src="jdimgs/brand_04.gif"></a>
+        </li>
+        <li>
+            <a><img src="jdimgs/brand_03.gif"></a>
+        </li>
+        <li>
+            <a><img src="jdimgs/brand_04.gif"></a>
+        </li>
+    </ul>
+    <div><a><img src="jdimgs/brand.jpg"></a></div>
+</div>
+</div>
+<div id="service">
+    <div class="servicelist">
+        <dl class="fore1">
+            <dt><b></b><strong>购物指南</strong></dt>
+            <dd>
+                <div><a>购物流程</a></div>
+            </dd>
+            <dd>
+                <div><a>会员介绍</a></div>
+            </dd>
+            <dd>
+                <div><a>团购/机票</a></div>
+            </dd>
+            <dd>
+                <div><a>常见问题</a></div>
+            </dd>
+            <dd>
+                <div><a>大家电</a></div>
+            </dd>
+            <dd>
+                <div><a>联系客服</a></div>
+            </dd>
+        </dl>
+        <dl class="fore2">
+            <dt><b></b><strong>购物指南</strong></dt>
+            <dd>
+                <div><a>购物流程</a></div>
+            </dd>
+            <dd>
+                <div><a>会员介绍</a></div>
+            </dd>
+            <dd>
+                <div><a>团购/机票</a></div>
+            </dd>
+            <dd>
+                <div><a>常见问题</a></div>
+            </dd>
+            <dd>
+                <div><a>大家电</a></div>
+            </dd>
+            <dd>
+                <div><a>联系客服</a></div>
+            </dd>
+        </dl>
+        <dl class="fore3">
+            <dt><b></b><strong>购物指南</strong></dt>
+            <dd>
+                <div><a>购物流程</a></div>
+            </dd>
+            <dd>
+                <div><a>会员介绍</a></div>
+            </dd>
+            <dd>
+                <div><a>团购/机票</a></div>
+            </dd>
+            <dd>
+                <div><a>常见问题</a></div>
+            </dd>
+            <dd>
+                <div><a>大家电</a></div>
+            </dd>
+            <dd>
+                <div><a>联系客服</a></div>
+            </dd>
+        </dl>
+        <dl class="fore4">
+            <dt><b></b><strong>购物指南</strong></dt>
+            <dd>
+                <div><a>购物流程</a></div>
+            </dd>
+            <dd>
+                <div><a>会员介绍</a></div>
+            </dd>
+            <dd>
+                <div><a>团购/机票</a></div>
+            </dd>
+            <dd>
+                <div><a>常见问题</a></div>
+            </dd>
+            <dd>
+                <div><a>大家电</a></div>
+            </dd>
+            <dd>
+                <div><a>联系客服</a></div>
+            </dd>
+        </dl>
+        <dl class="fore5">
+            <dt><b></b><strong>购物指南</strong></dt>
+            <dd>
+                <div><a>购物流程</a></div>
+            </dd>
+            <dd>
+                <div><a>会员介绍</a></div>
+            </dd>
+            <dd>
+                <div><a>团购/机票</a></div>
+            </dd>
+            <dd>
+                <div><a>常见问题</a></div>
+            </dd>
+            <dd>
+                <div><a>大家电</a></div>
+            </dd>
+            <dd>
+                <div><a>联系客服</a></div>
+            </dd>
+        </dl>
+        <div class="fenbu">
+            <h3>京东自营覆盖区县</h3>
+
+            <p>京东已向全国1789个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+
+            <p class="juti"><a>查看详情 ></a></p>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="f-link">
+        <a>关于我们</a>|<a>联系我们</a>|<a>人才招聘</a>|<a>商家入驻</a>|<a>广告服务</a>|<a>手机京东</a>|<a>友情链接</a>|<a>销售联盟</a>|<a>京东社区</a>|<a>京东公益</a>|<a>English
+        Site</a>
+    </div>
+    <div class="copyright">
+        <p>
+            <span>北京市公安局朝阳分局备案编号110105014669</span>|<span>京ICP证070359号</span>|<span>互联网药品信息服务资格证编号(京)-非经营性-2011-0034</span>|<span> 新出发京零&nbsp;字第大120007号</span>
+        </p>
+
+        <p>
+            <span><a>音像制品经营许可证苏宿批005号</a></span>|<span>出版物经营许可证编号新出发(苏)批字第N-012号</span>|<span>互联网出版许可证编号新出网证(京)字150号</span>
+        </p>
+
+        <p><span><a>网络文化经营许可证京网文[2011]0168-061号</a></span><span>Copyright © 2004-2014</span><span>京东JD.com 版权所有</span>
+        </p>
+
+        <p>京东旗下网站：<a>360TOP</a><a>拍拍网</a><a>网银在线</a></p>
+    </div>
+    <div class="authentication">
+        <a><img src="jdimgs/athen_01.gif"></a>
+        <a><img src="jdimgs/athen_02.gif"></a>
+        <a><img src="jdimgs/authen_03.png"></a>
+        <a><img src="jdimgs/authen_04.png"></a>
+    </div>
+</div>
+<script src="../js/jquery-1.10.2.js"></script>
+<script>
+    $(function () {
+        $("#home-area .note .citycha").click(function () {
+            $("#home-area").addClass("hover")
+        });
+        $("#citylist .close").click(function () {
+            $("#home-area").removeClass("hover");
+        });
+
+        $("#citylist li").click(function () {
+            $("#place").text($(this).find("a").text());
+            $("#home-area").removeClass("hover");
+        });
+
+        $("#car,#suan").hover(function () {
+            $(this).addClass("hover");
+        }, function () {
+            $(this).removeClass("hover");
+        });
+
+//        slider banner
+        (function () {
+            var page = 1;
+            var move = $(".content").width();
+            var len = $("#slideritems li").length;
+            var pCount = Math.ceil(len);
+            var flag = false;
+
+            $("#slideritems li").hover(function () {
+                flag = true;
+            }, function () {
+                flag = false;
+            });
+
+            setInterval(function () {
+                if (!flag) {
+                    if (page == pCount) {
+                        $(".content-list").css({left: 0, opacity: 0}).animate({opacity: 1}, 500);
+                        page = 1;
+                    } else {
+                        $(".content-list").css({left: -page * move, opacity: 0}).animate({opacity: 1}, 500);
+                        page++;
+                    }
+                    $(".control-tip span").eq(page - 1).addClass("current").siblings().removeClass("current");
+                }
+
+            }, 3000);
+
+            $(".control-tip span").hover(function () {
+                var idx = $(this).index();
+                $(".content-list").css({left: -idx * move, opacity: 0}).animate({opacity: 1}, 500);
+                $(".control-tip span").eq(idx).addClass("current").siblings().removeClass("current");
+            })
+        })();
+
+//        scroll slider
+
+        (function () {
+            var page = 1;
+            var i = 3;
+            var move = $("#scroll .scrollcontent").width() + 1;
+            var len = $("#scroll li").length;
+            var pCount = Math.ceil(len / i);
+            var flag = false;
+
+            $("#scroll span.next").click(function () {
+
+                if (!$("#scroll .scrollitems").is(":animated")) {
+                    if (page == pCount) {
+                        $(".scrollitems li:not(last)").remove().appendTo($(".scrollitems ul"));
+                        $(".scrollitems").animate({left: 0});
+                        page = 1;
+                    } else {
+                        $(".scrollitems").animate({left: "-=" + move});
+                        page++;
+                    }
+                }
+                $(".control-tip span").eq(page - 1).addClass("current").siblings().removeClass("current");
+            });
+            $("#scroll span.prev").click(function () {
+                if (page == 1) {
+                    $(".scrollitems").animate({left: "-=" + (pCount - 1) * move});
+                    page = pCount;
+                } else {
+                    $(".scrollitems").animate({left: "+=" + move});
+                    page--;
+                }
+                $(".control-tip span").eq(page - 1).addClass("current").siblings().removeClass("current");
+
+            });
+        })()
+    })
+</script>
+
+<script type="text/javascript" src="../js/jquery.menu-aim.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".dropdown-menu").menuAim({
+            exitMenu: deactivateSubmenu,
+            enter: activateSubmenu,
+            activate: activateSubmenu,
+            deactivate: deactivateSubmenu
+        });
+    });
+    var $menu = $(".dropdown-menu");
+    function activateSubmenu(row) {
+        var $row = $(row),
+                submenuId = $row.data("submenuId"),
+                $submenu = $("#" + submenuId),
+                offset = $menu.offset(),
+                height = $menu.outerHeight(),
+                width = $menu.outerWidth();
+        $submenu.css({
+            display: "block",
+            top: 2,
+            left: width - 5,  // main should overlay submenu
+            height: height - 8  // padding for main dropdown's arrow
+        });
+        $row.find("span").addClass("maintainHover");
+    }
+    function deactivateSubmenu(row) {
+//        console.log('--------------------')
+        var $row = $(row),
+                submenuId = $row.data("submenuId"),
+                $submenu = $("#" + submenuId);
+        $submenu.css("display", "none");
+        $row.find("span").removeClass("maintainHover");
+    }
+    $(document).click(function () {
+        $(".detail").css("display", "none");
+        $("li.item>span").removeClass("maintainHover");
+    });
+
+    (function () {
+//        return;
+        var leave = false;
+        $('#filter').hover(function () { // over
+            leave = false;
+        }, function () { // out
+            console.log('leaving---------------------');
+            leave = true;
+            window.setTimeout(function () {
+                if (leave == true) {
+                    $(".detail").css("display", "none");
+                    $("li.item>span").removeClass("maintainHover");
+                }
+            }, 50);
+        });
+    })();
+</script>
+<!--floor_01-->
+<script type="text/javascript">
+    (function () {
+        function resetTabs() {
+            $("#content > div").hide(); //Hide all content
+            $("#tabs a").attr("id", ""); //Reset id's
+        }
+
+        var myUrl = window.location.href; //get URL
+        var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For mywebsite.com/tabs.html#tab2, myUrlTab = #tab2
+        var myUrlTabName = myUrlTab.substring(0, 4); // For the above example, myUrlTabName = #tab
+
+        (function () {
+            $("#content > div").hide(); // Initially hide all content
+            $("#tabs li:first a").attr("id", "current"); // Activate first tab
+            $("#content > div:first").stop(true, true).fadeIn(400); // Show first tab content
+
+            $("#tabs").on("mouseenter", "a", function (e) {
+                e.preventDefault();
+                if ($(this).attr("id") == "current") { //detection for current tab
+                    return
+                }
+                else {
+                    resetTabs();
+                    $(this).attr("id", "current"); // Activate this
+//                console.log($(this).attr('name'));
+//                console.log($($(this).attr('name')))
+                    $($(this).attr('name')).stop(true, true).fadeIn(400); // Show content for current tab
+//                console.log($(e.target).position().left);
+                    $("#selectTab .arrows").animate({"left": $(e.target).position().left}, 100);
+                    console.log($(e.target).siblings())
+                    $("#tabs a").removeClass("hover");
+                    $(e.target).addClass("hover");
+                }
+            });
+
+            for (i = 1; i <= $("#tabs li").length; i++) {
+                if (myUrlTab == myUrlTabName + i) {
+                    resetTabs();
+                    $("a[name='" + myUrlTab + "']").attr("id", "current"); // Activate url tab
+                    $(myUrlTab).fadeIn(400); // Show url tab content
+                }
+            }
+
+
+        })()
+    })()
+
+</script>
 </body>
 </html>
