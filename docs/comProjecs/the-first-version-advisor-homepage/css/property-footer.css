@@ -1,0 +1,88 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "microsoft yahei", 'Lato', Calibri, Arial, sans-serif;
+    /*background-color: white;*/
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*页脚*/
+#footer {
+    height: 250px;
+    background: #efefef;
+    border-top: 1px solid #d1d1d1;
+}
+
+#footer .footer-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#footer .footer-top {
+    padding: 20px 0;
+}
+
+#footer .footer-top li {
+    float: left;
+    list-style: none;
+    width: 230px;
+    text-align: center;
+    border: 1px solid #ffffff;
+}
+
+#footer .footer-top p.classify {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+#footer .footer-top p.classify a {
+    color: #000;
+}
+
+#footer .footer-top p.classify a:hover {
+    color: blue;
+}
+
+#footer .footer-bottom {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#footer .footer-bottom p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+
+}
+
+#footer .footer-bottom p.links a {
+    color: #000;
+
+}
+
+#footer .footer-bottom p.links a:hover {
+    color: blue;
+}
+
+.footer-text {
+    float: left;
+}
+
+.footer-erweima img {
+    float: left;
+    width: 80px;
+    margin: -10px 0 0 10px;
+}

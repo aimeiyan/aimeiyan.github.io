@@ -1,0 +1,232 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "microsoft yahei", 'Lato', Calibri, Arial, sans-serif;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/*绩效体系样式*/
+#commission, #milepost-reward, #landlady, #recommend-award, .auto-wrapper {
+    background: #e2f2fd;
+}
+
+/*一份付出，四份收获*/
+#oneout-fourin{
+    background: url("../images/oneout-fourin-01.jpg") no-repeat center bottom #e2f2fd;
+    background-size: cover;
+}
+
+#oneout-fourin .wrapper0 {
+    width: 1000px;
+    margin: 0 auto;
+    height: 410px;
+    background: url("../images/lifangti-renwu_03.png") no-repeat 67px 25px;
+    position: relative;
+}
+
+#oneout-fourin .wrapper0 .text0 {
+    position: absolute;
+    /*width: 400px;*/
+    color: #030303;
+    right: 30px;
+    top: 95px;
+}
+
+#oneout-fourin .wrapper0 .text0 h2 {
+    font-size: 48px;
+    font-family: arial;
+    font-weight: normal;
+}
+
+#oneout-fourin .wrapper0 .one-four {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+#oneout-fourin .wrapper0 .one-four .the-four-number {
+    display: block;
+    background: url("../images/jxbig-four-number.jpg") no-repeat;
+    width: 49px;
+    height: 49px;
+
+}
+#oneout-fourin .wrapper0 .one-four span{
+    float: left;
+}
+#oneout-fourin .wrapper0 .join-quickly{
+    font-size: 24px;
+    color: #5c5d5e;
+    margin-top: 10px;
+}
+#oneout-fourin .wrapper0 .join-quickly img {
+    float: left;
+}
+
+#oneout-fourin .wrapper0 .detail-advisor {
+    font-size: 20px;
+    color: #5c5d5e;
+    margin-top: 20px;
+}
+
+/*#oneout-fourin .wrapper0*/
+/*佣金*/
+#commission .wrapper1 {
+    width: 1000px;
+    height: 394px;
+    margin: 0 auto;
+    background: url("../images/jxcommisstion.jpg") no-repeat right bottom #e2f2fd;
+    position: relative;
+}
+
+#commission .wrapper1 .text1 {
+    position: absolute;
+    color: #333333;
+    top: 80px;
+    left: 40px;
+}
+
+#commission .wrapper1 h2 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+#commission .wrapper1 p {
+    margin-top: 10px;
+}
+
+#commission .wrapper1 span.the-second-na {
+    font-size: 48px;
+}
+
+#commission .wrapper1 span.the-three-na {
+    font-size: 60px;
+}
+
+#commission .wrapper1 .text-summary {
+    font-size: 24px;
+}
+
+#commission .wrapper1 .text-detail {
+    font-size: 18px;
+}
+
+/*里程碑奖励*/
+#milepost-reward .wrapper2 {
+    width: 1000px;
+    height: 398px;
+    margin: 0 auto;
+    background: url("../images/jxmilepost-reward.jpg") no-repeat left bottom #e2f2fd;
+    position: relative;
+}
+
+#milepost-reward .wrapper2 .text2 {
+    position: absolute;
+    color: #333333;
+    text-align: center;
+    top: 124px;
+    right: 46px;
+}
+
+#milepost-reward .wrapper2 h2 {
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 48px;
+}
+
+#milepost-reward .wrapper2 p {
+    font-size: 36px;
+}
+
+/*包租婆*/
+#landlady .wrapper3 {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    background: url("../images/jxlandlady.jpg") no-repeat right bottom #e2f2fd;
+    position: relative;
+}
+
+#landlady .wrapper3 .text3 {
+    color: #333333;
+    position: absolute;
+    left: 83px;
+    top: 122px;
+    text-align: center;
+}
+
+#landlady .wrapper3 h2 {
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 37px;
+}
+
+#landlady .wrapper3 p {
+    font-size: 24px;
+    margin-top: 32px;
+}
+
+/*推荐奖励*/
+
+#recommend-award .wrapper4 {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    background: url("../images/jxrecommended-award.jpg") no-repeat left bottom #e2f2fd;
+    position: relative;
+}
+
+#recommend-award .wrapper4 .text4 {
+    position: absolute;
+    text-align: center;
+    color: #333333;
+    top: 63px;
+    right: 0;
+}
+
+#recommend-award .wrapper4 h2 {
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+#recommend-award .wrapper4 p {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+#recommend-award .wrapper4 img {
+    display: block;
+    margin: 15px auto;
+}
+
+#bdshare {
+    margin-left: 40px;
+}
+
+/*凹凸线*/
+.auto-line {
+    height: 2px;
+    background: url("../images/jxaotuline.jpg") no-repeat center #e2f2fd;
+}

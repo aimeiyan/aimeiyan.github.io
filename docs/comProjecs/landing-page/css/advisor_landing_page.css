@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial, Helvetica, sans-serif, "microsoft yahei";
+}
+
+body {
+    width: 1000px;
+    background: #ffffff;
+    margin: 0 auto;
+}
+a:hover{
+    cursor: pointer;
+}
+img {
+    border: 0;
+}
+
+#header {
+    width: 1000px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    background: url("../images/header_backgroun.png") repeat-x;
+}
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header-logo {
+    float: left;
+    height: 80px;
+    margin: 15px 0 0 5px;
+
+}
+
+#header ul {
+    float: right;
+    margin: 20px;
+}
+
+#header ul li {
+    list-style: none;
+    float: left;
+}
+
+#header ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #00699f;
+    font-weight: bold;
+}
+
+#header ul li a:hover {
+    background: #00699f;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+#banner {
+    margin-top: 5px;
+    width: 1000px;
+    height: 480px;
+    background: url("../images/banner_index.jpg") no-repeat;
+    position: relative;
+}
+
+#banner .into_advisor_platform {
+    position: absolute;
+    right: 34px;
+    top: 48px;
+}
+
+#signup-tip p {
+    padding: 4px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#signup-tip {
+    position: absolute;
+    right: 105px;
+    top: 18px;
+    width: 177px;
+    height: 24px;
+    background: url('../images/header-tip.png');
+}
+
+#peoples {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -70px;
+}
+
+#peoples img {
+    height: 110px;
+    position: relative;
+}
+
+#peoples a {
+    color: #222;
+    display: block;
+}
+
+#peoples a:hover {
+    color: red;
+}
+
+#peoples li:hover img {
+    top: -20px;
+}
+
+#peoples h5 {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#peoples li {
+    text-align: center;
+}
+
+#peoples li {
+    width: 24%;
+    padding: 0;
+    margin: 0;
+    /*display: inline-block;*/
+    float: left;
+}
+
+#list-button {
+    display: block;
+    position: relative;
+    top: -50px;
+}
+
+#list-button li {
+    text-align: center;
+    /*display: inline-block;*/
+    float: left;
+    width: 24%;
+    margin: 10px 0;
+}
+
+#list-button li img {
+    opacity: 0.6;
+}
+
+#list-button li img:hover {
+    opacity: 1;
+}
+
+#footer {
+    position: relative;
+    top: -20px;
+    height: 88px;
+    background: url("../images/footer_background.gif") repeat-x;
+}
+
+#footer-top {
+    padding: 20px 10px;
+}
+
+#footer-top li {
+    float: left;
+    height: 100px;
+    list-style: none;
+}
+
+#footer-top .zhanheng_logo, #footer-top .erwiema_pic {
+    margin-right: 70px;
+}
+
+#footer-top .zhanheng_logo>div {
+    float: left;
+    margin-right: 30px;
+
+}
+
+#footer-top .erwiema_pic>div {
+    float: left;
+    margin-right: 30px;
+}
+
+#footer-top li p {
+    line-height: 2em;
+}
+
+#footer-top li a.footer-logo {
+    color: #00699f;
+    cursor: pointer;
+}
+#footer-top li a.footer-logo:hover{
+    text-decoration: underline;
+}
+#foot-bottom {
+    /*margin: -10px 0 20px 0;*/
+    /*text-align: center;*/
+    width: 740px;
+    margin: 0 auto 20px;
+}
+
+#foot-bottom li {
+    /*display: inline-block;*/
+    float: left;
+    margin: 0 10px;
+}
+
+.cf:before,.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

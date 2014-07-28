@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial, Helvetica, sans-serif, "microsoft yahei";
+}
+
+body {
+    width: 1000px;
+    background: #ffffff;
+    margin: 0 auto;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+img {
+    border: 0;
+}
+
+#header {
+    width: 1000px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    background: url("../images/header_backgroun.png") repeat-x;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header-logo {
+    float: left;
+    height: 80px;
+    margin: 15px 0 0 5px;
+
+}
+
+#header ul {
+    float: right;
+    margin: 20px;
+}
+
+#header ul li {
+    list-style: none;
+    /*display: inline-block;*/
+    float: left;
+}
+
+#header ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #00699f;
+    font-weight: bold;
+}
+
+#header ul li a:hover {
+    background: #00699f;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+#banner {
+    margin-top: 5px;
+    width: 1000px;
+    height: 141px;
+    background: url("../images/inner_banner.jpg") no-repeat;
+}
+
+#signup-tip p {
+    padding: 4px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#signup-tip {
+    position: absolute;
+    right: 105px;
+    top: 18px;
+    width: 177px;
+    height: 24px;
+    background: url('../images/header-tip.png');
+}
+
+#people {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#people li {
+    /*display: inline-block;*/
+    float: left;
+    margin-right: 10px;
+    height: 120px;
+    width: 242px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#people li:after {
+
+}
+
+#people li.mother {
+    margin-right: 0;
+}
+
+#cartoons {
+    background: #efefef;
+    padding: 10px 20px;
+    position: relative;
+}
+
+#cartoons-wrapper {
+    position: relative;
+}
+
+#cartoons .finance>div:first-child, #cartoons .baoxian>div:first-child, #cartoons .zhiyeguwen>div:first-child, #cartoons .mother>div:first-child {
+    margin-bottom: 10px;
+}
+
+#cartoons .manhua img {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+}
+
+#cartoons-wrapper .center-pic {
+    position: absolute;
+    top: 264px;
+    left: 422px;
+}
+
+#cartoons-wrapper .center-pic img {
+    width: 150px;
+}
+
+#list-button {
+    margin: 30px 0;
+    text-align: center;
+}
+
+#list-button li {
+    text-align: center;
+    /*display: inline-block;*/
+    width: 24%;
+    margin: 10px 0;
+    float: left;
+}
+
+#list-button li img {
+    opacity: 0.6;
+}
+
+#list-button li img:hover {
+    opacity: 1;
+}
+
+#footer {
+    height: 88px;
+    background: url("../images/footer_background.gif") repeat-x;
+}
+
+#footer-top {
+    padding: 20px 10px;
+}
+
+#footer-top li {
+    float: left;
+    height: 100px;
+    list-style: none;
+
+}
+
+#footer-top .zhanheng_logo, #footer-top .erwiema_pic {
+    margin-right: 70px;
+}
+
+#footer-top .zhanheng_logo>div {
+    float: left;
+    margin-right: 30px;
+
+}
+
+#footer-top .erwiema_pic>div {
+    float: left;
+    margin-right: 30px;
+}
+
+#footer-top li p {
+    line-height: 2em;
+}
+
+#footer-top li a.footer-logo {
+    color: #00699f;
+    cursor: pointer;
+}
+
+#footer-top li a.footer-logo:hover {
+    text-decoration: underline;
+}
+
+#foot-bottom {
+    width: 740px;
+    margin: 0 auto 20px;
+    /*margin: -10px 0 20px 0;*/
+    /*text-align: center;*/
+}
+
+#foot-bottom li {
+    /*display: inline-block;*/
+    float: left;
+    margin: 0 10px;
+}
+
+.nonselected {
+    background: #efefef;
+}
+
+.selected {
+    background: #d1fff8;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Keyword" content="独立投资顾问,投资顾问,基金投资专家,展恒,人脉,钱脉,投资漫画">
+<meta name="Description" content="展恒理财招募独立投资顾问,为其提供丰厚的佣金收入、全面的基金方案和专业的培训体系,旨在为更多人提供理财建议,实现财富梦想.">
+
+<title>展恒理财招募投资顾问,优质产品,高额佣金</title>
+<link href="css/advisor_landing_inner_page.css"  rel="stylesheet" type="text/css">
+
+<style type="text/css">
+</style>
+</head>
+
+<body>
+<div id="header">
+    <a id="header-logo" href="/advisor/landing-page.html"><img
+            src="images/header_logo.png" alt="展恒"></a>
+
+    <div id="signup-tip">
+        <p>注册，即得10元话费！</p>
+    </div>
+    <ul>
+        <li><a href="/advisor/sign-up.html" target="_blank">注册</a></li>
+        <li><a href="/advisor/Index.html" target="_blank">登录</a></li>
+    </ul>
+</div>
+<div id="banner">
+
+</div>
+
+<ul id="people" class="cf">
+    <li class="finance nonselected" id="finance">
+        <a class="professional" href="#">
+            <img src="images/banker_samll.png">
+        </a>
+    </li>
+
+    <li class="baoxian nonselected" id="baoxian">
+        <a class="professional" href="#">
+            <img src="images/baoxian_small.png">
+        </a>
+    </li>
+
+    <li class="zhiyeguwen nonselected" id="zhiye">
+        <a class="professional" href="#">
+            <img src="images/zhiye_small.png">
+        </a>
+    </li>
+
+    <li class="mother nonselected" id="mama">
+        <a class="professional" href="#">
+            <img src="images/mother_small.png">
+        </a>
+    </li>
+</ul>
+
+<div id="cartoons-wrapper">
+    <div id="cartoons">
+        <div class="finance">
+            <div class="manhua"><img src="images/finance_cartoons.jpg"></div>
+            <div><img src="images/finance_tip.jpg"></div>
+            <!--<div class="center-pic"><img src="images/center_rotate_pic.png"></div>-->
+        </div>
+
+        <div class="baoxian" style="display: none">
+            <div class="manhua"><img src="images/baoxian_cartoons.jpg"></div>
+            <div><img src="images/baoxian_tip.jpg"></div>
+            <!--<div class="center-pic"><img src="images/center_rotate_pic.png"></div>-->
+
+        </div>
+        <div class="zhiyeguwen" style="display: none">
+            <div class="manhua"><img src="images/fangchanye_cartoons.jpg"></div>
+            <div><img src="images/zhiyeguwen_tip.jpg"></div>
+            <!--<div class="center-pic"><img src="images/center_rotate_pic.png"></div>-->
+        </div>
+        <div class="mother" style="display: none">
+            <div class="manhua"><img src="images/mother_catoons.jpg"></div>
+            <div><img src="images/mother_tip.png"></div>
+            <!--<div class="center-pic"><img src="images/center_rotate_pic.png"></div>-->
+        </div>
+    </div>
+
+
+    <div class="center-pic"><a href="http://www.myfund.com/advisor/tg_register.html" target="_blank"><img
+            src="images/center_rotate_pic.png"></a></div>
+
+
+</div>
+
+<ul id="list-button" class="cf">
+    <li><a href="/advisor/performance-system.html" target="_blank"><img
+            src="images/button-12.png"></a></li>
+    <li><a href="/advisor/product.html" target="_blank"><img
+            src="images/button-22.png"></a></li>
+    <li><a href="/advisor/training.html" target="_blank"><img
+            src="images/button-32.png"></a></li>
+    <li><a href="/advisor/investment-info.html" target="_blank"><img
+            src="images/button-42.png"></a></li>
+</ul>
+<div style="clear: both"></div>
+<div id="footer">
+    <ul id="footer-top" class="cf">
+        <li class="zhanheng_logo">
+            <div><img src="images/footer_logo.gif"></div>
+            <div><p><a class="footer-logo" href="http://www.myfp.cn/" target="_blank">登陆展恒理财官网</a></p>
+
+                <p>联系电话：400-888-6661</p>
+
+                <p>联系邮箱：advisor@myfund.com</p></div>
+        </li>
+        <li class="erwiema_pic">
+            <div><img src="images/erweima.gif"></div>
+            <div><p>微信二维码</p>
+
+                <p>微信账号：MYFP-666</p></div>
+        </li>
+        <li class="old_year_pic">
+            <div><img src="images/old_year_logo.gif"></div>
+        </li>
+    </ul>
+
+    <ul id="foot-bottom" class="cf">
+        <li><span>京ICP备06032587号</span></li>
+        <li><span>全国理财咨询热线：010-62020088</span></li>
+        <li><span>Copyright @2013 展恒理财 Corporation, All Rights Reserved版权所有</span></li>
+    </ul>
+</div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jQueryRotate.js"></script>
+<script>
+    $(function () {
+//header-tip
+
+        var ANIMATE_TIME = 600;
+
+        function animate_to_top() {
+            $('#signup-tip').animate({
+                top: 8
+            }, ANIMATE_TIME, animate_to_bottom);
+        }
+
+        function animate_to_bottom() {
+            $('#signup-tip').animate({
+                top: 18
+            }, ANIMATE_TIME, animate_to_top);
+        }
+
+        animate_to_top();
+
+
+//four-cartoons-exchange
+        var index = 0;
+
+        function remote_center_pic() {
+            $('#cartoons-wrapper .center-pic img').rotate({
+                angle: -ANGLE,
+                duration: A_TIME,
+                animateTo: 0
+            })
+        }
+
+        $("#people > li").click(function () {
+            var index = $("#people>li").index(this);
+            showImg(index);
+            $("#people > li").removeClass('selected');
+
+            $(this).addClass('selected');
+            remote_center_pic();
+        }).eq(1).click();
+
+
+        $(window.location.hash).click();
+
+        function showImg(index) {
+            $("#cartoons>div").eq(index).stop(true, true).fadeIn().siblings().hide();
+        }
+
+        var ANGLE = -360, A_TIME = 15000;
+
+        remote_center_pic();
+
+        setTimeout(function () {
+            $(window).scrollTop(0);
+        }, 100);
+    });
+
+
+</script>
+   
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbdda4560e57c67d6754a7347f58d8f32' type='text/javascript'%3E%3C/script%3E")) </script>
+  <p style="text-align:center"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5825624'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D5825624%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+</body>
+</html>
+

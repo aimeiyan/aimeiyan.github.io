@@ -1,0 +1,192 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "microsoft yahei", 'Lato', Calibri, Arial, sans-serif;
+    /*background-color: white;*/
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+*菜单栏*/
+
+#fixed-part{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#fixed-part .header {
+    background: #ffffff;
+    /*background: #f2f2ff;*/
+    width: 100%;
+    height: 60px;;
+    /*position: relative;*/
+    z-index: 75;
+    border-bottom: 1px solid #08084d;
+}
+
+#fixed-part .logo {
+    float: left;
+    margin: 4px 0 0 20px;
+    width: 150px;
+
+}
+
+#fixed-part .logo img {
+    float: left;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+#fixed-part .logo .club-text {
+    float: right;
+    margin: -35px 0 0 30px;
+    font-weight: bold;
+    width: 100px;
+}
+
+#fixed-part .menu-list {
+    float: right;
+    margin-left: -150px;
+    margin-right: 20px;
+    width: 720px;
+}
+
+#fixed-part .menu-list ul.inner-link li {
+    float: left;
+    list-style: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    line-height: 55px;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+#fixed-part .menu-list ul.inner-link li a.blue {
+    color: #000000;
+    font-size: 16px;
+}
+
+#fixed-part .menu-list ul.inner-link li a.blue:hover {
+    border-bottom: 1px solid #000;
+}
+
+#fixed-part .menu-list a.red {
+    /*display: block;*/
+    border: 1px solid blue;
+    padding: 10px 20px;
+    background: #f2f2ff;
+    color: #4255ff;
+    border-radius: 3px;
+}
+
+#fixed-part .menu-list a.red:hover {
+    background: #4255ff;
+    color: white;
+}
+
+#fixed-part .menu-list ul.inner-link li.register {
+    margin-left: 5px;
+}
+
+#fixed-part .header-marquee {
+    height: 25px;
+    background-color: #f2f2ff;
+    overflow: hidden;
+    border-top: 1px solid #08084d;
+    border-bottom: 1px solid #08084d;
+}
+
+/*5-09更改*/
+
+#fixed-part .header-marquee {
+    height: 25px;
+    background-color: #f2f2ff;
+    border-top: 1px solid #08084d;
+    border-bottom: 1px solid #08084d;
+}
+#marquee1{
+    float: left;
+    margin-left: 20px;
+    width: 600px;
+}
+
+#fixed-part .header-marquee .link-text{
+    width: 500px;
+    float: right;
+    margin-left: -600px;
+}
+
+#fixed-part .header-marquee .link-text ul li{
+    float: left;
+    margin-left:10px;
+padding-top: 5px;
+}
+#fixed-part .header-marquee .link-text ul li a{
+    font-size: 12px;
+    color: #000;
+}
+
+/*5-09更改*/
+
+#marquee1 span {
+    padding-right: 300px;
+    color: #ff1d17;
+    font-size:14px;
+    letter-spacing: 2px;
+}
+/*登录蒙版和登录显示框*/
+#login-box iframe {
+    position: fixed;
+    z-index: 102;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 -150px;
+}
+
+#login-box span {
+    position: fixed;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 103;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 138px;
+    /*background: blue;*/
+}
+
+#login-box span:hover {
+    color: red;
+}
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #777;
+    opacity: 0.7;
+    /* IE 8 */
+    filter: alpha(opacity=70);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=70);
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+#login-box, .overlay {
+    display: none;
+}

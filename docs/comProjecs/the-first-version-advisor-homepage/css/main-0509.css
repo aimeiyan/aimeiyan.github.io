@@ -1,0 +1,695 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "microsoft yahei", 'Lato', Calibri, Arial, sans-serif;
+    /*background-color: white;*/
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*焦点图*/
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -3;
+}
+
+#zhanheng-logo {
+    margin: 10px 0 0 10px;
+}
+
+#stretch-1 {
+    background: url("../images/first-page.jpg") no-repeat center center fixed;
+    opacity: 1;
+    z-index: -1;
+
+    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/first-page.jpg', sizingMethod='scale');*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/first-page.jpg', sizingMethod='scale')";*/
+    background-size: cover;
+}
+
+#stretch-2 {
+    background: url('../images/athletics.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#stretch-3 {
+    background: url('../images/professions-6.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#stretch-4 {
+    background: url('../images/knowledge.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.stretch {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    /*opacity: 0;*/
+    left: 0;
+    z-index: -2;
+}
+
+#bigcontrols {
+    position: relative;
+    /*background: red;*/
+    height: 90px;
+    top: 40%;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+#bigcontrols a {
+    position: absolute;
+    width: 81px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#bigcontrols a.s-pre {
+    background: url("../images/s-prev-blue.png");
+    margin-left: 50px;
+    left: 0;
+    opacity: .5;
+    /* IE 8 */
+    filter: alpha(opacity=50);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=50);
+}
+
+#bigcontrols a.s-next {
+    background: url("../images/s-next-blue.png");
+    margin-right: 30px;
+    right: 0;
+    opacity: .5;
+    /* IE 8 */
+    filter: alpha(opacity=50);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=50);
+}
+
+#bigcontrols a.s-pre:hover, #bigcontrols a.s-next:hover {
+    opacity: 1;
+    /* IE 8 */
+    filter: alpha(opacity=100);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=100);
+}
+
+/*0509修改*/
+#down-scroll {
+    position: absolute;
+    height: 100px;
+    bottom:10px;
+    text-align: center;
+    width: 100%;
+}
+
+#down-scroll .begin {
+    color: white;
+    padding: 12px 50px;
+    background: url("../images/down_arrow_grey03.png") no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+#down-scroll .begin:hover {
+    cursor: pointer;
+}
+
+/*0509修改*/
+
+/*菜单栏*/
+#fixed-part.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#fixed-part .header {
+    background: #ffffff;
+    /*background: #f2f2ff;*/
+    width: 100%;
+    height: 60px;;
+    /*position: relative;*/
+    z-index: 75;
+border-bottom: 1px solid #08084d;
+}
+
+#fixed-part .logo {
+    float: left;
+    margin: 4px 0 0 20px;
+    width: 150px;
+
+}
+
+#fixed-part .logo img {
+    float: left;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+#fixed-part .logo .club-text {
+    float: right;
+    margin: -35px 0 0 30px;
+    font-weight: bold;
+    width: 100px;
+}
+
+#fixed-part .menu-list {
+    float: right;
+    margin-left: -150px;
+    margin-right: 20px;
+    width: 720px;
+}
+
+#fixed-part .menu-list ul.inner-link li {
+    float: left;
+    list-style: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    line-height: 55px;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+#fixed-part .menu-list ul.inner-link li a.blue {
+    color: #000000;
+    font-size: 16px;
+}
+
+#fixed-part .menu-list ul.inner-link li a.blue:hover {
+    border-bottom: 1px solid #000;
+}
+
+#fixed-part .menu-list a.red {
+    /*display: block;*/
+    border: 1px solid blue;
+    padding: 10px 20px;
+    background: #f2f2ff;
+    color: #4255ff;
+    border-radius: 3px;
+}
+
+#fixed-part .menu-list a.red:hover {
+    background: #4255ff;
+    color: white;
+}
+
+#fixed-part .menu-list ul.inner-link li.register {
+    margin-left: 5px;
+}
+
+#fixed-part .header-marquee {
+    height: 25px;
+    background-color: #f2f2ff;
+    overflow: hidden;
+    border-top: 1px solid #08084d;
+    border-bottom: 1px solid #08084d;
+}
+
+/*5-09更改*/
+
+#fixed-part .header-marquee {
+    height: 25px;
+    background-color: #f2f2ff;
+    border-top: 1px solid #08084d;
+    border-bottom: 1px solid #08084d;
+}
+#marquee1{
+    float: left;
+    margin-left: 20px;
+    width: 600px;
+}
+
+#fixed-part .header-marquee .link-text{
+    width: 500px;
+    float: right;
+    margin-left: -600px;
+}
+
+#fixed-part .header-marquee .link-text ul li{
+    float: left;
+    margin-left:10px;
+}
+#fixed-part .header-marquee .link-text ul li a{
+    font-size: 12px;
+    color: #000;
+}
+
+/*5-09更改*/
+
+#marquee1 span {
+    padding-right: 300px;
+    color: #ff1d17;
+    font-size:14px;
+    letter-spacing: 2px;
+}
+
+/*我们的使命*/
+#mission {
+    background: url("../images/woodgrain-blue3.jpg") no-repeat;
+    /*padding: 80px 0 0;*/
+    color: white;
+    overflow: hidden;
+    height: 420px;
+}
+
+#mission .mission-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 42px 0 0;
+}
+
+#mission .mission-text {
+    float: left;
+    width: 300px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#mission .mission-text .my-mission{
+   font-size:20px;
+}
+
+#mission .mission-text .green-line {
+    height: 10px;
+    background: #146158;
+    width: 150px;
+    margin: 15px auto;
+}
+
+#mission .mission-text p {
+    line-height: 40px;
+}
+
+#mission .pad-pic {
+    width: 680px;
+    float: right;
+    position: relative;
+    top: 400px;
+    /*display: none;*/
+}
+
+#mission .pad-pic img {
+    display: block;
+}
+
+#mission .mission-text .button-wrapper {
+    margin: 30px 0;
+
+}
+
+#mission .mission-text .button {
+    padding: 10px 40px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    z-index: 650;
+}
+
+#mission .mission-text .button:hover {
+    background: #A14D48;
+    border: 1px solid #A14D48;
+}
+
+/*入驻专享特权*/
+#privilege {
+
+    background: #efefef;
+}
+
+#bloom {
+    margin: 0 auto;
+    width: 1100px;
+    /*background: red;*/
+    position: relative;
+    height: 564px;
+    /*height: 450px;*/
+    /*margin: 50px 0;*/
+}
+
+#circle-center {
+    position: absolute;
+    top: 230px;
+    left: 300px;
+    z-index: 2;
+}
+
+#circle-center img{
+    width: 186px;
+    height: 334px;
+}
+
+.i-arrow, .i-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+#bloom .privilege-list {
+    display: none;
+}
+
+#bloom .privilege-items:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#bloom .privilege-items {
+    position: absolute;
+    /*z-index: 4;*/
+    color: #000;
+}
+
+#bloom .privilege-items .left-title {
+    text-align: right;
+}
+
+#bloom .privilege-items .left-tip {
+    font-size: 12px;
+    text-align: right;
+    line-height: 20px;
+}
+
+#bloom .privilege-items .right-tip {
+    font-size: 12px;
+    text-align: left;
+    line-height: 20px;
+}
+
+#bloom .yjtd {
+    top: 188px;
+    left: 600px;
+
+}
+
+#bloom .gxhb {
+    top: 190px;
+    left: 35px;
+}
+
+#bloom .crms {
+    top: 338px;
+    left: 600px;
+}
+
+#bloom .tgpt {
+    top: 72px;
+    left: 500px;
+}
+
+#bloom .fwtd {
+    top: 340px;
+    left: 0;
+}
+
+#bloom .zhsxy {
+    top: 73px;
+    left: 95px;
+}
+
+#privilege .privilege-text {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    float: right;
+    /*text-align: right;*/
+    letter-spacing: 5px;
+    width: 280px;
+}
+
+#privilege .privilege-text h2 {
+    color: #ff9b0e;
+    text-align: center;
+    font-size:20px;
+}
+
+#privilege .privilege-text p {
+    color: #d81948;
+    line-height: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*加入我们*/
+#tree {
+    background: url("../images/tree_background_01.jpg") top center no-repeat;
+    background-size: 100% 580px;
+    height: 580px;
+}
+
+#tree .join-us {
+    /*color: #000;*/
+    text-align: center;
+    padding: 40px 0 20px;
+    letter-spacing: 5px;
+    font-size:20px;
+}
+
+#tree .tree-content {
+    width: 1200px;
+    margin: 40px auto 0;
+}
+
+#tree .kefu {
+    float: left;
+    margin-top: 80px;
+    margin-right: 10px;
+
+}
+
+#tree .kefu .zixun-text {
+    display: block;
+    text-align: center;
+    /* border: 1px solid #000; */
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #000;
+    border: 1px solid #A14D48;
+    border-radius: 5px;
+}
+
+#tree .kefu .zixun-text:hover {
+    background: #A14D48;
+    border: 1px solid #A14D48;
+    cursor: pointer;
+    /*color: red;*/
+
+}
+
+#tree .kefu img {
+    width: 180px;
+}
+
+#tree .flow-chart {
+    float: left;
+    padding: 10px 0 20px;
+}
+
+img {
+    border: 0;
+}
+
+/*专题回放*/
+#special {
+    /*width: 100%;*/
+    background: rgb(250, 247, 236);
+    /*position: relative;*/
+    height: 460px;
+}
+
+#special .title {
+    /*color: #000;*/
+    text-align: center;
+    padding: 40px 0 20px;
+    letter-spacing: 5px;
+    font-size:20px;
+}
+
+.example-desc {
+    margin: 3px 0;
+    padding: 5px;
+}
+
+#special .special-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#carousel {
+    width: 1100px;
+    margin: 0 auto;
+    height: 300px;
+    /*position: relative;*/
+    clear: both;
+    overflow: hidden;
+}
+
+#carousel img {
+    visibility: hidden; /* hide images until carousel can handle them */
+    cursor: pointer; /* otherwise it's not as obvious items can be clicked */
+}
+
+#special .special-control {
+    position: relative;
+    height: 48px;
+    top: -180px;
+    z-index: 0;
+    /*display: none;*/
+}
+
+#prev {
+    /*position: absolute;*/
+    float: left;
+    width: 30px;
+    height: 85px;
+    background: url("../images/c-arrows.png") no-repeat;
+    background-position: 3px 0;
+
+}
+
+#next {
+    float: right;
+    width: 30px;
+    height: 85px;
+    background: url("../images/c-arrows.png") no-repeat;
+    background-position: -25px 0;
+}
+
+/*页脚*/
+#footer {
+    height: 250px;
+    background: #efefef;
+    border-top: 1px solid #d1d1d1;
+}
+
+#footer .footer-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#footer .footer-top {
+    padding: 20px 0;
+}
+
+#footer .footer-top li {
+    float: left;
+    list-style: none;
+    width: 230px;
+    text-align: center;
+    border: 1px solid #ffffff;
+}
+
+#footer .footer-top p.classify {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+#footer .footer-top p.classify a {
+    color: #000;
+}
+
+#footer .footer-top p.classify a:hover {
+    color: blue;
+}
+
+#footer .footer-bottom {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#footer .footer-bottom p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+
+}
+
+#footer .footer-bottom p.links a {
+    color: #000;
+
+}
+
+#footer .footer-bottom p.links a:hover {
+    color: blue;
+}
+
+.footer-text {
+    float: left;
+}
+
+.footer-erweima img {
+    float: left;
+    width: 80px;
+    margin: -10px 0 0 10px;
+}
+
+/*登录蒙版和登录显示框*/
+#login-box iframe {
+    position: fixed;
+    z-index: 102;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 -150px;
+}
+
+#login-box span {
+    position: fixed;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 103;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 138px;
+    /*background: blue;*/
+}
+
+#login-box span:hover {
+    color: red;
+}
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #777;
+    opacity: 0.7;
+    /* IE 8 */
+    filter: alpha(opacity=70);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=70);
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+#login-box, .overlay {
+    display: none;
+}

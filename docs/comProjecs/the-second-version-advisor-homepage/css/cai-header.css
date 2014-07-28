@@ -1,0 +1,123 @@
+   /*�˵�����һ��*/
+
+    #header-top {
+        height: 30px;
+        background-color: #3d474a;
+    }
+
+    #header-marquee {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    #marquee1 {
+        float: left;
+        margin-top: 7px;
+        width: 400px;
+        color: red;
+        font-size: 12px;
+
+    }
+
+    #header-marquee .link-text {
+        /*width: 550px;*/
+        float: right;
+        /*margin-left: -400px;*/
+        color: #cecccc;
+        margin-top: 4px;
+    }
+
+    #header-marquee .link-text ul li {
+        float: left;
+    }
+
+    #header-marquee .link-text li.separator {
+        margin: 0 15px;
+    }
+
+    #header-marquee .link-text li.header-hotline {
+        margin-left: 24px;
+    }
+
+    #header-marquee .link-text li.register-btn {
+        margin-left: 10px;
+    }
+
+    #header-marquee .link-text li.login-btn {
+        margin-left: 7px;
+    }
+
+    #header-marquee .link-text ul li a {
+        font-size: 12px;
+        color: #cecccc;
+    }
+
+    /*�˵����ڶ��к͵�¼����*/
+
+    #menu-login-part {
+        height: 110px;
+        /*border: 1px solid red;*/
+        background: #e2f2fd;
+    }
+
+    #menu-login-part .menu-list {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 27px 0 10px 0;
+    }
+
+    #menu-login-part .shangbiao-part {
+        float: left;
+    }
+
+    #menu-login-part .shangbiao-part .logo-pic-txt {
+        position: relative;
+        display: block;
+        width: 230px;
+        color: #333333;
+    }
+
+    #menu-login-part .shangbiao-part p {
+        position: absolute;
+        font-family: SimHei;
+        font-size: 24px;
+        left: 61px;
+        top: 18px;
+    }
+
+    #menu-login-part .menu {
+        background: url("../images/menu-background.png") no-repeat;
+        width: 502px;
+        height: 40px;
+        float: right;
+        margin-top: 10px;
+    }
+
+    .menu ul {
+        width: 415px;
+        margin: 2px auto 0;
+    }
+
+    .menu li a {
+        padding: 4px 0;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .menu li {
+        float: left;
+        padding: 6px 8px;
+        height: 24px;
+        text-align: center;
+    }
+
+.menu li.homepage-btn:hover{
+    background: url("../images/sy-hover-btn.png") no-repeat center;
+    background-size: 44px 40px;
+}
+
+.menu li.header-items-btn:hover{
+    background: url("../images/sy-hover-btn.png") no-repeat center;
+    background-size: 72px 40px;
+}
+

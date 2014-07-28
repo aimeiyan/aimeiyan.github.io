@@ -118,9 +118,15 @@
                 if (top > rowTop) {
                     $("#rightPanel a:lt(6)").removeClass("click").eq(i).addClass("click");
                 }
-
             }
         });
+
+        $("#rightPanel a:lt(6)").click(function(){
+            var idx=$("#rightPanel a:lt(6)").index(this);
+//            console.log(idx)
+            var Top=$row.eq(idx).offset().top;
+            $("html,body").animate({scrollTop:Top},500);
+        })
 
     })
 </script>

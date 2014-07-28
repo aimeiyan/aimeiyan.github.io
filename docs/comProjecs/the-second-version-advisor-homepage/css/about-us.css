@@ -1,0 +1,150 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "microsoft yahei", 'Lato', Calibri, Arial, sans-serif;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/*关于我们*/
+
+#relation-between-three {
+    background: #fff;
+    width: 100%;
+}
+
+#relation-between-three .wrapper-01 {
+    width: 1000px;
+    height: 392px;
+    margin: -15px auto 0;
+    background: url("../images/as-mofang.jpg") no-repeat left top;;
+    position: relative;
+
+}
+
+#relation-between-three .summary-text {
+    font-size: 14px;
+    position: absolute;
+    top: 105px;
+    right: 16px;
+}
+#relation-between-three .summary-text p{
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+#three-merit {
+    background: #e2f2fd;
+    width: 100%;
+}
+
+#three-merit .wrapper-02 {
+    width: 1000px;
+    height: 610px;
+    margin: 0 auto;
+    background: #e2f2fd;
+}
+
+#three-merit .wrapper-02 h1 {
+    color: #010101;
+    font-weight: normal;
+    font-size: 30px;
+    padding: 40px 0 0 5px;
+}
+
+#three-merit .wrapper-02 .goal {
+    font-size: 14px;
+    margin-top: 40px;
+    text-indent: 5px;
+letter-spacing: 1px;
+}
+
+#three-merit .wrapper-02 ul {
+    margin-top: 30px;
+}
+
+#three-merit .wrapper-02 li {
+    height: 350px;
+    border: 1px solid #d0e8f9;
+    float: left;
+    margin: 0 4px;
+}
+
+#three-merit .wrapper-02 li p {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#three-merit .wrapper-02 li.brand {
+    width: 312px;
+    background: url("../images/asbrand.jpg") no-repeat center 15px #d2ecfd;
+    position: relative;
+}
+
+#three-merit .wrapper-02 li.brand p {
+    position: absolute;
+    top: 200px;
+    padding: 0 24px;
+    text-align: justify;
+    text-indent: 32px;
+    line-height: 25px;
+
+}
+
+#three-merit .wrapper-02 li.finance-product {
+    width: 312px;
+    background: url("../images/asfinance-product.jpg") no-repeat center 10px #d2ecfd;
+    position: relative;
+}
+
+#three-merit .wrapper-02 li.finance-product p {
+    position: absolute;
+    top: 200px;
+    padding: 0 30px;
+    text-align: justify;
+    text-indent: 32px;
+    line-height: 25px;
+}
+
+#three-merit .wrapper-02 li.privilege {
+    width: 346px;
+    background: url("../images/aspriviledge.jpg") no-repeat center 10px #d2ecfd;
+    position: relative;
+}
+
+#three-merit .wrapper-02 li.privilege div {
+    position: absolute;
+    top: 200px;
+    padding: 0 30px;
+
+}
+#three-merit .wrapper-02 li.privilege p.peixun{
+    text-align: justify;
+    text-indent: 32px;
+    line-height: 25px;
+}
+
+#three-merit .wrapper-02 li.privilege p.as-service-hotline{
+    margin-top: 25px;
+    font-weight: bolder;
+}

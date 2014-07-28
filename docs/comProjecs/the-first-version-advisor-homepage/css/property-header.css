@@ -1,0 +1,304 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "microsoft yahei", 'Lato', Calibri, Arial, sans-serif;
+    /*background-color: white;*/
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*焦点图*/
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -3;
+}
+
+#zhanheng-logo {
+    margin: 10px 0 0 10px;
+}
+
+#stretch-1 {
+    background: url("../images/first-page.jpg") no-repeat center center fixed;
+    opacity: 1;
+    z-index: -1;
+
+    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/first-page.jpg', sizingMethod='scale');*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/first-page.jpg', sizingMethod='scale')";*/
+    background-size: cover;
+}
+
+#stretch-2 {
+    background: url('../images/athletics.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#stretch-3 {
+    background: url('../images/professions-6.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#stretch-4 {
+    background: url('../images/knowledge.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.stretch {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    /*opacity: 0;*/
+    left: 0;
+    z-index: -2;
+}
+
+#bigcontrols {
+    position: relative;
+    /*background: red;*/
+    height: 90px;
+    top: 40%;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+#bigcontrols a {
+    position: absolute;
+    width: 81px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#bigcontrols a.s-pre {
+    background: url("../images/s-prev-blue.png");
+    margin-left: 50px;
+    left: 0;
+    opacity: .5;
+    /* IE 8 */
+    filter: alpha(opacity=50);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=50);
+}
+
+#bigcontrols a.s-next {
+    background: url("../images/s-next-blue.png");
+    margin-right: 30px;
+    right: 0;
+    opacity: .5;
+    /* IE 8 */
+    filter: alpha(opacity=50);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=50);
+}
+
+#bigcontrols a.s-pre:hover, #bigcontrols a.s-next:hover {
+    opacity: 1;
+    /* IE 8 */
+    filter: alpha(opacity=100);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=100);
+}
+
+#down-scroll {
+    position: absolute;
+    height: 20px;
+    bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+#down-scroll .begin {
+    color: white;
+    padding: 12px 50px;
+    border: 2px solid #4cddf3;
+}
+
+#down-scroll .begin:hover {
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+/*菜单栏*/
+#fixed-part.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#fixed-part .header {
+    background: #ffffff;
+    /*background: #f2f2ff;*/
+    width: 100%;
+    height: 60px;;
+    /*position: relative;*/
+    z-index: 75;
+}
+
+#fixed-part .logo {
+    float: left;
+    margin: 4px 0 0 20px;
+    width: 150px;
+
+}
+
+#fixed-part .logo img {
+    float: left;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+#fixed-part .logo .club-text {
+    float: right;
+    margin: -35px 0 0 30px;
+    font-weight: bold;
+    width: 100px;
+}
+
+#fixed-part .menu-list {
+    float: right;
+    margin-left: -150px;
+    margin-right: 20px;
+    width: 720px;
+}
+
+#fixed-part .menu-list ul.inner-link li {
+    float: left;
+    list-style: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    line-height: 55px;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+#fixed-part .menu-list ul.inner-link li a.blue {
+    color: #000000;
+    font-size: 16px;
+}
+
+#fixed-part .menu-list ul.inner-link li a.blue:hover {
+    border-bottom: 1px solid #000;
+}
+
+#fixed-part .menu-list a.red {
+    /*display: block;*/
+    border: 1px solid blue;
+    padding: 10px 20px;
+    background: #f2f2ff;
+    color: #4255ff;
+    border-radius: 3px;
+}
+
+#fixed-part .menu-list a.red:hover {
+    background: #4255ff;
+    color: white;
+}
+
+#fixed-part .menu-list ul.inner-link li.register {
+    margin-left: 5px;
+}
+
+#fixed-part .header-marquee {
+    height: 25px;
+    background-color: #f2f2ff;
+    overflow: hidden;
+    border-top: 1px solid #08084d;
+    border-bottom: 1px solid #08084d;
+}
+
+ul.marquee {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+
+    /* optional styles for appearance */
+    height: 25px; /* height should be included to reserve visual space for the marquee */
+    background-color: #f2f2ff;
+    border: 1px solid #08084d;
+}
+
+ul.marquee li {
+    /* required styles */
+    float: left;
+    position: absolute;
+    top: -999em;
+    left: 0;
+    display: block;
+    white-space: nowrap; /* keep all text on a single line */
+
+    /* optional styles for appearance */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px 3px;
+}
+
+#marquee1 span {
+    padding-right: 300px;
+    color: #ff1d17;
+    letter-spacing: 2px;
+}
+
+/*登录蒙版和登录显示框*/
+#login-box iframe {
+    position: fixed;
+    z-index: 102;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 -150px;
+}
+
+#login-box span {
+    position: fixed;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 103;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 138px;
+    /*background: blue;*/
+}
+
+#login-box span:hover {
+    color: red;
+}
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #777;
+    opacity: 0.7;
+    /* IE 8 */
+    filter: alpha(opacity=70);
+    /* Firefox,Safari(WebKit),Opera */
+    -ms-filter: alpha(opacity=70);
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+#login-box, .overlay {
+    display: none;
+}

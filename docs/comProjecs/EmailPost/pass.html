@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Microsoft YaHei, SimSun, SimHei;
+            font-size: 0.9em;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+        h4 {
+            font-weight: normal;
+            font-size:13px;
+        }
+
+        #wrap {
+            width: 700px;
+            margin: 20px auto;
+            height: 860px;
+        }
+
+        img {
+            border: 0;
+        }
+
+        #wrap .header, #wrap .userinfo, #wrap .link_1, #wrap .link_2, #wrap .link_3 {
+            position: relative;
+        }
+
+        #wrap .header a {
+            position: absolute;
+            display: block;
+            height: 20px;
+            width: 110px;
+            left: 501px;
+            top: 17px;
+            z-index: 999;
+        }
+
+        #wrap .userinfo .writeinfo {
+            position: absolute;
+            top: 50px;
+            left: 90px;
+            color: #2C789A;
+            font-size: 14px;
+        }
+
+        #wrap .link_1 a {
+            position: absolute;
+            display: block;
+            width: 253px;
+            height: 20px;
+            cursor: pointer;
+            top: 73px;
+            left: 308px;
+            z-index: 999;
+        }
+
+        #wrap .link_2 a.web-appointment {
+            position: absolute;
+            display: block;
+            width: 253px;
+            height: 25px;
+            top: 34px;
+            left: 408px;
+            z-index: 999;
+        }
+
+        #wrap .link_3 div.change-link {
+            position: absolute;
+            display: block;
+            bottom: 64px;
+            left: 315px;
+            z-index: 999;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="header" style="height: 114px">
+        <img src="images/header.png" alt="myfd">
+        <a href="http://www.myfp.cn/" target="_blank">登陆展恒官网</a>
+    </div>
+    <div class="userinfo" style="height: 154px">
+        <img src="images/userinfo.png" alt="userinfo">
+
+        <div class="writeinfo">
+            <h3>先生/女士</h3>
+
+            <h3>服务代码：<span>Qxxxxx</span></h3>
+        </div>
+    </div>
+    <div class="link_1" style="height: 201px">
+        <img src="images/link_1.png">
+        <a href="http://www.myfund.com/advisor" target="_blank">http://www.myfund.com/advisor</a>
+    </div>
+    <div class="link_2" style="height: 133px">
+        <img src="images/link_2.png">
+        <a class="web-appointment" href="http://www.myfund.com/advisor" target="_blank">http://www.myfund.com/advisor</a>
+    </div>
+    <div class="link_3" style="height: 140px">
+        <img src="images/link_3.png">
+
+        <div class="change-link"><h4>http://www.myfund.com/advisor/html/Q1813.html</h4></div>
+    </div>
+    <div class="footer" style="height: 118px">
+        <img src="images/footer.png">
+    </div>
+</div>
+</body>
+</html>
