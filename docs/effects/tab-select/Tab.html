@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>网页tab效果</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 12px/16px Arial, Helvetica;
+            background: #ffffff;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul {
+            clear: both;
+        }
+
+        #selectTab {
+            width: 790px;
+            margin: 0 auto;
+            font-family: "microsoft yahei";
+            /*overflow: hidden;*/
+        }
+
+        #selectTab .tab-arrow {
+            position: relative;
+        }
+
+        #selectTab .tab-arrow .arrows {
+            height: 11px;
+            width: 157px;
+            position: absolute;
+            bottom: -2px;
+            border-bottom: 2px solid #E4393C;
+            text-align: center;
+            z-index: 2;
+        }
+
+        #selectTab .tab-arrow .arrows b {
+            width: 0;
+            height: 0;
+            display: inline-block;
+            border-style: solid;
+            border-color: transparent transparent #E4393C;
+            border-width: 6px;
+        }
+
+        #tabs {
+            height: 32px;
+            line-height: 32px;
+        }
+
+        #tabs a {
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            font-weight: bold;
+            display: block;
+        }
+
+        #tabs li {
+            width: 157px;
+            float: left;
+            text-align: center;
+        }
+
+        #content {
+            clear: both;
+            height: 362px;
+            border-style: solid;
+            border-width: 2px 1px 1px;
+            border-color: #aaa #F1F1F1 #F1F1F1;
+        }
+
+        #content .showlist li {
+            width: 156px;
+            height: 170px;
+            float: left;
+            text-align: center;
+            padding-top: 10px;
+            border-right: 1px solid #F1F1F1;
+            border-bottom: 1px solid #F1F1F1;
+        }
+
+        #content .showlist li.rowlast {
+            border-right: 0;
+        }
+
+        #content .showlist li.row2 {
+            border-bottom: 0;
+        }
+
+        #content .showlist .price {
+            color: #E4393C;
+        }
+
+        #tab1, #tab1 .fore1 {
+            overflow: hidden;
+            zoom: 1;
+        }
+
+        #tab1 {
+            position: relative;
+        }
+
+        #tab1 .fore1 li:first-child {
+            padding-right: 471px;
+        }
+
+        #tab1 .jd-slider {
+            position: absolute;
+            width: 470px;
+            height: 180px;
+            top: 0;
+            left: 156px;
+            border-left: 1px solid #F1F1F1;
+            border-right: 1px solid #F1F1F1;
+            overflow: hidden;
+        }
+
+
+    </style>
+    <script src="../js/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+<div id="selectTab">
+<div class="tab-arrow">
+    <div class="arrows">
+        <b></b>
+    </div>
+    <ul id="tabs">
+        <li><a class="hover" href="#" name="#tab1">特价商品</a></li>
+        <li><a href="#" name="#tab2">大家电</a></li>
+        <li><a href="#" name="#tab3">小家电</a></li>
+        <li><a href="#" name="#tab4">手机通讯</a></li>
+        <li><a href="#" name="#tab5">汽车五金</a></li>
+    </ul>
+</div>
+<div id="content">
+<div id="tab1">
+    <div class="jd-slider">
+        <a><img src="../../images/jd-slider-01.jpg"></a>
+    </div>
+    <ul class="fore1 showlist">
+        <li>
+            <div><a><img src="../../images/tab1-1.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+
+        <li class="rowlast">
+            <div><a><img src="../../images/tab1-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab1-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="../../images/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+</div>
+<div id="tab2">
+    <ul class="fore2 showlist">
+        <li>
+            <div><a><img src="../../images/tab1-1.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab1-2.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab1-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab1-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="rowlast">
+            <div><a><img src="../../images/tab1-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab1-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="../../images/tab1-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+</div>
+<div id="tab3">
+    <ul class="fore3 showlist">
+        <li>
+            <div><a><img src="../../images/tab3-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab3-2.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab3-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab3-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="rowlast">
+            <div><a><img src="../../images/tab3-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab3-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab3-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab3-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab3-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="../../images/tab3-10.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+
+</div>
+<div id="tab4">
+    <ul class="fore4 showlist">
+        <li>
+            <div><a><img src="../../images/tab4-1.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab4-2.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab4-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab4-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="rowlast">
+            <div><a><img src="../../images/tab4-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab4-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab4-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab4-8.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab4-9.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="../../images/tab4-10.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+</div>
+<div id="tab5">
+    <ul class="fore5 showlist">
+        <li>
+            <div><a><img src="../../images/tab5-1.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab5-2.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab5-3.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li>
+            <div><a><img src="../../images/tab5-4.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="rowlast">
+            <div><a><img src="../../images/tab5-5.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab5-6.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab5-7.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab5-8.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2">
+            <div><a><img src="../../images/tab5-9.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+        <li class="row2 rowlast">
+            <div><a><img src="../../images/tab5-10.jpg"></a></div>
+            <div><a>全民不上街 在线抢家电</a></div>
+            <div><span class="price">40吋电视预约享1699</span></div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    (function () {
+        function resetTabs() {
+            $("#content > div").hide(); //Hide all content
+            $("#tabs a").attr("id", ""); //Reset id's
+        }
+
+        var myUrl = window.location.href; //get URL
+        var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For mywebsite.com/tabs.html#tab2, myUrlTab = #tab2
+        var myUrlTabName = myUrlTab.substring(0, 4); // For the above example, myUrlTabName = #tab
+
+        (function () {
+            $("#content > div").hide(); // Initially hide all content
+            $("#tabs li:first a").attr("id", "current"); // Activate first tab
+            $("#content > div:first").stop(true, true).fadeIn(400); // Show first tab content
+
+            $("#tabs").on("mouseenter", "a", function (e) {
+                e.preventDefault();
+                if ($(this).attr("id") == "current") { //detection for current tab
+                    return
+                }
+                else {
+                    resetTabs();
+                    $(this).attr("id", "current"); // Activate this
+//                console.log($(this).attr('name'));
+//                console.log($($(this).attr('name')))
+                    $($(this).attr('name')).stop(true, true).fadeIn(400); // Show content for current tab
+//                console.log($(e.target).position().left);
+                    $("#selectTab .arrows").animate({"left": $(e.target).position().left}, 100)
+                }
+            });
+
+            for (i = 1; i <= $("#tabs li").length; i++) {
+                if (myUrlTab == myUrlTabName + i) {
+                    resetTabs();
+                    $("a[name='" + myUrlTab + "']").attr("id", "current"); // Activate url tab
+                    $(myUrlTab).fadeIn(400); // Show url tab content
+                }
+            }
+
+
+        })()
+    })()
+
+</script>
+</body>
+</html>

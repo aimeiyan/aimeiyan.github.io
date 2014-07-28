@@ -1,11 +1,10 @@
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript" src="jquery.menu-aim.js"></script>
+<script type="text/javascript">
     $(function () {
         $(".dropdown-menu").menuAim({
-            exit: function () {
-                console.log('exit -00------------------------');
-            },
-            exitMenu: function () {
-                console.log('exit metnu-------------------');
-            },
+            exitMenu: deactivateSubmenu,
+            enter: activateSubmenu,
             activate: activateSubmenu,
             deactivate: deactivateSubmenu
         });
@@ -27,7 +26,7 @@
         $row.find("span").addClass("maintainHover");
     }
     function deactivateSubmenu(row) {
-        console.log('--------------------')
+//        console.log('--------------------')
         var $row = $(row),
                 submenuId = $row.data("submenuId"),
                 $submenu = $("#" + submenuId);
@@ -40,6 +39,7 @@
     });
 
     (function () {
+//        return;
         var leave = false;
         $('#filter').hover(function () { // over
             leave = false;
@@ -51,6 +51,7 @@
                     $(".detail").css("display", "none");
                     $("li.item>span").removeClass("maintainHover");
                 }
-            }, 200);
+            }, 50);
         });
     })();
+</script>

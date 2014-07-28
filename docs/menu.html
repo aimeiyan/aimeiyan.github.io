@@ -26,16 +26,15 @@
         <h1>Create jQuery effect by myself</h1>
     </div>
     <div class="container">
-
         <div class="row">
             <div class="col-lg-10">
-                <h2>slider&nbsp;动画效果-02</h2>
+                <h2>菜单栏动画效果</h2>
 
-                <p>点击pre和next箭头，或者图片下部的控制圆圈，切换图片。</p>
+                <p>借助插件“jquery.menu-aim.js”，鼠标滑过商品分类，会很流畅的显示每一类里的各小类。</p>
 
-                <p><a class="btn btn-default" href="#source-code-04" role="button">View source »</a></p>
+                <p><a class="btn btn-default" href="#source-code-01" role="button">View source »</a></p>
 
-                <div id="source-code-04" class="source-code">
+                <div id="source-code-01" class="source-code">
                     <pre class="view-source"></pre>
                 </div>
             </div>
@@ -43,23 +42,26 @@
                 <div class="sidebar-module">
                     <h4>其他动画效果</h4>
                     <ol class="list-unstyled">
-                        <li><a href="create-jQuery-effect-03-01.html">菜单栏动画效果</a></li>
-                        <li><a href="create-jQuery-effect-03-02.html">放大镜效果</a></li>
-                        <li><a href="create-jQuery-effect-03-03.html">slider&nbsp;动画效果-01</a></li>
-                        <li><a href="create-jQuery-effect-03-05.html">scrollTo动画效果</a></li>
+                        <li><a href="zoom-in.html">放大镜效果</a></li>
+                        <li><a href="slider.html">slider&nbsp;动画效果</a></li>
+                        <li><a href="carousel.html">carousel&nbsp;动画效果</a></li>
+                        <li><a href="tab-select.html">Tab切换</a></li>
                         <li><a href="create-jQuery-effect-03-06.html">Bubble Popup 效果</a></li>
                     </ol>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12">
-                <div id="effect-03-02">
-                    <iframe width="100%" frameborder="0" height="430" scrolling="yes"
-                            src="effects/slide-type1/slide_test_04_formal.html"></iframe>
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-10">
+                <div id="effect-01">
+                    <iframe class="iframe-01" width="100%" frameborder="0" height="550" scrolling="no"
+                            src="effects/menu-show/jd_menubar.html"></iframe>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -82,12 +84,12 @@
 //            });
 //            return result;
 //        })();
-        var txtFile = ['slider-02'];
+        var txtFile = ['jd-menu-show'];
         for (var i = 0; i < txtFile.length; i++) {
             var eveTxt = txtFile[i];
-            var he = eveTxt + ".txt";
+            var he = eveTxt + ".txt" ;
             console.log(eveTxt);
-            console.log(he);
+            console.log(he) ;
             var file = (function func1(he) {
                 var result;
                 $.ajax({
