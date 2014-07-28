@@ -1,0 +1,55 @@
+       #rightPanel {
+            width: 1200px;
+            position: relative;
+        }
+
+        #rightPanel .backPanel {
+            position: fixed;
+            left: 50%;
+            bottom: 0;
+            margin: 10px 0 10px 600px;
+        }
+
+        #rightPanel .backPanel a {
+            width: 50px;
+            height: 50px;
+            display: block;
+            /*line-height: 25px;*/
+            margin-top: 5px;
+            text-align: center;
+            padding: 8px;
+            font-size: 12px;
+            color: #878787;
+            border: 1px solid #DDDDDD;
+            background: #EEEEEE;
+        }
+
+        #rightPanel .backPanel a:hover {
+            font-weight: 700;
+            color: #555;
+            border: 1px solid #555;
+            text-decoration: none;
+        }
+
+        #rightPanel .backPanel a.homepage {
+            text-indent: -9999px;
+            background: url("../images/homepage.png") no-repeat center center;
+        }
+        #rightPanel .backPanel a.homepage:hover{
+            background: none;
+            text-indent: 0;
+        }
+        #rightPanel .backPanel a.abutton {
+            text-indent: -9999px;
+            background: url("../images/backimgs.png") no-repeat center center;
+        }
+        #rightPanel .backPanel a.abutton:hover{
+            background: none;
+            text-indent: 0;
+        }
+        #rightPanel .backPanel a.click {
+            font-weight: 700;
+            color: #555;
+            border: 1px solid #555;
+            text-decoration: none;
+        }

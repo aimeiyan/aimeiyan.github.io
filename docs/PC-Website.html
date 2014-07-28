@@ -5,8 +5,21 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="imitate-website.css">
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/right-panel.css">
 </head>
 <body>
+<div id="rightPanel">
+    <div class="backPanel">
+        <div class="items"><a href="#none">京东首页</a></div>
+        <div class="items"><a href="#none">电商首页</a></div>
+        <div class="items"><a href="#none">商品分页</a></div>
+        <div class="items"><a href="#none">PM<br>2.5</a></div>
+        <div class="items"><a href="#none">History<br>Tea</a></div>
+        <div class="items"><a href="#none">锤子科技</a></div>
+        <div class="items"><a class="homepage" href="../index.html" title="网站首页">网站首页</a></div>
+        <div class="items"><a href="#none" class="abutton" title="返回顶部">返回顶部</a></div>
+    </div>
+</div>
 <div id="imitate-website-page">
     <div class="page-header">
         <h1>PC版网页制作</h1>
@@ -21,7 +34,7 @@
                 <p><a class="btn btn-default" href="websites/jd/jd.html" target="_blank"
                       role="button">预览 »</a></p>
                 <a href="websites/jd/jd.html" target="_blank"><img src="images/jd.png"
-                                                                                                   class="img-thumbnail"></a>
+                                                                   class="img-thumbnail"></a>
             </div>
         </div>
         <div class="row">
@@ -30,6 +43,7 @@
 
                 <p>此网站是学习《锋利的jQuery》时书上的例子，自己用所学的HTML、CSS、jQuery知识模仿的写了一下，就算是学习此书的总结。此网站包含三个主要的jQuery
                     effect,包括：点击标签切换图片、点击标签实现slider效果，还有tooltip效果。</p>
+
                 <p><a class="btn btn-default" href="websites/commodity_website/index.html"
                       target="_blank" role="button">预览 »</a></p>
                 <a href="websites/commodity_website/index.html" target="_blank"><img
@@ -58,20 +72,20 @@
                 <p><a class="btn btn-default" href="websites/pm25/chapm25_backup_vision2.html"
                       role="button">预览 »</a></p>
                 <a href="websites/pm25/chapm25_backup_vision2.html"><img class="img-thumbnail"
-                                                                                         src="images/pm25.png"></a>
+                                                                         src="images/pm25.png"></a>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12">
-                <h2>the history of tea</h2>
+                <h2>The history of tea</h2>
 
                 <p>这个网站是Eric Meyer的CSS site design视频课程的例子，一边学习，就一边模仿的写了出来。</p>
 
                 <p><a class="btn btn-default" href="websites/tea/the_tea_history.html" target="_blank"
                       role="button">预览 »</a></p>
                 <a href="websites/tea/the_tea_history.html" target="_blank"><img src="images/tea.png"
-                                                                                                 class="img-thumbnail"></a>
+                                                                                 class="img-thumbnail"></a>
             </div>
         </div>
         <div class="row">
@@ -83,11 +97,31 @@
                 <p><a class="btn btn-default" href="websites/hammer-luo/hammer-luo-indexpage.html"
                       role="button">预览 »</a></p>
                 <a href="websites/hammer-luo/hammer-luo-indexpage.html"><img class="img-thumbnail"
-                                                                                             src="images/hammer.png"></a>
+                                                                             src="images/hammer.png"></a>
             </div>
         </div>
     </div>
 </div>
 </body>
 <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script>
+    $(function () {
+        $("#rightPanel .abutton").click(function () {
+            $("html,body").animate({scrollTop: 0}, 1000);
+        });
+
+        var $row = $("#imitate-website-page .row");
+        $(window).scroll(function (e) {
+            var top = $(window).scrollTop();
+            for (var i = 0; i < $row.length; i++) {
+                var rowTop = $row.eq(i).offset().top - $row.eq(i).height() / 3;
+                if (top > rowTop) {
+                    $("#rightPanel a:lt(6)").removeClass("click").eq(i).addClass("click");
+                }
+
+            }
+        });
+
+    })
+</script>
 </html>

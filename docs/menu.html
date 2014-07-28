@@ -10,17 +10,28 @@
     <script type="text/javascript" src="jquery-1.10.2.js"></script>
     <!--<script type="text/javascript" src="prettify.js"></script>-->
     <script type="text/javascript" src="Bootstrap/js/bootstrap.js"></script>
+<link rel="stylesheet" href="css/right-panel.css">
     <style type="text/css">
         .source-code {
             display: none;
         }
 
-            /*#source-code:target {*/
-            /*display: block;*/
-            /*}*/
+
     </style>
 </head>
 <body>
+<div id="rightPanel">
+    <div class="backPanel">
+        <!--<div class="items"><a href="#none">京东首页</a></div>-->
+        <!--<div class="items"><a href="#none">电商首页</a></div>-->
+        <!--<div class="items"><a href="#none">商品分页</a></div>-->
+        <!--<div class="items"><a href="#none">PM<br>2.5</a></div>-->
+        <!--<div class="items"><a href="#none">History<br>Tea</a></div>-->
+        <!--<div class="items"><a href="#none">锤子科技</a></div>-->
+        <div class="items"><a class="homepage" href="../index.html" title="网站首页">网站首页</a></div>
+        <!--<div class="items"><a href="#none" class="abutton" title="返回顶部">返回顶部</a></div>-->
+    </div>
+</div>
 <div id="create-jquery-effect">
     <div class="page-header">
         <h1>Create jQuery effect by myself</h1>
@@ -46,7 +57,7 @@
                         <li><a href="slider.html">slider&nbsp;动画效果</a></li>
                         <li><a href="carousel.html">carousel&nbsp;动画效果</a></li>
                         <li><a href="tab-select.html">Tab切换</a></li>
-                        <li><a href="create-jQuery-effect-03-06.html">Bubble Popup 效果</a></li>
+                        <li><a href="BubblePopup.html">Bubble Popup 效果</a></li>
                     </ol>
                 </div>
             </div>
@@ -69,6 +80,25 @@
 <script type="text/javascript">
     $(function () {
 
+//        右侧固定菜单面板
+        $("#rightPanel .abutton").click(function () {
+            $("html,body").animate({scrollTop: 0}, 1000);
+        });
+
+        var $row = $("#imitate-website-page .row");
+        $(window).scroll(function (e) {
+            var top = $(window).scrollTop();
+            for (var i = 0; i < $row.length; i++) {
+                var rowTop = $row.eq(i).offset().top - $row.eq(i).height() / 3;
+                if (top > rowTop) {
+                    $("#rightPanel a:lt(6)").removeClass("click").eq(i).addClass("click");
+                }
+
+            }
+        });
+
+
+//        view source
         $(".btn-default").click(function () {
             $(this).parent().next().toggle();
         });
