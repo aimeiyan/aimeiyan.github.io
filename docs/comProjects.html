@@ -40,12 +40,37 @@
         }
 
         #content {
-            width: 1200px;
-            margin: 0 auto;
+            width: 800px;
+            height: 300px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -150px 0 0 -400px;
+        }
+
+        #content .yinyu {
+            font-size: 15px;
+            margin-bottom: 10px;
         }
 
         ol {
             list-style: decimal;
+            list-style-position: inside;
+        }
+
+        #content .links a {
+            display: inline-block;
+            padding: 5px;
+            font-size: 14px;
+
+        }
+        #content .links a.slink{
+            font-size: 12px;
+            color: #999999;
+        }
+        #content .links a.slink:hover {
+            text-decoration: underline;
+            color: #3697ff;
         }
     </style>
 </head>
@@ -68,23 +93,32 @@
 </div>
 <div id="content">
     <div class="title">
-        <p>展恒是我第一个做前端开发工作的公司，只有短短的两个月（2014.3.21-2014.6.4），在这期间完成了以下网页的制作，还负责网站的数据更新。</p>
+        <p class="yinyu">
+            展恒是我第一个做前端开发工作的公司，只有短短的两个月（2014.3.21-2014.6.4），在这期间除了负责网站(www.cailifang.com)的数据更新，还完成了以下网页的制作(有些网站已经下线):</p>
     </div>
     <div class="links">
         <ol>
-            <li><a>财立方首页（version 01）</a><a
-                    href="../docs/comProjecs/the-first-version-advisor-homepage/the-first-version-homepage.html">链接</a>
+            <li><a>财立方首页（第一版）</a><a
+                    href="../docs/comProjecs/the-first-version-advisor-homepage/the-first-version-homepage.html"
+                    class="slink">点击</a>
+
+                <p></p>
             </li>
-            <li><a>财立方首页（version 02）</a><a
-                    href="../docs/comProjecs/the-second-version-advisor-homepage/the-second-version-advisor-homepage.html">链接</a>
+            <li><a>财立方首页（第二版）</a><a
+                    href="../docs/comProjecs/the-second-version-advisor-homepage/the-second-version-advisor-homepage.html"
+                    class="slink">点击</a>
             </li>
             <li><a>绩效体系</a><a
-                    href="../docs/comProjecs/the-second-version-advisor-homepage/performance-system.html">链接</a></li>
-            <li><a>关于我们</a><a href="../docs/comProjecs/the-second-version-advisor-homepage/about-us.html">链接</a></li>
-            <li><a>注册页面</a><a href="../docs/comProjecs/the-seconde-register/SignUp.html">链接</a></li>
-            <li><a>着陆页首页</a><a href="../docs/comProjecs/landing-page/landing-page.html">链接</a></li>
-            <li><a>着陆页第二级页面</a><a href="../docs/comProjecs/landing-page/insurance-professionals.html">链接</a></li>
-            <li><a>财富系统登陆页面</a><a href="../docs/comProjecs/wealth-mangement-system-index-finally/Login.html">链接</a></li>
+                    href="../docs/comProjecs/the-second-version-advisor-homepage/performance-system.html" class="slink">点击</a>
+            </li>
+            <li><a>关于我们</a><a href="../docs/comProjecs/the-second-version-advisor-homepage/about-us.html" class="slink">点击</a>
+            </li>
+            <li><a>注册页面</a><a href="../docs/comProjecs/the-seconde-register/SignUp.html" class="slink">点击</a></li>
+            <li><a>着陆页首页</a><a href="../docs/comProjecs/landing-page/landing-page.html" class="slink">点击</a></li>
+            <li><a>着陆页第二级页面</a><a href="../docs/comProjecs/landing-page/insurance-professionals.html"
+                                  class="slink">点击</a></li>
+            <li><a>财富系统登陆页面</a><a href="../docs/comProjecs/wealth-mangement-system-index-finally/Login.html"
+                                  class="slink">点击</a></li>
         </ol>
     </div>
 </div>
