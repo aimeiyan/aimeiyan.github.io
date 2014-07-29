@@ -33,7 +33,25 @@
             line-height: 1.8em;
             -webkit-font-smoothing: antialiased;
         }
+        .loadGif {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            top: 50%;
+            margin: -100px 0 0 -100px;
+            z-index: 9999;
+        }
 
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 9998;
+            left: 0;
+            top: 0;
+            background: #fff;
+        }
         .container h1 {
             width: 100%;
             position: fixed;
@@ -136,6 +154,8 @@
     </style>
 </head>
 <body>
+<div class="loadGif"><img src="homeImgs/loading-large.gif"></div>
+<div class="overlay"></div>
 <div class="container">
     <h1>
         <div class="slogon"><img src="homeImgs/slogon.png" alt="Loyalty, Quality, Discipline">
@@ -164,6 +184,10 @@ power atrophies because he does not use it.”</span>
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery.backstretch.js"></script>
 <script>
+    $(window).load(function(){
+        $(".loadGif,.overlay").hide();
+    });
+
     $.backstretch([
         "homeImgs/background_04.jpg",
         "homeImgs/background_05.jpg",
