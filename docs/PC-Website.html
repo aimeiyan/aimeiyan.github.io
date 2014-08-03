@@ -22,7 +22,7 @@
 </div>
 <div id="imitate-website-page">
     <div class="page-header">
-        <h1>PC版网页制作</h1>
+        <h1>Web版网页制作</h1>
     </div>
     <div class="container">
         <div class="row">
@@ -114,7 +114,10 @@
         $(window).scroll(function (e) {
             var top = $(window).scrollTop();
             for (var i = 0; i < $row.length; i++) {
+//                var eleTop=$row.eq(d).offset().top;
+
                 var rowTop = $row.eq(i).offset().top - $row.eq(i).height() / 3;
+
                 if (top > rowTop) {
                     $("#rightPanel a:lt(6)").removeClass("click").eq(i).addClass("click");
                 }
