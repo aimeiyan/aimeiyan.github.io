@@ -9,15 +9,18 @@ body {
     font-family: "microsoft yahei", 'Lato', Calibri, Arial, sans-serif;
 }
 
-.clearfix:before, .clearfix:after {
-    content: " ";
-    display: table;
-}
 
+.clearfix:before,
 .clearfix:after {
-    clear: both;
+    content:"";
+    display:table;
 }
-
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
 img {
     display: block;
     border: 0;
@@ -200,6 +203,7 @@ a:hover{
 #recommend-award .wrapper4 .text4 {
     position: absolute;
     text-align: center;
+    width: 300px;
     color: #333333;
     top: 63px;
     right: 0;
