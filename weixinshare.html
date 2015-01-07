@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="http://stc.weimob.com/css/activity/reset.css?2014-10-22" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://stc.weimob.com/css/activity/sendPrize/openPrize.css?2014-10-22" media="all" />
+    <script type="text/javascript" src="http://stc.weimob.com/src/activity/common.js?2014-10-22"></script>
+    <script type="text/javascript" src="http://stc.weimob.com/src/activity/sendPrize/openPrize.js?2014-10-22"></script>
+    <script type="text/javascript" src="http://stc.weimob.com/src/activity/zepto_min.js?2014-10-22"></script>
+    <title>中信建投证券通州营业部开业送礼啦~~</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="Keywords" content="微盟、微信营销、微信代运营、微信定制开发、微信托管、微网站、微商城、微营销" />
+    <meta name="Description" content="微盟，国内最大的微信公众智能服务平台，微盟八大微体系：微菜单、微官网、微会员、微活动、微商城、微推送、微服务、微统计，企业微营销必备。" />
+    <!-- Mobile Devices Support @begin1 -->
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Mobile Devices Support @end -->
+    <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico" />
+    <style>
+        img{max-width:100%!important;}
+    </style>
+</head>
+<body onselectstart="return true;" ondragstart="return false;">
+<body onselectstart="return true;" ondragstart="return false;">
+<div data-role="container" class="container ">
+    <header data-role="header"><!----></header>
+    <section data-role="body" class="body">
+        <div class="text-num opened"> <!--first/last/done/opened-->
+            <span class="have"></span>
+            <span class="rest">3</span>
+        </div>
+        <div class="choose-content-bg"></div>
+        <div class="choose-content opened">
+            <ul>
+                <li class="prize1" data-id=2><img src="http://img.weimob.com/static/4d/53/e7/image/20150102/20150102133931_35260.jpg" /></li>
+            </ul>
+        </div>
+        <div class="btn-layout">
+            <a href="javascript:void(0);" class="btn-help-other" ></a>
+            <!--<a href="javascript:void(0);" class="btn-alert-other" ></a>-->
+            <a href="/webmidautumn/index?id=10541&pid=240409&wechatid=oh_cJuMHcvPoYXFNJJYM4Fv-t6TE&uid=4277517&user_box_id=4731170&v=5d7546c389b831ca103a316be7b17563" class="btn-get-too"></a>
+            <!--<a href="/webmidautumn/index?id=10541&pid=240409&wechatid=oh_cJuMHcvPoYXFNJJYM4Fv-t6TE&uid=4277517&user_box_id=4731170&v=5d7546c389b831ca103a316be7b17563" class="btn-get-too big"></a> 只有一个按钮的时候 -->
+
+        </div>
+    </section>
+    <footer data-role="footer">
+        <a href="javascript:;" class="copyright">©印象通州</a>
+    </footer>
+</div>
+<div class="share-layer"></div>
+</body>
+<script type="text/javascript">
+    function _report (){
+        $.post('/webmidautumn/AddShare?id=10541&pid=240409&wechatid=oh_cJuMHcvPoYXFNJJYM4Fv-t6TE&uid=');
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        window.shareData = {
+            "imgUrl": "http://img.weimob.com/static/4d/53/e7/image/20150102/20150102123749_45419.jpg",
+            "timeLineLink": "http://240409.m.weimob.com/webmidautumn/HelpBox?id=10541&pid=240409&wechatid=fromUsername&uid=4277517&iid=4731170&v=ca512bc731542267608187b2bb2aeca1",
+            "sendFriendLink": "http://240409.m.weimob.com/webmidautumn/HelpBox?id=10541&pid=240409&wechatid=fromUsername&uid=4277517&iid=4731170&v=ca512bc731542267608187b2bb2aeca1",
+            "weiboLink": "http://240409.m.weimob.com/webmidautumn/HelpBox?id=10541&pid=240409&wechatid=fromUsername&uid=4277517&iid=4731170&v=ca512bc731542267608187b2bb2aeca1",
+            "tTitle": "中信建投新店开业免费送礼喽~",
+            "fTitle": "中信建投新店开业免费送礼喽~",
+            "tContent": "邀请8位，18位，28位好友帮您拆礼盒，就可以凭手机SN码领取相应好礼",
+            "fContent": "邀请8位，18位，28位好友帮您拆礼盒，就可以凭手机SN码领取相应好礼",
+            "wContent": "邀请8位，18位，28位好友帮您拆礼盒，就可以凭手机SN码领取相应好礼"
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function (res) {
+                $.post('/webmidautumn/AddShare?id=10541&pid=240409&wechatid=oh_cJuMHcvPoYXFNJJYM4Fv-t6TE&uid=');
+                _report('send_msg', res.err_msg);
+            })
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                $.post('/webmidautumn/AddShare?id=10541&pid=240409&wechatid=oh_cJuMHcvPoYXFNJJYM4Fv-t6TE&uid=');
+                _report('timeline', res.err_msg);
+            });
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.wContent,
+                "url": window.shareData.weiboLink,
+            }, function (res) {
+                $.post('/webmidautumn/AddShare?id=10541&pid=240409&wechatid=oh_cJuMHcvPoYXFNJJYM4Fv-t6TE&uid=');
+                _report('weibo', res.err_msg);
+            });
+        });
+    }, false)
+</script>        		<div mark="stat_code" style="width:0px; height:0px; display:none;">
+</div>
+</body>
+<script type="text/javascript">
+    (function() {
+        var wtj = document.createElement('script'); wtj.type = 'text/javascript'; wtj.async = true;
+        wtj.src = 'http://tj.weimob.com/wtj.js?url=' + encodeURIComponent(location.href);
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wtj, s);
+    })();
+    function weimobAfterShare(shareFromWechatId,sendFriendLink,shareToPlatform){
+        var wmShare = document.createElement('script'); wmShare.type = 'text/javascript'; wmShare.async = true;
+        wmShare.src = 'http://tj.weimob.com/api-share.js?fromWechatId=' + shareFromWechatId + '&shareToPlatform=';
+        wmShare.src += shareToPlatform + '&pid=240409&sendFriendLink=' + encodeURIComponent(sendFriendLink);
+        var stj = document.getElementsByTagName('script')[0]; stj.parentNode.insertBefore(wmShare, stj);
+    }
+
+    /**
+     * 默认分享出去的数据
+     *
+     */
+    function getShareImageUrl(){
+
+        var share_imgurl = "";
+        if("" == share_imgurl){
+            var shareImgObj = document.getElementsByClassName("shareImgUrl")[0];
+            if('undefined' != typeof(shareImgObj)){
+                share_imgurl = shareImgObj.src;
+            }
+        }
+        return window.shareData.imgUrl || share_imgurl;
+    }
+
+    window.shareData = window.shareData || {
+        "timeLineLink": "http://240409.m.weimob.com/webmidautumn/HelpBox?id=10541&pid=240409&wechatid=fromUsername&uid=4277517&iid=4731170&v=a5702119cb5cd2aa75f8044524e4b598&channel=share%5E%23%5E_f&from=singlemessage&isappinstalled=0&wxsubscribe=0",
+        "sendFriendLink": "http://240409.m.weimob.com/webmidautumn/HelpBox?id=10541&pid=240409&wechatid=fromUsername&uid=4277517&iid=4731170&v=a5702119cb5cd2aa75f8044524e4b598&channel=share%5E%23%5E_f&from=singlemessage&isappinstalled=0&wxsubscribe=0",
+        "weiboLink": "http://240409.m.weimob.com/webmidautumn/HelpBox?id=10541&pid=240409&wechatid=fromUsername&uid=4277517&iid=4731170&v=a5702119cb5cd2aa75f8044524e4b598&channel=share%5E%23%5E_f&from=singlemessage&isappinstalled=0&wxsubscribe=0",
+        "tTitle": document.title,
+        "tContent": document.title,
+        "fTitle": document.title,
+        "fContent": document.title,
+        "wContent": document.title
+    }
+
+
+    //loadChangeUrlChannel("timeLineLink","fc");
+    //loadChangeUrlChannel("sendFriendLink","f");
+    if(!window.pass_share){
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            //loadChangeUrlChannel();
+            // 发送给好友
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": getShareImageUrl(),
+                    "img_width": "640",
+                    "img_height": "640",
+                    "link": window.shareData.sendFriendLink,
+                    "desc": window.shareData.fContent,
+                    "title": window.shareData.fTitle
+                }, function (res) {
+                    if('send_app_msg:cancel' != res.err_msg){
+                        weimobAfterShare("oh_cJuMHcvPoYXFNJJYM4Fv-t6TE",window.shareData.sendFriendLink,'appmessage');
+                    }
+                    _report('send_msg', res.err_msg);
+                })
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
+
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": getShareImageUrl(),
+                    "img_width": "640",
+                    "img_height": "640",
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, function (res) {
+                    if('share_timeline:cancel' != res.err_msg){
+                        //如果用户没有取消
+                        weimobAfterShare("oh_cJuMHcvPoYXFNJJYM4Fv-t6TE",window.shareData.timeLineLink,'timeline');
+                    }
+                    _report('timeline', res.err_msg);
+                });
+            });
+
+            // 分享到微博
+            WeixinJSBridge.on('menu:share:weibo', function (argv) {
+                WeixinJSBridge.invoke('shareWeibo', {
+                    "content": window.shareData.wContent,
+                    "url": window.shareData.weiboLink
+                }, function (res) {
+                    if('share_weibo:cancel' != res.err_msg){
+                        weimobAfterShare("oh_cJuMHcvPoYXFNJJYM4Fv-t6TE",window.shareData.weiboLink,'weibo');
+                    }
+                    _report('weibo', res.err_msg);
+                });
+            });
+        }, false);
+    }
+
+</script>
+<script type="text/javascript" src="http://kf.weimob.com/js/ChatFloat.js"></script>
+<script type="text/javascript">
+    var str_domain = location.href.split('/',4)[2];
+    var boolIsTest = true;
+    if(str_domain == 'www.weimob.com' || str_domain.indexOf('m.weimob.com') > 0){
+        boolIsTest = false;
+    }
+    //1.0 web
+    new ChatFloat({
+        AId: '240409',
+        openid: "oh_cJuMHcvPoYXFNJJYM4Fv-t6TE",
+        top:150,
+        right:0,
+        IsTest:boolIsTest
+    });
+</script>
+<!--
+echo STATIC_DOMAIN."/src/jQuery.js?v=10101011 
+-->
+<script type="text/javascript" src="http://stc.weimob.com/src/st/share_channel.js?v=111111"></script>
+<script type="text/javascript" src="http://stc.weimob.com/src/st/base64.js?v=10101010"></script>
+<script type="text/javascript" src="http://stc.weimob.com/src/st/st.js?v=1420637330"></script>
+<script type="text/javascript">
+    //var jq=$.noConflict();
+    //使用案例如###如若上线请到研发群找我@赵增煜###
+    st.push("_triggerEvent",{
+        "is_statistic_on":"on", //开关
+        "statisticServerPath": "http://statistic.weimob.com/wm.js", //统计地址
+        "memcServerPath": "http://statistic.weimob.com/memc?cmd=get", //缓存地址
+        "stat_action":"loadPage",  //统计动作类型
+        "stat_optValue":""    //参数值
+    });
+</script>
+
+
+</html>
