@@ -197,7 +197,7 @@
     function shareWeibo() {
         WeixinJSBridge.invoke('shareWeibo',{
             "content": descContent,
-            "url": lineLink,
+            "url": lineLink
         }, function(res) {
             _report('weibo', res.err_msg);
         });
