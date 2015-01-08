@@ -1,0 +1,1472 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>测你在别人眼中的模样</title>
+<script type="text/javascript">
+    var _con = {}; _con["num"] = 39;
+</script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://1251008026.cdn.myqcloud.com/1251008026/new/js/avalon.mobile.min.js"></script>
+<style>
+* {
+    font-family: '微软雅黑';
+}
+
+html, body {
+    margin: 0;
+    color: #000;
+    background: #ffc2bd;
+    background-size: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+#loading {
+    text-align: center;
+    font-size: 20px;
+    line-height: 400px;
+    display: none;
+}
+
+.loading #loading {
+    display: block;
+}
+
+.loading .head,
+.loading .main {
+    display: none;
+}
+
+.head img {
+    width: 100%;
+}
+
+.main {
+    padding: 10px;
+    padding-top:9%;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.t-t {
+    font-size: 22px;
+    line-height: 2em;
+    text-align: left;
+}
+
+.t-s {
+    padding: 5px;
+    background-color: #fca9a2;
+    max-width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    position: relative;
+    -webkit-transition: background-color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+}
+
+.t-s img {
+    max-width: 100%;
+}
+
+.t-s span {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-weight: bold;
+    color: #761511;
+    padding:5px 20px;
+}
+
+.t-s.active {
+    background-color: #e98483;
+}
+
+.t-s.active span {
+    color: #fff;
+}
+
+.t-s:after {
+    position: absolute;
+    right:2px;
+    top: 2px;
+    padding: 5px;
+    background: rgba(255,255,255,1);
+    content: "√";
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    font-size: 1.1em;
+}
+
+.t-s.error:after {
+    background: rgba(255,0,0,1);
+    content: "×";
+    color: white;
+}
+
+.t-s.active:after {
+    display: block;
+    opacity: 1;
+}
+
+.t-c {
+    line-height: 1.2em;
+    padding:10px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-align: left;
+    color: #761511;
+    overflow: hidden;
+}
+
+.t-s.h {
+    max-width: 40%;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.t-r {
+
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.t-r span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 50px;
+    color: #27AE60;
+    /*color: rgba(0,0,0,0);*/
+    text-shadow: 3px 0 4px #16A085;
+}
+
+.t-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.t-img img {
+    max-width: 60%;
+}
+
+.t-btn,
+.t-btn:link,
+.t-btn:visited {
+    color: #ffffff;
+    background-color: #00b1ea;
+    padding-top: 12px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+    line-height: 1em;
+    min-width: 60%;
+    margin: 10px auto;
+    border-radius: 7px;
+    text-decoration: none;
+}
+.t-btn{
+    font-size:1.1em;
+}
+.share {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 1000;
+}
+
+.share img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    max-width: 320px;
+}
+
+.livetip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 200;
+}
+
+.lt-w {
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    right: 10px;
+    z-index: 300;
+}
+
+.lt-w .lt-c {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.list {
+    list-style: initial;
+    text-align: left;
+}
+
+.list li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+a,
+a:link,
+a:visited {
+    color: #ffffff;
+}
+
+.dialog {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dialog-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.dialog-con {
+    position: absolute;
+    width: 280px;
+    top: 100px;
+    background-color: white;
+    left: 50%;
+    margin-left: -140px;
+    padding-bottom: 10px;
+}
+.mane{
+    width: 84%;
+    margin-bottom:10px;
+    background:url("mane.png") no-repeat;
+    height:60px;
+    color:#ffffff;
+    font-size:21px;
+    line-height:36px;
+    background-size:100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+    padding:0 25px;
+    overflow: hidden;
+}
+</style>
+
+</head>
+<body class="loading" onload="showQ();">
+
+<div id="headad">
+</div>
+
+<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:none;opacity:0.5;">
+    <img style="position: relative;top: 40px;width:80px" src="http://1251008026.cdn.myqcloud.com/1251008026/new/img/load.gif" />
+    加载中......	</div>
+<div id="loading">加载中</div>
+<div class="head"></div>
+<div class="main" id="main" ms-controller="test">
+    <!-- 测试题 -->
+    <div ms-if="item.type=='hello'"  >
+        <div class="mane">测你在别人眼中的模样</div>
+        <div class="t-c" ms-if="item.text">
+            {{item.text}}
+        </div>
+        <div class="t-c" ms-if="item.text1">
+            {{item.text1}}
+        </div>
+        <div class="t-s h" ms-repeat-elem="item.select" ms-class-active="elem.active"  ms-on-click="elem.tap(elem, item.select)">
+            <img ms-attr-src="{{elem.img}}">
+            <span>{{elem.text}}</span>
+        </div>
+        <div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我想玩其他好玩的</a></div>
+    </div>
+    <div ms-if="item.type=='select'">
+        <div class="mane">测你在别人眼中的模样</div>
+        <div class="t-c">
+            <div ms-if="item.img" style="margin-bottom:0.5em;">
+                <img ms-attr-src="{{item.img}}">
+            </div>
+            {{item.id}}. {{item.text}}
+        </div>
+        <div class="t-s" ms-repeat-elem="item.select" ms-class-active="elem.active" ms-on-click="elem.tap(elem, item.select)">
+            <img ms-if="!!elem.img" ms-attr-src="{{elem.img}}">
+            <span>{{elem.text}}</span>
+        </div>
+    </div>
+    <div id="sans" style="display:none;">
+        <div class="t-r" id="fis">
+            <span></span>
+        </div>
+        <div class="t-c" id="sec">
+
+        </div>
+
+
+        <link rel="stylesheet" href="http://1251008026.cdn.myqcloud.com/1251008026/common/sharetowx/sharetowx.css" />
+        <div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display:none;">
+            <img src="http://1251008026.cdn.myqcloud.com/1251008026/common/sharetowx/guide.png" />
+        </div>
+
+        <div class="text" id="content">
+            <div id="mess_share">
+
+                <div id="share_1">
+                    <div class="button2" onclick="location.href = 'http://hbemgru.shareya.xyz/shares/?wid=194&title=测你在别人眼中的模样&t=1420697802'">
+                        <img src="http://1251008026.cdn.myqcloud.com/1251008026/common/sharetowx/icon_timeline.png" width="64" height="64" />分享到朋友圈
+                    </div>
+                </div>
+
+                <div id="share_2">
+                    <div class="button2" onclick="document.getElementById('mcover').style.display='block';">
+                        <img src="http://1251008026.cdn.myqcloud.com/1251008026/common/sharetowx/icon_msg.png" width="64" height="64" />发送给朋友
+                    </div>
+                </div>
+
+                <div class="clr"></div>
+            </div>
+
+        </div>
+
+        <style>
+            .more_test_list a{
+                color:#333;
+                text-decoration: none;
+            }
+
+            .more_test_list {
+                background-color: #fff;
+                margin: 10px 10px 0px 10px;
+                border: #CCC 1px solid;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+            }
+
+            .more_test_list dt {
+                border-bottom: #CCC 1px solid;
+                text-align: center;
+                background: #F6F6F6;
+                height:38px;
+                line-height:38px;
+            }
+
+            .more_test_list dd{
+                text-align:left;
+                margin:0;
+                padding:0;
+            }
+
+            .more_test_list li {
+                list-style: none;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                border-bottom: #E0E0E0 dashed 1px;
+                height: 40px;
+                line-height: 40px;
+                background: url(http://1251008026.cdn.myqcloud.com/1251008026/common/img/yjt.png) right no-repeat;
+                font-size: 16px;
+                padding:0 10px;
+            }
+        </style>
+
+        <div class="more_test_list" id="more_test">
+            <dt>↓ 更多好玩测试 ↓</dt>
+            <dd><a href="http://sla.sh.1251246865.cee.myqcloud.com/ceshi/?wid=12/?f=newmore"><li>测试你最真实的一面！</li></a><a href="http://sla.sh.1251246865.cee.myqcloud.com/ceshi/?wid=306/?f=newmore"><li>测你花钱起来有多可怕？</li></a><a href="http://sla.sh.1251246865.cee.myqcloud.com/ceshi/?wid=308/?f=newmore"><li>宠妃跟冷妃你会是哪一个呢？</li></a><a href="http://sla.sh.1251246865.cee.myqcloud.com/ceshi/?wid=182/?f=newmore"><li>测测你在西游记里什么妖精？</li></a><a href="http://sla.sh.1251246865.cee.myqcloud.com/ceshi/?wid=106/?f=newmore"><li>测你们最适合的关系？</li></a><a href="http://wecs.gz.1251246865.cee.myqcloud.com/ceshi/119/?f=newmore"><li>测你是《甄嬛传》中的哪个角色？</li></a><a href="http://app.gz.1251246865.cee.myqcloud.com/mingxing/?f=newmore"><li>测测你最像哪位明星？</li></a><a href="http://sla.sh.1251246865.cee.myqcloud.com/xinnianqian/?f=newmore"><li>2015到！快来测测你的新年签！</li></a></dd>
+        </div>
+
+        <!--<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注我们</a></div>-->
+        <div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" >
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('showOptionMenu');});
+    function showQ(){
+        $("#zhao").hide();
+    }
+</script>
+
+<script>
+var ID = getQueryString("sid") || Date.now() + "" + Math.floor(Math.random() * 1000);
+var fen = 0;
+function tap(elemvm, select, cb) {
+    var a = false;
+    for (var i = 0; i < select.length; i++) {
+        a = a || select[i].active;
+    };
+    if (!a) {
+        elemvm.active = true;
+        setTimeout(function () {
+            cb && cb()
+        }, 300)
+    }
+}
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = location.search.substr(1).match(reg);
+    if (r != null) return unescape(decodeURI(r[2])); return null;
+}
+var model = avalon.define("test", function (vm) {
+    vm.arr = [
+        {
+            type: "hello",
+            text: "我们在观察着世界，世界也在观察着我们。当你用你的经验、知识和态度去评价他人时，别人也在用着同样的方法来评价你。你在别人眼中究竟是什么样子？让这个测试来告诉你答案吧！",
+            select: [
+                {
+                    text: "开始测试",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select, function () {
+                            model.item = model.arr[1];
+                            model.result.sex = 0;
+                        });
+                    }
+                }
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 1,
+            text: "早上起来，你通常会先洗脸还是先刷牙？",
+            select: [
+
+
+
+                {
+                    text: "先洗脸",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[2];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "先刷牙",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[3];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 2,
+            text: "你喜欢周杰伦吗？",
+            select: [
+
+
+
+                {
+                    text: "喜欢",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[4];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "不喜欢",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[3];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "不置可否",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[3];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 3,
+            text: "你有不吃早餐的习惯吗？",
+            select: [
+
+
+
+                {
+                    text: "有",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[5];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "没有",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[6];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "有时有",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[4];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 4,
+            text: "你能确切地说出苹果对一个人的好处吗？",
+            select: [
+
+
+
+                {
+                    text: "能",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[6];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "不能",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[5];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "我能说出，但不知道是否确切",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[6];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 5,
+            text: "别人拿起刀子的时候，你是否感觉到害怕？",
+            select: [
+
+
+
+                {
+                    text: "是",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[7];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "否",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[8];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 6,
+            text: "你喜欢逛书店吗？",
+            select: [
+
+
+
+                {
+                    text: "喜欢，并且每次都会买书",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[7];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "喜欢，但通常只看书不买书",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[7];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "不喜欢，那裡人太多了",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[5];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "不喜欢，买书太贵，不如借书实惠",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[5];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 7,
+            text: "你相信「一切皆有可能」这句话吗？",
+            select: [
+
+
+
+                {
+                    text: "我深信不疑",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[9];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "我不相信",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[8];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "我希望这句话是真的，但是偶尔会怀疑",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[8];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 8,
+            text: "你觉得在「好」与「坏」之间是否存在一种中间状态，即「灰色地带」？",
+            select: [
+
+
+
+                {
+                    text: "是的",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[10];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "不是",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[10];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "我也不知道",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[9];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "都不知道你说什麽",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[11];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 9,
+            text: "你听说过「蝴蝶效应」吗？",
+            select: [
+
+
+
+                {
+                    text: "听说过",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[10];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "没听说过",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[11];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "有点耳熟",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[10];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 10,
+            text: "在你看来，父母是否因你而自豪？",
+            select: [
+
+
+
+                {
+                    text: "是的，他们总是在别人面前夸我",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[12];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "是的，他们很信任我",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[11];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "我也不知道",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[12];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "他们没有因我而自豪过",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[13];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 11,
+            text: "和陌生人接触的时候，你是否感觉到害怕？",
+            select: [
+
+
+
+                {
+                    text: "是",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[13];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "否",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[13];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 12,
+            text: "你经常熬夜吗？",
+            select: [
+
+
+
+                {
+                    text: "经常",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[14];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "偶尔",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[13];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 13,
+            text: "提到「信息」，你首先联想到的是什麽？",
+            select: [
+
+
+
+                {
+                    text: "电脑或者电视",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[14];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "互联网",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[16];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "书籍",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[14];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "文字",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[17];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 14,
+            text: "你有过和别人「吵架」的经历吗？",
+            select: [
+
+
+
+                {
+                    text: "我脾气不好，经常和别人「吵架」",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[15];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "曾经有过，但只是偶尔",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[18];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "没有，我不知道该怎麽和别人「吵架」",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[19];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "没有，我不喜欢「吵架」",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[15];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+        {
+            type: "select",
+            id: 15,
+            text: "你每天都会感觉很忙碌吗？",
+            select: [
+
+
+
+                {
+                    text: "是的",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[20];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "不是每天，但多数时候会",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[21];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "偶尔会",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[22];
+
+
+                                });
+                    }
+                },
+
+
+                {
+                    text: "目前我很閒",
+                    active: false,
+                    tap: function (ele, select) {
+                        tap(ele, select,
+                                function () {
+
+                                    model.item = model.arr[23];
+
+
+                                });
+                    }
+                },
+            ]
+        },
+
+
+
+        {
+            type: "result",
+            id: 16                    },
+
+        {
+            type: "result",
+            id: 17                    },
+
+        {
+            type: "result",
+            id: 18                    },
+
+        {
+            type: "result",
+            id: 19                    },
+
+        {
+            type: "result",
+            id: 20                    },
+
+        {
+            type: "result",
+            id: 21                    },
+
+        {
+            type: "result",
+            id: 22                    },
+
+        {
+            type: "result",
+            id: 23                    },
+
+    ];
+    vm.item = vm.arr[0];
+    vm.result = {
+        sex: 0
+    }
+    vm.shared = false;
+    vm.sharebox = function () {
+        model.showshare = true;
+    }
+    vm.livetip = false;
+    vm.hidelivetip = function () {
+        model.livetip = false;
+    }
+    vm.livenow = function () {
+
+    }
+    vm.showxz = function () {
+        model.xunzhang = true;
+    }
+    vm.$watch("item", function (newval) {
+        if (newval.type == 'result') {
+            tarShare((newval.id-15));
+            return false;
+        };
+    })
+});
+var ylist = [
+
+
+    {
+        "biao": "A",
+        "t1": "别人眼中,你是一个直接的人。",
+        "t2": "你是一个很直接的人，在别人眼中，你既有温柔的一面，又很坦诚与直率。你最大的优点就是追求真实，这是很可贵的品质。但需要注意的是，有时棱角太分明不一定是好事，善意的语言也有很多种表达方式。",
+    },
+
+    {
+        "biao": "B",
+        "t1": "别人眼中,你是一个真诚的人。",
+        "t2": "你时常觉得自己很平凡，但是别人眼中的你却很特别。因为你独特的气质并不做作，这很吸引人。只要保持好现有的风格并不断给他人以真诚的关爱，你的人际关系将发展得更好。同时蓝色的服饰对你有好处。",
+    },
+
+    {
+        "biao": "C",
+        "t1": "别人眼中,你是一个极其矛盾的人。",
+        "t2": "你的思想很深刻，但又总是会质疑自己提出的结论。多多参与实践对你是有好处的，这样思想和行为就会平衡一些，并且一定要坚持“做到后再说”的原则。",
+    },
+
+    {
+        "biao": "D",
+        "t1": "别人眼中,你显得不是很聪明。",
+        "t2": "你希望自己可以高效率地做事，但却缺乏很好的规划。这反而会给人留下不是很聪明的印象。其实你不是没有智慧，而是需要一点时间来思考。事情总是做不完的，不如给自己制订一个翔实的计划再行动，这也会让你得到更多的信任。",
+    },
+
+    {
+        "biao": "E",
+        "t1": "别人眼中,你具有敏锐的洞察力。",
+        "t2": "你看问题很深刻，并且对于世界知之甚广。但如果想要实现更好的自己，必须超越目前的状态，除了知识，你需要更多的实践。做任何想做的事，只要自己真正感兴趣，天赋都会把你推向成功。",
+    },
+
+    {
+        "biao": "F",
+        "t1": "别人眼中,你是一个踏实的人。",
+        "t2": "大家总是很信赖你，因为你踏实的处世风格让人很放心。这样的你，只要好好做自己，通常会有不错的发展。但有时缺乏冒险精神，在某些事情上处理得有些保守。不过这不是什么坏事，至少不会让你犯太多太大的过错。",
+    },
+
+    {
+        "biao": "G",
+        "t1": "别人眼中,你显得有些拖拉。",
+        "t2": "办事不可以太拖拉，不然大家会怀疑你的能力。其实你的智慧和独一无二的判断力是很可贵的，并不是所有人都能像你一样。任何时候，都别忘记了自己的优势。尽可能地发挥优势，就会为自己创造无限财富。",
+    },
+
+    {
+        "biao": "H",
+        "t1": "别人眼中,你显得有些头脑简单。",
+        "t2": "你需要对自己做一些深入思考，比如你的人生规划，你的理想等。因为别人眼中的你不免有点头脑简单，但这往往是误解。只要稍微努力一点，做出一些有实际意义的事情，大家对你的看法就会改变。当然，别人的看法只是参考，毕竟你还是你。",
+    },
+
+];
+document.body.className = "";
+function tarShare(score){
+    var url = "http://hbemgru.shareya.xyz/shares/?score="+score+"&wid=194&title=测你在别人眼中的模样&t=1420697802";
+    location.href = url;
+    return false;
+}
+function tarHref(type){
+    if(type==1){
+        var urls = "";
+    }else{
+        var urls = "http://sla.sh.1251246865.cee.myqcloud.com/?f=more";
+    }
+    location.href = urls;
+    return false;
+}
+function showAns(ans){
+    ans = ans-1;
+    if(ans<0 || ans>8){
+        ans = 1;
+    }
+    $("#sans").show();
+    $("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
+    $("#sec").html(ylist[ans].t2);
+
+}
+
+</script>
+<div>
+
+    <div style="margin-top:0px;">
+
+        <script type="text/javascript">
+            /*new_test_200_3_normal*/
+            var cpro_id = "u1806252";
+        </script>
+        <script src="http://cpro.baidustatic.com/cpro/ui/cm.js" type="text/javascript"></script>
+
+    </div>
+
+</div>
+
+<div style="display:none;">
+    <img src="http://c.cnzz.com/wapstat.php?siteid=1253440473&r=&rnd=2109592000" width="0" height="0"/>
+</div>
+
+<script>
+
+    $.post("http://119.29.58.140/count/count.php", { site:"newacc" , page:"194" , type:"2"},function(data){});
+
+</script>
+</body>
+</html>
