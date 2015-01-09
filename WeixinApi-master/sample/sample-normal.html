@@ -1,115 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>红包大礼活动</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="dns-prefetch" href="http://mmbiz.qpic.cn">
-        <link rel="dns-prefetch" href="http://res.wx.qq.com">
-        <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0;">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="format-detection" content="telephone=no">
-        <style type="text/css">
-            p {
-                padding: 5px 10px;
-            }
-        </style>
-        <script type="text/javascript" src="../wxjs.6.02.js?v=6.02"></script>
-        <script type="text/javascript" src="../WeixinApi.js?v=3.7"></script>
-    </head>
-    <body>
-        <div><img src="../img/introduce-1-banner.png" style="width: 100%;display: block;"></div>
-        <p>这是一个测试页面！请直接分享到微信好友、朋友圈、腾讯微博看效果吧！（async为false，即：分享过程中，wxData是固定的，不会被修改）</p>
+<head>
+    <title>红包大礼活动</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="dns-prefetch" href="http://mmbiz.qpic.cn">
+    <link rel="dns-prefetch" href="http://res.wx.qq.com">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0;">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+        p {
+            padding: 5px 10px;
+        }
+    </style>
+    <script type="text/javascript" src="../wxjs.6.02.js?v=6.02"></script>
+    <script type="text/javascript" src="../WeixinApi.js?v=3.7"></script>
+</head>
+<body>
+<div><img src="../img/introduce-1-banner.png" style="width: 100%;display: block;"></div>
+<p>这是一个测试页面！请直接分享到微信好友、朋友圈、腾讯微博看效果吧！（async为false，即：分享过程中，wxData是固定的，不会被修改）</p>
 
-        <p>
-            <a href="?" id="refresh">点击这里刷新！！！！</a>
-        </p>
-
-        <script type="text/javascript">
-
-            // 开启Api的debug模式
-            WeixinApi.enableDebugMode();
-
-            // 给按钮增加click事件：请不要太纠结这个写法，demo而已
-            var addEvent = function(elId,listener){
-                document.getElementById(elId)
-                        .addEventListener('click',function(e){
-                            if(!window.WeixinApi || !window.WeixinJSBridge) {
-                                alert('请确认您是在微信内置浏览器中打开的，并且WeixinApi.js已正确引用');
-                                e.preventDefault();
-                                return false;
-                            }
-                            listener(this,e);
-                        },false);
+<p>
+    <a href="?" id="refresh">点击这里刷新！！！！</a>
+</p>
+<script type="text/javascript">
+    /*
+     * 智能机浏览器版本信息:
+     *
+     */
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {//移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
             };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    };
 
-            // 刷新
-            addEvent('refresh',function(el,e){
-                e.preventDefault();
-                location.replace('?' + Math.random(),true);
-            });
+    if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+//        window.location = "http://www.tongbaotu.com";
+        history.pushState({}, '', '/');
+    }
+    //    else if (browser.versions.android) {
+    //        window.location="http://a.app.qq.com/o/simple.jsp?pkgname=com.tongbaotu";
+    //    }
 
-            // 需要分享的内容，请放到ready里
-            WeixinApi.ready(function(Api) {
+    // document.writeln("语言版本: " + browser.language);
+    // document.writeln(" 是否为移动终端: " + browser.versions.mobile);
+    // document.writeln(" ios终端: " + browser.versions.ios);
+    // document.writeln(" android终端: " + browser.versions.android);
+    // document.writeln(" 是否为iPhone: " + browser.versions.iPhone);
+    // document.writeln(" 是否iPad: " + browser.versions.iPad);
+    // document.writeln(navigator.userAgent);
 
-                // 微信分享的数据
-                var wxData = {
-                    "appId": "wx729bcc4f3ca39e87", // 服务号可以填写appId
-                    "imgUrl" : 'http://static.tongbaotu.com/tbtofficial//resource/images/T01.png?2014100914',
-                    "link" : 'http://www.tongbaotu.com',
-                    "desc" : '千万红包送大礼活动，推出好产品基金产品，哈哈',
-                    "title" : "红包大礼活动"
-                };
+</script>
+<script type="text/javascript">
 
-                // 分享的回调
-                var wxCallbacks = {
-                    // 收藏操作是否触发回调，默认是开启的
-                    favorite : false,
 
-                    // 分享操作开始之前
-                    ready : function() {
-                        // 你可以在这里对分享的数据进行重组
-                        alert("准备分享");
-                    },
-                    // 分享被用户自动取消
-                    cancel : function(resp) {
-                        // 你可以在你的页面上给用户一个小Tip，为什么要取消呢？
-                        alert("分享被取消，msg=" + resp.err_msg);
-                    },
-                    // 分享失败了
-                    fail : function(resp) {
-                        // 分享失败了，是不是可以告诉用户：不要紧，可能是网络问题，一会儿再试试？
-                        alert("分享失败，msg=" + resp.err_msg);
-                    },
-                    // 分享成功
-                    confirm : function(resp) {
-                        // 分享成功了，我们是不是可以做一些分享统计呢？
-//                        alert("分享成功，msg=" + resp.err_msg);
-                        alert("分享成功");
-                    },
-                    // 整个分享过程结束
-                    all : function(resp,shareTo) {
-                        // 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
-                        alert("分享" + (shareTo ? "到" + shareTo : "") + "结束，msg=" + resp.err_msg);
+    // 开启Api的debug模式
+    WeixinApi.enableDebugMode();
+
+    // 给按钮增加click事件：请不要太纠结这个写法，demo而已
+    var addEvent = function (elId, listener) {
+        document.getElementById(elId)
+                .addEventListener('click', function (e) {
+                    if (!window.WeixinApi || !window.WeixinJSBridge) {
+                        alert('请确认您是在微信内置浏览器中打开的，并且WeixinApi.js已正确引用');
+                        e.preventDefault();
+                        return false;
                     }
-                };
+                    listener(this, e);
+                }, false);
+    };
 
-                // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
-                Api.shareToFriend(wxData, wxCallbacks);
+    // 刷新
+    addEvent('refresh', function (el, e) {
+        e.preventDefault();
+        location.replace('?' + Math.random(), true);
+    });
 
-                // 点击分享到朋友圈，会执行下面这个代码
-                Api.shareToTimeline(wxData, wxCallbacks);
+    // 需要分享的内容，请放到ready里
+    WeixinApi.ready(function (Api) {
 
-                // 点击分享到腾讯微博，会执行下面这个代码
-                Api.shareToWeibo(wxData, wxCallbacks);
+        // 微信分享的数据
+        var wxData = {
+            "appId": "wx729bcc4f3ca39e87", // 服务号可以填写appId
+            "imgUrl": 'http://static.tongbaotu.com/tbtofficial//resource/images/T01.png?2014100914',
+            "link": 'http://www.tongbaotu.com',
+            "desc": '千万红包送大礼活动，推出好产品基金产品，哈哈',
+            "title": "红包大礼活动"
+        };
 
-                // iOS上，可以直接调用这个API进行分享，一句话搞定
-                Api.generalShare(wxData,wxCallbacks);
+        // 分享的回调
+        var wxCallbacks = {
+            // 收藏操作是否触发回调，默认是开启的
+            favorite: false,
 
-                // 激活WeixinApi的hook功能
-                Api.hook.enable(wxData,wxCallbacks);
-            });
+            // 分享操作开始之前
+            ready: function () {
+                // 你可以在这里对分享的数据进行重组
+                alert("准备分享");
+            },
+            // 分享被用户自动取消
+            cancel: function (resp) {
+                // 你可以在你的页面上给用户一个小Tip，为什么要取消呢？
+                alert("分享被取消，msg=" + resp.err_msg);
+            },
+            // 分享失败了
+            fail: function (resp) {
+                // 分享失败了，是不是可以告诉用户：不要紧，可能是网络问题，一会儿再试试？
+                alert("分享失败，msg=" + resp.err_msg);
+            },
+            // 分享成功
+            confirm: function (resp) {
+                // 分享成功了，我们是不是可以做一些分享统计呢？
+//                        alert("分享成功，msg=" + resp.err_msg);
+                alert("分享成功");
+            },
+            // 整个分享过程结束
+            all: function (resp, shareTo) {
+                // 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
+                alert("分享" + (shareTo ? "到" + shareTo : "") + "结束，msg=" + resp.err_msg);
+            }
+        };
 
-        </script>
-    </body>
+        // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
+        Api.shareToFriend(wxData, wxCallbacks);
+
+        // 点击分享到朋友圈，会执行下面这个代码
+        Api.shareToTimeline(wxData, wxCallbacks);
+
+        // 点击分享到腾讯微博，会执行下面这个代码
+        Api.shareToWeibo(wxData, wxCallbacks);
+
+        // iOS上，可以直接调用这个API进行分享，一句话搞定
+        Api.generalShare(wxData, wxCallbacks);
+
+        // 激活WeixinApi的hook功能
+        Api.hook.enable(wxData, wxCallbacks);
+    });
+
+</script>
+</body>
 </html>
