@@ -54,10 +54,10 @@
                 // 微信分享的数据
                 var wxData = {
                     "appId": "wx729bcc4f3ca39e87", // 服务号可以填写appId
-                    "imgUrl" : 'http://news.baidu.com/resource/img/logo_news_276_88.png',
-                    "link" : 'http://www.baidufe.com',
-                    "desc" : '大家好，我是Alien，Web前端&Android客户端码农，喜欢技术上的瞎倒腾！欢迎多交流',
-                    "title" : "Hell,title"
+                    "imgUrl" : 'http://static.tongbaotu.com/tbtofficial//resource/images/T01.png?2014100914',
+                    "link" : 'http://www.tongbaotu.com',
+                    "desc" : '千万红包送大礼活动，推出好产品基金产品，哈哈',
+                    "title" : "红包大礼活动"
                 };
 
                 // 分享的回调
@@ -83,7 +83,8 @@
                     // 分享成功
                     confirm : function(resp) {
                         // 分享成功了，我们是不是可以做一些分享统计呢？
-                        alert("分享成功，msg=" + resp.err_msg);
+//                        alert("分享成功，msg=" + resp.err_msg);
+                        alert("分享成功");
                     },
                     // 整个分享过程结束
                     all : function(resp,shareTo) {
