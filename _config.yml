@@ -1,6 +1,5 @@
-markdown: rdiscount
 permalink: /:year/:month/:title/
-url: http://geeklu.com
-author: 卢克
+url: http://aimeiyan.me
+author: nancy
 pygments: true
 paginate: 24
