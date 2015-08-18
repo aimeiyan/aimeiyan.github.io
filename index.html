@@ -1,273 +1,96 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<title>玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，玩的玩的，</title>
-<link rel="stylesheet" href="css/font.css">
-<!--<meta http-equiv="X-UA-COMPATIBLE" content="IE=8">-->
-<style type="text/css">
-    /*@import url(http://fast.fonts.com/cssapi/c2bdb8b7-c98e-4328-b2cb-7d5a1fee9b44.css);*/
-
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font: inherit;
-        vertical-align: baseline;
-    }
-
-    body {
-        font-size: 10px;
-        font-family: "Volta W01 Medium Italic", sans-serif, "microsoft yahei", 'Lato', Calibri, Arial;
-        line-height: 1.8em;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    .loadGif {
-        position: fixed;
-        width: 200px;
-        height: 200px;
-        left: 50%;
-        top: 50%;
-        margin: -100px 0 0 -100px;
-        z-index: 9999;
-    }
-
-    .overlay {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 9998;
-        left: 0;
-        top: 0;
-        background: #fff;
-    }
-
-    .container h1 {
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 23%;
-        margin: 0 auto;
-        text-align: center;
-        color: #fff;
-        font-size: 3em;
-    }
-
-    .slogon {
-        width: 100% text-align : center;
-    }
-
-    .slogon img {
-        display: block;
-        width: 182px;
-        margin: 0 auto -35px;
-        padding-right: 8px;
-    }
-
-    .container .line {
-        display: block;
-        height: 4px;
-        width: 40%;
-        margin: 30px auto;
-        background: #fff;
-    }
-
-    .container .quote {
-        max-width: 1180px;
-        margin: 0 auto;
-        display: block;
-        line-height: 1.8em;
-    }
-
-    /*jqueryExercise*/
-    #jqueryExercise {
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        z-index: 999;
-    }
-
-    #jqueryExercise ul {
-        text-align: center;
-    }
-
-    #jqueryExercise ul li {
-        display: inline-block;
-        display: inline;
-        float: left;
-        width: 20%;
-        height: 80px;
-        line-height: 80px;
-        background: #3f3f3f;
-        /*margin-right: 1px;*/
-        opacity: 0.7;
-        filter: Alpha(Opacity=0.7);
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-
-    #jqueryExercise ul li:last-child {
-        margin-right: 0;
-    }
-
-    #jqueryExercise ul li a {
-        /*font-family: "Volta W01 Medium Italic",sans-serif;*/
-        display: block;
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.8em;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-
-    #jqueryExercise ul li:hover {
-        background: #fff;
-        opacity: 1;
-        filter: Alpha(Opacity=1);
-        transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
-        -moz-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
-        -webkit-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
-        -o-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
-    }
-
-    #jqueryExercise ul li:hover a {
-        color: #15cde5;
-        background: #ffffff;
-        font-weight: 700;
-        transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
-        -moz-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
-        -webkit-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
-        -o-transition: color 0.6s ease-in-out 0s, background 0.6s ease-in-out 0s;
-    }
-</style>
-<!--<script>-->
-<!--var item = getSite();-->
-<!--var shareTitle = '地铁涨价，交通零补助排行榜惊现我司，我已哭瞎，小伙伴速来！';-->
-<!--var descContent = "各位亲朋，工资未见涨，票价已翻番。求攒够1111，老板体恤咱们，多些给地铁补助的动力 :)";-->
-<!--var imgUrl = 'http://m.kanzhun.com/images/activity/celebrate/share.jpg?v=1229';-->
-<!--var lineLink = item + "/activity/celebrate/index/?id=" + 15;-->
-<!--lineLink += "&sid=" + get_sid();-->
-<!--window.shareCallback = function(){-->
-<!--document.querySelector('#wxMask').style.display = 'none';-->
-<!--}-->
-<!--</script>-->
-<!--<script type="text/javascript">-->
-    <!--var imgUrl = 'http://www.baidu.com/img/bd_logo1.png';//这里是分享的时候的那个图片-->
-    <!--var lineLink = 'http://www.tongbaotu.com';//这个是分享的网址-->
-    <!--var descContent = "这个操作的介绍，没发现他有啥用，呜呜呜呜呜哈哈哈哈";-->
-    <!--var shareTitle = '这是题目题目题目，千万千万千万千万';-->
-    <!--var appid = 'wx7b416038fb2b459d';  //这里写开发者接口里的appid 可忽略-->
-    <!--function shareFriend() {-->
-        <!--WeixinJSBridge.invoke('sendAppMessage', {-->
-            <!--"appid": appid,-->
-            <!--"img_url": imgUrl,-->
-            <!--"img_width": "640",-->
-            <!--"img_height": "640",-->
-            <!--"link": lineLink,-->
-            <!--"desc": descContent,-->
-            <!--"title": shareTitle-->
-        <!--}, function (res) {-->
-            <!--_report('send_msg', res.err_msg);-->
-        <!--})-->
-    <!--}-->
-    <!--function shareTimeline() {-->
-        <!--WeixinJSBridge.invoke('shareTimeline', {-->
-            <!--"img_url": imgUrl,-->
-            <!--"img_width": "640",-->
-            <!--"img_height": "640",-->
-            <!--"link": lineLink,-->
-            <!--"desc": descContent,-->
-            <!--"title": shareTitle-->
-        <!--}, function (res) {-->
-            <!--_report('timeline', res.err_msg);-->
-        <!--});-->
-    <!--}-->
-    <!--function shareWeibo() {-->
-        <!--WeixinJSBridge.invoke('shareWeibo', {-->
-            <!--"content": descContent,-->
-            <!--"url": lineLink-->
-        <!--}, function (res) {-->
-            <!--_report('weibo', res.err_msg);-->
-        <!--});-->
-    <!--}-->
-    <!--// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。-->
-    <!--document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {-->
-        <!--// 发送给好友-->
-        <!--WeixinJSBridge.on('menu:share:appmessage', function (argv) {-->
-            <!--shareFriend();-->
-        <!--});-->
-        <!--// 分享到朋友圈-->
-        <!--WeixinJSBridge.on('menu:share:timeline', function (argv) {-->
-            <!--shareTimeline();-->
-        <!--});-->
-        <!--// 分享到微博-->
-        <!--WeixinJSBridge.on('menu:share:weibo', function (argv) {-->
-            <!--shareWeibo();-->
-        <!--});-->
-    <!--}, false);-->
-<!--</script>-->
-
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="3rd/docs.min.css">
+    <link rel="stylesheet" type="text/css" href="3rd/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="3rd/font-awesome-4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="loadGif"><img src="homeImgs/loading-large.gif"></div>
-<div class="overlay"></div>
-<div class="container">
-    <h1>
-        <div class="slogon"><img src="homeImgs/slogon.png" alt="Loyalty, Quality, Discipline">
+<header class="navbar navbar-static-top bs-docs-nav navbar-default" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar"
+                    aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand"><i class="fa fa-database"></i></a>
         </div>
-        <span class="line"></span>
-        <span class="quote">“Learning does not stop as long as a man live, unless his learning 
-power atrophies because he does not use it.”</span>
-        <span class="line"></span>
-        <small>Hutchins</small>
-    </h1>
-
-    <div id="jqueryExercise">
-        <ul>
-            <li class="rightSubNav"><a href="docs/mobile-website.html">移动版网页制作</a></li>
-            <li class="rightSubNav"><a href="docs/PC-Website.html">Web版网页制作</a></li>
-            <li><a href="docs/menu.html">jQuery效果制作</a></li>
-            <li class="leftSubNav"><a href="docs/myblog-intro.html" target="_blank">MyBlog制作</a></li>
-            <li class="rightSubNav"><a href="weixinshare.html"
-                                       target="_blank">测测</a>
-            </li>
-            <!--<li class="resume"><a href="docs/comProjects.html" target="_blank">公司项目</a></li>-->
-        </ul>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">文章</a>
+                </li>
+                <li>
+                    <a href="#">资源</a>
+                </li>
+                <li>
+                    <a href="#">读后感</a>
+                </li>
+                <li>
+                    <a href="#">旅行</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">点点滴滴</a>
+                </li>
+            </ul>
+        </nav>
     </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="bs-docs-section">
+                <div class="bs-callout bs-callout-info" id="callout-glyphicons-dont-mix">
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-2">-->
+                            <!--<img src="images/grunt-logo.svg" class="center-block">-->
+                        <!--</div>-->
+                        <!--<div class="col-md-10">-->
+                            <a href="#" class="help-block">
+                                <h4>Grunt自动化工具</h4>
 
+                                <p>基于nodeJS的命令行工具，结合uglify 和 cssmin等插件对文件进行压缩合并等操作。</p>
+                            </a>
+
+                        <!--</div>-->
+                    <!--</div>-->
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <ul class="nav bs-docs-sidebar">
+                <li class="active">
+                    <a href="">急哦俄乌头儿</a>
+                </li>
+                <li class="active">
+                    <a href="">急哦俄乌头儿</a>
+                </li>
+                <li class="active">
+                    <a href="">急哦俄乌头儿</a>
+                </li>
+                <li class="active">
+                    <a href="">急哦俄乌头儿</a>
+                </li>
+                <li class="active">
+                    <a href="">急哦俄乌头儿</a>
+                </li>
+                <li class="active">
+                    <a href="">急哦俄乌头儿</a>
+                </li>
+            </ul>
+            <a class="back-to-top" href="#top">
+                Back to top
+            </a>
+        </div>
+    </div>
 </div>
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/jquery.backstretch.js"></script>
-<script>
-//    history.pushState({}, '', '/');
-    $(window).load(function () {
-        $(".loadGif,.overlay").hide();
-    });
-
-    $.backstretch([
-        "homeImgs/background_04.jpg",
-        "homeImgs/background_05.jpg",
-        "homeImgs/background_01.jpg",
-        "homeImgs/background_03.jpg"
-
-    ], {
-        fade: 750,
-        duration: 2000
-    });
-</script>
 </body>
 </html>
