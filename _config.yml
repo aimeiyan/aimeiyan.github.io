@@ -1,5 +1,6 @@
 permalink: /:year/:month/:title/
 url: http://aimeiyan.me
+highlighter: pygments
 author: nancy
 pygments: true
 paginate: 24
