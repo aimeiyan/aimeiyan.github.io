@@ -22,13 +22,13 @@ http-wathcer 是朋友写的一个小工具，主要是修改css保存后，页�
 
 ### 三、启动命令
 
-```javascript
+```
 http-watcher -port=8000 －root={代码目录} -proxy={动态程序端口}
 ```
 
 例如：
 
-```javascript
+```
 http-watcher -port 8000  打开浏览器，访问http://127.0.0.1:8000。同事们也可通过你的IP，实时查看
 ```
 
