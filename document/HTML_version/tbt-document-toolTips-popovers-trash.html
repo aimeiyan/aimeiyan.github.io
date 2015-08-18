@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title> 通宝图-Tooltips and Popovers</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- #CSS Links -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/your-document-style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/prettify.css">
+
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+    <link rel="shortcut icon" href="img/favicon/tongbaotu.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon/tongbaotu.ico" type="image/x-icon">
+
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+</head>
+<body class="">
+
+<!-- #HEADER -->
+<header id="header">
+    <div id="logo-group">
+        <span class="project-selector dropdown-toggle" data-toggle="dropdown">SmartAdmin使用手册</span>
+    </div>
+    <div class="pull-right">
+
+        <!-- collapse menu button -->
+        <div id="hide-menu" class="btn-header pull-right">
+            <span> <a href="javascript:void(0);" data-action="toggleMenu" title="隐藏菜单面板"><i
+                    class="fa fa-reorder"></i></a> </span>
+        </div>
+        <!-- end collapse menu -->
+
+        <!-- #MOBILE -->
+        <!-- Top menu profile link : this shows only when top menu is active -->
+        <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+            <li class="">
+                <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
+                    <!--<img src="img/avatars/sunny.png" alt="John Doe" class="online" />-->
+                    <!--<i class="fa fa-lg fa-fw fa-user"></i>-->
+                    <strong><span>目录</span>
+                        <!--<i class="fa fa-caret-down"></i>--></strong>
+                </a>
+
+            </li>
+        </ul>
+
+        <!-- fullscreen button -->
+        <div id="fullscreen" class="btn-header transparent pull-right">
+            <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i
+                    class="fa fa-arrows-alt"></i></a> </span>
+        </div>
+        <!-- end fullscreen button -->
+
+    </div>
+
+</header>
+<!-- END HEADER -->
+
+<aside id="left-panel">
+
+    <div class="login-info">
+				<span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                        <span class="glyphicon fa-fw glyphicon-list-alt"></span>
+						<span>
+							目录
+						</span>
+                    </a>
+
+				</span>
+    </div>
+    <nav>
+        <ul>
+            <li class="active">
+                <a href="#"><i class="fa fa-lg fa-fw fa-book"></i> <span class="menu-item-parent">文档</span></a>
+                <ul>
+                    <li>
+                        <a href="tbt-document-smartAdminVersion.html">版本信息</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">页面结构</a>
+                        <ul>
+                            <li><a href="tbt-document-structure.html">介绍</a></li>
+                            <li><a href="tbt-document-structure-example.html">举例</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tbt-document-widget.html">窗口部件 Widget</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">表格 Table</a>
+                        <ul>
+                            <li><a href="tbt-document-normal-table.html"> 普通表格 Table</a></li>
+                            <li><a href="tbt-document-table.html">数据表格 Table</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tbt-document-form.html">表单 Form</a>
+                    </li>
+                    <li class="active">
+                        <a>常用元素</a>
+                        <ul>
+                            <li><a href="tbt-document-message.html">消息类型</a></li>
+                            <li><a href="tbt-document-buttons.html">按钮</a></li>
+                            <li class="active"><a href="tbt-document-labels.html">标签标记</a></li>
+                            <li><a href="tbt-document-bgTxtcolor.html">元素背景和文字颜色</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:void(0);">常用Js插件应用</a>
+                        <ul>
+                            <li><a href="">JqueryUI</a></li>
+                            <li><a href="">Bootstrap</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+			<span class="minifyme" data-action="minifyMenu">
+				<i class="fa fa-arrow-circle-left hit"></i>
+			</span>
+
+</aside>
+<!-- END NAVIGATION -->
+
+<!-- MAIN PANEL -->
+<div id="main" role="main">
+
+<!-- RIBBON -->
+<div id="ribbon">
+<span class="ribbon-button-alignment">
+					<span id="refresh" class="btn btn-ribbon" data-title="refresh"
+                          rel="tooltip" data-placement="bottom"
+                          data-original-title="<i class='text-warning fa fa-warning'></i> 警告！此操作会将所有设置还原为初始设置。"
+                          data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span>
+				</span>
+
+    <!-- breadcrumb -->
+    <ol class="breadcrumb">
+        <li><a href="#">文档</a></li>
+        <li><a href="#">Tooltips and Popovers</a></li>
+    </ol>
+    <!-- end breadcrumb -->
+
+    <!-- You can also add more buttons to the
+                ribbon for further usability
+
+                Example below:
+
+                <span class="ribbon-button-alignment pull-right">
+                <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+                <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+                <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+                </span> -->
+
+</div>
+<!-- END RIBBON -->
+
+<!-- MAIN CONTENT -->
+<div id="content">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+        <h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-book"></i> 文档 <span>> Tooltips and Popovers</span></h1>
+    </div>
+</div>
+<section id="widget-grid">
+
+<!-- start row -->
+
+<!-- start row -->
+<div class="row">
+
+    <h2 class="row-seperator-header"><i class="fa fa-question"></i> Tooltips and Popovers </h2>
+
+    <div class="col-sm-12">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
+
+                <div class="well well-light">
+                    <h3>Tooltips</h3>
+                    <p>
+                        Tip your users with a small tooltip. Nifty helpful information can be disaplayed using this very simple and yet effictive component. Display pure <strong>HTML Content</strong>, <strong> Images</strong> and <strong>Icons</strong>
+                    </p>
+                    <br>
+
+                    <ul class="demo-btns text-center">
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default btn-lg" rel="tooltip" data-placement="top" data-original-title="<h1><b>One</b> <em>Really</em> big tip!</h1>" data-html="true">Big Tip</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default btn-lg" rel="tooltip" data-placement="top" data-original-title="<i class='fa fa-check fa-3x text-success'></i> <i class='fa fa-times fa-3x text-danger'></i>" data-html="true">has Icon</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default btn-lg" rel="tooltip" data-placement="top" data-original-title="<img src='img/avatars/sunny.png' alt='me' class='online'>" data-html="true">also Image</a>
+                        </li>
+                    </ul>
+
+                    <ul class="demo-btns text-center">
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="left" data-original-title="Tooltip Left"><i class="fa fa-arrow-left"></i> Tooltip Left</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="top" data-original-title="Tooltip Top"><i class="fa fa-arrow-up"></i> Tooltip Top</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="bottom" data-original-title="Tooltip Bottom"><i class="fa fa-arrow-down"></i> Tooltip Bottom</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="right" data-original-title="<i class='fa fa-check text-success'></i> Tooltip Right" data-html="true"><i class="fa fa-arrow-right"></i> Tooltip Right</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
+
+                <div class="well well-light">
+                    <h3>Popovers</h3>
+                    <p>
+                        Popovers are a cool way to express compressed information to the user, neatly and quickly. You can generate all kinds of content within the popover component. Including <strong>Forms</strong>, <strong>Tabs</strong>, <strong>Images</strong> and even <strong>Google map</strong>!
+                    </p>
+                    <br>
+                    <ul class="demo-btns text-center">
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default btn-lg" rel="popover-hover" data-placement="top" data-original-title="Popover activated on hover" data-content="Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."><strong>On</strong> <i>Hover</i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default btn-lg" rel="popover" data-placement="top" data-original-title="<h4>Tabs inside popover</h4>" data-content="<ul id='popup-tab' class='nav nav-tabs bordered'><li class='active'><a href='#pop-1' data-toggle='tab'>Active Tab </a></li><li><a href='#pop-2' data-toggle='tab'>Tab 2</a></li></ul><div id='popup-tab-content' class='tab-content padding-10'><div class='tab-pane fade in active' id='pop-1'><p>I have six locks on my door all in a row. When I go out, I lock every other one. I figure no matter how long somebody stands there picking the locks, they are always locking three.</p></div><div class='tab-pane fade' id='pop-2'><p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. wes anderson artisan four loko farm-to-table craft beer twee.</p></div></div>" data-html="true"><strong>Active</strong> <i>Content</i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default btn-lg" rel="popover" data-placement="top" data-original-title="<i class='fa fa-fw fa-pencil'></i> Form inside popover" data-content="<form action='' style='min-width:170px'><div class='checkbox'><label><input type='checkbox' class='checkbox style-0' checked='checked'><span>Read</span></label></div><div class='checkbox'><label><input type='checkbox' class='checkbox style-0'><span>Write</span></label></div><div class='checkbox'><label><input type='checkbox' class='checkbox style-0'><span>Execute</span></label></div><div class='form-actions'><div class='row'><div class='col-md-12'><button class='btn btn-primary btn-sm' type='submit'>SAVE</button></div></div></div></form>" data-html="true"><strong>File</strong> <i>Access</i></a>
+                        </li>
+                    </ul>
+
+                    <ul class="demo-btns text-center">
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default" rel="popover" data-placement="left" data-original-title="Popover Left" data-content="Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."><i class="fa fa-arrow-left"></i> <strong>Popover</strong> <i>Left</i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default" rel="popover" data-placement="top" data-original-title="Popover Up" data-content="Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."><i class="fa fa-arrow-up"></i> <strong>Popover</strong> <i>Up</i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default" rel="popover" data-placement="bottom" data-original-title="Popover Down" data-content="Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."><i class="fa fa-arrow-down"></i> <strong>Popover</strong> <i>Down</i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-default" rel="popover" data-placement="right" data-original-title="Popover Right" data-content="Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."><i class="fa fa-arrow-right"></i> <strong>Popover</strong> <i>Right</i></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- end row --></section>
+</div>
+<!-- END MAIN CONTENT -->
+
+</div>
+<!-- ui-dialog -->
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 text-center">
+            <p class="tbt-txt-color-grey">SmartAdmin 使用手册 © 2014</p>
+        </div>
+    </div>
+</div>
+<!-- END PAGE FOOTER -->
+
+<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+Note: These tiles are completely responsive,
+you can add as many as you like
+-->
+
+<!-- END SHORTCUT AREA -->
+
+<!--================================================== -->
+
+<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+
+<!--<script src="js/libs/jquery-ui-1.10.3.min.js"></script>-->
+
+
+<!-- IMPORTANT: APP CONFIG -->
+<script src="js/app.config.js"></script>
+
+<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+
+<!-- BOOTSTRAP JS -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- CUSTOM NOTIFICATION -->
+<script src="js/notification/SmartNotification.min.js"></script>
+
+<!-- JARVIS WIDGETS -->
+<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+
+<!-- EASY PIE CHARTS -->
+<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+<!-- SPARKLINES -->
+<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+<!-- JQUERY VALIDATE -->
+<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+<!-- JQUERY MASKED INPUT -->
+<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+<!-- JQUERY SELECT2 INPUT -->
+<script src="js/plugin/select2/select2.min.js"></script>
+
+<!-- JQUERY UI + Bootstrap Slider -->
+<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+<!-- browser msie issue fix -->
+<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+<!-- FastClick: For mobile devices -->
+<script src="js/plugin/fastclick/fastclick.min.js"></script>
+
+<!--[if IE 8]>
+
+<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+<![endif]-->
+
+<!-- Demo purpose only -->
+<script src="js/demo.min.js"></script>
+
+<!-- MAIN APP JS FILE -->
+<script src="js/app.min.js"></script>
+
+
+<!--code style-->
+<script src="js/prettify.js"></script>
+
+<script src="js/your-js.js" type="text/javascript"></script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //        code style
+        var escape = document.createElement('textarea');
+
+        function escapeHTML(html) {
+            escape.innerHTML = html;
+            return escape.innerHTML;
+        }
+
+        function unescapeHTML(html) {
+            escape.innerHTML = html;
+            return escape.value;
+        }
+
+
+        $(function () {
+
+            $('.lang-html').each(function (idx, pre) {
+                var $pre = $(pre);
+                $pre.html(escapeHTML($pre.html()));
+            });
+
+
+            $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
+            window.prettyPrint && prettyPrint();
+        });
+
+    })
+
+</script>
+</html>

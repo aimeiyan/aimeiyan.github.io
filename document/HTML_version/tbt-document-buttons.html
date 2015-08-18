@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title> 通宝图-按钮</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- #CSS Links -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/your-document-style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/prettify.css">
+
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+    <link rel="shortcut icon" href="img/favicon/tongbaotu.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon/tongbaotu.ico" type="image/x-icon">
+
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+</head>
+<body class="">
+
+<!-- #HEADER -->
+<header id="header">
+    <div id="logo-group">
+        <span class="project-selector dropdown-toggle" data-toggle="dropdown">SmartAdmin使用手册</span>
+    </div>
+    <div class="pull-right">
+
+        <!-- collapse menu button -->
+        <div id="hide-menu" class="btn-header pull-right">
+            <span> <a href="javascript:void(0);" data-action="toggleMenu" title="隐藏菜单面板"><i
+                    class="fa fa-reorder"></i></a> </span>
+        </div>
+        <!-- end collapse menu -->
+
+        <!-- #MOBILE -->
+        <!-- Top menu profile link : this shows only when top menu is active -->
+        <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+            <li class="">
+                <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
+                    <!--<img src="img/avatars/sunny.png" alt="John Doe" class="online" />-->
+                    <!--<i class="fa fa-lg fa-fw fa-user"></i>-->
+                    <strong><span>目录</span>
+                        <!--<i class="fa fa-caret-down"></i>--></strong>
+                </a>
+
+            </li>
+        </ul>
+
+        <!-- fullscreen button -->
+        <div id="fullscreen" class="btn-header transparent pull-right">
+            <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i
+                    class="fa fa-arrows-alt"></i></a> </span>
+        </div>
+        <!-- end fullscreen button -->
+
+    </div>
+
+</header>
+<!-- END HEADER -->
+
+<aside id="left-panel">
+
+    <div class="login-info">
+				<span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                        <span class="glyphicon fa-fw glyphicon-list-alt"></span>
+						<span>
+							目录
+						</span>
+                    </a>
+
+				</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#"><i class="fa fa-lg fa-fw fa-book"></i> <span class="menu-item-parent">文档</span></a>
+                <ul>
+                    <li>
+                        <a href="tbt-document-smartAdminVersion.html">版本信息</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">页面结构</a>
+                        <ul>
+                            <li><a href="tbt-document-structure.html">介绍</a></li>
+                            <li><a href="tbt-document-structure-example.html">举例</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tbt-document-widget.html">窗口部件 Widget</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">表格 </a>
+                        <ul>
+                            <li><a href="tbt-document-normal-table.html"> 普通表格 </a></li>
+                            <li><a href="tbt-document-table.html">数据表格 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tbt-document-form.html">表单 </a>
+                    </li>
+                    <li>
+                        <a>常用元素</a>
+                        <ul>
+                            <li><a href="tbt-document-message.html">消息类型</a></li>
+                            <li class="active"><a href="tbt-document-buttons.html">按钮</a></li>
+                            <li>
+                                <a href="javascript:void(0)">图标</a>
+                                <ul>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-plane"></i> Font Awesome</a>
+                                        <ul>
+                                            <li><a href="tbt-document-icon-font.html">介绍</a></li>
+                                            <li><a href="tbt-document-icon-font-libary.html">图标库</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="tbt-document-icon-glyph.html"><i class="glyphicon glyphicon-plane"></i> Glyph Icons</a>
+                                    </li>
+                                    <li><a href="tbt-document-icon-flags.html"><i class="fa fa-flag"></i> Flags</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="tbt-document-labels.html">标签标记</a></li>
+                            <li><a href="tbt-document-bgTxtcolor.html">元素背景和文字颜色</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">常用JS动态效果</a>
+
+
+                        <ul>
+                            <li><a href="tbt-document-carousel.html">Carousel<span class="font-sm">（轮播）</span></a></li>
+                            <li><a href="tbt-document-According.html">According</a></li>
+                            <li><a href="tbt-document-Date-Picker.html">DatePicker<span class="font-sm">（日期选择）</span></a></li>
+                            <li><a href="tbt-document-Juery-Tabs.html">Tabs<span class="font-sm">（切换）</span></a></li>
+                            <li><a href="tbt-document-openDialog.html">OpenDialog<span class="font-sm">（对话框）</span></a></li>
+                            <li><a href="tbt-document-smartAlert.html">SmartAlert<span class="font-sm">（警示框）</span></a></li>
+                            <li><a href="tbt-document-spinner.html">Spinner</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+			<span class="minifyme" data-action="minifyMenu">
+				<i class="fa fa-arrow-circle-left hit"></i>
+			</span>
+
+</aside>
+<!-- END NAVIGATION -->
+
+<!-- MAIN PANEL -->
+<div id="main" role="main">
+
+<!-- RIBBON -->
+<div id="ribbon">
+<span class="ribbon-button-alignment">
+					<span id="refresh" class="btn btn-ribbon" data-title="refresh"
+                          rel="tooltip" data-placement="bottom"
+                          data-original-title="<i class='text-warning fa fa-warning'></i> 警告！此操作会将所有设置还原为初始设置。"
+                          data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span>
+				</span>
+
+    <!-- breadcrumb -->
+    <ol class="breadcrumb">
+        <li><a href="#">文档</a></li>
+        <li><a href="#">常用元素</a></li>
+        <li><a href="#">按钮</a></li>
+    </ol>
+    <!-- end breadcrumb -->
+
+    <!-- You can also add more buttons to the
+                ribbon for further usability
+
+                Example below:
+
+                <span class="ribbon-button-alignment pull-right">
+                <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+                <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+                <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+                </span> -->
+
+</div>
+<!-- END RIBBON -->
+
+<!-- MAIN CONTENT -->
+<div id="content">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+        <h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-book"></i> 文档 <span>> 按钮</span></h1>
+    </div>
+</div>
+<section id="widget-grid">
+<div class="row">
+
+    <!-- NEW WIDGET START -->
+    <article class="col-sm-12">
+
+        <div class="alert alert-info fade in">
+            <!--<button class="close" data-dismiss="alert">-->
+            <!--×-->
+            <!--</button>-->
+            <i class="fa-fw fa fa-info"></i>
+            <strong>说明：</strong> 按钮，原始包<a href="buttons.html" style="text-decoration: underline">buttons.html</a>文件。
+        </div>
+
+
+    </article>
+    <!-- WIDGET END -->
+
+</div>
+<!-- start row -->
+
+<div class="row">
+
+    <h2 class="row-seperator-header">按钮类型 </h2>
+
+    <div class="col-sm-12">
+
+        <!-- well -->
+        <div class="well">
+            <!-- row -->
+            <div class="row">
+                <!-- col -->
+                <div class="col-sm-12">
+                    <!--<p class="alert alert-info">-->
+                    <!--<i class="fa fa-info"></i> Did you know you can add more than just the basic colors to customize your badge? <strong>Learn more about color options modifiers on the <a href="typography.html">Typography page</a>! </strong>-->
+                    <!--</p>-->
+                    <!-- row -->
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th style="width:25%">类型</th>
+                                    <th style="width:25%">Classes</th>
+                                    <th style="width:25%">按钮</th>
+                                    <th style="width:25%">代码举例</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span class="txt-color-grayDark">默认</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn btn-default
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-default">Default</a></td>
+                                    <td rowspan="8">
+                                        <code>
+                                            <pre class="lang-html"><a href="javascript:void(0);"
+                                                                      class="btn btn-default">Default</a></pre>
+                                        </code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-blue">主要的</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn btn-primary
+
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-primary">Primary</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-greenLight">成功</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn btn-success
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-success">Success</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-blueDark">说明信息</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn btn-info
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-info">Info</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-yellow">警告</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn btn-Warning
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-warning">Warning</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-red">Default</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn btn-danger
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-danger">Danger</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tbt-txt-color-grey">无效</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn btn-disabled
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-default disabled">Disabled</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-blue">链接</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn btn-link
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-link">Link</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end well -->
+
+    </div>
+
+</div>
+<div class="row">
+
+    <h2 class="row-seperator-header">按钮尺寸 </h2>
+
+    <div class="col-sm-12">
+
+        <!-- well -->
+        <div class="well">
+            <!-- row -->
+            <div class="row">
+                <!-- col -->
+                <div class="col-sm-12">
+                    <!--<p class="alert alert-info">-->
+                    <!--<i class="fa fa-info"></i> Did you know you can add more than just the basic colors to customize your badge? <strong>Learn more about color options modifiers on the <a href="typography.html">Typography page</a>! </strong>-->
+                    <!--</p>-->
+                    <!-- row -->
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th style="width:25%">类型</th>
+                                    <th style="width:25%">Classes</th>
+                                    <th style="width:40%">按钮</th>
+                                    <th style="width:10%">代码举例</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span class="txt-color-blueDark">大按钮</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn-lg
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-default btn-lg">Large button</a>
+                                    </td>
+                                    <td rowspan="4">
+                                        <code>
+                                            <pre class="lang-html"><a href="javascript:void(0);"
+                                                                      class="btn btn-default btn-lg">Large
+                                                button</a></pre>
+                                        </code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-blueDark">默认按钮</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn-default
+
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-default">Default button</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-blueDark">小按钮</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn-sm
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-default btn-sm">Small button</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-blueDark">mini按钮</span></td>
+
+                                    <td>
+                                        <code>
+                                            btn-xs
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-default btn-xs">Mini button</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end well -->
+
+    </div>
+
+</div>
+<div class="row">
+
+    <h2 class="row-seperator-header">圆形按钮</h2>
+
+    <div class="col-sm-12">
+
+        <!-- well -->
+        <div class="well">
+            <!-- row -->
+            <div class="row">
+                <!-- col -->
+                <div class="col-sm-12">
+                    <!--<p class="alert alert-info">-->
+                    <!--<i class="fa fa-info"></i> Did you know you can add more than just the basic colors to customize your badge? <strong>Learn more about color options modifiers on the <a href="typography.html">Typography page</a>! </strong>-->
+                    <!--</p>-->
+                    <!-- row -->
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th style="width:25%">类型</th>
+                                    <th style="width:25%">Classes</th>
+                                    <th style="width:25%">按钮</th>
+                                    <th style="width:25%">代码举例</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span class="txt-color-blueDark">超大按钮</span></td>
+
+                                    <td>
+                                        <code>
+                                            .btn-circle .btn-xl
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-primary btn-circle btn-xl"><i
+                                            class="glyphicon glyphicon-list"></i></a></td>
+                                    <td rowspan="3">
+                                        <code>
+                                                        <pre class="lang-html">
+    <a href="javascript:void(0);" class="btn btn-primary btn-circle btn-xl">
+        <i class="glyphicon glyphicon-list"></i>
+    </a></pre>
+                                        </code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-blueDark">大按钮</span></td>
+
+                                    <td>
+                                        <code>
+                                            .btn-circle .btn-lg
+
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-primary btn-circle btn-lg"><i
+                                            class="glyphicon glyphicon-list"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="txt-color-blueDark">默认按钮</span></td>
+
+                                    <td>
+                                        <code>
+                                            .btn-circle
+                                        </code></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-primary btn-circle"><i
+                                            class="glyphicon glyphicon-list"></i></a></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end well -->
+
+    </div>
+
+</div>
+<div class="row">
+
+<h2 class="row-seperator-header">下拉按钮</h2>
+
+<div class="col-sm-12">
+
+<!-- well -->
+<div class="well">
+<!-- row -->
+<div class="row">
+<!-- col -->
+<div class="col-sm-12">
+<!--<p class="alert alert-info">-->
+<!--<i class="fa fa-info"></i> Did you know you can add more than just the basic colors to customize your badge? <strong>Learn more about color options modifiers on the <a href="typography.html">Typography page</a>! </strong>-->
+<!--</p>-->
+<!-- row -->
+<div class="row">
+
+<div class="col-md-12">
+
+
+<table class="table table-bordered">
+<thead>
+<tr>
+    <th style="width:15%">类型</th>
+    <th style="width:25%">Classes</th>
+    <th style="width:35%">按钮</th>
+    <th style="width:25%">代码举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><span class="txt-color-blueDark">下拉按钮</span></td>
+
+    <td>
+        <code>
+            .btn-group .dropdown-toggle .dropdown-menu
+        </code></td>
+    <td>
+        <div class="btn-group">
+            <button class="btn btn-primary">
+                Drop Down
+            </button>
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:void(0);">Action</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Another action</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Something else here</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">Separated link</a>
+                </li>
+            </ul>
+        </div>
+
+    </td>
+    <td>
+        <code>
+                                                        <pre class="lang-html">
+    <div class="btn-group">
+        <button class="btn btn-primary">
+            Drop Down
+        </button>
+        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="javascript:void(0);">Action</a>
+            </li>
+            ......
+            <li class="divider"></li>
+            <li>
+                <a href="javascript:void(0);">Separated link</a>
+            </li>
+        </ul>
+    </div></pre>
+        </code>
+    </td>
+</tr>
+<tr>
+    <td><span class="txt-color-blueDark">上弹按钮</span></td>
+
+    <td>
+        <code>
+            .btn-group .dropup .dropdown-toggle .dropdown-menu
+        </code></td>
+    <td>
+        <div class="btn-group dropup">
+            <button class="btn btn-default">
+                Drop Up
+            </button>
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:void(0);">Action</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Another action</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Something else here</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">Separated link</a>
+                </li>
+            </ul>
+        </div>
+
+    </td>
+    <td>
+        <code>
+                                                        <pre class="lang-html">
+   <div class="btn-group dropup">
+       <button class="btn btn-default">
+           Drop Up
+       </button>
+       <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+           <span class="caret"></span>
+       </button>
+       <ul class="dropdown-menu">
+           <li>
+               <a href="javascript:void(0);">Action</a>
+           </li>
+           ......
+           <li class="divider"></li>
+           <li>
+               <a href="javascript:void(0);">Separated link</a>
+           </li>
+       </ul>
+   </div></pre>
+        </code>
+    </td>
+</tr>
+<tr>
+    <td><span class="txt-color-blueDark">下拉按钮</span></td>
+
+    <td>
+        <code>
+            .btn-group .dropdown-toggle .dropdown-menu
+        </code></td>
+    <td>
+        <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:void(0);">Action</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Another action</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Something else here</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">Separated link</a>
+                </li>
+            </ul>
+        </div>
+
+    </td>
+    <td>
+        <code>
+                                                        <pre class="lang-html">
+  <div class="btn-group">
+      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Action <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+          <li>
+              <a href="javascript:void(0);">Action</a>
+          </li>
+          ......
+          <li class="divider"></li>
+          <li>
+              <a href="javascript:void(0);">Separated link</a>
+          </li>
+      </ul>
+  </div></pre>
+        </code>
+    </td>
+</tr>
+<tr>
+    <td><span class="txt-color-blueDark">多级下拉按钮</span></td>
+
+    <td>
+        <code>
+            .btn-group .dropdown-toggle .dropdown-menu
+        </code></td>
+    <td>
+        <div class="dropdown">
+            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#"
+               href="javascript:void(0);"> Multi Level
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu multi-level" role="menu">
+                <li>
+                    <a href="javascript:void(0);">Some action</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Some other action</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="javascript:void(0);">Hover me for more options</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a tabindex="-1" href="javascript:void(0);">Second level</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="javascript:void(0);">Even More..</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:void(0);">3rd level</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">3rd level</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Second level</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Second level</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </td>
+    <td>
+        <code>
+                                                        <pre class="lang-html">
+  <div class="dropdown">
+      <a id="dLabel" role="button" data-toggle="dropdown"
+         class="btn btn-primary" data-target="#"
+         href="javascript:void(0);">
+          Multi Level
+          <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu multi-level" role="menu">
+          <li>
+              <a href="javascript:void(0);">Some action</a>
+          </li>
+          <li>
+              <a href="javascript:void(0);">Some other action</a>
+          </li>
+          <li class="divider"></li>
+          <li class="dropdown-submenu">
+              <a tabindex="-1" href="javascript:void(0);">Hover me for more options</a>
+              <ul class="dropdown-menu">
+                  <li>
+                      <a tabindex="-1" href="javascript:void(0);">Second level</a>
+                  </li>
+                  <li class="dropdown-submenu">
+                      <a href="javascript:void(0);">Even More..</a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="javascript:void(0);">3rd level</a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">3rd level</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0);">Second level</a>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0);">Second level</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+  </div></pre>
+        </code>
+    </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+</div>
+<!-- end row -->
+</div>
+<!-- end col -->
+</div>
+<!-- end row -->
+</div>
+<!-- end well -->
+
+</div>
+
+</div>
+
+<div class="row">
+    <h2 class="row-seperator-header">按钮组</h2>
+
+    <div class="col-sm-12">
+        <div class="well">
+            <table class="table table-bordered">
+                <thead>
+                <th style="width: 120px">类型</th>
+                <th style="">Classes</th>
+                <th style="">按钮</th>
+                <th style="">代码举例</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>水平按钮组</td>
+                    <td><code>.btn-group .btn-toolbar</code></td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">
+                                Left
+                            </button>
+                            <button type="button" class="btn btn-default">
+                                Middle
+                            </button>
+                            <button type="button" class="btn btn-default">
+                                Right
+                            </button>
+                        </div>
+                        <div class="btn-toolbar margin-top-10">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">
+                                    1
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    2
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    3
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    4
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">
+                                    5
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    6
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    7
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">
+                                    8
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <pre class="lang-html">
+<!--水平按钮组-->
+<div class="btn-group">
+    <button type="button" class="btn btn-default">
+        Left
+    </button>
+    <button type="button" class="btn btn-default">
+        Middle
+    </button>
+    <button type="button" class="btn btn-default">
+        Right
+    </button>
+</div>
+<!--多组按钮组-->
+<div class="btn-toolbar">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">
+            1
+        </button>
+        ......
+        <button type="button" class="btn btn-default">
+            4
+        </button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">
+            5
+        </button>
+        ......
+        <button type="button" class="btn btn-default">
+            7
+        </button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">
+            8
+        </button>
+    </div>
+</div>
+                        </pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>垂直按钮组</td>
+                    <td><code>.btn-group-vertical</code></td>
+                    <td>
+                        <div class="btn-group-vertical">
+                            <button type="button" class="btn btn-default">
+                                Top
+                            </button>
+                            <button type="button" class="btn btn-default">
+                                Middle
+                            </button>
+                            <button type="button" class="btn btn-default">
+                                Bottom
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <pre class="lang-html">
+<div class="btn-group-vertical">
+    <button type="button" class="btn btn-default">
+        Top
+    </button>
+    <button type="button" class="btn btn-default">
+        Middle
+    </button>
+    <button type="button" class="btn btn-default">
+        Bottom
+    </button>
+</div>
+                        </pre>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <h2 class="row-seperator-header">图标 / Lable按钮</h2>
+
+    <div class="col-sm-12">
+        <div class="well">
+            <table class="table table-bordered">
+                <thead>
+                <th style="width: 20%">类型</th>
+                <th style="width: 30%">按钮</th>
+                <th style="width: 25%">代码举例</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>图标按钮</td>
+                    <td>
+                        <a href="javascript:void(0);" class="btn btn-primary btn-lg"><i class="fa fa-gear fa-lg"></i></a>
+
+                        <br>
+                        <a href="javascript:void(0);" class="btn btn-primary margin-top-10"><i class="fa fa-gear"></i> Icon Left</a>
+
+                        <br>
+                        <div class="btn-group margin-top-10">
+                            <button class="btn bg-color-blueDark txt-color-white">
+                                Drop Down <i class="fa fa-gear"></i>
+                            </button>
+                            <button class="btn btn-danger dropdown-toggle">
+                                <span class="caret"></span>
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <pre class="lang-html">
+<a href="javascript:void(0);" class="btn btn-primary btn-lg"><i class="fa fa-gear fa-lg"></i></a>
+<a href="javascript:void(0);" class="btn btn-primary"><i class="fa fa-gear"></i> Icon Left</a>
+
+ <div class="btn-group">
+     <button class="btn bg-color-blueDark txt-color-white">
+         Drop Down <i class="fa fa-gear"></i>
+     </button>
+     <button class="btn btn-danger dropdown-toggle">
+         <span class="caret"></span>
+     </button>
+ </div>
+
+                        </pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Label按钮</td>
+                    <td>
+                        <a href="javascript:void(0);" class="btn btn-labeled btn-success"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-up"></i></span>Thumbs
+                            Up </a>
+                    </td>
+                    <td>
+                        <pre class="lang-html">
+<a href="javascript:void(0);" class="btn btn-labeled btn-success">
+    <span class="btn-label">
+        <i class="glyphicon glyphicon-thumbs-up"></i>
+    </span>
+    Thumbs Up
+</a>
+                        </pre>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row">
+
+    <h2 class="row-seperator-header">块按钮</h2>
+
+    <div class="col-sm-12">
+
+        <!-- well -->
+        <div class="well">
+            <p>块按钮class <code>.btn .btn-block</code></p>
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">
+                            Block level button
+                        </button>
+                        <pre class="lang-html margin-top-10">
+    <button type="button" class="btn btn-primary btn-lg btn-block">
+        Block level button
+    </button>
+                        </pre>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+            <hr class="simple">
+            <p>块级按钮组class <code>.btn-group .btn-group-justified</code></p>
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="btn-group btn-group-justified">
+                            <a href="javascript:void(0);" class="btn btn-default">Left</a>
+                            <a href="javascript:void(0);" class="btn btn-default">Middle</a>
+                            <a href="javascript:void(0);" class="btn btn-default">Right</a>
+                        </div>
+                        <pre class="lang-html margin-top-10">
+    <div class="btn-group btn-group-justified">
+        <a href="javascript:void(0);" class="btn btn-default">Left</a>
+        <a href="javascript:void(0);" class="btn btn-default">Middle</a>
+        <a href="javascript:void(0);" class="btn btn-default">Right</a>
+    </div>
+                        </pre>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- end row -->
+</section>
+</div>
+<!-- END MAIN CONTENT -->
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 text-center">
+            <p class="tbt-txt-color-grey">SmartAdmin 使用手册 © 2014</p>
+        </div>
+    </div>
+</div>
+<!-- END PAGE FOOTER -->
+
+<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+Note: These tiles are completely responsive,
+you can add as many as you like
+-->
+
+<!-- END SHORTCUT AREA -->
+
+<!--================================================== -->
+
+<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+
+<script src="js/libs/jquery-ui-1.10.3.min.js"></script>
+
+
+<!-- IMPORTANT: APP CONFIG -->
+<script src="js/app.config.js"></script>
+
+<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+
+<!-- BOOTSTRAP JS -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- CUSTOM NOTIFICATION -->
+<script src="js/notification/SmartNotification.min.js"></script>
+
+<!-- JARVIS WIDGETS -->
+<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+
+<!-- EASY PIE CHARTS -->
+<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+<!-- SPARKLINES -->
+<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+<!-- JQUERY VALIDATE -->
+<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+<!-- JQUERY MASKED INPUT -->
+<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+<!-- JQUERY SELECT2 INPUT -->
+<script src="js/plugin/select2/select2.min.js"></script>
+
+<!-- JQUERY UI + Bootstrap Slider -->
+<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+<!-- browser msie issue fix -->
+<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+<!-- FastClick: For mobile devices -->
+<script src="js/plugin/fastclick/fastclick.min.js"></script>
+
+<!--[if IE 8]>
+
+<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+<![endif]-->
+
+<!-- Demo purpose only -->
+<script src="js/demo.min.js"></script>
+
+<!-- MAIN APP JS FILE -->
+<script src="js/app.min.js"></script>
+
+<!-- PAGE RELATED PLUGIN(S) -->
+<script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
+<script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
+<script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
+<script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+<script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+
+<!--code style-->
+<script src="js/prettify.js"></script>
+
+<script src="js/your-js.js" type="text/javascript"></script>
+</body>
+<script type="text/javascript">
+
+    //        code style
+    var escape = document.createElement('textarea');
+
+    function escapeHTML(html) {
+        escape.innerHTML = html;
+        return escape.innerHTML;
+    }
+
+    function unescapeHTML(html) {
+        escape.innerHTML = html;
+        return escape.value;
+    }
+
+
+    $(function () {
+
+        $('.lang-html').each(function (idx, pre) {
+            var $pre = $(pre);
+            $pre.html(escapeHTML($pre.html()));
+        });
+
+
+        $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
+        window.prettyPrint && prettyPrint();
+    });
+
+    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+
+    $(document).ready(function () {
+        pageSetUp();
+    })
+
+</script>
+</html>

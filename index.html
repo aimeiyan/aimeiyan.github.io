@@ -4,6 +4,12 @@ layout: page
 ---
 
 <ul class="listing">
+    <!--<li class="listing-seperator">2014</li>-->
+
+    <li>
+        <time>2014-12-20</time>
+        <a href="document/HTML_version/SmartAdmin-introduce.html" target="_blank" title="">SmartAdmin前端页面组件库应用</a>
+    </li>
     {% for post in paginator.posts %}
     {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
     {% if year != y %}

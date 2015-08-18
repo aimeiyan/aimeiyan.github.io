@@ -1,0 +1,2813 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>SmartAdmin介绍文档</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="css/github-markdown.css">-->
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="css/your-document-style.css">-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/highlight-styles/solarized_dark.css">
+    <link rel="stylesheet" type="text/css" href="css/smartadmin-introduction.css">
+    <script src="js/libs/jquery-2.0.2.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div class="content">
+<div class="document-content">
+<div class="container-fluid markdown-body">
+<h1>
+    SmartAdmin
+</h1>
+
+<h2 name="title-01">一、简介</h2>
+
+<p>
+    SmartAdmin 是基于<a href="http://getbootstrap.com/" target="_blank"> Bootstrap </a>技术和各种 JS 插件（40多种）所创建的 UI
+    组件库，具有独特的平面设计和响应式布局，布局的页面不仅适用于桌面设备，而且也能很好的自适应手机和平板设备。SmartAdmin 有 HTML 、 AJAX 、 PHP 和 AngularJS 四种版本，这里主要介绍 HTML 版本。
+</p>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well col-sm-8">
+            <div class="row">
+                <img src="img/SmartAdmin-introduce/total-pic.jpg" class="col-sm-12">
+            </div>
+            <br>
+            <br>
+
+            <div class="row margin-top-10">
+                <div class="col-sm-12 text-align-center"><a class="btn btn-primary margin-right-10 padding-5"
+                                                            target="_blank"
+                                                            href="http://192.241.236.31/themes/preview/smartadmin/1.4.1/ajaxversion/#ajax/dashboard.html"><i
+                        class="fa fa-desktop"></i>&nbsp;&nbsp;预览</a><a class="btn btn-primary padding-5" target="_blank"
+                                                                       href="https://bootstraphunter.com/smartadmin-product.php"><i
+                        class="fa fa-shopping-cart"></i>&nbsp;&nbsp;购买</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2 name="title-02">二、主要特点</h2>
+<ul class="fa-ul">
+    <li><i class="fa fa-check fa-li"></i>兼容最新的 Chrome 、Firefox 、Opera 、Safari 和 IE9（包括 IE9 ）以上版本浏览器。</li>
+    <li><i class="fa fa-check fa-li"></i>有条理的 HTML、JS 和 LESS 代码，JS 和 CSS 分为压缩和未压缩版本。</li>
+    <li><i class="fa fa-check fa-li"></i>大量使用了能兼容各浏览器的 HTML5 标签。</li>
+    <li><i class="fa fa-check fa-li"></i>兼容各种分辨率的移动、平板和桌面设备。</li>
+    <li><i class="fa fa-check fa-li"></i>有四种技术版本，分别是 HTML 、 AJAX 、 PHP 和 AngularJS 版本。1.5版本增加了 .NET MVC 版本。</li>
+    <li><i class="fa fa-check fa-li"></i>轻量级页面（可以通过 ajax 技术加载页面）。</li>
+    <li><i class="fa fa-check fa-li"></i>1.4.2 版本默认有四种主题皮肤，1.5 版本默认有6种主题皮肤。</li>
+    <li><i class="fa fa-check fa-li"></i>导航菜单有两种展现方式：1.4.2 版本具有顶部菜单和左侧菜单两种菜单样式，1.5版本增加了右侧菜单样式。</li>
+    <li><i class="fa fa-check fa-li"></i>左侧导航菜单最高可制作6级菜单。</li>
+    <li><i class="fa fa-check fa-li"></i>可以创建面包屑导航。</li>
+    <li><i class="fa fa-check fa-li"></i>可以折叠、最小化导航菜单（ hover 时出现），对于屏幕尺寸较小的移动设备，导航菜单可以灵活调整。</li>
+    <li><i class="fa fa-check fa-li"></i>地图组件（具有多种类似谷歌地图的皮肤）。</li>
+    <li><i class="fa fa-check fa-li"></i>画廊组件（类似于 Google 图片）。</li>
+    <li><i class="fa fa-check fa-li"></i>带有声音的智能警示框和通知框。</li>
+    <li><i class="fa fa-check fa-li"></i>带有导出（PDF/Excel格式）功能的动态数据表。</li>
+    <li><i class="fa fa-check fa-li"></i>丰富的 CSS3 动画效果。</li>
+    <li><i class="fa fa-check fa-li"></i>功能型收件箱页面组件。</li>
+    <li><i class="fa fa-check fa-li"></i>折线图表、饼状图表等各种图表组件。</li>
+    <li><i class="fa fa-check fa-li"></i>用 data-* 属性控制的验证表单组件。</li>
+    <li><i class="fa fa-check fa-li"></i>添加事件标记的全功能日历。</li>
+    <li><i class="fa fa-check fa-li"></i>具有多种类型、颜色的按钮、标签、标记。</li>
+    <li><i class="fa fa-check fa-li"></i>自定义树视图。</li>
+    <li><i class="fa fa-check fa-li"></i>有 Warning、Success、Info、Error 四种消息类型。</li>
+</ul>
+<h2 name="title-03">三、网页结构</h2>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well col-sm-8">
+            <div class="row">
+                <img class="col-sm-12" src="img/SmartAdmin-introduce/structure.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 name="title-04">四、代码结构</h2>
+
+<h3 name="title-04-01">（一）整体代码结构</h3>
+<pre class="lang-html">
+<code class="html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="zh-CN"&gt;
+
+    <!--定义文档头部信息-->
+    &lt;head&gt;
+    [文档头部信息，包括文档标题、引用脚本、样式等内容。]
+    &lt;/head&gt;
+
+    &lt;body class=""&gt;
+
+    <!--顶部页头信息-->
+    &lt;header id="header"&gt;
+
+    [LOGO]
+    [AJAX下拉框]
+    [工程信息下拉框]
+    [语言选择、语音、搜索、退出、折叠菜单按钮]
+
+    &lt;/header&gt;
+
+    <!--左侧导航菜单面板-->
+    &lt;aside id="left-panel"&gt;
+
+    [用户信息，包括图片、用户名等内容]
+
+    <!--导航菜单-->
+    <nav>
+        <ul>
+            <li class="">[导航链接]</li>
+            <li class="">[导航链接]</li>
+        </ul>
+    </nav>
+
+    &lt;/aside&gt;
+
+    <!--页面主要内容面板-->
+    &lt;div id="main"&gt;
+
+    <!-- 面包屑导航面板 -->
+    &lt;div id="ribbon"&gt;
+    [面包屑导航内容]
+    &lt;/div&gt;
+
+    <!--主要内容-->
+    &lt;div id="content"&gt;
+    [主要内容]
+    &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    <!--点击用户名出现的快捷菜单链接-->
+    <div id="shortcut">
+        [快捷菜单内容]
+    </div>
+
+    <!--页脚信息-->
+    <div class="page-footer">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 text-center">
+                [页脚内容]
+            </div>
+        </div>
+    </div>
+
+    [页面默认加载的js脚本内容]
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+
+<h3 name="title-04-02">（二）HEAD_信息（文档头部信息）</h3>
+
+<p>文档头部信息中需要自己编写的文件只有<code> your_style.css </code>，将其引用在所有 CSS 文件之后，其他文件都是 SmartAdmin 的原始文件，直接引用即可。</p>
+
+<p>如果要求兼容移动设备，还需更换 Webapp 快捷图标和打开网页时预先加载的图片，如果要求 Webapp 系统，可以去掉这两项。</p>
+    <pre class="lang-html">
+            <code class="html">
+                &lt;head&gt;
+
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>SmartAdmin</title>
+                <meta content="" name="description">
+                <meta content="" name="author">
+                <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+                      name="viewport">
+
+                <!-- 引入 Open Sans 文字字体样式-->
+                &lt;link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700"
+                rel="stylesheet"&gt;
+
+                <!-- 基本样式 -->
+                &lt;link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css"&gt;
+                &lt;link href="css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css"&gt;
+
+                <!-- SmartAdmin 样式，(smartadmin-production.css)是使用 LESS 文件生成的，尽量不要修改该文件，如果必须要修改，则要修改 LESS 文件。 -->
+                &lt;link href="css/smartadmin-production.css" media="screen" rel="stylesheet" type="text/css"&gt;
+                &lt;link href="css/smartadmin-skins.css" media="screen" rel="stylesheet" type="text/css"&gt;
+
+                <!-- SmartAdmin 右侧导航菜单样式，1.5版本支持。
+               <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css"> -->
+
+                <!-- 结合 demo.js, 实现右侧布局选项工具条功能 -->
+                &lt;link href="css/demo.css" media="screen" rel="stylesheet" type="text/css"&gt;
+
+                <!-- 自定义css文件 "your_style.css"，放在所有 css 之后。 -->
+                &lt;link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"&gt;
+
+                <!-- FAVICONS -->
+                &lt;link href="img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"&gt;
+                &lt;link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon"&gt;
+
+                <!-- 在移动设备上，设置 Webapp 快捷图标 -->
+                &lt;link href="img/splash/sptouch-icon-iphone.png" rel="apple-touch-icon"&gt;
+                &lt;link href="img/splash/touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76"&gt;
+                &lt;link href="img/splash/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120"&gt;
+                &lt;link href="img/splash/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152"&gt;
+
+                <!-- iOS web-app metas：iphone设备中的safari私有meta标签，允许全屏模式浏览，content有两个值“yes”和“no”，“yes” 为删除默认的苹果工具栏和菜单栏，“no”（默认值）为显示苹果工具栏和菜单栏。-->
+                &lt;meta content="yes" name="apple-mobile-web-app-capable"&gt;
+                <!-- iOS safari ：指定 iphone 中的 safari 顶端的状态条的样式，默认值为default（白色），可设置为 black（黑色）和 black-translucent（灰色半透明），注意：若值为“black-translucent”将会占据页面px位置，浮在页面上方（会覆盖页面20px高度–iphone4和itouch4的Retina屏幕为40px）。-->
+                &lt;meta content="black" name="apple-mobile-web-app-status-bar-style"&gt;
+
+                <!-- webApps 启动画面设置,当用户点击主屏图标打开 WebApp 时，系统会展示启动画面，在未设置情况下系统会默认显示该网站的首页截图，当然这个体验不是很好，所以我们需要通过以下代码来自定义启动画面.-->
+                &lt;link href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and
+                (max-device-width: 1024px) and (orientation:landscape)" rel="apple-touch-startup-image"&gt;
+                &lt;link href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and
+                (max-device-width: 1024px) and (orientation:portrait)" rel="apple-touch-startup-image"&gt;
+                &lt;link href="img/splash/iphone.png" media="screen and (max-device-width: 320px)"
+                rel="apple-touch-startup-image"&gt;
+
+                &lt;/head&gt;
+            </code></pre>
+<h3 name="title-04-03">（三）HEADER(页头信息)</h3>
+    <pre class="lang-html">
+            <code class="html">
+                &lt;header id="header"&gt;
+                <div id="logo-group">
+
+                    <!-- LOGO 位置-->
+                    <span id="logo"><img alt="SmartAdmin" src="img/logo.png"></span>
+                    <span class="activity-dropdown" id="activity"> <b
+                            class="badge bg-color-red bounceIn animated">21</b></span>
+
+                    <!-- AJAX 下拉框 -->
+                    <div class="ajax-dropdown">
+                        <div class="ajax-notifications custom-scroll">
+                            [AJAX 下拉框内容]
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--最近工程信息 -->
+                <div id="project-context">
+                    [最近工程信息内容]
+                </div>
+
+                <div class="pull-right">
+
+                    <!-- 折叠菜单 -->
+                    <div class="btn-header pull-right" id="hide-menu">
+                        <span><a href="javascript:void(0);" title="Collapse menu"></a></span>
+                    </div>
+
+                    <!-- 退出按钮 -->
+                    <div class="btn-header transparent pull-right" id="logout">
+                <span>
+                    <a data-logout-msg="You can improve your security further after logging out by closing this opened browser"
+                       href="login.html" title="Sign Out"></a>
+                </span>
+                    </div>
+
+                    <!-- 搜索按钮，移动设备上会隐藏 -->
+                    <div class="btn-header transparent pull-right" id="search-mobile">
+                        <span><a href="javascript:void(0)" title="Search"></a></span>
+                    </div>
+
+                    <!-- 搜索框 -->
+                    <form action="#ajax/search.html" class="header-search pull-right" autocomplete="off">
+                        <input id="search-fld" name="param" placeholder="Find reports and more" type="text"
+                               autocomplete="off">
+                        <a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"></a>
+                    </form>
+
+                    <!-- 全屏按钮 -->
+                    <div class="btn-header transparent pull-right" id="fullscreen">
+                <span>
+                    <a href="javascript:void(0);" onclick="launchFullscreen(document.documentElement);"
+                       title="Full Screen"></a>
+                </span>
+                    </div>
+
+                    <!-- 语言选择下拉框 -->
+                    <ul class="header-dropdown-list hidden-xs">
+                        <li>...</li>
+                    </ul>
+
+                </div>
+
+                &lt;/header&gt;
+            </code></pre>
+
+<h3 name="title-04-04">（四）导航菜单</h3>
+<pre class="lang-html">
+        <code class="html">
+            &lt;aside id="left-panel"&gt;
+
+            <!-- 用户名信息 -->
+            &lt;div class="login-info"&gt;
+            &lt;span&gt;
+            <!-- 用户头像和用户名 -->
+            &lt;a href="javascript:void(0);" id="show-shortcut"&gt;&lt;img alt="me" class="online"
+            src="img/avatars/sunny.png"&gt;
+            &lt;span&gt;john.doe&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;/span&gt;
+            &lt;/div&gt;
+
+            <!--左侧导航菜单内容-->
+            &lt;nav&gt;
+            &lt;ul&gt;
+            &lt;li class=""&gt;
+            &lt;a href="ajax/dashboard.html" title="Dashboard"&gt;&lt;span class="menu-item-parent"&gt;Dashboard&lt;/span&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;li&gt;
+            &lt;a href="#"&gt;
+            &lt;span class="menu-item-parent"&gt;Graphs&lt;/span&gt;
+            &lt;b class="collapse-sign"&gt;&lt;em class="fa fa-plus-square-o"&gt;&lt;/em&gt;&lt;/b&gt;
+            &lt;/a&gt;
+            &lt;ul&gt;
+            &lt;li&gt;&lt;a href="ajax/flot.html"&gt;...&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/nav&gt;
+
+            &lt;/aside&gt;
+        </code></pre>
+<h3 name="title-04-05">（五）主要内容面板</h3>
+    <pre class="lang-html">
+            <code class="html">
+                <div id="main">
+
+                    <!-- 面包屑路径面板 -->
+                    <div id="ribbon">
+
+                        <!--重置按钮-->
+                        <span class="ribbon-button-alignment btn btn-ribbon" data-html="true"
+                              data-original-title="message..." data-placement="bottom" data-title="refresh"
+                              id="refresh"></span>
+
+                        <!--面包屑路径内容-->
+                        <ol class="breadcrumb">
+                            <li>Blank Page</li>
+                        </ol>
+
+                    </div>
+
+                    <!-- 主要内容面板 -->
+                    <div id="content">
+                        [主要内容]
+                    </div>
+
+                </div>
+            </code></pre>
+<h3 name="title-04-06">（六）默认需加载的js文件</h3>
+    <pre class="lang-html">
+            <code class="html">
+                <!-- PACE LOADER - 展现 ajax loading（提醒: 该功能会占用许多内存），参考网址：http://github.hubspot.com/pace/。-->
+                &lt;script src="js/plugin/pace/pace.min.js"&gt;&lt;/script&gt;
+
+                &lt;script src="js/libs/jquery-2.0.2.min.js"&gt;&lt;/script&gt;
+
+                &lt;script src="js/libs/jquery-ui-1.10.3.min.js"&gt;&lt;/script&gt;
+
+                <!--JS TOUCH : include this plugin for mobile drag / drop touch events-->
+                &lt;script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"&gt;&lt;/script&gt;
+
+                <!-- BOOTSTRAP JS -->
+                &lt;script src="js/bootstrap/bootstrap.min.js"&gt;&lt;/script&gt;
+
+                <!-- CUSTOM NOTIFICATION -->
+                &lt;script src="js/notification/SmartNotification.min.js"&gt;&lt;/script&gt;
+
+                <!-- JARVIS WIDGETS -->
+                &lt;script src="js/smartwidgets/jarvis.widget.min.js"&gt;&lt;/script&gt;
+
+                <!-- EASY PIE CHARTS -->
+                &lt;script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"&gt;&lt;/script&gt;
+
+                <!-- SPARKLINES -->
+                &lt;script src="js/plugin/sparkline/jquery.sparkline.min.js"&gt;&lt;/script&gt;
+
+                <!-- JQUERY VALIDATE -->
+                &lt;script src="js/plugin/jquery-validate/jquery.validate.min.js"&gt;&lt;/script&gt;
+
+                <!-- JQUERY MASKED INPUT -->
+                &lt;script src="js/plugin/masked-input/jquery.maskedinput.min.js"&gt;&lt;/script&gt;
+
+                <!-- JQUERY SELECT2 INPUT -->
+                &lt;script src="js/plugin/select2/select2.min.js"&gt;&lt;/script&gt;
+
+                <!-- JQUERY UI + Bootstrap Slider -->
+                &lt;script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"&gt;&lt;/script&gt;
+
+                <!-- browser msie issue fix -->
+                &lt;script src="js/plugin/msie-fix/jquery.mb.browser.min.js"&gt;&lt;/script&gt;
+
+                <!-- FastClick: For mobile devices: you can disable this in app.js -->
+                &lt;script src="js/plugin/fastclick/fastclick.js"&gt;&lt;/script&gt;
+
+                &lt;script src="js/demo.js"&gt;&lt;/script&gt;
+
+                <!-- MAIN APP JS FILE -->
+                &lt;script src="js/app.js"&gt;&lt;/script&gt;
+            </code></pre>
+
+
+<h2 name="title-05">五、删格布局</h2>
+
+<p>重点参考网站：<a href="http://v3.bootcss.com/css/#grid" target="_blank">http://v3.bootcss.com/css/#grid</a>。</p>
+
+<p>SmartAdmin 之所以能够自适应多种尺寸屏幕的设备，主要借助于 <a href="" target="_blank">Bootstrap</a> 的 media queries 媒体查询功能，以 768px 、992px 和
+    1200px 为分界点，划分不同范围编写专门的CSS。具体可以查看 <a href="http://getbootstrap.com/css/#grid-media-queries" target="_blank">http://getbootstrap.com/css/#grid-media-queries</a>
+    或者 bootstrap.css 源码。</p>
+
+<p>以下内容摘抄于<a href="http://v3.bootcss.com/css/#grid" target="_blank"> http://v3.bootcss.com/css/#grid </a>网址，主要介绍<a
+        href="http://v3.bootcss.com/css/#grid" target="_blank"> Bootstrap </a>的删格系统，初步了解可查看下面内容，想进一步了解则查看前面提到的网址。</p>
+
+<h3 name="title-05-01">（一）简介</h3>
+
+<p>栅格系统用于通过一系列的行（row）与列（column）的组合来创建页面布局，你的内容就可以放入这些创建好的布局中。下面就介绍一下 <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+    栅格系统的工作原理：</p>
+<ul class="summary">
+    <li>“行（row）”必须包含在 <code>.container</code> （固定宽度）或 <code>.container-fluid</code> （100%
+        宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。
+    </li>
+    <li>通过“行（row）”在水平方向创建一组“列（column）”。</li>
+    <li>你的内容应当放置于“列（column）”内，并且，只有“列（column）”可以作为行（row）”的直接子元素。</li>
+    <li>类似 <code>.row</code> 和 <code>.col-xs-4</code> 这种预定义的类，可以用来快速创建栅格布局。<a href="http://getbootstrap.com/"
+                                                                              target="_blank">Bootstrap</a> 源码中定义的 mixin
+        也可以用来创建语义化的布局。
+    </li>
+    <li>通过为“列（column）”设置 <code>padding</code> 属性，从而创建列与列之间的间隔（gutter）。通过为 <code>.row</code> 元素设置负值 <code>margin</code>
+        从而抵消掉为 <code>.container</code> 元素设置的 <code>padding</code>，也就间接为“行（row）”所包含的“列（column）”抵消掉了<code>padding</code>。
+    </li>
+    <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined
+        up with non-grid content.
+    </li>
+    <li>默认一行（row）会被分成 12 列（column），如果分成 3 个相等的列（column），需要用 <code>.col-xs-4</code>。
+    </li>
+    <li>如果一“行（row）”中包含了的“列（column）”大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列。</li>
+    <li>删格类适用于大于或等于屏幕分界点的屏幕， <code>.col-md-</code>的元素不仅影响中等尺寸的屏幕，也会影响大屏幕（如果该元素没有<code>.col-lg-</code>类。 ）
+    </li>
+</ul>
+<p>通过研究后面的实例，可以将这些原理应用到你的代码中。</p>
+
+<h3 name="title-05-02">（二）栅格参数</h3>
+
+<div class="row">
+    <div class="col-sm-3">
+        <img src="img/SmartAdmin-introduce/lanyon-master.png" class="col-sm-12">
+        <br>
+        <br>
+
+        <p>SmartAdmin的布局是用了<a href="http://getbootstrap.com/" target="_blank"> Bootstrap </a>的删格系统，<a
+                href="http://getbootstrap.com/" target="_blank"> Bootstrap </a>提供了一套响应式、移动设备优先的流式删格系统。</p>
+    </div>
+    <div class="well col-sm-9">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        超小屏幕
+                        <small>手机 (&lt;768px)</small>
+                    </th>
+                    <th>
+                        小屏幕
+                        <small>平板 (≥768px)</small>
+                    </th>
+                    <th>
+                        中等屏幕
+                        <small>桌面显示器 (≥992px)</small>
+                    </th>
+                    <th>
+                        大屏幕
+                        <small>大桌面显示器 (≥1200px)</small>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th class="text-nowrap">栅格系统行为</th>
+                    <td>总是水平排列</td>
+                    <td colspan="3">开始是堆叠在一起的，当大于这些阈值时将变为水平排列C</td>
+                </tr>
+                <tr>
+                    <th class="text-nowrap"><code>.container</code> 最大宽度</th>
+                    <td>None （自动）</td>
+                    <td>750px</td>
+                    <td>970px</td>
+                    <td>1170px</td>
+                </tr>
+                <tr>
+                    <th class="text-nowrap">类前缀</th>
+                    <td><code>.col-xs-</code></td>
+                    <td><code>.col-sm-</code></td>
+                    <td><code>.col-md-</code></td>
+                    <td><code>.col-lg-</code></td>
+                </tr>
+                <tr>
+                    <th class="text-nowrap">列（column）数</th>
+                    <td colspan="4">12</td>
+                </tr>
+                <tr>
+                    <th class="text-nowrap">最大列（column）宽</th>
+                    <td class="text-muted">自动</td>
+                    <td>~62px</td>
+                    <td>~81px</td>
+                    <td>~97px</td>
+                </tr>
+                <tr>
+                    <th class="text-nowrap">槽（gutter）宽</th>
+                    <td colspan="4">30px （每列左右均有 15px）</td>
+                </tr>
+                <tr>
+                    <th class="text-nowrap">可嵌套</th>
+                    <td colspan="4">是</td>
+                </tr>
+                <tr>
+                    <th class="text-nowrap">偏移（Offsets）</th>
+                    <td colspan="4">是</td>
+                </tr>
+                <tr>
+                    <th class="text-nowrap">列排序</th>
+                    <td colspan="4">是</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<h3 name="title-05-03">（三）布局容器</h3>
+
+<p><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> 需要为页面内容和栅格系统包裹一个 .container 容器。我们提供了两个作此用处的类。注意，由于
+    padding 等属性的原因，这两种容器类不能互相嵌套。</p>
+
+<p>.container 类用于固定宽度并支持响应式布局的容器。</p>
+<pre class="lang-html">
+    <code class="html">
+        <div class="container">
+            ...
+        </div>
+    </code>
+</pre>
+<p>.container-fluid 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
+<pre class="lang-html">
+    <code class="html">
+        <div class="container-fluid">
+            ...
+        </div>
+    </code>
+</pre>
+<h3 name="title-05-04">（四）实例</h3>
+
+<h4>实例1：从堆叠到水平排列</h4>
+
+<p>使用单一的一组 <code>.col-md-*</code>
+    栅格类，就可以创建一个基本的栅格系统，在手机和平板设备上一开始是堆叠在一起的（超小屏幕到小屏幕这一范围），在桌面（中等）屏幕设备上变为水平排列。所有“列（column）必须放在 ” <code>.row</code> 内。</p>
+
+<div class="well">
+
+    <div class="row show-grid">
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+        <div class="col-md-1">
+            .col-md-1
+        </div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-md-8">
+            .col-md-8
+        </div>
+        <div class="col-md-4">
+            .col-md-4
+        </div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-md-4">
+            .col-md-4
+        </div>
+        <div class="col-md-4">
+            .col-md-4
+        </div>
+        <div class="col-md-4">
+            .col-md-4
+        </div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-md-6">
+            .col-md-6
+        </div>
+        <div class="col-md-6">
+            .col-md-6
+        </div>
+    </div>
+
+</div>
+
+<h4>实例2：移动设备和桌面屏幕</h4>
+
+<p>是否不希望在小屏幕设备上所有列都堆叠在一起？那就使用针对超小屏幕和中等屏幕设备所定义的类吧，即 .col-xs-* 和 .col-md-*。请看下面的实例，研究一下这些是如何工作的。</p>
+
+<div class="well">
+
+    <div class="row show-grid">
+        <div class="col-xs-12 col-md-8">.col-xs-12 col-md-8</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+    </div>
+
+</div>
+<h4>实例3：手机、平板、桌面</h4>
+
+<p>在上面案例的基础上，通过使用针对平板设备的 .col-sm-* 类，我们来创建更加动态和强大的布局吧。</p>
+
+<div class="well">
+    <div class="row show-grid">
+        <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+        <div class="col-xs-6 col-sm-6 col-md-4">.col-xs-6 .col-sm-6 .col-md-4</div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+        <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+    </div>
+</div>
+<h4>实例4：列偏移</h4>
+
+<p>使用 .col-md-offset-* 类可以将列向右侧偏移。这些类实际是通过使用 * 选择器为当前元素增加了左侧的边距（margin）。例如，.col-md-offset-4 类将 .col-md-4
+    元素向右侧偏移了4个列（column）的宽度。</p>
+
+<div class="well">
+
+    <div class="row show-grid">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+        <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+    </div>
+
+</div>
+<h4>实例5：嵌套列</h4>
+
+<p>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 .row 元素和一系列 .col-sm-* 元素到已经存在的 .col-sm-*
+    元素内。被嵌套的行（row）所包含的列（column）的个数不能超过12（其实，没有要求你必须占满12列）。</p>
+
+<div class="well">
+
+    <div class="row show-grid">
+        <div class="col-md-12">
+            Level 1: .col-md-12
+            <div class="row show-grid">
+                <div class="col-md-6">
+                    Level 2: .col-md-6
+                </div>
+                <div class="col-md-6">
+                    Level 2: .col-md-6
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<h3 name="title-05-05">（五）响应式显示／隐藏元素类</h3>
+
+<p>利用媒体查询功能并结合这些工具类可以方便的针对不同设备展示或隐藏页面内容</p>
+
+<div class="well">
+    <table class="table table-bordered table-striped responsive-utilities">
+        <thead>
+        <tr>
+            <th></th>
+            <th>
+                超小屏幕 手机 (<768px)
+            </th>
+            <th>
+                小屏幕 平板 (≥768px)
+            </th>
+            <th>
+                中等屏幕 桌面显示器 (≥992px)
+            </th>
+            <th>
+                大屏幕 大桌面显示器 (≥1200px)
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th><code>.visible-xs</code></th>
+            <td class="success txt-color-green">可见</td>
+            <td class="text-muted">隐藏</td>
+            <td class="text-muted">隐藏</td>
+            <td class="text-muted">隐藏</td>
+        </tr>
+        <tr>
+            <th><code>.visible-sm</code></th>
+            <td class="text-muted">隐藏</td>
+            <td class="success txt-color-green">可见</td>
+            <td class="text-muted">隐藏</td>
+            <td class="text-muted">隐藏</td>
+        </tr>
+        <tr>
+            <th><code>.visible-md</code></th>
+            <td class="text-muted">隐藏</td>
+            <td class="text-muted">隐藏</td>
+            <td class="success txt-color-green">可见</td>
+            <td class="text-muted">隐藏</td>
+        </tr>
+        <tr>
+            <th><code>.visible-lg</code></th>
+            <td class="text-muted">隐藏</td>
+            <td class="text-muted">隐藏</td>
+            <td class="text-muted">隐藏</td>
+            <td class="success txt-color-green">可见</td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+            <th><code>.hidden-xs</code></th>
+            <td class="text-muted">隐藏</td>
+            <td class="success txt-color-green">可见</td>
+            <td class="success txt-color-green">可见</td>
+            <td class="success txt-color-green">可见</td>
+        </tr>
+        <tr>
+            <th><code>.hidden-sm</code></th>
+            <td class="success txt-color-green">可见</td>
+            <td class="text-muted">隐藏</td>
+            <td class="success txt-color-green">可见</td>
+            <td class="success txt-color-green">可见</td>
+        </tr>
+        <tr>
+            <th><code>.hidden-md</code></th>
+            <td class="success txt-color-green">可见</td>
+            <td class="success txt-color-green">可见</td>
+            <td class="text-muted">隐藏</td>
+            <td class="success txt-color-green">可见</td>
+        </tr>
+        <tr>
+            <th><code>.hidden-lg</code></th>
+            <td class="success txt-color-green">可见</td>
+            <td class="success txt-color-green">可见</td>
+            <td class="success txt-color-green">可见</td>
+            <td class="text-muted">隐藏</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<p>从 v3.2.0 版本起，形如 .visible-*-* 的类针对每种屏幕大小都有了三种变体，每个针对 CSS 中不同的 display 属性，列表如下：</p>
+
+<div class="well">
+    <table class="table table-bordered table-striped table-responsive">
+        <thead>
+        <tr>
+            <th>类组</th>
+            <th>CSS <code>display</code></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><code>.visible-*-block</code></td>
+            <td><code>display: block;</code></td>
+        </tr>
+        <tr>
+            <td><code>.visible-*-inline</code></td>
+            <td><code>display: inline;</code></td>
+        </tr>
+        <tr>
+            <td><code>.visible-*-inline-block</code></td>
+            <td><code>display: inline-block;</code></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<p>因此，以超小屏幕（<code>xs</code>）为例，可用的 <code>.visible-*-*</code>
+    类是：<code>.visible-xs-block</code>、<code>.visible-xs-inline</code> 和 <code>.visible-xs-inline-block</code>。</p>
+
+<p><code>.visible-xs</code>、<code>.visible-sm</code>、<code>.visible-md</code> 和 <code>.visible-lg</code>
+    类也同时存在。但是<strong>从 v3.2.0 版本开始不再建议使用</strong>。除了 <code>&lt;table&gt;</code> 相关的元素的特殊情况外，它们与
+    <code>.visible-*-block</code> 大体相同。</p>
+
+<h2 name="title-06">六、数据表格</h2>
+
+<p>重点参考网站：<a href="http://legacy.datatables.net" target="_blank"> http://legacy.datatables.net</a>。</p>
+
+<p>引用js文件：</p>
+<pre class="lang-html">
+    <code class="html">
+        <script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
+        <script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
+        <script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
+        <script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+        <script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+    </code>
+</pre>
+<h3 name="title-06-01">（一）截图</h3>
+
+<p><img style="height: 430px" src="img/SmartAdmin-introduce/table.jpg"></p>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3 name="title-06-02">（二）js代码</h3>
+         <pre class="lang-html">
+             <code class="html">
+                 <script type="text/javascript">
+                     $(document).ready(function () {
+
+                         pageSetUp();
+
+                         /* // DOM Position key index //
+
+                          l - Length changing (dropdown)
+                          f - Filtering input (search)
+                          t - The Table! (datatable)
+                          i - Information (records)
+                          p - Pagination (paging)
+                          r - pRocessing
+                          < and > - div elements
+                          <"#id" and > - div with an id
+                          <"class" and > - div with a class
+                          <"#id.class" and > - div with an id and class
+
+                          Also see: http://legacy.datatables.net/usage/features
+                          */
+
+                         /* BASIC ;*/
+                         var responsiveHelper_dt_basic = undefined;
+                         var responsiveHelper_datatable_fixed_column = undefined;
+                         var responsiveHelper_datatable_col_reorder = undefined;
+                         var responsiveHelper_datatable_tabletools = undefined;
+
+                         var breakpointDefinition = {
+                             tablet: 1024,
+                             phone: 480
+                         };
+
+                         $('#dt_basic').dataTable({
+                             "sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'lTC>r>" +
+                                     "t" +
+                                     "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+                             "oTableTools": {
+                                 "aButtons": [
+                                     "copy",
+                                     "csv",
+                                     "xls",
+                                     {
+                                         "sExtends": "pdf",
+                                         "sTitle": "SmartAdmin_PDF",
+                                         "sPdfMessage": "SmartAdmin PDF Export",
+                                         "sPdfSize": "letter"
+                                     },
+                                     {
+                                         "sExtends": "print",
+                                         "sMessage": "Generated by SmartAdmin <i>(press Esc to close)</i>"
+                                     }
+                                 ],
+                                 "sSwfPath": "js/plugin/datatables/swf/copy_csv_xls_pdf.swf"
+                             },
+                             "autoWidth": true,
+                             "preDrawCallback": function () {
+                                 // Initialize the responsive datatables helper once.
+                                 if (!responsiveHelper_dt_basic) {
+                                     responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
+                                 }
+                             },
+                             "rowCallback": function (nRow) {
+                                 responsiveHelper_dt_basic.createExpandIcon(nRow);
+                             },
+                             "drawCallback": function (oSettings) {
+                                 responsiveHelper_dt_basic.respond();
+                             }
+                         });
+
+                         /* END BASIC */
+
+                         /* COLUMN FILTER  */
+                         var otable = $('#dt_basic').DataTable({
+                             //"bFilter": false,
+                             //"bInfo": false,
+                             //"bLengthChange": false
+                             //"bAutoWidth": false,
+                             //"bPaginate": false,
+                             //"bStateSave": true // saves sort state using localStorage
+                             retrieve: true,
+                             "sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>" +
+                                     "t" +
+                                     "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+                             "autoWidth": true,
+                             "preDrawCallback": function () {
+                                 // Initialize the responsive datatables helper once.
+                                 if (!responsiveHelper_datatable_fixed_column) {
+                                     responsiveHelper_datatable_fixed_column = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
+                                 }
+                             },
+                             "rowCallback": function (nRow) {
+                                 responsiveHelper_datatable_fixed_column.createExpandIcon(nRow);
+                             },
+                             "drawCallback": function (oSettings) {
+                                 responsiveHelper_datatable_fixed_column.respond();
+                             }
+
+                         });
+
+                         // Apply the filter
+                         $("#dt_basic thead th input[type=text]").on('keyup change', function () {
+
+                             otable
+                                     .column($(this).parent().index() + ':visible')
+                                     .search(this.value)
+                                     .draw();
+
+                         });
+                         /* END COLUMN FILTER */
+
+                     })
+
+                 </script>
+             </code>
+         </pre>
+    </div>
+</div>
+<h3 name="title-06-03">（三）难点说明</h3>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well">
+            <p>使用jquery.dataTables.min.js 插件时，遇到的问题：</p>
+
+            <p>1、"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'<code>f</code>><'col-sm-6 col-xs-12
+                hidden-xs'<code>lTC</code>>r>" +
+                "t" +
+                "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'<code>i</code>><'col-xs-12 col-sm-6'<code>p</code>>>"，这段代码是为表格添加上面部分的工具栏和底部的分页工具栏。其中标红的字母都有各自的含义，<code>f</code>代表快速搜索，<code>l</code>代表每页显示的条目，<code>T</code>代表导出功能组，<code>C</code>代表显示／隐藏栏目，<code>i</code>代表条目显示信息，<code>p</code>代表分页，根据所需添加功能。
+            </p>
+
+            <p>2、如果出现Bug “DataTables warning: table id=dt_basic - Cannot reinitialise DataTable. For more information
+                about this
+                error, please see http://datatables.net/tn/3”，如下图，需要在第二个用DataTable插件的函数的参数中添加“<code>retrieve:
+                    true</code>”。</p>
+
+            <p>例如：$('#dt_basic').DataTable({<code>retrieve:
+                true</code>,"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12
+                hidden-xs'<'toolbar'>>r>" +"t" +"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12
+                col-sm-6'p>>"……});
+            </p>
+
+            <p><img src="img/SmartAdmin-introduce/table-bug.jpg"></p>
+        </div>
+    </div>
+
+</div>
+
+
+<h2 name="title-07">七、验证表单</h2>
+
+<p>重点参考网站：<a href="http://jqueryvalidation.org/" target="_blank"> http://jqueryvalidation.org/</a>。</p>
+
+<p>引用js文件：</p>
+<pre class="lang-html"><code class="html">&lt;script src="...js/jquery.validate.min.js"&gt;&lt;/script&gt;</code></pre>
+<h3 name="title-07-01">（一）截图</h3>
+
+<div class="row">
+    <div class="col-sm-7">
+        <img style="height: 700px" src="img/SmartAdmin-introduce/form-validate.jpg">
+    </div>
+    <div class="col-sm-5">
+
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3 name="title-07-02">（二）js代码</h3>
+        <pre class="lang-html">
+            <code class="html">
+                <!-- JQUERY VALIDATE -->
+                <!--关于jquery.validate.min.js的应用可以查看http://jqueryvalidation.org/-->
+                <script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+                <script type="text/javascript">
+
+                    //  验证规则（rules）和提示信息（messages）中变量名要和 input 定义的 name 属性的名称一致
+
+                    var $registerForm = $("#smart-form-register").validate({
+
+                        // 鼠标焦点离开必填项输入框时出现的提示信息
+                        onfocusout: function (element) {
+                            this.element(element);
+                        },
+
+                        // 必填项验证条件
+                        rules: {
+                            username: {
+                                required: true
+                            },
+                            email: {
+                                required: true,
+                                email: true
+                            },
+                            password: {
+                                required: true,
+                                minlength: 6
+                            },
+                            passwordConfirm: {
+                                required: true,
+                                minlength: 3,
+                                equalTo: '#password'
+                            },
+                            phone: {
+                                required: true,
+                                rangelength: [11, 11]
+                            },
+                            gender: {
+                                required: true
+                            },
+                            terms: {
+                                required: true
+                            }
+                        },
+
+                        // 验证提示信息
+                        messages: {
+                            username: {
+                                required: '请输入您的用户名'
+                            },
+
+                            email: {
+                                required: '请输入您的邮箱',
+                                email: '请输入有效的邮箱地址'
+                            },
+                            password: {
+                                required: '请输入密码'
+                            },
+                            passwordConfirm: {
+                                required: '请再次输入您的密码',
+                                equalTo: '密码不一致，请重新输入'
+                            },
+                            phone: {
+                                required: '请输入您的手机号码',
+                                rangelength: '手机号应为11位'
+                            },
+                            gender: {
+                                required: '请选择您的性别'
+                            },
+                            terms: {
+                                required: '请同意此条款'
+                            }
+                        },
+
+                        // 错误提示信息出现的位置
+                        errorPlacement: function (error, element) {
+                            error.insertAfter(element.parent());
+                        }
+                    });
+                </script>
+            </code>
+        </pre>
+    </div>
+</div>
+<h2 name="title-08">八、弹出框</h2>
+
+<p>重点参考网站：<a href="http://jqueryui.com/dialog/#default" target="_blank">http://jqueryui.com/dialog/#default</a>。</p>
+
+<p>引用js文件：</p>
+<pre class="lang-html"><code class="html">&lt;script src="...js/jquery-ui-1.10.3.min.js"&gt;&lt;/script&gt;</code></pre>
+<div class="row">
+    <div class="col-sm-12">
+        <a href="#" id="dialog_link" class="btn btn-info margin-bottom-10"> Open Dialog </a><span>（点击看效果）</span>
+    </div>
+    <!-- ui-dialog -->
+    <div id="dialog_simple" title="Dialog Simple Title">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </p>
+    </div>
+    <div class="col-sm-12">
+            <pre class="lang-html">
+                <code class="html">
+                    <!--html代码-->
+                    &lt;a href="#" id="dialog_link" class="btn btn-info margin-bottom-10"&gt; Open Dialog &lt;/a&gt;
+                    <!-- ui-弹出框内容 -->
+                    &lt;div id="dialog_simple" title="Dialog Simple Title" &gt;
+                    &lt;p &gt;
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                    &lt;/p &gt;
+                    &lt;/div &gt;
+
+                    <!--javascript代码-->
+                    <script type="text/javascript">
+                        /*
+                         * CONVERT DIALOG TITLE TO HTML
+                         * REF: http://stackoverflow.com/questions/14488774/using-html-in-a-dialogs-title-in-jquery-ui-1-10
+                         */
+                        $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+                            _title: function (title) {
+                                if (!this.options.title) {
+                                    title.html("&#160;");
+                                } else {
+                                    title.html(this.options.title);
+                                }
+                            }
+                        }));
+
+                        // Dialog click
+                        $('#dialog_link').click(function () {
+                            $('#dialog_simple').dialog('open');
+                            return false;
+
+                        });
+
+                        $('#dialog_simple').dialog({
+                            autoOpen: false,
+                            width: 600,
+                            resizable: false,
+                            modal: true,
+                            title: "<div class='widget-header'><h4><i class='fa fa-warning'></i> Empty the recycle bin?</h4></div>",
+                            buttons: [
+                                {
+                                    html: "<i class='fa fa-trash-o'></i>&nbsp; Delete all items",
+                                    "class": "btn btn-danger",
+                                    click: function () {
+                                        $(this).dialog("close");
+                                    }
+                                },
+                                {
+                                    html: "<i class='fa fa-times'></i>&nbsp; Cancel",
+                                    "class": "btn btn-default",
+                                    click: function () {
+                                        $(this).dialog("close");
+                                    }
+                                }
+                            ]
+                        });
+                    </script>
+                </code>
+            </pre>
+    </div>
+
+</div>
+<h2 name="title-09">九、窗口部件（widget）</h2>
+
+<p>SmartAdmin 几乎每个组件都是嵌套在窗口部件（widget）中，充分认识该部件尤为重要，该部件主要依赋于<code> jarvis.widget.js </code>文件（版权属 SmartAdmin 所有）。</p>
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+    <!-- row -->
+    <div class="row">
+
+        <!-- NEW WIDGET START -->
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-id-0" data-widget-togglebutton="false">
+                <!-- widget options:
+                    usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+                    data-widget-colorbutton="false"
+                    data-widget-editbutton="false"
+                    data-widget-togglebutton="false"
+                    data-widget-deletebutton="false"
+                    data-widget-fullscreenbutton="false"
+                    data-widget-custombutton="false"
+                    data-widget-collapsed="true"
+                    data-widget-sortable="false"
+
+                -->
+                <header>
+                    <h2><strong>Default</strong> <i>Widget</i></h2>
+
+                    <div class="widget-toolbar">
+
+                        <div class="btn-group">
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:void(0);">Option 1</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Option 2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Option 3</a>
+                                </li>
+                            </ul>
+                            <button class="btn dropdown-toggle btn-xs btn-warning" data-toggle="dropdown">
+                                Dropdown <i class="fa fa-caret-down"></i>
+                            </button>
+
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-primary">Btn</a>
+                    </div>
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget edit box -->
+                    <div class="jarviswidget-editbox">
+                        <!-- This area used as dropdown edit box -->
+                        <input class="form-control" type="text">
+                        <span class="note"><i class="fa fa-check text-success"></i> Change title to update and save instantly!</span>
+
+                    </div>
+                    <!-- end widget edit box -->
+
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <h4>
+                            <small>图片样式</small>
+                        </h4>
+                        <div class="row">
+                            <img src="img/tbt-document/widget_01.jpg" class="col col-lg-12">
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+
+
+        </article>
+        <!-- WIDGET END -->
+
+
+    </div>
+
+    <!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+<p>说明：SmartAdmin 窗口部件的按钮功能由 data-* 属性控制，默认为 true，如果要禁用某项功能，则要清楚下面内容：</p>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th style="width:25%">属性定义</th>
+        <th style="width:45%">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>data-widget-deletebutton = "false"</td>
+        <td>删除按钮，默认为True，False为隐藏。</td>
+    </tr>
+    <tr>
+        <td>data-widget-editbutton = "false"</td>
+        <td>设置标题按钮，默认为True，False为隐藏。</td>
+    </tr>
+    <tr>
+        <td>data-widget-fullscreenbutton = "false"</td>
+        <td>全屏按钮，默认为True，False为隐藏。</td>
+    </tr>
+    <td> data-widget-colorbutton = "false"</td>
+    <td>色块选择按钮，默认为True，False为隐藏。</td>
+    </tr>
+    <tr>
+        <td>data-widget-collapsed = "false"</td>
+        <td>折叠按钮，默认为True，False为隐藏。</td>
+    </tr>
+    </tbody>
+</table>
+
+<pre class="lang-html">
+    <code class="html">
+        &lt;script src="js/bootstrap/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="js/smartwidgets/jarvis.widget.min.js"&gt;&lt;/script&gt;
+        &lt;script src="js/app.min.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
+
+        $(document).ready(function () {
+        // 使 widget 实现移动、折叠、全屏等操作，如果去掉该行代码，则 widget 上的按钮会消失，同时 widget 窗口不能移动。
+        pageSetUp();
+        })
+
+        &lt;/script&gt;
+    </code>
+</pre>
+
+<h2 name="title-10">十、图标字体</h2>
+
+<h3 name="title-10-01">（一）Font Awesome</h3>
+
+<p>重点参考网站：<a
+        href="http://fontawesome.io/" target="_blank">http://fontawesome.io/</a>。</p>
+
+<p>SmartAdmin 中附有最新的 Font Awesome 矢量图标库，用 CSS 能非常容易的改变这些图标的颜色、大小、阴影以及任何 CSS 能控制的属性。</p>
+<h4>1、前期准备</h4>
+
+<p>（1）拷贝 Font Awesome
+    字体文件到你的项目中。字体文件包括：FontAwesome.otf、fontawesome-webfont.eot、fontawesome-webfont.svg、fontawesome-webfont.ttf和fontawesome-webfont.woff。</p>
+
+<p>（2）拷贝 font-awesome.min.css 文件到你的项目中。并在 html 文档中的 &lt;head&gt; 部分，引入 font-awesome.min.css 文件。<code>&lt;link
+    rel="stylesheet" href="../css/font-awesome.min.css"&gt;</code></p>
+
+<p>（3）打开项目中的 font-awesome.min.css 文件并编辑字体路径指向正确的位置,字体路径是相对于你的 CSS 目录的。</p>
+
+<h4>2、如何使用</h4>
+
+<p>Font Awesome 是行内元素，倾向于使用标签<code>&lt;i&gt;</code>,使用<code>&lt;span&gt;</code>标签也没问题。自 Font Awesome 4.1
+    版本，所有的图标都需要两个 class 类：基础类 fa 和代表图标专有类。</p>
+<h4>举例：</h4>
+
+<p>（1）基本图标使用。
+
+<div class="well">
+    <i class="fa fa-camera-retro"></i> <code class="html"><i class="fa fa-camera-retro"></i> </code>
+</div>
+</p>
+
+<p>（2）图标大小。控制图标字体大小类：<code> fa-lg </code> (增大33%), <code> fa-2x </code>（增大2倍）, <code> fa-3x </code>（增大3倍）, <code>
+    fa-4x </code>（增大4倍）, 或 <code> fa-5x </code>（增大5倍） ，都是相对于图标的父亲节点大小计算的。</p>
+
+<div class="well">
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-camera-retro margin-right-10"></i><span>dafault</span>
+        <code class="html"><i class="fa fa-camera-retro"></i> </code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-camera-retro fa-lg margin-right-10"></i><span
+            class="margin-right-10">fa-lg</span><code class="html"><i class="fa fa-camera-retro fa-lg"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-camera-retro fa-2x margin-right-10"></i><span
+            class="margin-right-10">fa-2x</span><code class="html"><i class="fa fa-camera-retro fa-2x"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-camera-retro fa-3x margin-right-10"></i><span
+            class="margin-right-10">fa-3x</span><code class="html"><i class="fa fa-camera-retro fa-3x"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-camera-retro fa-4x margin-right-10"></i><span
+            class="margin-right-10">fa-4x</span><code class="html"><i class="fa fa-camera-retro fa-4x"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-camera-retro fa-5x margin-right-10"></i><span
+            class="margin-right-10">fa-5x</span><code class="html"><i class="fa fa-camera-retro fa-5x"></i></code></p>
+</div>
+<div class="well">
+    <p>（3）旋转图标。增加 fa-spin 类可以让图标旋转</p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-spinner fa-spin margin-right-10"></i><code
+            class="html"><i
+            class="fa fa-spinner fa-spin"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-circle-o-notch fa-spin margin-right-10"></i><code
+            class="html"><i class="fa fa-circle-o-notch fa-spin"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-refresh fa-spin margin-right-10"></i><code
+            class="html"><i
+            class="fa fa-refresh fa-spin"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-cog fa-spin margin-right-10"></i><code class="html"><i
+            class="fa fa-cog fa-spin"></i></code></p>
+</div>
+
+
+<p>（4）旋转翻转图标。增加 fa-rotate-* and fa-flip-* 类可以让图标旋转或者翻转</p>
+
+<div class="well">
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-shield margin-right-10"></i> normal<code class="html"><i
+            class="fa fa-shield"></i> </code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-shield fa-rotate-90 margin-right-10"></i>
+        fa-rotate-90<code class="html"><i class="fa fa-shield fa-rotate-90"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-shield fa-rotate-180 margin-right-10"></i>
+        fa-rotate-180<code class="html"><i class="fa fa-shield fa-rotate-180"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-shield fa-rotate-270 margin-right-10"></i>
+        fa-rotate-270<code class="html"><i class="fa fa-shield fa-rotate-270"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-shield fa-flip-horizontal margin-right-10"></i>
+        fa-flip-horizontal<code class="html"><i class="fa fa-shield fa-flip-horizontal"></i></code></p>
+
+    <p><span class="margin-right-10">&nbsp;</span><i class="fa fa-shield fa-flip-vertical margin-right-10"></i>
+        icon-flip-vertical<code class="html"><i class="fa fa-shield fa-flip-vertical"></i></code></p>
+</div>
+<p>（5）叠加多个图标。父亲节点需增加fa-stack，外层图标class类 fa-stack-2x，里层图标class类 fa-stack-1x,里层和外层图标的大小可以调整，类 fa-inverse可以得到反色效果。</p>
+
+<div class="well">
+    <p><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i
+            class="fa fa-twitter fa-stack-1x"></i></span><span
+            class="margin-right-10">fa-twitter on fa-square-o</span><code
+            class="html"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i
+            class="fa fa-twitter fa-stack-1x"></i></span></code></p>
+
+    <p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i
+            class="fa fa-flag fa-stack-1x fa-inverse"></i></span><span
+            class="margin-right-10">fa-flag on fa-circle</span><code class="html"><span class="fa-stack fa-lg"><i
+            class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></code></p>
+
+    <p><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i
+            class="fa fa-terminal fa-stack-1x fa-inverse"></i></span><span
+            class="margin-right-10">fa-terminal on fa-square</span><code class="html"><span class="fa-stack fa-lg"><i
+            class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></code></p>
+
+    <p><span class="fa-stack fa-lg"><i class="fa fa-camera fa-stack-1x"></i><i
+            class="fa fa-ban fa-stack-2x text-danger"></i></span><span
+            class="margin-right-10">fa-ban on fa-camera</span><code class="html"><span class="fa-stack fa-lg"><i
+            class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></code></p>
+
+</div>
+<p>（6）使用fa-ul 和 fa-li 能够替换 ul 列表默认的 list-style-type。</p>
+
+<div class="well">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+                <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+                <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+                <li><i class="fa-li fa fa-square"></i>in lists</li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+        <pre class="lang-html">
+        <code class="html">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+                <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+                <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+                <li><i class="fa-li fa fa-square"></i>in lists</li>
+            </ul>
+        </code>
+        </pre>
+        </div>
+    </div>
+</div>
+
+<h3 name="title-10-02">（二）Glyph Icons</h3>
+
+<p> Glyph 矢量图标字体，用CSS能控制这些图标的颜色、大小、阴影等样式。参考网站：<a href="http://getbootstrap.com/components/#glyphicons" target="_blank">
+    http://getbootstrap.com/components/#glyphicons </a>和<a
+        href="http://glyphicons.com/" target="_blank"> http://glyphicons.com/ </a>。</p>
+
+<h4>1、前期准备</h4>
+
+<p>（1）拷贝 Glyph Icons
+    字体到你的项目中。字体文件包括：glyphicons-halflings-regular.eot、glyphicons-halflings-regular.svg、glyphicons-halflings-regular.ttf 和
+    glyphicons-halflings-regular.woff。</p>
+
+<p>（2）拷贝 bootstrap.min.css 文件到你的项目中。并在 html 文档中的 &lt;head&gt; 部分，引入 bootstrap.min.css 文件。<code>&lt;link
+    rel="stylesheet" href="../css/bootstrap.min.css"&gt;</code></p>
+
+<p>（3）打开项目中的 bootstrap.min.css 文件并编辑字体路径指向正确的位置,字体路径是相对于你的 CSS 目录的。</p>
+
+<h4>2、基本使用</h4>
+<br>
+
+<div class="well">
+    <p><span class="glyphicon glyphicon-glass margin-right-10"></span><code class="html"><span
+            class="glyphicon glyphicon-glass"></span></code></p>
+</div>
+
+<h2 name="title-11">十一、图表</h2>
+
+<p>smartAdmin 介绍了 Flot Chart、Morris Chart、Inline Chart 和 Dygraph 四种图表，下面分别介绍一下，另推荐一个图表库网址：<a
+        href="http://www.hcharts.cn/" target="_blank">http://www.hcharts.cn/</a>，该网站的图表类型丰富并兼容大多数浏览器。</p>
+
+<h3 name="title-11-01">（一）Flot Chart</h3>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="well">
+            <div id="my-bar-chart" class="chart"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12">
+           <pre class="lang-html">
+                <code class="html">
+                    <!--Flot Chart 相关js-->
+                    <script src="js/plugin/flot/jquery.flot.cust.min.js"></script>
+                    <script src="js/plugin/flot/jquery.flot.orderBar.min.js"></script>
+                    <script>
+                        /* bar chart */
+
+                        if ($("#bar-chart").length) {
+
+                            var data1 = [];
+                            for (var i = 0; i <= 12; i += 1)
+                                data1.push([i, parseInt(Math.random() * 30)]);
+
+                            var data2 = [];
+                            for (var i = 0; i <= 12; i += 1)
+                                data2.push([i, parseInt(Math.random() * 30)]);
+
+                            var data3 = [];
+                            for (var i = 0; i <= 12; i += 1)
+                                data3.push([i, parseInt(Math.random() * 30)]);
+
+                            var ds = new Array();
+
+                            ds.push({
+                                data: data1,
+                                bars: {
+                                    show: true,
+                                    barWidth: 0.2,
+                                    order: 1
+                                }
+                            });
+                            ds.push({
+                                data: data2,
+                                bars: {
+                                    show: true,
+                                    barWidth: 0.2,
+                                    order: 2
+                                }
+                            });
+                            ds.push({
+                                data: data3,
+                                bars: {
+                                    show: true,
+                                    barWidth: 0.2,
+                                    order: 3
+                                }
+                            });
+
+                            //Display graph
+                            $.plot($("#bar-chart"), ds, {
+                                colors: [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+                                grid: {
+                                    show: true,
+                                    hoverable: true,
+                                    clickable: true,
+                                    tickColor: $chrt_border_color,
+                                    borderWidth: 0,
+                                    borderColor: $chrt_border_color
+                                },
+                                legend: true,
+                                tooltip: true,
+                                tooltipOpts: {
+                                    content: "<b>%x</b> = <span>%y</span>",
+                                    defaultTheme: false
+                                }
+
+                            });
+
+                        }
+
+                        /* end bar chart */
+
+                    </script>
+                </code>
+           </pre>
+    </div>
+</div>
+<h3 name="title-11-02">（二）Morris Chart</h3>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well">
+            <div id="my-sales-graph" class="chart no-padding"></div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <pre class="lang-html">
+            <code class="html">
+                <!-- Morris Chart 相关js -->
+                <script src="js/plugin/morris/raphael.min.js"></script>
+                <script src="js/plugin/morris/morris.min.js"></script>
+                <script>
+                    if ($('#sales-graph').length) {
+
+                        Morris.Area({
+                            element: 'sales-graph',
+                            data: [
+                                {
+                                    period: '2010 Q1',
+                                    iphone: 2666,
+                                    ipad: null,
+                                    itouch: 2647
+                                },
+                                {
+                                    period: '2010 Q2',
+                                    iphone: 2778,
+                                    ipad: 2294,
+                                    itouch: 2441
+                                },
+                                {
+                                    period: '2010 Q3',
+                                    iphone: 4912,
+                                    ipad: 1969,
+                                    itouch: 2501
+                                },
+                                {
+                                    period: '2010 Q4',
+                                    iphone: 3767,
+                                    ipad: 3597,
+                                    itouch: 5689
+                                },
+                                {
+                                    period: '2011 Q1',
+                                    iphone: 6810,
+                                    ipad: 1914,
+                                    itouch: 2293
+                                },
+                                {
+                                    period: '2011 Q2',
+                                    iphone: 5670,
+                                    ipad: 4293,
+                                    itouch: 1881
+                                },
+                                {
+                                    period: '2011 Q3',
+                                    iphone: 4820,
+                                    ipad: 3795,
+                                    itouch: 1588
+                                },
+                                {
+                                    period: '2011 Q4',
+                                    iphone: 15073,
+                                    ipad: 5967,
+                                    itouch: 5175
+                                },
+                                {
+                                    period: '2012 Q1',
+                                    iphone: 10687,
+                                    ipad: 4460,
+                                    itouch: 2028
+                                },
+                                {
+                                    period: '2012 Q2',
+                                    iphone: 8432,
+                                    ipad: 5713,
+                                    itouch: 1791
+                                }
+                            ],
+                            xkey: 'period',
+                            ykeys: ['iphone', 'ipad', 'itouch'],
+                            labels: ['iPhone', 'iPad', 'iPod Touch'],
+                            pointSize: 2,
+                            hideHover: 'auto'
+                        });
+
+                    }
+                </script>
+            </code>
+        </pre>
+    </div>
+</div>
+<h3 name="title-11-03">（三）Inline Chart</h3>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well">
+
+            <ul class="list-inline">
+                <li>&nbsp;&nbsp;&nbsp;
+                    <div class="easy-pie-chart txt-color-red easyPieChart" data-percent="50" data-size="180"
+                         data-pie-size="50">
+                        <span class="percent percent-sign txt-color-red font-xl semi-bold">49</span>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                </li>
+                <li>&nbsp;&nbsp;&nbsp;
+                    <div class="easy-pie-chart txt-color-blue easyPieChart" data-percent="36" data-pie-size="180">
+                        <span class="percent percent-sign txt-color-blue font-xl semi-bold">36</span>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                </li>
+                <li>&nbsp;&nbsp;&nbsp;
+                    <div class="easy-pie-chart txt-color-pinkDark easyPieChart" data-percent="46" data-pie-size="160">
+                        <span class="percent percent-sign txt-color-pinkDark font-lg semi-bold">46</span>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                </li>
+                <li>&nbsp;&nbsp;&nbsp;
+                    <div class="easy-pie-chart txt-color-greenLight easyPieChart" data-percent="56" data-pie-size="110">
+                        <span class="percent percent-sign txt-color-greenLight font-md">56</span>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                </li>
+                <li>&nbsp;&nbsp;&nbsp;
+                    <div class="easy-pie-chart txt-color-orange easyPieChart" data-percent="66" data-pie-size="60">
+                        <span class="percent percent-sign txt-color-orange">66</span>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                </li>
+                <li>&nbsp;&nbsp;&nbsp;
+                    <div class="easy-pie-chart txt-color-darken easyPieChart" data-percent="76" data-pie-size="45">
+                        <span class="percent percent-sign font-sm">76</span>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                </li>
+                <li>&nbsp;&nbsp;&nbsp;
+                    <div class="easy-pie-chart txt-color-blue easyPieChart" data-percent="86" data-pie-size="35">
+                        <span class="percent percent-sign font-xs">86</span>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="col-sm-12">
+<pre class="lang-html">
+    <code class="html">
+        <ul class="list-inline">
+            <li>&nbsp;&nbsp;&nbsp;
+                <div class="easy-pie-chart txt-color-red easyPieChart" data-percent="50" data-size="180"
+                     data-pie-size="50">
+                    <span class="percent percent-sign txt-color-red font-xl semi-bold">49</span>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;
+                <div class="easy-pie-chart txt-color-blue easyPieChart" data-percent="36" data-pie-size="180">
+                    <span class="percent percent-sign txt-color-blue font-xl semi-bold">36</span>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;
+                <div class="easy-pie-chart txt-color-pinkDark easyPieChart" data-percent="46" data-pie-size="160">
+                    <span class="percent percent-sign txt-color-pinkDark font-lg semi-bold">46</span>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;
+                <div class="easy-pie-chart txt-color-greenLight easyPieChart" data-percent="56" data-pie-size="110">
+                    <span class="percent percent-sign txt-color-greenLight font-md">56</span>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;
+                <div class="easy-pie-chart txt-color-orange easyPieChart" data-percent="66" data-pie-size="60">
+                    <span class="percent percent-sign txt-color-orange">66</span>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;
+                <div class="easy-pie-chart txt-color-darken easyPieChart" data-percent="76" data-pie-size="45">
+                    <span class="percent percent-sign font-sm">76</span>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;
+                <div class="easy-pie-chart txt-color-blue easyPieChart" data-percent="86" data-pie-size="35">
+                    <span class="percent percent-sign font-xs">86</span>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+            </li>
+        </ul>
+
+        <!--饼状图相关js-->
+        <script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+    </code>
+</pre>
+    </div>
+
+</div>
+<h3 name="title-11-04">（四）Dygraph</h3>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="well">
+            <div id="my-noroll" style="width:100%; height:300px;"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12">
+            <pre class="lang-html">
+                <code class="html">
+                    <!--Dygraph 相关js-->
+                    <script src="js/plugin/dygraphs/demo-data.min.js"></script>
+                    <script src="js/plugin/dygraphs/dygraph-combined.min.js"></script>
+                    <script>
+                        new Dygraph(document.getElementById("noroll"), data_temp, {
+                            customBars: true,
+                            title: 'Daily Temperatures in New York vs. San Francisco',
+                            ylabel: 'Temperature (F)',
+                            legend: 'always',
+                            labelsDivStyles: {
+                                'textAlign': 'right'
+                            },
+                            showRangeSelector: true
+                        });
+                    </script>
+                </code>
+            </pre>
+    </div>
+</div>
+
+
+<h2 name="title-12">十二、SmartAdmin 基本配置</h2>
+
+<h3 name="title-12-01">（一）导航菜单折叠、最小化配置参数</h3>
+
+<div class="table-responsive no-margin">
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>属性</th>
+            <th>描述</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <code>
+                    data-action="userLogout"
+                </code></td>
+            <td>退出（Logout）信息弹出框, 使用 <code>
+                data-logout-msg = "..."</code>属性设置弹出框内的内容。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    data-action="resetWidgets"
+                </code></td>
+            <td>重置</td>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    data-action="launchFullscreen"
+                </code></td>
+            <td>全屏</td>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    data-action="minifyMenu"
+                </code></td>
+            <td>最小化菜单</td>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    data-action="toggleMenu"
+                </code></td>
+            <td>折叠菜单</td>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    data-action="toggleShortcut"
+                </code></td>
+            <td>点击用户名出现快捷菜单，用户名元素标签需设置该属性。</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h3 name="title-12-02">（二）布局选项工具条配置参数</h3>
+<!--<div class="well-sm">-->
+
+<!-- this is what the user will see -->
+<div class="row">
+    <div class="col-sm-6">
+        <div class="well">
+            <div class="padding-gutter padding-bottom-0">
+                可以给 <b><i>BODY</i></b> 标签添加的class: <code>
+                smart-skin-{SKIN_NUMBER}</code>
+                主题皮肤, <code>
+                smart-rtl</code>
+                （右侧菜单）, <code>
+                fixed-header</code>
+                （冻结头部信息）, <code>
+                fixed-navigation</code>
+                （冻结导航菜单）, <code>
+                fixed-ribbon</code>
+                （冻结面包屑面板）, <code>
+                fixed-footer</code>
+                （冻结页脚）, <code>
+                container</code>（固定宽度）
+
+            </div>
+            <div style="background: #f1f1f1;border-radius:3px;overflow: hidden">
+                <div style="width: 100%;height: auto;background:#ddd;font-size:11px;font-weight: bold;padding:13px 10px">
+                    <img src="img/logo.png" alt="SmartAdmin" style="width:75px;">
+                </div>
+                <div style="width: 25%;height: 296px; background:#949291;" class="pull-left"></div>
+                <div style="width: 75%;height: 255px; background:#f1f1f1;" class="pull-left">
+                    <div style="width: 100% height:20px; padding:3px; background:#C5C5C5; font-size:10px; font-weight: bold;">
+                        <i class="fa fa-home"></i> breadcrumb &gt;
+                    </div>
+                </div>
+                <div style="width: 75%;height: auto;background:#ddd;font-size:11px;font-weight: bold;padding:13px 10px"
+                     class="text-right pull-right">
+                    Footer
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="well">
+            <div class="padding-gutter padding-top-0 padding-bottom-0">
+                切换到顶部导航菜单模式需要给<b>BODY</b>标签添加<code>.menu-on-top</code>类。
+            </div>
+            <div class="padding-gutter">
+
+                <div style="background: #f1f1f1;border-radius:3px;overflow: hidden">
+                    <div style="width: 100%;height: auto;background:#ddd;font-size:11px;font-weight: bold;padding:13px 10px">
+                        <img src="img/logo.png" alt="SmartAdmin" style="width:75px;">
+                    </div>
+                    <div style="width: 100%;height: 50px; background:#949291;" class="pull-left"></div>
+                    <div style="width: 100%;height: 255px; background:#f1f1f1;" class="pull-left">
+                        <div style="width: 100% height:20px; padding:3px; background:#C5C5C5; font-size:10px; font-weight: bold;">
+                            <i class="fa fa-home"></i> breadcrumb >
+                        </div>
+                    </div>
+                    <div style="width: 100%;height: auto;background:#ddd;font-size:11px;font-weight: bold;padding:13px 10px"
+                         class="text-right pull-right">
+                        Footer
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!--</div>-->
+<h3 name="title-12-03">（三）app.js 配置表</h3>
+
+<p>源码链接：<a href="js/app.js" target="_blank">app.js</a></p>
+
+<div class="well">
+    <!-- this is what the user will see -->
+    <div class="padding-gutter">
+        <span class="badge bg-color-green">说明：</span> 可以在 <a href="js/app.js" target="_blank">app.js</a>
+        文件中，对下面的属性进行自定义。
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="table table-bordered margin-top-10">
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>默认值</th>
+                <th>描述</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><b><i>closedSign</i></b></td>
+                <td>
+                    <code>
+                        fa-plus-square-o
+                    </code></td>
+                <td>菜单打开图标</td>
+            </tr>
+            <tr>
+                <td><b><i>openedSign</i></b></td>
+                <td>
+                    <code>
+                        fa-minus-square-o
+                    </code></td>
+                <td>菜单关闭图标</td>
+            </tr>
+            <tr>
+                <td><b><i>setup_widgets_desktop()</i></b></td>
+                <td><i>function<b>()</b></i></td>
+                <td>为桌面系统安装 widgets 部件 (<i>必须设置 <b><i>$.enableJarvisWidgets</i></b> 为
+                    <code>
+                        true
+                    </code></i>)
+                </td>
+            </tr>
+            <tr>
+                <td><b><i>setup_widgets_mobile()</i></b></td>
+                <td><i>function<b>()</b></i></td>
+                <td>为移动系统安装 widgets 部件 <i>(必须设置 <b>$.enableJarvisWidgets</b> 和 <b>$.enableMobileWidgets</b> 为
+                    <code>true</code>)</i></td>
+            </tr>
+            <tr>
+                <td><b><i>runAllCharts()</i></b></td>
+                <td><i>function<b>()</b></i></td>
+                <td>运行图表相关脚本: $.sparkline 和 $.easyPieChart</td>
+            </tr>
+            <tr>
+                <td><b><i>runAllForms()</i></b></td>
+                <td><i>function<b>()</b></i></td>
+                <td>运行 Form 相关脚本，例如：$.select2, $.mask, $.datepicker 和 $.autocomplete</td>
+            </tr>
+            <tr>
+                <td><b><i>pageSetUp()</i></b></td>
+                <td><i>function<b>()</b></i></td>
+                <td>定义所运行的函数: <i>setup_widgets_desktop<b>()</b>, setup_widgets_mobile<b>()</b>, runAllCharts<b>()</b>,
+                    runAllForms<b>()</b></i> - 并且触发 tooltip 和 popovers 功能。
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+<h3 name="title-12-04">（四）app.config.js 配置表</h3>
+
+<p>源码链接：<a href="js/app.config.js" target="_blank">app.config.js</a></p>
+
+<div class="well">
+    <!-- this is what the user will see -->
+    <div class="padding-gutter">
+        <span class="badge bg-color-green">说明：</span> 可以在 <a href="js/app.config.js" target="_blank">app.config.js</a>
+        文件中，对下面的属性进行自定义。
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="table table-bordered margin-top-10">
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>默认值</th>
+                <th>描述</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><b><i>$.throttle_delay</i></b></td>
+                <td>
+                    <code>
+                        350
+                    </code></td>
+                <td>Impacts the responce rate of some of the responsive elements (lower value affects CPU but improves
+                    speed)
+                </td>
+            </tr>
+            <tr>
+                <td><b><i>$.menu_speed</i></b></td>
+                <td>
+                    <code>
+                        235
+                    </code></td>
+                <td>子级菜单展开速度</td>
+            </tr>
+            <tr>
+                <td><b><i>$.navAsAjax</i></b></td>
+                <td>
+                    <code>
+                        true/false
+                    </code></td>
+                <td>HTML version 版本设置成 false，因为左侧菜单将不再响应 ajax 调用。</td>
+            </tr>
+            <tr>
+                <td><b><i>$.enableJarvisWidgets</i></b></td>
+                <td>
+                    <code>
+                        true/false
+                    </code></td>
+                <td>JarvisWidget窗口部件功能，依附文件 jarvis.widget.min.js。</td>
+            </tr>
+            <tr>
+                <td><b><i>$.enableMobileWidgets</i></b></td>
+                <td>
+                    <code>
+                        true/false
+                    </code></td>
+                <td>Warning: Enabling mobile widgets could potentially crash your webApp if you have too many widgets
+                    running at once (<i>必须设置 <b><i>$.enableJarvisWidgets</i></b> 为
+                        <code>true</code></i>)
+                </td>
+            </tr>
+            <tr>
+                <td><b><i>$.sound_path</i></b></td>
+                <td>
+                    <code>
+                        sound/
+                    </code></td>
+                <td>声音文件的路径</td>
+            </tr>
+            <tr>
+                <td><b><i>$.sound_on</i></b></td>
+                <td>
+                    <code>
+                        true/false
+                    </code></td>
+                <td>声音开关</td>
+            </tr>
+            <tr>
+                <td><b><i>fastClick</i></b></td>
+                <td>
+                    <code>
+                        false/true
+                    </code></td>
+                <td>触摸操作时300毫秒延迟消除开关</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<!--<pre class="lang-html">-->
+<!--<code class="html">-->
+<!--Your left nav in your app will no longer fire ajax calls, set it to false for HTML version-->
+<!--$.navAsAjax = false;-->
+
+<!--声音配置：alert告警框、－－－－－－在点击确定按钮的时候都有声音，下面代码分别设置声音文件的路径和默认情况声音是开启的。-->
+<!--$.sound_path = "sound/";-->
+<!--$.sound_on = true;-->
+
+<!--Impacts the responce rate of some of the responsive elements (lower value affects CPU but improves speed)-->
+<!--var throttle_delay = 350,-->
+
+<!--点击导航父级菜单，展开子级菜单的速度-->
+<!--menu_speed = 235,-->
+
+<!--打开JarvisWidget窗口部件功能，依附文件 jarvis.widget.min.js-->
+<!--enableJarvisWidgets = true,-->
+
+<!--注意：打开 mobile widgets 部件可能会影响webApp-->
+<!--如果同时有很多 widgets 运行，必须设置enableJarvisWidgets = true-->
+<!--enableMobileWidgets = false,-->
+
+
+<!--如果在移动端要激活 fastclick 插件（fastclick.js ），需要设置 fastClick = true-->
+<!--fastClick = false,-->
+
+
+<!--These elements are ignored during DOM object deletion for ajax version,It will delete all objects during page load with these exceptions:-->
+<!--ignore_key_elms = ["#header, #left-panel, #main, div.page-footer, #shortcut, #divSmallBoxes, #divMiniIcons, #divbigBoxes, #voiceModal, script"],-->
+
+<!--语音命令配置，依附于voicecommand.js，默认情况下语音命令是禁用的，默认支持的语言是英语，使用 localstorage 记住 on/off (最好用于 HTML 版本)-->
+<!--voice_command = true,-->
+<!--voice_command_auto = false,-->
+<!--voice_command_lang = 'en-US',-->
+<!--voice_localStorage = true;-->
+
+<!--定义所有的语音指令变量及对应的函数-->
+<!--if (voice_command) {-->
+<!--var commands = {-->
+<!--'show dashboard' : function() { $('nav a[href="dashboard.html"]').trigger("click"); },-->
+<!--'show inbox' : function() { $('nav a[href="inbox.html"]').trigger("click"); },-->
+
+<!--... ...-->
+
+<!--[其他语音命令]-->
+
+<!--};-->
+<!--</code>-->
+<!--</pre>-->
+<h2 name="title-13">十三、其他 JS 插件的作用</h2>
+
+<div class="well">
+
+    <p>引用的JS插件比较多，需注意引入顺序，搞清插件作用，并在项目完善的时候合并压缩，减少 http 请求数量。</p>
+
+    <p><code>&lt;script src="js/plugin/pace/pace.min.js"&gt;&lt;/script&gt;</code>
+        展示 Ajax Loading 效果，刷新界面时，页面顶部出现的蓝色进度条。参考网址： <a href="http://github.hubspot.com/pace/" target="_blank">http://github.hubspot.com/pace/</a>。
+    </p>
+
+    <p><code>&lt;script src="js/libs/jquery-2.0.2.min.js"&gt;&lt;/script&gt;</code> JQuery 插件。</p>
+
+    <p><code>&lt;script src="js/libs/jquery-ui-1.10.3.min.js"&gt;&lt;/script&gt;</code> JQuery UI 插件。</p>
+
+    <p><code>&lt;script src="js/plugin/select2/jquery.ui.touch-punch.min.js"&gt;&lt;/script&gt;</code> 由于目前触摸设备不支持
+        jQuery
+        UI 类库，因为触摸事件是 touchstart，touchmove 和 touched，而不是 mouseover、mousemove 和 mouseout。为了解决这个问题，我们可以用 jQuery UI Touch
+        Punch 类库，它通过模拟事件来将鼠标事件匹配 touch 事件，而且使用起来很方便。</p>
+
+    <p><code>&lt;script src="js/bootstrap/bootstrap.min.js"&gt;&lt;/script&gt;</code> bootstrap 插件。</p>
+
+    <p><code>&lt;script src="js/notification/SmartNotification.min.js"&gt;&lt;/script&gt;</code> 智能警示框（带声音）。</p>
+
+    <p><code>&lt;script src="js/smartwidgets/jarvis.widget.min.js"&gt;&lt;/script&gt;</code> widget 窗口部件（SmartAdmin）。
+    </p>
+
+    <p><code>&lt;script src="js/plugin/sparkline/jquery.sparkline.min.js"&gt;&lt;/script&gt;</code> 折线图插件。</p>
+
+    <p><code>&lt;script src="js/plugin/masked-input/jquery.maskedinput.min.js"&gt;&lt;/script&gt;</code>
+        input 附带 data-mask 属性时会用到。</p>
+
+    <p><code>&lt;script src="js/plugin/select2/select2.min.js"&gt;&lt;/script&gt;</code> select2 美化下拉框。</p>
+
+    <p><code>&lt;script src="js/plugin/select2/fastclick.min.js"&gt;&lt;/script&gt;</code> 小型 JS 库，触摸操作时摆脱 300 毫秒的延迟。
+    </p>
+
+    <p><code>&lt;script src="js/smartwidgets/demo.js"&gt;&lt;/script&gt;</code> 布局选项工具栏（SmartAdmin）。</p>
+
+    <p><code>&lt;script src="js/speech/voicecommand.min.js"&gt;&lt;/script&gt;</code> <i class="fa fa-microphone"></i>
+        录音插件。</p>
+</div>
+
+
+<h2 name="title-14">十四、Grunt</h2>
+
+<p>重点参考网址：<a href="http://www.gruntjs.net/" target="_blank">http://www.gruntjs.net/</a>。</p>
+
+<p>SmartAdmin 提供了 less 、 sass 样式文件和未压缩的 js 文件，通过 grunt 技术合并压缩文件。</p>
+
+<p>下面是SmartAdmin中的 Gruntfile.js 和 package.json 配置内容，进入这两个文件的路径，用命令行直接输入 <code>grunt</code> ,就可以生成压缩文件（不用安装 grunt，因为
+    SmartAdmin 原始包中已经有安装 grunt 之后生成的文件（node_modules）），需要将 Gruntfile.js 文件中的 globalConfig 变量的 dest 对应的 value 值改成
+    HTML_version。</p>
+
+<h3 name="title-14－01">（一）Gruntfile.js配置</h3>
+<pre class="lang-html">
+    <code class="html">
+        /*!
+        * SmartAdmin's Gruntfile for HTML / AJAX / PHP Versions (please use a seperate Gruntfile for the AngularJS
+        verison)
+        * Copyright 2013-2014 MYORANGE INC.
+        */
+
+        module.exports = function(grunt) {
+        'use strict';
+
+        // DEFINE DIRECTORY FOR SMARTADMIN VERSION HERE
+        var globalConfig = {
+        src: 'COMMON_ASSETS',
+
+        // 此处需要更改生成文件的路径
+        dest: 'HTML_version' // PHP_version/PHP_AJAX_Version | PHP_version/PHP_HTML_Version | HTML_version |
+        AJAX_version |
+        };
+
+        // DEFINE YOUR VERSION NAME
+        grunt.initConfig({
+        globalConfig: globalConfig,
+        pkg: grunt.file.readJSON('package.json'),
+        banner: '/*!\n' +
+        ' * SmartAdmin v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+        ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+        ' */\n',
+        jqueryCheck: 'if (typeof jQuery === \'undefined\') { throw new Error(\'Bootstrap\\\'s JavaScript requires
+        jQuery\') }\n\n',
+
+        // JS TESTING
+        'jshint': {
+        files: [
+        'Gruntfile.js',
+        '<%= globalConfig.src %>/UNMINIFIED_JS/app.js',
+        '<%= globalConfig.src %>/UNMINIFIED_JS/smartwidgets',
+        '<%= globalConfig.src %>/UNMINIFIED_JS/speech'
+        ],
+        options: {
+        // options here to override JSHint defaults
+        globals: {
+        jQuery: true,
+        console: true,
+        module: true,
+        document: true
+        }
+        }
+        },
+
+        // MINIFY JS FILE
+        'uglify': {
+        options: {
+        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+        '<%= grunt.template.today("yyyy-mm-dd") %> */'
+        },
+        build: {
+
+        // Grunt will search for "**/*.js" under "lib/" when the "uglify" task
+        // runs and build the appropriate src-dest file mappings then, so you
+        // don't need to update the Gruntfile when files are added or removed.
+        files: [{
+        expand: true,
+        src: ['**/*.js', '!**/*.min.js', '!**/*.backup.js'],
+        dest: '<%= globalConfig.dest %>/js/',
+        cwd: '<%= globalConfig.src %>/UNMINIFIED_JS/',
+        extDot: 'last',
+        ext: '.min.js'
+
+        }]
+        }
+        },
+
+        // SASS FILE COMPILATION
+        'sass': {
+        development: {
+        options: {
+        banner: '<%= banner %>'
+        },
+        files: {
+        "<%= globalConfig.src %>/UNMINIFIED_CSS/bootstrap.css": "<%= globalConfig.src
+        %>/SASS_FILES/scss/bootstrap.sass",
+        "<%= globalConfig.src %>/UNMINIFIED_CSS/smartadmin-production.css": "<%= globalConfig.src
+        %>/SASS_FILES/scss/smartadmin-production.sass",
+        "<%= globalConfig.src %>/UNMINIFIED_CSS/font-awesome.css": "<%= globalConfig.src
+        %>/SASS_FILES/scss/library/fontawesome/font-awesome.sass",
+        "<%= globalConfig.src %>/UNMINIFIED_CSS/smartadmin-skins.css": "<%= globalConfig.src
+        %>/SASS_FILES/scss/smartadmin-skin/smartadmin-skins.sass"
+        }
+        }
+        },
+
+        // LESS FILE COMPILATION
+        'less': {
+        development: {
+        options: {
+        banner: '<%= banner %>'
+        },
+        files: {
+        "<%= globalConfig.src %>/UNMINIFIED_CSS/bootstrap.css": "<%= globalConfig.src %>/LESS_FILES/bootstrap.less",
+        "<%= globalConfig.src %>/UNMINIFIED_CSS/smartadmin-production.css": "<%= globalConfig.src
+        %>/LESS_FILES/smartadmin-production.less",
+        "<%= globalConfig.src %>/UNMINIFIED_CSS/font-awesome.css": "<%= globalConfig.src
+        %>/LESS_FILES/library/fontawesome/font-awesome.less",
+        "<%= globalConfig.src %>/UNMINIFIED_CSS/smartadmin-skins.css": "<%= globalConfig.src
+        %>/LESS_FILES/smartadmin-skin/smartadmin-skins.less"
+        }
+        }
+        },
+
+        // MINIFY CSS
+        'cssmin': {
+        minify: {
+        expand: true,
+        src: ['*.css', '!*.min.css'],
+        dest: '<%= globalConfig.dest %>/css/',
+        cwd: '<%= globalConfig.src %>/UNMINIFIED_CSS/',
+        extDot: 'last',
+        ext: '.min.css'
+        }
+        },
+
+        // WATCH FILES FOR CHANGES
+        watch: {
+        files: ['<%= globalConfig.src %>/LESS_FILES/smartadmin/top-menu.less','<%= globalConfig.src
+        %>/UNMINIFIED_JS/app.js', '<%= globalConfig.src %>/UNMINIFIED_JS/demo.js'],
+        tasks: ['less','cssmin']
+        }
+        });
+
+        //grunt.loadNpmTasks('grunt-contrib-concat');
+        grunt.loadNpmTasks('grunt-contrib-jshint');
+        grunt.loadNpmTasks('grunt-contrib-less');
+        grunt.loadNpmTasks('grunt-contrib-sass');
+        grunt.loadNpmTasks('grunt-contrib-uglify');
+        grunt.loadNpmTasks('grunt-contrib-cssmin');
+        grunt.loadNpmTasks('grunt-contrib-watch');
+
+        grunt.registerTask('dist-test', ['jshint']);
+        grunt.registerTask('default', ['uglify', 'less','cssmin']);
+        grunt.registerTask('dist-less', ['less','cssmin']);
+        grunt.registerTask('dist-sass', ['sass','cssmin']);
+        grunt.registerTask('dist-js', ['uglify']);
+        grunt.registerTask('dist-watch', ['watch']);
+
+        };
+
+    </code>
+</pre>
+<h3 name="title-14－02">（二）package.json配置</h3>
+<pre class="lang-html">
+    <code class="html">
+        {
+        "name": "SmartAdmin",
+        "version": "1.4.1",
+        "description": "SmartAdmin - Responsive Webapp Template",
+        "devDependencies": {
+        "grunt": "^0.4.4",
+        "grunt-contrib-uglify": "^0.4.0",
+        "grunt-contrib-concat": "^0.4.0",
+        "grunt-contrib-watch": "^0.6.1",
+        "grunt-contrib-jshint": "^0.10.0",
+        "grunt-contrib-less": "^0.11.0",
+        "grunt-contrib-cssmin": "^0.9.0",
+        "grunt-contrib-sass": "^0.7.3"
+        }
+        }
+    </code>
+</pre>
+<h3 name="title-14-03">（三）出现的问题</h3>
+                <pre class="lang-html">
+                    <code class="html">
+                        Running "less:development" (less) task
+                        File COMMON_ASSETS/UNMINIFIED_CSS/bootstrap.css created: 0 B → 132.36 kB
+                        >> FileError: '3.1.1/mixins.less' wasn't found in
+                        COMMON_ASSETS/LESS_FILES/smartadmin-production.less on line 10, column 1:
+                        >> 9 @import "variables.less";
+                        >> 10 @import "3.1.1/mixins.less";
+                        >> 11 @import "custom.less"; // custom variable overrides
+                        Warning: Error compiling COMMON_ASSETS/LESS_FILES/smartadmin-production.less Use --force to
+                        continue.
+
+                        Aborted due to warnings.
+
+                        解决办法：
+                        COMMON_ASSETS/LESS_FILES/smartadmin-production.less 的 @import "3.1.1/mixins.less”中 3.1.1 的改成 3.2
+                        即可，就是路径的问题。
+                    </code>
+                </pre>
+
+<h2 name="title-15">十五、其他常用页面</h2>
+
+<h3 name="title-15-01 col-sm-8">（一）注册界面</h3>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well col-sm-8">
+            <div class="row">
+                <img src="img/smartadmin-introduce/register.png" class="col-sm-12">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <h3 name="title-15-02">（二）Error 404 界面</h3>
+
+        <div class="well col-sm-8">
+            <div class="row">
+                <img src="img/smartadmin-introduce/error_404.png" class="col-sm-12">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <h3 name="title-15-03">（三）Error 500 界面</h3>
+
+        <div class="well col-sm-8">
+            <div class="row">
+                <img src="img/smartadmin-introduce/error_500.png" class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>
+<h2 name="title-16">十六、总结</h2>
+
+<p>此篇文章只是让读者对 SmartAdmin 有一个初步的整体认识，并且提到了一些自己在使用过程中遇到的问题和解决方法。将 SmartAdmin 用于项目，可以先从 <code>blank_.html</code>
+    文件入手，填写所需组件的代码，就可以了。此外，还有整理《SmartAdmin 使用手册》，较详细介绍了 SmartAdmin 和常用组件，参考网址<a
+            href="tbt-document-smartAdminVersion.html" target="_blank"> tbt-document-smartAdminVersion.html </a>。
+</p>
+
+</div>
+</div>
+
+<!--左侧浮动导航-->
+
+<div class="left-slider hidden-sm hidden-xs hidden-md">
+    <div class="title">目录</div>
+
+    <div class="left-navbar-menu">
+    </div>
+</div>
+</div>
+
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+<script src="js/libs/jquery-ui-1.10.3.min.js"></script>
+<script src="js/app.config.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+<script src="js/notification/SmartNotification.min.js"></script>
+<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+<script src="js/app.min.js"></script>
+<script src="js/plugin/morris/raphael.min.js"></script>
+<script src="js/plugin/morris/morris.min.js"></script>
+
+<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
+<script src="js/plugin/flot/jquery.flot.cust.min.js"></script>
+<script src="js/plugin/flot/jquery.flot.resize.min.js"></script>
+<script src="js/plugin/flot/jquery.flot.fillbetween.min.js"></script>
+<script src="js/plugin/flot/jquery.flot.orderBar.min.js"></script>
+<script src="js/plugin/flot/jquery.flot.pie.min.js"></script>
+<script src="js/plugin/flot/jquery.flot.tooltip.min.js"></script>
+
+<script type="text/javascript">
+//        code style
+/* chart colors default */
+var $chrt_border_color = "#efefef";
+var $chrt_grid_color = "#DDD"
+var $chrt_main = "#E24913";
+/* red       */
+var $chrt_second = "#6595b4";
+/* blue      */
+var $chrt_third = "#FF9F01";
+/* orange    */
+var $chrt_fourth = "#7e9d3a";
+/* green     */
+var $chrt_fifth = "#BD362F";
+/* dark red  */
+var $chrt_mono = "#000";
+$(function () {
+
+    pageSetUp();
+
+    g1 = new Dygraph(document.getElementById("my-noroll"), data_temp, {
+        customBars: true,
+        title: 'Daily Temperatures in New York vs. San Francisco',
+        ylabel: 'Temperature (F)',
+        legend: 'always',
+        labelsDivStyles: {
+            'textAlign': 'right'
+        },
+        showRangeSelector: true
+    });
+
+
+    if ($('#my-sales-graph').length) {
+
+        Morris.Area({
+            element: 'my-sales-graph',
+            data: [
+                {
+                    period: '2010 Q1',
+                    iphone: 2666,
+                    ipad: null,
+                    itouch: 2647
+                },
+                {
+                    period: '2010 Q2',
+                    iphone: 2778,
+                    ipad: 2294,
+                    itouch: 2441
+                },
+                {
+                    period: '2010 Q3',
+                    iphone: 4912,
+                    ipad: 1969,
+                    itouch: 2501
+                },
+                {
+                    period: '2010 Q4',
+                    iphone: 3767,
+                    ipad: 3597,
+                    itouch: 5689
+                },
+                {
+                    period: '2011 Q1',
+                    iphone: 6810,
+                    ipad: 1914,
+                    itouch: 2293
+                },
+                {
+                    period: '2011 Q2',
+                    iphone: 5670,
+                    ipad: 4293,
+                    itouch: 1881
+                },
+                {
+                    period: '2011 Q3',
+                    iphone: 4820,
+                    ipad: 3795,
+                    itouch: 1588
+                },
+                {
+                    period: '2011 Q4',
+                    iphone: 15073,
+                    ipad: 5967,
+                    itouch: 5175
+                },
+                {
+                    period: '2012 Q1',
+                    iphone: 10687,
+                    ipad: 4460,
+                    itouch: 2028
+                },
+                {
+                    period: '2012 Q2',
+                    iphone: 8432,
+                    ipad: 5713,
+                    itouch: 1791
+                }
+            ],
+            xkey: 'period',
+            ykeys: ['iphone', 'ipad', 'itouch'],
+            labels: ['iPhone', 'iPad', 'iPod Touch'],
+            pointSize: 2,
+            hideHover: 'auto'
+        });
+
+    }
+
+    /* bar chart */
+
+    if ($("#my-bar-chart").length) {
+
+        var data1 = [];
+        for (var i = 0; i <= 12; i += 1)
+            data1.push([i, parseInt(Math.random() * 30)]);
+
+        var data2 = [];
+        for (var i = 0; i <= 12; i += 1)
+            data2.push([i, parseInt(Math.random() * 30)]);
+
+        var data3 = [];
+        for (var i = 0; i <= 12; i += 1)
+            data3.push([i, parseInt(Math.random() * 30)]);
+
+        var ds = new Array();
+
+        ds.push({
+            data: data1,
+            bars: {
+                show: true,
+                barWidth: 0.2,
+                order: 1
+            }
+        });
+        ds.push({
+            data: data2,
+            bars: {
+                show: true,
+                barWidth: 0.2,
+                order: 2
+            }
+        });
+        ds.push({
+            data: data3,
+            bars: {
+                show: true,
+                barWidth: 0.2,
+                order: 3
+            }
+        });
+
+        //Display graph
+        $.plot($("#my-bar-chart"), ds, {
+            colors: [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            grid: {
+                show: true,
+                hoverable: true,
+                clickable: true,
+                tickColor: $chrt_border_color,
+                borderWidth: 0,
+                borderColor: $chrt_border_color
+            },
+            legend: true,
+            tooltip: true,
+            tooltipOpts: {
+                content: "<b>%x</b> = <span>%y</span>",
+                defaultTheme: false
+            }
+
+        });
+
+    }
+
+    /* end bar chart */
+
+
+    /*
+     * CONVERT DIALOG TITLE TO HTML
+     * REF: http://stackoverflow.com/questions/14488774/using-html-in-a-dialogs-title-in-jquery-ui-1-10
+     */
+    $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+        _title: function (title) {
+            if (!this.options.title) {
+                title.html("&#160;");
+            } else {
+                title.html(this.options.title);
+            }
+        }
+    }));
+
+
+    /*
+     * DIALOG SIMPLE
+     */
+
+    // Dialog click
+    $('#dialog_link').click(function () {
+        $('#dialog_simple').dialog('open');
+        return false;
+
+    });
+
+    $('#dialog_simple').dialog({
+        autoOpen: false,
+        width: 600,
+        resizable: false,
+        modal: true,
+        title: "<div class='widget-header'><h4><i class='fa fa-warning'></i> Empty the recycle bin?</h4></div>",
+        buttons: [
+            {
+                html: "<i class='fa fa-trash-o'></i>&nbsp; Delete all items",
+                "class": "btn btn-danger",
+                click: function () {
+                    $(this).dialog("close");
+                }
+            },
+            {
+                html: "<i class='fa fa-times'></i>&nbsp; Cancel",
+                "class": "btn btn-default",
+                click: function () {
+                    $(this).dialog("close");
+                }
+            }
+        ]
+    });
+
+    $(".html").each(function () {
+        $(this).html(
+                $(this).html().replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        );
+    });
+
+    // 右侧菜单
+
+    // 生成菜单
+
+    var $lis = $('[name^=title]');
+    var $nav_container = $('.left-navbar-menu');
+    var lis_html = '<ul>';
+
+    var catalogue_height = $(".left-slider .title").height();
+    var window_height = $(window).height();
+
+    $nav_container.height(window_height - catalogue_height - 15);
+
+    for (var i = 0; i < $lis.length; i++) {
+        var id = 'title-id-' + i;
+        var $lis_ele = $lis.eq(i);
+        $lis_ele.attr('id', id);
+        lis_html += '<li><a href="#' + id + '" for-id="' + id + '">' + $lis_ele.text() + '</a></li>';
+    }
+
+    lis_html += '</ul>';
+
+    $nav_container.empty().append(lis_html);
+
+    // 菜单列表高亮
+    var pre_top = 300;
+    $(window).scroll(function () {
+        var html_scroll_top = $(window).scrollTop();
+
+        for (var i = 0; i < $lis.length; i++) {
+            var current_top = $lis.eq(i).offset().top - pre_top;
+            var active_lis_active = '[for-id=title-id-' + i + ']';
+            if (html_scroll_top > current_top) {
+                $('a', $nav_container).removeClass('active');
+                $(active_lis_active).addClass('active');
+
+
+                var lis_parent_pos = $nav_container.scrollTop();
+                var active_ele_pos_top = $(active_lis_active).position().top;
+                var over_parent_top = active_ele_pos_top - $nav_container.height();
+                if (over_parent_top > 0) {
+                    $nav_container.scrollTop(lis_parent_pos + over_parent_top + 15);
+                } else if (over_parent_top < 0) {
+                    $nav_container.scrollTop(0);
+                }
+            }
+
+
+        }
+    })
+
+});
+</script>
+</body>
+</html>
+

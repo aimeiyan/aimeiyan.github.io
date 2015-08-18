@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title> 通宝图-JueryTabs</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- #CSS Links -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/your-document-style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/prettify.css">
+
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+    <link rel="shortcut icon" href="img/favicon/tongbaotu.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon/tongbaotu.ico" type="image/x-icon">
+
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+</head>
+<body class="">
+
+<!-- #HEADER -->
+<header id="header">
+    <div id="logo-group">
+        <span class="project-selector dropdown-toggle" data-toggle="dropdown">SmartAdmin使用手册</span>
+    </div>
+    <div class="pull-right">
+
+        <!-- collapse menu button -->
+        <div id="hide-menu" class="btn-header pull-right">
+            <span> <a href="javascript:void(0);" data-action="toggleMenu" title="隐藏菜单面板"><i
+                    class="fa fa-reorder"></i></a> </span>
+        </div>
+        <!-- end collapse menu -->
+
+        <!-- #MOBILE -->
+        <!-- Top menu profile link : this shows only when top menu is active -->
+        <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+            <li class="">
+                <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
+                    <!--<img src="img/avatars/sunny.png" alt="John Doe" class="online" />-->
+                    <!--<i class="fa fa-lg fa-fw fa-user"></i>-->
+                    <strong><span>目录</span>
+                        <!--<i class="fa fa-caret-down"></i>--></strong>
+                </a>
+
+            </li>
+        </ul>
+
+        <!-- fullscreen button -->
+        <div id="fullscreen" class="btn-header transparent pull-right">
+            <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i
+                    class="fa fa-arrows-alt"></i></a> </span>
+        </div>
+        <!-- end fullscreen button -->
+
+    </div>
+
+</header>
+<!-- END HEADER -->
+
+<aside id="left-panel">
+
+    <div class="login-info">
+				<span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                        <span class="glyphicon fa-fw glyphicon-list-alt"></span>
+						<span>
+							目录
+						</span>
+                    </a>
+
+				</span>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="#"><i class="fa fa-lg fa-fw fa-book"></i> <span class="menu-item-parent">文档</span></a>
+                <ul>
+                    <li>
+                        <a href="tbt-document-smartAdminVersion.html">版本信息</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">页面结构</a>
+                        <ul>
+                            <li><a href="tbt-document-structure.html">介绍</a></li>
+                            <li><a href="tbt-document-structure-example.html">举例</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tbt-document-widget.html">窗口部件 Widget</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">表格 </a>
+                        <ul>
+                            <li><a href="tbt-document-normal-table.html"> 普通表格 </a></li>
+                            <li><a href="tbt-document-table.html">数据表格 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tbt-document-form.html">表单 </a>
+                    </li>
+                    <li>
+                        <a>常用元素</a>
+                        <ul>
+                            <li><a href="tbt-document-message.html">消息类型</a></li>
+                            <li><a href="tbt-document-buttons.html">按钮</a></li>
+                            <li>
+                                <a href="javascript:void(0)">图标</a>
+                                <ul>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-plane"></i> Font Awesome</a>
+                                        <ul>
+                                            <li><a href="tbt-document-icon-font.html">介绍</a></li>
+                                            <li><a href="tbt-document-icon-font-libary.html">图标库</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="tbt-document-icon-glyph.html"><i class="glyphicon glyphicon-plane"></i> Glyph Icons</a>
+                                    </li>
+                                    <li><a href="tbt-document-icon-flags.html"><i class="fa fa-flag"></i> Flags</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="tbt-document-labels.html">标签标记</a></li>
+                            <li><a href="tbt-document-bgTxtcolor.html">元素背景和文字颜色</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">常用JS动态效果</a>
+
+                        <ul>
+                            <li><a href="tbt-document-carousel.html">Carousel<span class="font-sm">（轮播）</span></a></li>
+                            <li><a href="tbt-document-According.html">According</a></li>
+                            <li><a href="tbt-document-Date-Picker.html">DatePicker<span class="font-sm">（日期选择）</span></a></li>
+                            <li class="active"><a href="tbt-document-Juery-Tabs.html">Tabs<span class="font-sm">（切换）</span></a></li>
+                            <li><a href="tbt-document-openDialog.html">OpenDialog<span class="font-sm">（对话框）</span></a></li>
+                            <li><a href="tbt-document-smartAlert.html">SmartAlert<span class="font-sm">（警示框）</span></a></li>
+                            <li><a href="tbt-document-spinner.html">Spinner</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+			<span class="minifyme" data-action="minifyMenu">
+				<i class="fa fa-arrow-circle-left hit"></i>
+			</span>
+
+</aside>
+<!-- END NAVIGATION -->
+
+<!-- MAIN PANEL -->
+<div id="main" role="main">
+
+    <!-- RIBBON -->
+    <div id="ribbon">
+<span class="ribbon-button-alignment">
+					<span id="refresh" class="btn btn-ribbon" data-title="refresh"
+                          rel="tooltip" data-placement="bottom"
+                          data-original-title="<i class='text-warning fa fa-warning'></i> 警告！此操作会将所有设置还原为初始设置。"
+                          data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span>
+				</span>
+
+        <!-- breadcrumb -->
+        <ol class="breadcrumb">
+            <li><a href="#">文档</a></li>
+            <li><a href="#">JueryTabs</a></li>
+        </ol>
+        <!-- end breadcrumb -->
+
+        <!-- You can also add more buttons to the
+                    ribbon for further usability
+
+                    Example below:
+
+                    <span class="ribbon-button-alignment pull-right">
+                    <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+                    <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+                    <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+                    </span> -->
+
+    </div>
+    <!-- END RIBBON -->
+
+    <!-- MAIN CONTENT -->
+    <div id="content">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-book"></i> 文档 <span>> JueryTabs</span></h1>
+            </div>
+        </div>
+        <section id="widget-grid">
+            <div class="row">
+
+                <!-- NEW WIDGET START -->
+                <article class="col-sm-12">
+
+                    <div class="alert alert-info fade in">
+                        <!--<button class="close" data-dismiss="alert">-->
+                        <!--×-->
+                        <!--</button>-->
+                        <i class="fa-fw fa fa-info"></i>
+                        <strong>说明：</strong> 原始包<a href="jqui.html" style="text-decoration: underline">jqui.html</a>文件。
+                    </div>
+
+
+                </article>
+                <!-- WIDGET END -->
+
+            </div>
+            <!-- start row -->
+
+            <div class="row">
+                <!--<h2 class="row-seperator-header">标签</h2>-->
+
+
+                <div class="col-sm-12">
+
+                    <!-- well -->
+                    <div class="well well-sm well-light">
+                        <!-- row -->
+                        <div class="row">
+                            <!-- col -->
+                            <div class="col-sm-12">
+                                <!--<p class="alert alert-info">-->
+                                <!--<i class="fa fa-info"></i> Did you know you can add more than just the basic colors to customize your badge? <strong>Learn more about color options modifiers on the <a href="typography.html">Typography page</a>! </strong>-->
+                                <!--</p>-->
+                                <!-- row -->
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <h3>
+                                            Jquery Tabs
+                                        </h3>
+                                        <div id="tabs">
+                                            <ul>
+                                                <li>
+                                                    <a href="#tabs-a">First</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#tabs-b">Second</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#tabs-c">Third</a>
+                                                </li>
+                                            </ul>
+                                            <div id="tabs-a">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                </p>
+                                            </div>
+                                            <div id="tabs-b">
+                                                <p>
+                                                    Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.
+                                                </p>
+                                            </div>
+                                            <div id="tabs-c">
+                                                <p>
+                                                    Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <pre class="lang-html margin-top-10">
+<!--html代码-->
+<div id="tabs">
+    <ul>
+        <li>
+            <a href="#tabs-a">First</a>
+        </li>
+        <li>
+            <a href="#tabs-b">Second</a>
+        </li>
+        <li>
+            <a href="#tabs-c">Third</a>
+        </li>
+    </ul>
+    <div id="tabs-a">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+    <div id="tabs-b">
+        <p>
+            Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.
+        </p>
+    </div>
+    <div id="tabs-c">
+        <p>
+            Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.
+        </p>
+    </div>
+</div>
+
+ <!--javascript代码-->
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+<script src="js/libs/jquery-ui-1.10.3.min.js"></script>
+ <script type="text/javascript">
+     $('#tabs').tabs();
+ </script>
+</pre>
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- end row -->
+        </section>
+    </div>
+    <!-- END MAIN CONTENT -->
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 text-center">
+            <p class="tbt-txt-color-grey">SmartAdmin 使用手册 © 2014</p>
+        </div>
+    </div>
+</div>
+<!-- END PAGE FOOTER -->
+
+<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+Note: These tiles are completely responsive,
+you can add as many as you like
+-->
+
+<!-- END SHORTCUT AREA -->
+
+<!--================================================== -->
+
+<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+
+<script src="js/libs/jquery-ui-1.10.3.min.js"></script>
+
+
+<!-- IMPORTANT: APP CONFIG -->
+<script src="js/app.config.js"></script>
+
+<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+
+<!-- BOOTSTRAP JS -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- CUSTOM NOTIFICATION -->
+<script src="js/notification/SmartNotification.min.js"></script>
+
+<!-- JARVIS WIDGETS -->
+<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+
+<!-- EASY PIE CHARTS -->
+<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+<!-- SPARKLINES -->
+<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+<!-- JQUERY VALIDATE -->
+<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+<!-- JQUERY MASKED INPUT -->
+<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+<!-- JQUERY SELECT2 INPUT -->
+<script src="js/plugin/select2/select2.min.js"></script>
+
+<!-- JQUERY UI + Bootstrap Slider -->
+<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+<!-- browser msie issue fix -->
+<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+<!-- FastClick: For mobile devices -->
+<script src="js/plugin/fastclick/fastclick.min.js"></script>
+
+<!--[if IE 8]>
+
+<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+<![endif]-->
+
+<!-- Demo purpose only -->
+<script src="js/demo.min.js"></script>
+
+<!-- MAIN APP JS FILE -->
+<script src="js/app.min.js"></script>
+
+
+<!--code style-->
+<script src="js/prettify.js"></script>
+
+<script src="js/your-js.js" type="text/javascript"></script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    //        code style
+    var escape = document.createElement('textarea');
+
+    function escapeHTML(html) {
+        escape.innerHTML = html;
+        return escape.innerHTML;
+    }
+
+    function unescapeHTML(html) {
+        escape.innerHTML = html;
+        return escape.value;
+    }
+
+
+    $(function () {
+
+        $('.lang-html').each(function (idx, pre) {
+            var $pre = $(pre);
+            $pre.html(escapeHTML($pre.html()));
+        });
+
+
+        $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
+        window.prettyPrint && prettyPrint();
+    });
+
+        pageSetUp();
+        $('#tabs').tabs();
+
+
+    })
+
+</script>
+</html>

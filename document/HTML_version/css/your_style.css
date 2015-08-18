@@ -1,0 +1,182 @@
+#main {
+    min-height: 800px;
+}
+
+#logo-group {
+    line-height: 49px;
+    padding-left: 9px;
+}
+
+.login-info a {
+    margin-top: 10px;
+}
+
+#mobile-profile-img a:hover {
+    text-decoration: none;
+}
+
+#mobile-profile-img {
+    margin-top: 10px;
+}
+
+.jarviswidget {
+    margin-bottom: 78px;
+}
+
+.page-footer {
+    height: 150px;
+}
+
+.page-footer p {
+    margin: 0 !important;
+    font-weight: lighter;
+}
+
+.view, .update {
+    margin-right: 5px;
+}
+
+.smart-form footer .btn {
+    float: none;
+}
+
+.smart-form section {
+    margin-bottom: 30px;
+}
+
+.smart-form footer {
+    padding: 30px 14px 40px;
+}
+
+.smart-form .tooltip {
+    background-color: #ff4d2b;
+}
+
+.tbt-new-create {
+    border-width: 0 0 0 1px;
+    padding-top: 8px
+}
+
+.dt-toolbar {
+    padding: 11px 7px 7px;
+}
+
+/*#content {*/
+    /*padding: 21px 14px;*/
+/*}*/
+
+.tbt-txt-color-grey {
+    color: #aaa !important;
+}
+
+table.dataTable thead .sorting:last-child {
+    background-image: none;
+}
+
+.tbt-flow {
+    margin: -15px 0 20px;
+}
+
+.tbt-flow li {
+    float: left;
+    list-style: none;
+}
+
+.tbt-flow li.tbt-finish {
+    color: red;
+}
+
+.tbt-flow li i {
+    margin: 0 10px;
+}
+
+.jarviswidget header:first-child .nav-tabs li a {
+    color: #ccc;
+}
+
+.jarviswidget header:first-child .nav-tabs li.active a {
+    color: #555;
+}
+
+.dt-toolbar {
+    padding: 0 !important;
+}
+
+#announcement_wrapper, #sellCity_wrapper, #operationRecord_wrapper {
+    border-color: #ddd !important;
+    border-width: 0 1px 1px !important;
+    border-style: solid !important;
+}
+
+.dataTables_filter {
+    padding-top: 6px;
+    padding-left: 6px;
+}
+
+.DTTT,.ColVis{
+    padding-top: 6px;
+    padding-right: 6px;
+}
+div.ColVis button{
+    height: 31px;
+    font-size: 12px;
+}
+
+ul.ColVis_collection{
+    width: auto;
+}
+ul.ColVis_collection li span{
+    vertical-align: 0;
+}
+.margin-right-3 {
+    margin-right: 0;
+}
+.margin-right-15 {
+    margin-right: 15px;
+}
+
+.tbt-padding-20{
+    padding:0 20px;
+}
+
+.tbt-margin-negative{
+    margin: 0 -13px;
+}
+.tbt-agreement-title{
+    padding: 15px 0;
+}
+.tbt-agreement-title h3{
+    margin: 10px 0;
+    font-weight: bold;
+}
+.tbt-agreement-content p{
+    line-height: 1.8;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.tbt-margin-right-10{
+    margin-right: 10px;
+}
+
+.tbt-padding-rl-15{
+    padding-left:15px;
+    padding-right:15px;
+}
+
+#extr-page #header #logo{
+    margin-top: 8px;
+}
+
+#extr-page .hero{
+    background:url("../img/login-img.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.jarviswidget{
+    margin-bottom: 100px;
+}
+
+#ribbon .breadcrumb li:last-child a{
+    color: #E4E4E4 !important;
+}

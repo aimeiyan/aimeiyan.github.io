@@ -1,0 +1,27 @@
+.page-footer {
+    height: 52px;
+}
+
+.tbt-form-pic{
+    padding: 0;
+}
+
+.dataTables_filter {
+    padding: 0;
+}
+
+.dt-toolbar{
+    padding: 6px 7px 1px !important;
+}
+
+.DTTT, .ColVis{
+    padding-top: 0;
+}
+
+.jarviswidget{
+    margin-bottom: 30px;
+}
+
+.tbt-document-h4{
+    margin: 18px 0;
+}
