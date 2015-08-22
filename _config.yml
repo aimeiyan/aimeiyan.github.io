@@ -2,5 +2,8 @@ permalink: /:year/:month/:title/
 url: http://aimeiyan.me
 highlighter: pygments
 author: nancy
+markdown:      maruku
+markdown_ext:  markdown,mkd,mkdn,md
+textile_ext:   textile
 pygments: true
 paginate: 24
