@@ -67,7 +67,7 @@ body{
 }
 
 body>div {
-    width: 70%;
+    width: 680px;
     min-width: 32em;
     max-width: 50em;
     padding: 3em 3em 1.5em;
@@ -77,6 +77,8 @@ body>div {
     -webkit-box-shadow: 0 0 10px 0 #cfcfcf;
     box-shadow: 0 0 10px 0 #cfcfcf;
     border-top: 6px solid #EE0000;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
 }
 h1 {
     font-size: 28px;
