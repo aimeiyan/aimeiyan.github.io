@@ -18,7 +18,7 @@ http-wathcer 是朋友写的一个小工具，主要是修改css保存后，页�
 
 ### 二、安装
 
-
+将http-watcher加入到PATH下。
 
 ### 三、启动命令
 
