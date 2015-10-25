@@ -5,7 +5,7 @@ title:  http-watcher——自动刷新页面工具
 
 
 
-http-wathcer 是朋友写的一个小工具，主要是修改css保存后，页面会自动刷新，能立刻看到样式修改后的页面效果，同时也充当一个简单的http-server。
+http-wathcer工具： 修改css样式，保存，页面自动刷新的小工具。
 
 ### 一、下载
 
