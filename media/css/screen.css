@@ -76,7 +76,7 @@ body>div {
     -moz-box-shadow: 0 0 10px 0 #cfcfcf;
     -webkit-box-shadow: 0 0 10px 0 #cfcfcf;
     box-shadow: 0 0 10px 0 #cfcfcf;
-    border-top: 6px solid #EE0000;
+    border-top: 6px solid #00B7EE;
     -webkit-border-radius: 8px;
     border-radius: 8px;
 }
@@ -145,10 +145,10 @@ hr {
     margin: 0 0 22px 0;
 }
 a {
-    color: #EE0000;
+    color: #00B7EE;
 }
 a:visited {
-    color: #B22222;
+    color: #0077EE;
 }
 a.ss-icon {
 	font-size: 20px;
