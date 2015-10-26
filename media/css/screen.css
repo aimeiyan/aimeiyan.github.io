@@ -146,6 +146,7 @@ hr {
 }
 a {
     color: #00B7EE;
+    text-decoration: none;
 }
 a:visited {
     color: #0077EE;
@@ -156,7 +157,8 @@ a.ss-icon {
 	color: #ccc;
 }
 a:hover {
-    color: #EE0000;
+    color: #0077EE;
+    text-decoration: underline;
 }
 em {
     font-style: italic;
