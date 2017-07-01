@@ -294,7 +294,8 @@ a {
 }
 
 .main-content .main-content-item .item-detal-content .class-hour li {
-    background-color: rgba(246,62,49,0.8);
+    background:url("../images/course_bg.png") no-repeat 0 0;
+    background-size: contain;
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 50%;
