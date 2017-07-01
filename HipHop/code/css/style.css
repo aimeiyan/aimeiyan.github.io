@@ -264,6 +264,7 @@ a {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
+    padding-top: 0.05rem;
 }
 
 .main-content .main-content-item .item-detal-content .item-type, .main-content .main-content-item .item-detal-content .item-intro {
