@@ -36,7 +36,7 @@ ul, ol, li {
 }
 
 body {
-    font-family: arial,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+    font-family: arial, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
     line-height: 1.5;
     color: #333;
     /*background-color: #f2f2f2;*/
@@ -92,6 +92,25 @@ a {
 
 .theader .right-portrait {
     position: relative;
+}
+
+.theader .right-portrait .head-popup {
+    position: absolute;
+    width: 2rem;
+    height: 1.6rem;
+    top: 0.6rem;
+    right: -0.22rem;
+    background-color: #fff;
+    border: 0.01rem solid #efefef;
+    border-radius: 0.08rem;
+    padding: 0.15rem 0.2rem;
+    box-shadow: 0 0 0.2rem rgba(156, 156, 156, 0.3);
+    line-height: 1.8;
+    display: none;
+}
+
+.theader .right-portrait.open .head-popup{
+    display: block;
 }
 
 .theader .right-portrait .head-img {
@@ -314,7 +333,7 @@ a {
 }
 
 .main-content .main-content-item .item-detal-content .class-hour li {
-    background:url("../images/course_bg.png") no-repeat 0 0;
+    background: url("../images/course_bg.png") no-repeat 0 0;
     background-size: contain;
     width: 0.8rem;
     height: 0.8rem;

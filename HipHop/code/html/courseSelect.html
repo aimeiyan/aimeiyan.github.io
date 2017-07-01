@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>课程选择</title>
     <script type="text/javascript" src="../js/layout.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style_b.css"/>
 </head>
@@ -13,17 +13,8 @@
         <span class="left-address"><img class="address-icon" src="../images/address_icon.png"
                                         alt=""/>&nbsp;<span>北京</span></span>
             <img class="logo-img" src="../images/VyouClub.png" alt=""/>
-    <span class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
-            class="arrow-down"></i>
-    <span class="head-popup">
-        <ul>
-            <li>个人主页</li>
-            <li>刷新</li>
-            <li>重新授权登陆</li>
-        </ul>
-    </span>
-    </span>
-
+    <span href="" class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
+            class="arrow-down"></i></span>
         </div>
         <div class="sort-switch">
             <div class="sort-item"><span>课程类型</span>&nbsp;<i class="sort-icon"></i></div>
@@ -133,15 +124,6 @@
         $('.bnav .bnav-tab').tap(function () {
             $('.bnav .bnav-tab').removeClass("bnav-active");
             $(this).addClass("bnav-active");
-        });
-
-        $(".theader .right-portrait").tap(function () {
-            var $this = $(this);
-            if ($this.hasClass("open")) {
-                $this.removeClass("open");
-            } else {
-                $this.addClass("open");
-            }
         })
     })
 </script>
