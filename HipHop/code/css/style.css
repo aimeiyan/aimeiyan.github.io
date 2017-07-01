@@ -1,0 +1,312 @@
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0 none;
+    font-size: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+
+    /* 在X5新内核Blink中，在排版页面的时候，会主动对字体进行放大，会检测页面中的主字体，当某一块字体在我们的判定规则中，认为字号较小，并且是页面中的主要字体，就会采取主动放大的操作。然而这不是我们想要的，可以采取给最大高度解决 */
+    max-height: 100000px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+em, strong {
+    font-style: normal;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    /*background-color: #f2f2f2;*/
+    font-size: 0.24rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.webapp {
+    max-width: 10rem;
+    margin: 0 auto;
+}
+
+/*theader*/
+.theader-wrp {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.68rem;
+    padding-top: 0.4rem;
+    background-color: #252525;
+}
+
+.theader {
+    width: 100%;
+    height: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.4rem 0 0.2rem;
+}
+
+.theader .left-address {
+    color: #909090;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.theader .left-address .address-icon {
+    display: block;
+    height: 0.24rem;
+}
+
+.theader .logo-img {
+    height: 0.5rem;
+}
+
+.theader .right-portrait {
+    position: relative;
+}
+
+.theader .right-portrait .head-img {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+
+}
+
+.theader .right-portrait .arrow-down {
+    width: 0;
+    height: 0;
+    top: 0.2rem;
+    position: absolute;
+    border-top: 0.08rem solid #000;
+    border-right: 0.08rem solid transparent;
+    border-left: 0.08rem solid transparent;
+    border-bottom: 0.08rem solid transparent;
+}
+
+/*sort switch*/
+.sort-switch {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.16rem;
+    color: #dfdfdf;
+    height: 0.5rem;
+    font-size: 0.3rem;
+}
+
+.sort-switch .sort-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+}
+
+.sort-switch .sort-item:first-child {
+    border-right: 0.02rem solid #909090;
+}
+
+.sort-switch .sort-item .sort-icon {
+    display: block;
+    width: 0.21rem;
+    height: 0.22rem;
+    margin-top: 0.05rem;
+    background: url("../images/sort-icon.png") no-repeat 0 0;
+}
+
+/*bnav*/
+.bnav {
+    background-color: #202020;
+    height: 1rem;
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: .01rem solid #000;
+    color: #fff;
+}
+
+.bnav .bnav-tab {
+    width: 20%;
+    text-align: center;
+    font-size: 0.22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bnav .bnav-tab.bnav-active {
+    color: #f63e31;
+}
+
+.bnav .bnv-img {
+    display: block;
+    height: 0.53rem;
+}
+
+.bnav .bnav-course .bnv-img {
+    background: url("../images/bnav_course.png") no-repeat center center;
+}
+
+.bnav .bnav-course.bnav-active .bnv-img {
+    background: url("../images/bnav_course_active.png") no-repeat center center;
+}
+
+.bnav .bnav-party .bnv-img {
+    background: url("../images/bnav_party.png") no-repeat center center;
+}
+
+.bnav .bnav-party.bnav-active .bnv-img {
+    background: url("../images/bnav_party_active.png") no-repeat center center;
+}
+
+.bnav .bnav-news .bnv-img {
+    background: url("../images/bnav_news.png") no-repeat center center;
+}
+
+.bnav .bnav-news.bnav-active .bnv-img {
+    background: url("../images/bnav_news_active.png") no-repeat center center;
+}
+
+.bnav .bnav-attention .bnv-img {
+    background: url("../images/bnav_attention.png") no-repeat center center;
+}
+
+.bnav .bnav-attention.bnav-active .bnv-img {
+    background: url("../images/bnav_attention_active.png") no-repeat center center;
+}
+
+.bnav .bnav-my .bnv-img {
+    background: url("../images/bnav_my.png") no-repeat center center;
+}
+
+.bnav .bnav-my.bnav-active .bnv-img {
+    background: url("../images/bnav_my_active.png") no-repeat center center;
+}
+
+/*main content*/
+.main-content {
+    background-color: #fff;
+    padding: 0.1rem 0.18rem;
+    margin-top: 1.68rem;
+    margin-bottom: 1rem;
+}
+
+.main-content .main-content-item {
+    background-color: #3b3b3b;
+    border-radius: 0.08rem;
+    box-shadow: 0 0 0.1rem rgba(59, 59, 59, 0.8);
+    padding: 0 0.15rem 0.15rem;
+    margin-bottom: 0.1rem;
+}
+
+.main-content .main-content-item:last-child {
+    margin-bottom: 0;
+}
+
+.main-content .main-content-item .item-title {
+    font-size: 0.36rem;
+    color: #ff4235;
+    text-align: center;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.main-content .main-content-item .item-detail {
+    width: 100%;
+    height: 3.6rem;
+    position: relative;
+}
+
+.main-content .main-content-item .item-detail img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.main-content .main-content-item .item-detal-content {
+    position: absolute;
+    top: 46%;
+    left: 0;
+    height: 54%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.main-content .main-content-item .item-detal-content .item-type, .main-content .main-content-item .item-detal-content .item-intro {
+    line-height: 1.3;
+    display: table;
+    padding: 0 0.1rem;
+}
+
+.main-content .main-content-item .item-detal-content .item-type span, .main-content .main-content-item .item-detal-content .item-intro span {
+    display: table-cell;
+}
+
+.main-content .main-content-item .item-detal-content .intro-name, .main-content .main-content-item .item-detal-content .intro-name {
+    width: 3em;
+}
+
+.main-content .main-content-item .item-detal-content .class-hour {
+    margin-top: 0.1rem;
+    color: #fff;
+}
+
+.main-content .main-content-item .item-detal-content .class-hour ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main-content .main-content-item .item-detal-content .class-hour li {
+    background-color: #f63e31;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1;
+}
+
+.main-content .main-content-item .item-detal-content .class-hour .class-hour-num {
+    font-size: 0.48rem;
+    display: block;
+}
+
+.main-content .main-content-item .item-detal-content .class-hour .class-hour-text {
+    font-size: 0.18rem;
+    display: block;
+}
+
