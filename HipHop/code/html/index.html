@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>首页</title>
     <script type="text/javascript" src="../js/layout.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/style_b.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_c.css"/>
 </head>
 <body>
 <div class="webapp">
@@ -128,22 +128,6 @@
 <script type="text/javascript" src="../js/zepto/zepto.js"></script>
 <script type="text/javascript" src="../js/zepto/event.js"></script>
 <script type="text/javascript" src="../js/zepto/touch.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('.bnav .bnav-tab').tap(function () {
-            $('.bnav .bnav-tab').removeClass("bnav-active");
-            $(this).addClass("bnav-active");
-        });
-
-        $(".theader .right-portrait").tap(function () {
-            var $this = $(this);
-            if ($this.hasClass("open")) {
-                $this.removeClass("open");
-            } else {
-                $this.addClass("open");
-            }
-        })
-    })
-</script>
+<script type="text/javascript" src="../js/custom.js"></script>
 </body>
 </html>

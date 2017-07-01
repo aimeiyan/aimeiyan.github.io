@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>课程选择</title>
     <script type="text/javascript" src="../js/layout.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/style_b.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_c.css"/>
 </head>
 <body>
 <div class="webapp">
@@ -14,7 +14,15 @@
                                         alt=""/>&nbsp;<span>北京</span></span>
             <img class="logo-img" src="../images/VyouClub.png" alt=""/>
     <span href="" class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
-            class="arrow-down"></i></span>
+            class="arrow-down"></i>
+     <span class="head-popup">
+        <ul>
+            <li>个人主页</li>
+            <li>刷新</li>
+            <li>重新授权登陆</li>
+        </ul>
+    </span>
+    </span>
         </div>
         <div class="sort-switch">
             <div class="sort-item"><span>课程类型</span>&nbsp;<i class="sort-icon"></i></div>
@@ -119,13 +127,6 @@
 <script type="text/javascript" src="../js/zepto/zepto.js"></script>
 <script type="text/javascript" src="../js/zepto/event.js"></script>
 <script type="text/javascript" src="../js/zepto/touch.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('.bnav .bnav-tab').tap(function () {
-            $('.bnav .bnav-tab').removeClass("bnav-active");
-            $(this).addClass("bnav-active");
-        })
-    })
-</script>
+<script type="text/javascript" src="../js/custom.js"></script>
 </body>
 </html>
