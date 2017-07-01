@@ -136,10 +136,11 @@ a {
 
 .sort-switch .sort-item .sort-icon {
     display: block;
-    width: 0.21rem;
-    height: 0.22rem;
+    width: 0.23rem;
+    height: 0.24rem;
     margin-top: 0.05rem;
     background: url("../images/sort-icon.png") no-repeat 0 0;
+    background-size: contain;
 }
 
 /*bnav*/
@@ -293,7 +294,7 @@ a {
 }
 
 .main-content .main-content-item .item-detal-content .class-hour li {
-    background-color: #f63e31;
+    background-color: rgba(246,62,49,0.8);
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 50%;
