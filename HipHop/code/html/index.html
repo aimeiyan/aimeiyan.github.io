@@ -5,6 +5,179 @@
     <title>首页</title>
     <script type="text/javascript" src="../js/layout.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style_d.css"/>
+    <style type="text/css">
+
+        .overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: #252525;
+            opacity: 0.94;
+            z-index: 3;
+        }
+
+        /*course type*/
+        .course-type {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+
+            display: none;
+        }
+
+        .course-type {
+            padding: 0 0.2rem;
+        }
+
+        .course-type .course-type-item {
+            border: 0.02rem solid #7c7c7c;
+            border-radius: 0.2rem;
+            margin-top: 1rem;
+            position: relative;
+            padding-top: 1.35rem;
+            padding-bottom: 0.25rem;
+        }
+
+        .course-type .course-type-item .course-type-title {
+            position: absolute;
+            left: 50%;
+            top: -0.6rem;
+            margin-left: -0.6rem;
+        }
+
+        .course-type .course-type-item .course-type-title .course-type-title-img {
+            width: 1.2rem;
+            height: 1.2rem;
+            display: block;
+            border: 0.1rem solid #d0d0d0;
+            border-radius: 50%;
+        }
+
+        .course-type .course-type-item .course-type-title .course-type-title-text {
+            color: #fff;
+            text-align: center;
+            margin-top: 0.06rem;
+        }
+
+        .course-type .course-type-item .course-type-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .course-type .course-type-item .course-type-list li .course-type-img {
+            width: 2rem;
+            height: 2rem;
+            border: 0.1rem solid #7c7c7d;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .course-type .course-type-item .course-type-list li .course-type-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .course-type .course-type-item .course-type-text {
+            color: #fefefe;
+            font-size: 0.24rem;
+            text-align: center;
+            margin-top: 0.08rem;
+        }
+
+        /*time arrangement*/
+        .time-arrangement {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+        }
+
+        .time-arrangement-subwrp {
+            padding: 0 0.4rem;
+
+        }
+
+        .time-arrangement .time-title {
+            color: #ff4235;
+            font-size: 0.3rem;
+            line-height: 4;
+            margin-top: 0.3rem;
+        }
+
+        .time-arrangement .course-date-text, .time-arrangement .course-time-text {
+            color: #fff;
+            font-size: 0.24rem;
+            display: inline-block;
+            border: 0.02rem solid #fff;
+            border-radius: 0.08rem;
+
+        }
+
+        .time-arrangement .course-date-text {
+            padding: 0.2em 0.5em;
+            margin: 0.5em 0;
+        }
+
+        .time-arrangement .course-date .course-date-list {
+            /*display: flex;*/
+            /*flex-direction: row;*/
+            /*justify-content: space-around;*/
+            /*flex-wrap: wrap;*/
+        }
+
+        .time-arrangement .course-time .course-time-list {
+            /*display: flex;*/
+            /*flex-direction: row;*/
+            /*justify-content: space-around;*/
+            /*flex-wrap: wrap;*/
+        }
+        .time-arrangement .course-time{
+            /*margin-top: 0.3rem;*/
+        }
+        .time-arrangement .course-date li {
+            width: 24%;
+            display: inline-block;
+            text-align: center;
+
+        }
+
+        .time-arrangement .course-time li {
+            width: 49%;
+            display: inline-block;
+            /*text-align: center;*/
+        }
+        .time-arrangement .course-time li:nth-child(even) {
+            text-align: right;
+        }
+        .time-arrangement .course-time-text{
+            width: 96%;
+            text-align: center;
+            padding: 0.3em 0;
+            margin-bottom: 0.34rem;
+        }
+
+            /*time note*/
+        .time-note {
+            margin-top: 0.7rem;
+            color: #ff3366;
+            font-size: 0.28rem;
+            letter-spacing: 0.2em;
+        }
+
+        .time-note .note-title {
+            font-size: 0.32rem;
+        }
+    </style>
 </head>
 <body>
 <div class="webapp">
@@ -124,6 +297,120 @@
             <span>我的Vyou</span>
         </a>
     </div>
+
+    <div class="course-type">
+        <div class="course-type-item">
+            <div class="course-type-title">
+                <img class="course-type-title-img" src="../images/courseType/course_type_title_01.png" alt=""/>
+
+                <div class="course-type-title-text">健身功能类</div>
+            </div>
+            <ul class="course-type-list">
+                <li>
+                    <div class="course-type-img"><img src="../images/courseType/course_type_01.jpg" alt=""/></div>
+                    <div class="course-type-text">亚健康复</div>
+                </li>
+                <li>
+                    <div class="course-type-img"><img src="../images/courseType/course_type_02.jpg" alt=""/></div>
+                    <div class="course-type-text">瘦身塑形</div>
+                </li>
+                <li>
+                    <div class="course-type-img"><img src="../images/courseType/course_type_03.jpg" alt=""/></div>
+                    <div class="course-type-text">协调柔韧</div>
+                </li>
+            </ul>
+        </div>
+        <div class="course-type-item">
+            <div class="course-type-title">
+                <img class="course-type-title-img" src="../images/courseType/course_type_title_02.png" alt=""/>
+
+                <div class="course-type-title-text">舞蹈类</div>
+            </div>
+            <ul class="course-type-list">
+                <li>
+                    <div class="course-type-img"><img src="../images/courseType/course_type_04.jpg" alt=""/></div>
+                    <div class="course-type-text">Hip-Hop</div>
+                </li>
+                <li>
+                    <div class="course-type-img"><img src="../images/courseType/course_type_05.jpg" alt=""/></div>
+                    <div class="course-type-text">House</div>
+                </li>
+                <li>
+                    <div class="course-type-img"><img src="../images/courseType/course_type_06.jpg" alt=""/></div>
+                    <div class="course-type-text">Jazz</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="time-arrangement">
+        <div class="time-arrangement-subwrp">
+            <div class="course-date">
+                <h4 class="time-title">上课日期</h4>
+                <ul class="course-date-list">
+                    <li class="active">
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                    <li>
+                        <a class="course-date-text">5月2日</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="course-time">
+                <h4 class="time-title">授课时间</h4>
+                <ul class="course-time-list">
+                    <li>
+                        <a class="course-time-text">上午(10:00-11:30AM)</a>
+                    </li>
+                    <li>
+                        <a class="course-time-text">中午(13:30-15:00PM)</a>
+                    </li>
+                    <li>
+                        <a class="course-time-text">下午(15:10-16:40PM)</a>
+                    </li>
+                    <li>
+                        <a class="course-time-text">傍晚(16:50-18:20PM)</a>
+                    </li>
+                    <li>
+                        <a class="course-time-text">前晚(18:30-20:00PM)</a>
+                    </li>
+                    <li>
+                        <a class="course-time-text">晚间(20:10-21:40PM)</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="time-note">
+                <span class="note-title">提示：</span><span>请任意选择其中一项功能类别进行点击；
+两项功能之间没有任何联系。</span>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
 </div>
 <script type="text/javascript" src="../js/zepto/zepto.js"></script>
 <script type="text/javascript" src="../js/zepto/event.js"></script>
