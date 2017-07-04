@@ -120,7 +120,7 @@
         }
 
         .time-arrangement-subwrp {
-           padding: 0 0.4rem;
+            padding: 0 0.4rem;
         }
 
         .time-arrangement .time-title {
@@ -130,31 +130,25 @@
             margin-top: 0.2rem;
         }
 
-        .time-arrangement .course-date-list {
-            /*margin-right: -0.5rem;*/
-
-        }
-
         .time-arrangement .course-date-text, .time-arrangement .course-time-text {
             color: #fff;
             font-size: 0.24rem;
             display: inline-block;
             border: 0.02rem solid #fff;
             border-radius: 0.08rem;
-
         }
 
         .time-arrangement .course-date-text {
             padding: 0.5em 0 0.4em;
             margin-bottom: 0.4rem;
-            width: 1.3rem;
+            width: 100%;
             text-align: center;
         }
 
-        .time-arrangement .course-date li {
-            display: inline-block;
-            text-align: center;
-            width: 24%;
+        .time-arrangement .course-date .course-date-list li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
         .time-arrangement .course-time li {
@@ -172,8 +166,15 @@
             padding: 0.3em 0;
             margin-bottom: 0.34rem;
         }
-
-        .time-arrangement li.active a {
+        .time-arrangement .course-date-list li>div{
+            width: 1.3rem;
+        }
+        .time-arrangement .course-date-list div.active a {
+            border-color: #ff4235 !important;
+            color: #ff4235 !important;;
+            background-color: #fff !important;;
+        }
+        .time-arrangement .course-time-list li.active a {
             border-color: #ff4235 !important;
             color: #ff4235 !important;;
             background-color: #fff !important;;
@@ -361,35 +362,23 @@
         <div class="course-date">
             <h4 class="time-title">上课日期</h4>
             <ul class="course-date-list">
-                <li class="active">
-                    <a class="course-date-text">5月2日</a>
+                <li>
+                    <div class="active"><a class="course-date-text">5月2日</a></div>
+                    <div><a class="course-date-text">5月3日</a></div>
+                    <div><a class="course-date-text">5月4日</a></div>
+                    <div><a class="course-date-text">5月5日</a></div>
                 </li>
                 <li>
-                    <a class="course-date-text">5月3日</a>
+                    <div><a class="course-date-text">5月6日</a></div>
+                    <div><a class="course-date-text">5月7日</a></div>
+                    <div><a class="course-date-text">5月8日</a></div>
+                    <div><a class="course-date-text">5月9日</a></div>
                 </li>
                 <li>
-                    <a class="course-date-text">5月4日</a>
-                </li>
-                <li>
-                    <a class="course-date-text">5月5日</a>
-                </li>
-                <li>
-                    <a class="course-date-text">5月6日</a>
-                </li>
-                <li>
-                    <a class="course-date-text">5月7日</a>
-                </li>
-                <li>
-                    <a class="course-date-text">5月8日</a>
-                </li>
-                <li>
-                    <a class="course-date-text">5月9日</a>
-                </li>
-                <li>
-                    <a class="course-date-text">5月10日</a>
-                </li>
-                <li>
-                    <a class="course-date-text">5月11日</a>
+                    <div><a class="course-date-text">5月10日</a></div>
+                    <div><a class="course-date-text">5月11日</a></div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
                 </li>
             </ul>
         </div>
