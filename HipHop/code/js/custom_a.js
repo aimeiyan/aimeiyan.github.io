@@ -75,8 +75,13 @@ $(function () {
         event.stopPropagation();
         $(".course-date-list .course-date-text-wrp").removeClass("active");  //去掉上课日期选项
         var $this = $(this);
-        $this.parent().siblings().removeClass("active");
-        $this.parent().addClass("active");
+        var $parent = $this.parent();
+//        $this.parent().siblings().removeClass("active");
+        if ($parent.hasClass("active")) {
+            $this.parent().removeClass("active");
+        } else {
+            $this.parent().addClass("active");
+        }
     });
 
 });
