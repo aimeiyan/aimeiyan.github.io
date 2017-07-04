@@ -1,209 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>首页</title>
-<script type="text/javascript" src="../js/layout.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/animate.css"/>
-<link rel="stylesheet" type="text/css" href="../css/style_d.css"/>
-<style type="text/css">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_d.css"/>
+    <style type="text/css">
 
-    /*遮罩层*/
-    .overlay {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: -150%;
-        /*top: 0;*/
-        background-color: #252525;
-        opacity: 0.94;
-        z-index: 3;
-    }
+        /*遮罩层*/
+        .overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: -150%;
+            /*top: 0;*/
+            background-color: #252525;
+            opacity: 0.94;
+            z-index: 3;
+        }
 
-    .overlay.slideInDown {
-        top: 0;
-    }
+        .overlay.slideInDown {
+            top: 0;
+        }
 
-    /*course type*/
-    .course-type {
-        position: absolute;
-        left: 0;
-        top: -150%;
-        /*top: 0;*/
-        width: 100%;
-        height: 100%;
-        z-index: 4;
-    }
+        /*课程类型*/
+        .course-type {
+            position: absolute;
+            left: 0;
+            top: -150%;
+            /*top: 0;*/
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+        }
 
-    .course-type.slideInDown {
-        top: 0;
-    }
+        .course-type.slideInDown {
+            top: 0;
+        }
 
-    .course-type {
-        padding: 0 0.2rem;
-    }
+        .course-type {
+            padding: 0 0.2rem;
+        }
 
-    .course-type .course-type-item {
-        border: 0.02rem solid #7c7c7c;
-        border-radius: 0.2rem;
-        margin-top: 1rem;
-        position: relative;
-        padding-top: 1.35rem;
-        padding-bottom: 0.25rem;
-    }
+        .course-type .course-type-item {
+            border: 0.02rem solid #7c7c7c;
+            border-radius: 0.2rem;
+            margin-top: 1rem;
+            position: relative;
+            padding-top: 1.35rem;
+            padding-bottom: 0.25rem;
+        }
 
-    .course-type .course-type-item .course-type-title {
-        position: absolute;
-        left: 50%;
-        top: -0.6rem;
-        margin-left: -0.6rem;
-    }
+        .course-type .course-type-item .course-type-title {
+            position: absolute;
+            left: 50%;
+            top: -0.6rem;
+            margin-left: -0.6rem;
+        }
 
-    .course-type .course-type-item .course-type-title .course-type-title-img {
-        width: 1.2rem;
-        height: 1.2rem;
-        display: block;
-        border: 0.1rem solid #d0d0d0;
-        border-radius: 50%;
-        margin: 0 auto;
-    }
+        .course-type .course-type-item .course-type-title .course-type-title-img {
+            width: 1.2rem;
+            height: 1.2rem;
+            display: block;
+            border: 0.1rem solid #d0d0d0;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
 
-    .course-type .course-type-item .course-type-title .course-type-title-text {
-        color: #fff;
-        text-align: center;
-        margin-top: 0.06rem;
-        font-size: 0.3rem;
-    }
+        .course-type .course-type-item .course-type-title .course-type-title-text {
+            color: #fff;
+            text-align: center;
+            margin-top: 0.06rem;
+            font-size: 0.3rem;
+        }
 
-    .course-type .course-type-item .course-type-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
+        .course-type .course-type-item .course-type-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
 
-    .course-type .course-type-item .course-type-list li .course-type-img {
-        width: 1.9rem;
-        height: 1.9rem;
-        border: 0.1rem solid #7c7c7d;
-        border-radius: 50%;
-        overflow: hidden;
-    }
+        .course-type .course-type-item .course-type-list li .course-type-img {
+            width: 1.9rem;
+            height: 1.9rem;
+            border: 0.1rem solid #7c7c7d;
+            border-radius: 50%;
+            overflow: hidden;
+        }
 
-    .course-type .course-type-item .course-type-list li .course-type-img img {
-        display: block;
-        width: 100%;
-        height: 100%;
+        .course-type .course-type-item .course-type-list li .course-type-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
 
-    }
+        }
 
-    .course-type .course-type-item .course-type-text {
-        color: #fefefe;
-        font-size: 0.24rem;
-        text-align: center;
-        margin-top: 0.08rem;
-    }
+        .course-type .course-type-item .course-type-text {
+            color: #fefefe;
+            font-size: 0.24rem;
+            text-align: center;
+            margin-top: 0.08rem;
+        }
 
-    /*time arrangement*/
-    .time-arrangement {
-        position: absolute;
-        left: 0;
-        top: -150%;
-        width: 100%;
-        height: 100%;
-        z-index: 4;
-    }
+        /*时间安排*/
+        .time-arrangement {
+            position: absolute;
+            left: 0;
+            top: -150%;
+            /*top: 0;*/
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+        }
 
-    .time-arrangement.slideInDown {
-        top: 0;
-    }
+        .time-arrangement.slideInDown {
+            top: 0;
+        }
 
-    .time-arrangement-subwrp {
-        padding: 0 0.4rem;
+        .time-arrangement-subwrp {
+           padding: 0 0.4rem;
+        }
 
-    }
+        .time-arrangement .time-title {
+            color: #ff4235;
+            font-size: 0.3rem;
+            line-height: 3.5;
+            margin-top: 0.2rem;
+        }
 
-    .time-arrangement .time-title {
-        color: #ff4235;
-        font-size: 0.3rem;
-        line-height: 4;
-        margin-top: 0.3rem;
-    }
+        .time-arrangement .course-date-list {
+            /*margin-right: -0.5rem;*/
 
-    .time-arrangement .course-date-text, .time-arrangement .course-time-text {
-        color: #fff;
-        font-size: 0.24rem;
-        display: inline-block;
-        border: 0.02rem solid #fff;
-        border-radius: 0.08rem;
+        }
 
-    }
+        .time-arrangement .course-date-text, .time-arrangement .course-time-text {
+            color: #fff;
+            font-size: 0.24rem;
+            display: inline-block;
+            border: 0.02rem solid #fff;
+            border-radius: 0.08rem;
 
-    .time-arrangement .course-date-text {
-        padding: 0.2em 0.5em;
-        margin: 0.5em 0;
-    }
+        }
 
-    .time-arrangement .course-date .course-date-list {
-        /*display: flex;*/
-        /*flex-direction: row;*/
-        /*justify-content: space-around;*/
-        /*flex-wrap: wrap;*/
-    }
+        .time-arrangement .course-date-text {
+            padding: 0.5em 0 0.4em;
+            margin-bottom: 0.4rem;
+            width: 1.3rem;
+            text-align: center;
+        }
 
-    .time-arrangement .course-time .course-time-list {
-        /*display: flex;*/
-        /*flex-direction: row;*/
-        /*justify-content: space-around;*/
-        /*flex-wrap: wrap;*/
-    }
+        .time-arrangement .course-date li {
+            display: inline-block;
+            text-align: center;
+            width: 24%;
+        }
 
-    .time-arrangement .course-time {
-        /*margin-top: 0.3rem;*/
-    }
+        .time-arrangement .course-time li {
+            width: 49%;
+            display: inline-block;
+        }
 
-    .time-arrangement .course-date li {
-        width: 24%;
-        display: inline-block;
-        text-align: center;
+        .time-arrangement .course-time li:nth-child(even) {
+            text-align: right;
+        }
 
-    }
+        .time-arrangement .course-time-text {
+            width: 98%;
+            text-align: center;
+            padding: 0.3em 0;
+            margin-bottom: 0.34rem;
+        }
 
-    .time-arrangement .course-time li {
-        width: 49%;
-        display: inline-block;
-        /*text-align: center;*/
-    }
+        .time-arrangement li.active a {
+            border-color: #ff4235 !important;
+            color: #ff4235 !important;;
+            background-color: #fff !important;;
+        }
 
-    .time-arrangement .course-time li:nth-child(even) {
-        text-align: right;
-    }
+        /*time note*/
+        .time-note {
+            margin-top: 0.7rem;
+            color: #ff3366;
+            font-size: 0.28rem;
+            letter-spacing: 0.2em;
+        }
 
-    .time-arrangement .course-time-text {
-        width: 98%;
-        text-align: center;
-        padding: 0.3em 0;
-        margin-bottom: 0.34rem;
-    }
-
-    .time-arrangement li.active a {
-        border-color: #ff4235 !important;
-        color: #ff4235 !important;;
-        background-color: #fff !important;;
-    }
-
-    /*time note*/
-    .time-note {
-        margin-top: 0.7rem;
-        color: #ff3366;
-        font-size: 0.28rem;
-        letter-spacing: 0.2em;
-    }
-
-    .time-note .note-title {
-        font-size: 0.32rem;
-    }
-</style>
+        .time-note .note-title {
+            font-size: 0.32rem;
+        }
+    </style>
 </head>
 <body>
 <div class="webapp">
@@ -378,31 +365,31 @@
                     <a class="course-date-text">5月2日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月3日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月4日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月5日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月6日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月7日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月8日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月9日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月10日</a>
                 </li>
                 <li>
-                    <a class="course-date-text">5月2日</a>
+                    <a class="course-date-text">5月11日</a>
                 </li>
             </ul>
         </div>
@@ -475,6 +462,22 @@
             $timeArrangementOverlay.removeClass("slideInDown animated");
             $timeArrangementOverlay.addClass("slideInUp animated");
         });
+
+        // 时间安排页面选项点击高亮
+        // 上课日期
+        $(".course-date-list a").tap(function () {
+            var $this = $(this);
+            $this.parent().siblings().removeClass("active");
+            $this.parent().addClass("active");
+        });
+
+        //授课时间
+        $(".course-time-list a").tap(function () {
+            var $this = $(this);
+            $this.parent().siblings().removeClass("active");
+            $this.parent().addClass("active");
+        });
+
     })
 </script>
 </body>
