@@ -20,7 +20,7 @@ $(function () {
     var $timeArrangementOverlay = $(".time-arrangement,.overlay");
 
     // 课程类型出现
-    $(".switch-course-type *").tap(function () {
+    $(".switch-course-type").tap(function () {
         $courseTypeOverlay.removeClass("slideInUp animated");
         $courseTypeOverlay.addClass("slideInDown animated");
 //        setTimeout(function(){
@@ -41,7 +41,7 @@ $(function () {
     });
 
     // 时间安排出现
-    $(".switch-time-arrangement *").tap(function () {
+    $(".switch-time-arrangement").tap(function () {
         $timeArrangementOverlay.removeClass("slideInUp animated");
         $timeArrangementOverlay.addClass("slideInDown animated");
 //        $("body").scrollTop(0);
