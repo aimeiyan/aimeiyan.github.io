@@ -23,6 +23,9 @@ $(function () {
     $(".switch-course-type *").tap(function () {
         $courseTypeOverlay.removeClass("slideInUp animated");
         $courseTypeOverlay.addClass("slideInDown animated");
+//        setTimeout(function(){
+//            $("body").scrollTop(0);
+//        },1000)
     });
 
     // 课程类型消失
@@ -36,6 +39,7 @@ $(function () {
     $(".switch-time-arrangement *").tap(function () {
         $timeArrangementOverlay.removeClass("slideInUp animated");
         $timeArrangementOverlay.addClass("slideInDown animated");
+//        $("body").scrollTop(0);
     });
 
     // 时间安排消失
