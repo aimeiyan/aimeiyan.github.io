@@ -35,6 +35,11 @@ $(function () {
     });
 
 
+    // 课程类型页面点击选择项
+    $(".course-type .course-type-img").tap(function (e) {
+        console.log("课程类型页面点击选择项");
+    });
+
     // 时间安排出现
     $(".switch-time-arrangement *").tap(function () {
         $timeArrangementOverlay.removeClass("slideInUp animated");
