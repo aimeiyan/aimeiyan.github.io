@@ -563,7 +563,7 @@ a {
     border: 1px solid #3b3b3b;
     background: url("../images/timetable_bg.png") no-repeat 0 0 #3b3b3b;
     border-radius: 0.18rem;
-    box-shadow: 0 0 0.2rem #ccc;
+    box-shadow: 0 0 0.2rem #555;
     overflow: hidden;
 }
 
@@ -596,12 +596,12 @@ a {
 .timetable table .course-title {
     font-size: 0.3rem !important;
     line-height: 2.5;
-    padding-top: 0.1rem;
-    margin-bottom: -0.1rem;
+    padding-top: 0.2rem;
+    margin-bottom: -0.2rem;
 }
 
 .timetable table .course-content {
-    box-shadow: 0 0 0.4rem #aaa inset;
+    box-shadow: 0 0 0.4rem #999 inset;
     background-color: rgba(0,0,0,0.4);
 }
 
