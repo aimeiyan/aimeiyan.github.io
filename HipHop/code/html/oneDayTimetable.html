@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单日课程表</title>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="../css/animate.css"/>-->
+    <link rel="stylesheet" type="text/css" href="../css/style_e.css"/>
+    <style type="text/css">
+
+        .theader-wrp.smaller-height {
+            height: auto;
+            padding-bottom: 0.25rem;;
+        }
+
+        /*单日课程表*/
+
+        .one-day-timetable {
+            margin-top: 1.15rem;
+            padding: 0.16rem;
+        }
+
+        .one-day-timetable .one-day-timetable-subwrp {
+            border: 1px solid #3b3b3b;
+            background: url("../images/timetable_bg.png") no-repeat 0 0 #3b3b3b;
+            border-radius: 0.18rem;
+            box-shadow: 0 0 0.2rem #ccc;
+            overflow: hidden;
+        }
+
+        .one-day-timetable table {
+            text-align: center;
+            width: 100%;
+            padding: 0.16rem;
+            line-height: 4.5;
+        }
+
+        .one-day-timetable table th, .one-day-timetable table td {
+            font-weight: normal;
+            color: #fff;
+        }
+
+        .one-day-timetable table tr:first-child {
+            line-height: 2.2;
+        }
+
+        .one-day-timetable table tr:nth-child(2) {
+            line-height: 2.8;
+        }
+
+        .one-day-timetable table tr th:first-child {
+            width: 25%;
+            line-height: 1.5;
+        }
+
+        .one-day-timetable table .course-title {
+            font-size: 0.3rem !important;
+            line-height: 2.5;
+            padding-top: 0.1rem;
+            margin-bottom: -0.1rem;
+        }
+
+        .one-day-timetable table .course-content {
+            box-shadow: 0 0 0.4rem #aaa inset;
+
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .one-day-timetable table .course-detail {
+            font-size: 0.2rem !important;
+            /*line-height: 2;*/
+        }
+
+        .timetable .txt-color-yellow {
+            color: #f5df10;
+        }
+
+        .timetable .txt-color-red {
+            color: #ff3366;
+        }
+
+        .timetable .txt-color-green {
+            color: #00ff01;
+        }
+
+        .timetable .txt-color-orange {
+            color: #ff6f02;
+        }
+
+        .timetable .txt-color-blue {
+            color: #00a1e9;
+        }
+
+        .timetable .txt-color-plum {
+            color: #dc00dc;
+        }
+
+        .timetable .fs-smaller {
+            font-size: 0.2rem !important;
+        }
+
+        .timetable .fs-small {
+            font-size: 0.24rem !important;
+        }
+
+        .timetable .fs-medium {
+            font-size: 0.3rem !important;
+        }
+
+        .timetable .fs-large {
+            font-size: 0.36rem !important;
+        }
+
+        .timetable th, .timetable td {
+            border: 0.01rem dashed #919392;
+            vertical-align: middle;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="webapp">
+    <div class="theader-wrp smaller-height">
+        <div class="theader">
+            <span class="left-address"><img class="address-icon" src="../images/address_icon.png"
+                                            alt=""/>&nbsp;<span>北京</span></span>
+            <img class="logo-img" src="../images/VyouClub.png" alt=""/>
+            <span class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
+                    class="arrow-down"></i>
+                <span class="head-popup">
+                    <ul>
+                        <li>个人主页</li>
+                        <li>刷新</li>
+                        <li>重新授权登陆</li>
+                    </ul>
+                </span>
+            </span>
+        </div>
+    </div>
+
+    <div class="one-day-timetable timetable">
+        <div class="one-day-timetable-subwrp">
+            <table>
+                <tbody>
+                <tr>
+                    <th class="fs-medium">5月2日</th>
+                    <th colspan="3" class="fs-large">上课舞房</th>
+                </tr>
+                <tr class="fs-medium">
+                    <th>星期二</th>
+                    <th>Release</th>
+                    <th>Autonomy</th>
+                    <th>Freedom</th>
+                </tr>
+                <tr>
+                    <th class="fs-small">上午(10:00-11:30AM)</th>
+                    <td class="course-content">
+                        <div class="course-title txt-color-yellow">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-red">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-green">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="fs-small">中午(13:30-15:00PM)</th>
+                    <td class="course-content">
+                        <div class="course-title txt-color-plum">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-blue">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-orange">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="fs-small">下午(15:10-16:40PM)</th>
+                    <td class="course-content">
+                        <div class="course-title txt-color-yellow">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-red">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-blue">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="fs-small">傍晚(16:50-18:20PM)</th>
+                    <td class="course-content">
+                        <div class="course-title txt-color-green">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-yellow">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-red">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="fs-small">前晚(18:30-20:00PM)</th>
+                    <td class="course-content">
+                        <div class="course-title txt-color-red">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-plum">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-yellow">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="fs-small">晚间(20:10-21:40PM)</th>
+                    <td class="course-content">
+                        <div class="course-title txt-color-blue">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-green">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                    <td class="course-content">
+                        <div class="course-title txt-color-plum">Apple</div>
+                        <div class="course-detail">第20节 <span class="divide-line">|</span> 亚健康</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/zepto/zepto.js"></script>
+<script type="text/javascript" src="../js/zepto/event.js"></script>
+<script type="text/javascript" src="../js/zepto/touch.js"></script>
+<script type="text/javascript" src="../js/custom_a.js"></script>
+</body>
+</html>

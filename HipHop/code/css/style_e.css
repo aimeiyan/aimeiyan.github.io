@@ -35,6 +35,11 @@ ul, ol, li {
     list-style: none;
 }
 
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
 body {
     font-family: arial, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
     line-height: 1.5;
