@@ -575,7 +575,7 @@ a {
     border: 0.01rem solid #3b3b3b;
 }
 
-.timetable table th, .one-day-timetable table td {
+.timetable table th, .timetable table td {
     font-weight: normal;
     color: #fff;
 }
