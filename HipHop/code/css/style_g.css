@@ -654,3 +654,15 @@ a {
     border: 0.01rem dashed #919392;
     vertical-align: middle;
 }
+
+.one-day-timetable .time-date {
+    width: 5.5em;
+    display: inline-block;
+    text-align: left;
+}
+
+.hour-timetable .time-date {
+    width: 4em;
+    display: inline-block;
+    text-align: left;
+}
