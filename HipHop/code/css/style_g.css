@@ -589,12 +589,12 @@ a {
 }
 
 .timetable table tr th:first-child {
-    width: 25%;
+    width: 24%;
     line-height: 1.5;
 }
 
 .timetable table .course-title {
-    font-size: 0.3rem !important;
+    font-size: 0.36rem !important;
     line-height: 2.5;
     padding-top: 0.2rem;
     margin-bottom: -0.2rem;
@@ -606,7 +606,7 @@ a {
 }
 
 .timetable table .course-detail {
-    font-size: 0.2rem !important;
+    font-size: 0.21rem !important;
     /*line-height: 2;*/
 }
 
@@ -639,11 +639,11 @@ a {
 }
 
 .timetable .fs-small {
-    font-size: 0.24rem !important;
+    font-size: 0.26rem !important;
 }
 
 .timetable .fs-medium {
-    font-size: 0.3rem !important;
+    font-size: 0.32rem !important;
 }
 
 .timetable .fs-large {
