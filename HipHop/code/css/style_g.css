@@ -666,3 +666,7 @@ a {
     display: inline-block;
     text-align: left;
 }
+
+.hour-timetable .fs-small {
+    font-size: 0.28rem !important;
+}
