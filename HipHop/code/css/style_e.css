@@ -543,3 +543,113 @@ a {
 .time-note .note-title {
     font-size: 0.32rem;
 }
+
+
+/*单日课程表和时间课程表样式*/
+
+.theader-wrp.smaller-height {
+    height: auto;
+    padding-bottom: 0.25rem;;
+}
+
+/*单日课程表*/
+
+.timetable {
+    margin-top: 1.15rem;
+    padding: 0.16rem;
+}
+
+.timetable .timetable-subwrp {
+    border: 1px solid #3b3b3b;
+    background: url("../images/timetable_bg.png") no-repeat 0 0 #3b3b3b;
+    border-radius: 0.18rem;
+    box-shadow: 0 0 0.2rem #ccc;
+    overflow: hidden;
+}
+
+.timetable table {
+    text-align: center;
+    width: 100%;
+    padding: 0.16rem;
+    line-height: 4.5;
+}
+
+.timetable table th, .one-day-timetable table td {
+    font-weight: normal;
+    color: #fff;
+}
+
+.timetable table tr:first-child {
+    line-height: 2.2;
+}
+
+.timetable table tr:nth-child(2) {
+    line-height: 2.8;
+}
+
+.timetable table tr th:first-child {
+    width: 25%;
+    line-height: 1.5;
+}
+
+.timetable table .course-title {
+    font-size: 0.3rem !important;
+    line-height: 2.5;
+    padding-top: 0.1rem;
+    margin-bottom: -0.1rem;
+}
+
+.timetable table .course-content {
+    box-shadow: 0 0 0.4rem #aaa inset;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.timetable table .course-detail {
+    font-size: 0.2rem !important;
+    /*line-height: 2;*/
+}
+
+.timetable .txt-color-yellow {
+    color: #f5df10;
+}
+
+.timetable .txt-color-red {
+    color: #ff3366;
+}
+
+.timetable .txt-color-green {
+    color: #00ff01;
+}
+
+.timetable .txt-color-orange {
+    color: #ff6f02;
+}
+
+.timetable .txt-color-blue {
+    color: #00a1e9;
+}
+
+.timetable .txt-color-plum {
+    color: #dc00dc;
+}
+
+.timetable .fs-smaller {
+    font-size: 0.2rem !important;
+}
+
+.timetable .fs-small {
+    font-size: 0.24rem !important;
+}
+
+.timetable .fs-medium {
+    font-size: 0.3rem !important;
+}
+
+.timetable .fs-large {
+    font-size: 0.36rem !important;
+}
+
+.timetable th, .timetable td {
+    border: 0.01rem dashed #919392;
+    vertical-align: middle;
+}
