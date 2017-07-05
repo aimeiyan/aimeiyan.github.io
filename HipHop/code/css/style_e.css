@@ -572,6 +572,7 @@ a {
     width: 100%;
     padding: 0.16rem;
     line-height: 4.5;
+    border: 0.01rem solid #3b3b3b;
 }
 
 .timetable table th, .one-day-timetable table td {
