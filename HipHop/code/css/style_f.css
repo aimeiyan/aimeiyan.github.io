@@ -601,7 +601,7 @@ a {
 }
 
 .timetable table .course-content {
-    box-shadow: 0 0 0.4rem #999 inset;
+    box-shadow: 0 0 0.3rem #999 inset;
     background-color: rgba(0,0,0,0.4);
 }
 
