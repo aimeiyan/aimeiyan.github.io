@@ -650,7 +650,7 @@ a {
 }
 
 .timetable th, .timetable td {
-    border: 1px dashed #919392;
+    border: 0.01rem dashed #919392;
     vertical-align: middle;
 }
 
