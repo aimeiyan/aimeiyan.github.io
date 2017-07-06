@@ -36,8 +36,8 @@ ul, ol, li {
 }
 
 table {
-    /*border-spacing: 0;*/
-    border-collapse: collapse;
+    border-spacing: 0;
+    /*border-collapse: collapse;*/
 }
 
 body {
@@ -569,7 +569,7 @@ a {
 .timetable table {
     text-align: center;
     width: 100%;
-    padding: 0.16rem;
+    /*padding: 0.16rem;*/
     line-height: 4.5;
     border: 0.01rem solid #3b3b3b;
 }
