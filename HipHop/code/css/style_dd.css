@@ -202,61 +202,61 @@ a {
 }
 
 .bnav .bnav-course .bnv-img {
-    background: url("../images/bnav_course.png") no-repeat center center;
+    background: url("../images/bnav/bnav_course.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-course.bnav-active .bnv-img {
-    background: url("../images/bnav_course_active.png") no-repeat center center;
+    background: url("../images/bnav/bnav_course_active.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-party .bnv-img {
-    background: url("../images/bnav_party.png") no-repeat center center;
+    background: url("../images/bnav/bnav_party.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-party.bnav-active .bnv-img {
-    background: url("../images/bnav_party_active.png") no-repeat center center;
+    background: url("../images/bnav/bnav_party_active.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-news .bnv-img {
-    background: url("../images/bnav_news.png") no-repeat center center;
+    background: url("../images/bnav/bnav_news.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-news.bnav-active .bnv-img {
-    background: url("../images/bnav_news_active.png") no-repeat center center;
+    background: url("../images/bnav/bnav_news_active.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-attention .bnv-img {
-    background: url("../images/bnav_attention.png") no-repeat center center;
+    background: url("../images/bnav/bnav_attention.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-attention.bnav-active .bnv-img {
-    background: url("../images/bnav_attention_active.png") no-repeat center center;
+    background: url("../images/bnav/bnav_attention_active.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-my .bnv-img {
-    background: url("../images/bnav_my.png") no-repeat center center;
+    background: url("../images/bnav/bnav_my.png") no-repeat center center;
     background-size: contain;
 
 }
 
 .bnav .bnav-my.bnav-active .bnv-img {
-    background: url("../images/bnav_my_active.png") no-repeat center center;
+    background: url("../images/bnav/bnav_my_active.png") no-repeat center center;
     background-size: contain;
 
 }
