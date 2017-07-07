@@ -10,8 +10,8 @@
 
 /*课次详细页*/
 .course-detail-content {
-    margin-top: 1.15rem;
-    padding: 0.1rem 0.18rem;
+    margin-top: 1.18rem;
+    padding: 0.1rem 0.18rem 1.1rem;
 }
 
 .course-detail-content .course-detail-part {
@@ -215,6 +215,11 @@
     color: #c1c1c1;
 }
 
+.course-detail-intro .course-img img {
+    display: block;
+    width: 100%;
+}
+
 .course-detail-intro .course-title, .course-detail-notice .course-title, .course-detail-more .course-title {
     font-size: 0.32rem;
     color: #ff4235;
@@ -281,6 +286,10 @@
     line-height: 0.8rem;
 }
 
+.course-detail-more {
+    padding-bottom: 0 !important;
+}
+
 .course-detail-more .more-course-ul {
     display: flex;
     flex-direction: row;
@@ -292,14 +301,21 @@
     width: 49%;
     display: inline-block;
     position: relative;
+    margin-bottom: 0.2rem;
 }
 
 .course-detail-more .more-course-ul li .course-title {
     position: absolute;
-    height: 40%;
-    top: 60%;
+    height: 55%;
+    width: 100%;
+    top: 45%;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
+    line-height: 1.5;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .course-detail-more .more-course-ul li .course-title span {
@@ -326,6 +342,51 @@
 .course-detail-more .more-course-ul li .course-img img {
     width: 100%;
     display: block;
+}
+
+.course-detail-entry-action {
+    height: 1.05rem;
+    width: 100%;
+    border-top: 0.01rem solid #ccc;
+    display: table;
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    background-color: #fff;
+}
+
+/*.course-detail-entry-action {*/
+/*height: 1.05rem;*/
+/*border-top: 0.01rem solid #e6e6e6;*/
+/*}*/
+
+.course-detail-entry-action .entry-num {
+    width: 60%;
+    font-size: 0.6rem;
+    display: table-cell;
+}
+
+.course-detail-entry-action .entry-num > span {
+    /*height: 100%;*/
+    /*display: block;*/
+    /*display: table-cell;*/
+}
+
+.course-detail-entry-action .entry-num .entry-num-show {
+    font-size: 0.3rem;
+}
+
+.course-detail-entry-action .entry-btn {
+    display: table-cell;
+    width: 40%;
+    /*height: 100%;*/
+    background-color: #ff4235;
+    text-align: center;
+    color: #fff;
+    font-size: 0.32rem;
 }
 
 </style>
@@ -538,7 +599,12 @@
     </div>
 </div>
 <div class="course-detail-entry-action">
-
+    <div class="entry-num">
+        <span class="plus-btn"><img src="../images/plus_icon.png" alt=""/></span>
+        <span class="entry-num-show"><span class="entry-figure">1</span>人</span>
+        <span class="plus-add"><img src="../images/add_icon.png" alt=""/></span>
+    </div>
+    <div class="entry-btn">立即报名</div>
 </div>
 </div>
 <script type="text/javascript" src="../js/zepto/zepto.js"></script>
