@@ -123,7 +123,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.22rem 0 0.2rem;
+    padding: 0.22rem 0 0.25rem;
 }
 
 .course-detail-teacher .teacher-situdation-left {
@@ -136,8 +136,9 @@
     height: 1rem;
     display: block;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
+    margin-top: -0.6rem;
     border-radius: 50%;
 }
 
@@ -147,6 +148,11 @@
 
 .course-detail-teacher .teacher-situdation-left .teacher-name-wrp {
     color: #ff4235;
+    line-height: 2;
+}
+
+.course-detail-teacher .teacher-situdation-left .teacher-name-wrp .star-icon{
+    margin: 0 0.1rem 0 0.2rem;
 }
 
 .course-detail-teacher .teacher-situdation-right .class-room {
@@ -156,6 +162,10 @@
 .course-detail-teacher .entryed-people-num {
     color: #ccc;
     text-align: right;
+    line-height: 2.5;
+}
+.course-detail-teacher .entryed-people-num .slash-icon{
+    margin: 0 0.04rem;
 }
 
 .course-detail-teacher .progress-bar {
@@ -377,13 +387,14 @@
 }
 
 .course-detail-entry-action .entry-num .entry-num-show {
-    font-size: 0.3rem;
+    font-size: 0.32rem;
     width: 2rem;
     text-align: center;
 }
 
 .course-detail-entry-action .entry-num .entry-num-show .entry-figure {
     margin: 0 0.1rem;
+    font-size: 0.35rem;
 }
 
 .course-detail-entry-action .entry-btn {
@@ -468,13 +479,13 @@
                 <img src="../images/headPortrait/teacher_01.jpg" class="teacher-head" alt=""/>
 
                 <div class="teacher-title">指导老师</div>
-                <div class="teacher-name-wrp"><span>Salra</span><img src="../images/star_icon.png"
+                <div class="teacher-name-wrp"><span>Salra</span><img class="star-icon" src="../images/star_icon.png"
                                                                      alt=""/><span>5.0</span></div>
             </div>
             <div class="teacher-situdation-right">
                 <div class="class-room">上课舞房：<span>Freedom</span></div>
                 <div class="entryed-people-num-wrp">
-                    <div class="entryed-people-num">已报名人数<span>16</span>/<span>20</span></div>
+                    <div class="entryed-people-num">已报名人数<span>16</span><span class="slash-icon">/</span><span>20</span></div>
                     <div class="progress-bar">
                         <div class="progress"></div>
                     </div>
