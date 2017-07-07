@@ -783,7 +783,7 @@ a {
 .course-detail-content .course-detail-time-address .course-time-address-ul .right-part {
     position: relative;
     color: #ccc;
-    font-size: 0.24rem;
+    font-size: 0.26rem;
     padding-right: 0.4rem;
     text-align: right;
 }
@@ -800,6 +800,7 @@ a {
 .course-detail-content .course-detail-time-address .course-time-address-ul .course-address-detail {
     text-align: left;
     letter-spacing: 0.02rem;
+    font-size: 0.24rem;
 }
 
 .course-detail-teacher {
@@ -935,6 +936,7 @@ a {
 
 .course-detail-intro .course-intro-item {
     font-size: 0.25rem;
+    margin-top: 0.1rem;
 }
 
 .course-detail-intro .course-intro-item .course-intro-subtitle {
@@ -943,7 +945,7 @@ a {
 }
 
 .course-detail-intro .course-intro-item ul {
-    line-height: 2;
+    line-height: 1.8;
 }
 
 
@@ -952,7 +954,7 @@ a {
     color: #c1c1c1;
 }
 .course-detail-notice .course-item-ul{
-    line-height: 2;
+    line-height: 1.8;
 }
 
 .course-detail-notice .course-item-ul li, .course-intro-item .course-item-ul li {
