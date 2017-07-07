@@ -306,9 +306,9 @@
 
 .course-detail-more .more-course-ul li .course-title {
     position: absolute;
-    height: 55%;
+    height: 45%;
     width: 100%;
-    top: 45%;
+    top: 55%;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
     line-height: 1.5;
@@ -348,45 +348,54 @@
     height: 1.05rem;
     width: 100%;
     border-top: 0.01rem solid #ccc;
-    display: table;
-    /*flex-direction: row;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
     position: fixed;
     bottom: 0;
     z-index: 3;
     background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
-
-/*.course-detail-entry-action {*/
-/*height: 1.05rem;*/
-/*border-top: 0.01rem solid #e6e6e6;*/
-/*}*/
 
 .course-detail-entry-action .entry-num {
     width: 60%;
     font-size: 0.6rem;
-    display: table-cell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.course-detail-entry-action .entry-num > span {
-    /*height: 100%;*/
-    /*display: block;*/
-    /*display: table-cell;*/
+.course-detail-entry-action .entry-num .entry-num-show {
+    display: block;
+}
+
+.course-detail-entry-action .entry-num > span img {
+    display: block;
+    padding: 0.2rem;
 }
 
 .course-detail-entry-action .entry-num .entry-num-show {
     font-size: 0.3rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.course-detail-entry-action .entry-num .entry-num-show .entry-figure {
+    margin: 0 0.1rem;
 }
 
 .course-detail-entry-action .entry-btn {
-    display: table-cell;
     width: 40%;
-    /*height: 100%;*/
+    height: 100%;
     background-color: #ff4235;
     text-align: center;
     color: #fff;
     font-size: 0.32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 </style>
@@ -602,7 +611,7 @@
     <div class="entry-num">
         <span class="plus-btn"><img src="../images/plus_icon.png" alt=""/></span>
         <span class="entry-num-show"><span class="entry-figure">1</span>人</span>
-        <span class="plus-add"><img src="../images/add_icon.png" alt=""/></span>
+        <span class="add-btn"><img src="../images/add_icon.png" alt=""/></span>
     </div>
     <div class="entry-btn">立即报名</div>
 </div>
@@ -611,5 +620,25 @@
 <script type="text/javascript" src="../js/zepto/event.js"></script>
 <script type="text/javascript" src="../js/zepto/touch.js"></script>
 <script type="text/javascript" src="../js/custom_a.js"></script>
+<script>
+    $(function () {
+        $(".entry-num .add-btn").click(function () {
+            var $num = $(".entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+            $num.text(currentNum + 1);
+        });
+
+        $(".entry-num .plus-btn").click(function () {
+            var $num = $(".entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+
+            if (currentNum < 2) {
+                $num.text(1);
+            } else {
+                $num.text(currentNum - 1);
+            }
+        })
+    })
+</script>
 </body>
 </html>
