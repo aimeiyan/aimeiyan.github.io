@@ -718,13 +718,13 @@ a {
 }
 
 .course-detail-content .course-detail-time-address .course-title {
-    font-size: 0.36rem;
+    font-size: 0.42rem;
     color: #ff4235;
     font-weight: bolder;
 }
 
 .course-detail-content .course-detail-time-address .course-subtitle {
-    font-size: 0.22rem;
+    font-size: 0.25rem;
     color: #fff;
 }
 
@@ -800,7 +800,8 @@ a {
 .course-detail-content .course-detail-time-address .course-time-address-ul .course-address-detail {
     text-align: left;
     letter-spacing: 0.02rem;
-    font-size: 0.24rem;
+    font-size: 0.26rem;
+    text-align: justify;
 }
 
 .course-detail-teacher {
@@ -920,7 +921,7 @@ a {
 }
 
 .course-detail-intro .course-title, .course-detail-notice .course-title, .course-detail-more .course-title {
-    font-size: 0.32rem;
+    font-size: 0.36rem;
     color: #ff4235;
     text-align: left;
     font-weight: bolder;
@@ -988,7 +989,7 @@ a {
     color: #fff;
     height: 0.8rem;
     line-height: 0.8rem;
-    font-size: 0.3rem;
+    font-size: 0.32rem;
 }
 
 .course-detail-more {
@@ -1011,12 +1012,12 @@ a {
 
 .course-detail-more .more-course-ul li .course-title {
     position: absolute;
-    height: 45%;
+    height: 48%;
     width: 100%;
-    top: 55%;
+    top: 52%;
     left: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    line-height: 1.5;
+    line-height: 1.3;
     font-weight: normal;
     display: flex;
     flex-direction: column;
@@ -1029,12 +1030,12 @@ a {
 }
 
 .course-detail-more .more-course-ul li .course-title span.title {
-    font-size: 0.3rem;
+    font-size: 0.32rem;
     color: #f0857d;
 }
 
 .course-detail-more .more-course-ul li .course-title span.subtitle {
-    font-size: 0.22rem;
+    font-size: 0.26rem;
     color: #fff;
 }
 
