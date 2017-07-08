@@ -783,7 +783,7 @@ a {
 .course-detail-content .course-detail-time-address .course-time-address-ul .right-part {
     position: relative;
     color: #ccc;
-    font-size: 0.26rem;
+    font-size: 0.28rem;
     padding-right: 0.4rem;
     text-align: right;
 }
@@ -800,8 +800,7 @@ a {
 .course-detail-content .course-detail-time-address .course-time-address-ul .course-address-detail {
     text-align: left;
     letter-spacing: 0.02rem;
-    font-size: 0.26rem;
-    text-align: justify;
+    font-size: 0.28rem;
 }
 
 .course-detail-teacher {
