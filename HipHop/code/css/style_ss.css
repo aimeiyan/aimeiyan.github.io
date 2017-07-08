@@ -929,18 +929,18 @@ a {
 
 .course-detail-intro .course-intro-title {
     color: #fff;
-    font-size: 0.32rem;
+    font-size: 0.34rem;
     line-height: 2;
     margin-top: 0.15rem;
 }
 
 .course-detail-intro .course-intro-item {
-    font-size: 0.25rem;
+    font-size: 0.26rem;
     margin-top: 0.1rem;
 }
 
 .course-detail-intro .course-intro-item .course-intro-subtitle {
-    font-size: 0.3rem;
+    font-size: 0.32rem;
     line-height: 2.5;
 }
 
@@ -950,7 +950,7 @@ a {
 
 
 .course-detail-notice {
-    font-size: 0.25rem;
+    font-size: 0.26rem;
     color: #c1c1c1;
 }
 .course-detail-notice .course-item-ul{
@@ -1089,7 +1089,7 @@ a {
 
 .course-detail-entry-action .entry-num .entry-num-show .entry-figure {
     margin: 0 0.1rem;
-    font-size: 0.35rem;
+    font-size: 0.36rem;
 }
 
 .course-detail-entry-action .entry-btn {
