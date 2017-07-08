@@ -812,12 +812,13 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.22rem 0 0.25rem;
+    padding: 0.26rem 0 0.25rem;
 }
 
 .course-detail-teacher .teacher-situdation-left {
     position: relative;
     padding-left: 1.2rem;
+    font-size: 0.3rem;
 }
 
 .course-detail-teacher .teacher-head {
@@ -831,10 +832,6 @@ a {
     border-radius: 50%;
 }
 
-.course-detail-teacher .teacher-situdation-left {
-    font-size: 0.28rem;
-}
-
 .course-detail-teacher .teacher-situdation-left .teacher-name-wrp {
     color: #ff4235;
     line-height: 2;
@@ -845,13 +842,15 @@ a {
 }
 
 .course-detail-teacher .teacher-situdation-right .class-room {
-    font-size: 0.28rem;
+    font-size: 0.3rem;
 }
 
 .course-detail-teacher .entryed-people-num {
     color: #ccc;
     text-align: right;
-    line-height: 2.5;
+    line-height: 2;
+    font-size: 0.28rem;
+    margin-bottom: 0.05rem;
 }
 
 .course-detail-teacher .entryed-people-num .slash-icon {
@@ -882,7 +881,7 @@ a {
 }
 
 .course-detail-teacher .entry-people .entry-people-title {
-    font-size: 0.26rem;
+    font-size: 0.28rem;
     color: #fff;
     padding: 0.2rem 0;
 }
@@ -895,8 +894,8 @@ a {
 }
 
 .course-detail-teacher .entry-people .entry-people-group .entry-people-img-wrp {
-    width: 0.56rem;
-    height: 0.56rem;
+    width: 0.6rem;
+    height: 0.6rem;
     border: 0.03rem solid #fff;
     border-radius: 50%;
     overflow: hidden;
@@ -1103,4 +1102,5 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bolder;
 }
