@@ -1103,3 +1103,6 @@ a {
     justify-content: center;
     font-weight: bolder;
 }
+.course-detail-notice .course-title{
+    margin-bottom: -0.1rem;
+}
