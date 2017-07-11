@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>帐号优惠卷</title>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_ww.css"/>
+
+    <style type="text/css">
+
+        /*优惠券*/
+        .discount-coupon .discount-coupon-title-wrp {
+            position: relative;
+            text-align: center;
+            margin: 0.5rem 0.3rem;
+        }
+
+        .discount-coupon .discount-coupon-title {
+            font-size: 0.36rem;
+            color: #eb3772;
+            background-color: #fff;
+            display: inline-block;
+            padding: 0 0.15rem;
+        }
+
+        .discount-coupon .title-line {
+            position: absolute;
+            width: 100%;
+            height: 0.02rem;
+            letter-spacing: 0;
+            bottom: 0.12rem;
+            background-color: #3b3b3b;
+            z-index: -1;
+        }
+
+        .discount-coupon .title-attention {
+            display: block;
+            width: 0.28rem;
+            height: 0.28rem;
+            position: absolute;
+            right: 0;
+            top: -0.14rem;
+        }
+
+        .discount-coupon .title-attention img {
+            display: block;
+            width: 100%;
+        }
+
+        .discount-coupon-list {
+            padding: 0 0.2rem;
+        }
+
+        .discount-coupon-list .discount-coupon-item {
+            height: 2.3rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .discount-coupon .discount-coupon-list .item-part {
+            /*display: inline-block;*/
+        }
+
+        .discount-coupon .discount-coupon-list .item-left {
+            width: 38%;
+            height: 100%;
+            background-color: #3b3b3b;
+            color: #eb3772;
+            /*-radius: 0.18rem;*/
+            border-top-left-radius: 0.18rem;
+            border-bottom-left-radius: 0.18rem;
+            text-align: center;
+        }
+
+        .discount-coupon .discount-coupon-list .item-left .money-part {
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+            top: 0.55rem;
+        }
+
+        .discount-coupon .discount-coupon-list .item-left .money-unit {
+            position: absolute;
+            width: 0.5rem;
+            height: 0.52rem;
+            left: -0.5rem;
+            top: 0;
+        }
+
+        .discount-coupon .discount-coupon-list .item-left .money-value {
+            font-size: 1.08rem;
+        }
+
+        .discount-coupon .discount-coupon-list .item-right {
+            width: 60%;
+            height: 100%;
+            font-size: 0.28rem;
+            background: url("../images/discount_bg.png") no-repeat center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 0.3rem;
+
+        }
+
+        .points-mall {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            z-index: 4;
+            background-color: #3b3b3b;
+            color: #e63166;
+            font-size: 0.36rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="webapp">
+    <div class="discount-coupon">
+        <div class="discount-coupon-title-wrp">
+            <div class="title-line">&nbsp;</div>
+            <span class="discount-coupon-title">我的优惠券</span>
+            <a href="javascript:void (0);" class="title-attention"><img src="../images/attention_icon.png" alt=""/></a>
+        </div>
+        <div class="discount-coupon-list">
+            <div class="discount-coupon-item">
+                <div class="item-left item-part">
+                    <div class="money-part">
+                        <!--<span class="money-unit">&yen;</span>-->
+                        <img class="money-unit" src="../images/yen_icon.png" alt=""/>
+                        <span class="money-value">30</span>
+                        <!--<span>30</span>-->
+                    </div>
+                </div>
+                <div class="item-right item-part">
+                    <p>1.无门槛使用</p>
+
+                    <p>2.仅使用一次</p>
+
+                    <p>有效期至：2017- 06- 04</p>
+                </div>
+            </div>
+            <div class="discount-coupon-item">
+                <div class="item-left item-part">
+                    <div class="money-part">
+                        <!--<span class="money-unit">&yen;</span>-->
+                        <img class="money-unit" src="../images/yen_icon.png" alt=""/>
+                        <span class="money-value">60</span>
+                        <!--<span>30</span>-->
+                    </div>
+                </div>
+                <div class="item-right item-part">
+                    <p>1.无门槛使用</p>
+
+                    <p>2.仅使用一次</p>
+
+                    <p>有效期至：2017- 06- 04</p>
+                </div>
+            </div>
+            <div class="discount-coupon-item">
+                <div class="item-left item-part">
+                    <div class="money-part">
+                        <!--<span class="money-unit">&yen;</span>-->
+                        <img class="money-unit" src="../images/yen_icon.png" alt=""/>
+                        <span class="money-value">90</span>
+                        <!--<span>30</span>-->
+                    </div>
+                </div>
+                <div class="item-right item-part">
+                    <p>1.无门槛使用</p>
+
+                    <p>2.仅使用一次</p>
+
+                    <p>有效期至：2017- 06- 04</p>
+                </div>
+            </div>
+        </div>
+        <div class="points-mall">
+            <a href="javascript:void (0);">积分商城</a>
+        </div>
+    </div>
+
+
+</div>
+<script type="text/javascript" src="../js/zepto/zepto.js"></script>
+<script type="text/javascript" src="../js/zepto/event.js"></script>
+<script type="text/javascript" src="../js/zepto/touch.js"></script>
+<script type="text/javascript" src="../js/custom_a.js"></script>
+</body>
+</html>
