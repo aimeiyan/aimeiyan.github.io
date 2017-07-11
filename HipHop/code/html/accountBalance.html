@@ -5,6 +5,50 @@
     <title>单日课程表</title>
     <script type="text/javascript" src="../js/layout.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style_ww.css"/>
+    <style>
+        .account-balance {
+            padding: 0 0.2rem;
+        }
+
+        .account-balance .amount-part {
+            height: 4.55rem;
+            text-align: center;
+            position: relative;
+            background-color: #3b3b3b;
+            border-radius: 0.08rem;
+        }
+
+        .amount-part .balance-bg {
+            position: absolute;
+
+        }
+
+        .amount-part .balance-bg-left {
+            top: 0;
+            left: 0;
+        }
+
+        .amount-part .balance-bg-right {
+            top: 0;
+            right: 0;
+
+        }
+
+        .account-balance .amount-part .amount-value {
+            font-size: 1rem;
+            color: #f44336;
+
+        }
+
+        .account-balance .expense-list {
+            background-color: #3b3b3b;
+            color: #f44336;
+            border-radius: 0.08rem;
+            font-size: 0.3rem;
+            text-align: center;
+            line-height: 3;
+        }
+    </style>
 </head>
 <body>
 <div class="webapp">
@@ -25,7 +69,23 @@
             </span>
         </div>
     </div>
+    <div class="account-balance">
+        <div>
+            <div class="amount-part">
+                <p class="amount-value">100.00</p>
 
+                <p class="amount-text">我的余额</p>
+                <img class="balance-bg balance-bg-left" src="../images/balance_left.png" alt=""/>
+                <img class="balance-bg balance-bg-right" src="../images/balance_right.png" alt=""/>
+            </div>
+            <ul class="balance-action">
+                <li>充值</li>
+                <li>|</li>
+                <li>Vyou商城</li>
+            </ul>
+        </div>
+        <div class="expense-list">消费记录</div>
+    </div>
 </div>
 <script type="text/javascript" src="../js/zepto/zepto.js"></script>
 <script type="text/javascript" src="../js/zepto/event.js"></script>
