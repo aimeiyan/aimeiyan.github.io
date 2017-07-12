@@ -669,6 +669,7 @@ a {
 .timetable table tbody tr:last-child th {
     border-bottom: 0;
 }
+
 .timetable table tbody tr:last-child td {
     border-bottom: 0;
 }
@@ -692,8 +693,6 @@ a {
 .hour-timetable .fs-small {
     font-size: 0.28rem !important;
 }
-
-
 
 /*课次详细页*/
 .course-detail-content {
@@ -947,12 +946,12 @@ a {
     line-height: 1.8;
 }
 
-
 .course-detail-notice {
     font-size: 0.26rem;
     color: #c1c1c1;
 }
-.course-detail-notice .course-item-ul{
+
+.course-detail-notice .course-item-ul {
     line-height: 1.8;
 }
 
@@ -1103,7 +1102,8 @@ a {
     justify-content: center;
     font-weight: bolder;
 }
-.course-detail-notice .course-title{
+
+.course-detail-notice .course-title {
     margin-bottom: -0.15rem;
 }
 
@@ -1216,4 +1216,85 @@ a {
     color: #e63166;
     font-size: 0.36rem;
     text-align: center;
+}
+
+/*账号余额*/
+.account-balance {
+    padding: 0 0.2rem;
+    margin-top: 1.3rem;
+}
+
+.account-balance .amount-wrp {
+    border-radius: 0.08rem;
+    box-shadow: 0 0 0.2rem #555;
+    overflow: hidden;
+    background-color: #3b3b3b;
+    margin-bottom: 0.24rem;
+}
+
+.account-balance .amount-part {
+    height: 4.55rem;
+    text-align: center;
+    position: relative;
+    border-radius: 0.08rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.amount-part .balance-bg {
+    position: absolute;
+}
+
+.amount-part .balance-bg-left {
+    top: 0;
+    left: 0;
+}
+
+.amount-part .balance-bg-right {
+    top: 0;
+    right: 0;
+}
+
+.account-balance .amount-part .amount-value {
+    font-size: 1rem;
+    color: #f44336;
+    line-height: 1;
+}
+
+.account-balance .amount-part .amount-text {
+    font-size: 0.36rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.account-balance .balance-action {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.3rem;
+    line-height: 4;
+}
+
+.account-balance .balance-action .balance-action-item {
+    width: 48%;
+    text-align: center;
+}
+
+.account-balance .balance-action .vertical-line {
+    font-size: 0.5rem;
+    color: #b1b1b1;
+}
+
+.account-balance .expense-list {
+    background-color: #3b3b3b;
+    color: #f44336;
+    border-radius: 0.08rem;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: 3;
+    box-shadow: 0 0 0.2rem #555;
+    overflow: hidden;
 }
