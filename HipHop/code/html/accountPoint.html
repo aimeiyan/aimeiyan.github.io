@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>单日课程表</title>
+    <title>账户积分</title>
     <script type="text/javascript" src="../js/layout.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style_ww.css"/>
+    <style>
+        /*积分使用规则*/
+        .points-use-rule {
+            padding: 0.2rem 0;
+            border-top: 1px solid #b7b7b7;
+        }
+
+        .points-use-rule .points-use-rule-title {
+            color: #fff;
+            text-align: center;
+            font-size: 0.3rem;
+            line-height: 3;
+        }
+
+        .points-use-rule .points-use-rule-ul {
+            color: #fff;
+            opacity: 0.6;
+            font-size: 0.26rem;
+            padding: 0 0.2rem;
+            line-height: 1.8;
+        }
+
+        .points-use-rule .points-use-rule-ul li {
+            display: table;
+        }
+
+        .points-use-rule .points-use-rule-ul li .small-dot {
+            width: 0.6em;
+            display: table-cell;
+        }
+
+        .points-use-rule .points-use-rule-ul li span {
+            display: table-cell;
+        }
+    </style>
 </head>
 <body>
 <div class="webapp">
@@ -28,19 +63,30 @@
     <div class="account-balance">
         <div class="amount-wrp">
             <div class="amount-part">
-                <p class="amount-value">100.00</p>
+                <p class="amount-value">539</p>
 
-                <p class="amount-text">我的余额</p>
+                <p class="amount-text">积分</p>
                 <img class="balance-bg balance-bg-left" src="../images/balance_left.png" alt=""/>
                 <img class="balance-bg balance-bg-right" src="../images/balance_right.png" alt=""/>
             </div>
             <ul class="balance-action">
-                <li class="balance-action-item"><a href="javascript:void(0);">充值</a></li>
+                <li class="balance-action-item"><a href="javascript:void(0);">积分商城</a></li>
                 <li class="vertical-line">|</li>
-                <li class="balance-action-item"><a href="javascript:void(0);">Vyou商城</a></li>
+                <li class="balance-action-item"><a href="javascript:void(0);">积分使用记录</a></li>
             </ul>
+            <div class="points-use-rule">
+                <h4 class="points-use-rule-title">积分使用规则</h4>
+                <ul class="points-use-rule-ul">
+                    <li><i class="small-dot">&bull;</i><span>积分不可与优惠券同时使用。</span></li>
+                    <li><i class="small-dot">&bull;</i><span>参与秒杀、立减活动的产品订单，不可使用积分支付。</span></li>
+                    <li><i class="small-dot">&bull;</i><span>积分不能兑现，不可转让。</span></li>
+                    <li><i class="small-dot">&bull;</i><span>积分不可与优惠券同时使用。</span></li>
+                    <li><i class="small-dot">&bull;</i><span>参与秒杀、立减活动的产品订单，不可使用积分支付。</span></li>
+                    <li><i class="small-dot">&bull;</i><span>积分不能兑现，不可转让。</span></li>
+                </ul>
+            </div>
         </div>
-        <div class="expense-list">消费记录</div>
+        <!--<div class="expense-list">消费记录</div>-->
     </div>
 </div>
 <script type="text/javascript" src="../js/zepto/zepto.js"></script>
