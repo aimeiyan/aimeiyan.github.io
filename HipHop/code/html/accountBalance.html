@@ -8,19 +8,29 @@
     <style>
         .account-balance {
             padding: 0 0.2rem;
+            margin-top: 1.3rem;
+        }
+
+        .account-balance .amount-wrp {
+            border-radius: 0.08rem;
+            box-shadow: 0 0 0.2rem #555;
+            overflow: hidden;
+            background-color: #3b3b3b;
+            margin-bottom: 0.24rem;
         }
 
         .account-balance .amount-part {
             height: 4.55rem;
             text-align: center;
             position: relative;
-            background-color: #3b3b3b;
             border-radius: 0.08rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .amount-part .balance-bg {
             position: absolute;
-
         }
 
         .amount-part .balance-bg-left {
@@ -37,7 +47,33 @@
         .account-balance .amount-part .amount-value {
             font-size: 1rem;
             color: #f44336;
+            line-height: 1;
+        }
 
+        .account-balance .amount-part .amount-text {
+            font-size: 0.36rem;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .account-balance .balance-action {
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 0.3rem;
+            line-height: 4;
+        }
+
+        .account-balance .balance-action .balance-action-item {
+            width: 48%;
+            text-align: center;
+        }
+
+        .account-balance .balance-action .vertical-line {
+            font-size: 0.5rem;
+            color: #b1b1b1;
         }
 
         .account-balance .expense-list {
@@ -47,6 +83,9 @@
             font-size: 0.3rem;
             text-align: center;
             line-height: 3;
+            /*border-radius: 0.18rem;*/
+            box-shadow: 0 0 0.2rem #555;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -70,7 +109,7 @@
         </div>
     </div>
     <div class="account-balance">
-        <div>
+        <div class="amount-wrp">
             <div class="amount-part">
                 <p class="amount-value">100.00</p>
 
@@ -79,9 +118,9 @@
                 <img class="balance-bg balance-bg-right" src="../images/balance_right.png" alt=""/>
             </div>
             <ul class="balance-action">
-                <li>充值</li>
-                <li>|</li>
-                <li>Vyou商城</li>
+                <li class="balance-action-item"><a href="javascript:void(0);">充值</a></li>
+                <li class="vertical-line">|</li>
+                <li class="balance-action-item"><a href="javascript:void(0);">Vyou商城</a></li>
             </ul>
         </div>
         <div class="expense-list">消费记录</div>
