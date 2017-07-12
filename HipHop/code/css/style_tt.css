@@ -1364,3 +1364,150 @@ a {
 .account-appointment-timetable tr:last-child {
     line-height: 3;
 }
+
+/*个人中心*/
+.personal-center {
+    margin-top: 1.12rem;
+}
+
+.personal-center .personal-center-portrait {
+    height: 3.4rem;
+    background: -webkit-linear-gradient(#989898, #404040);
+    background: -o-linear-gradient(#989898, #404040);
+    background: -moz-linear-gradient(#989898, #404040);
+    background: linear-gradient(#989898, #404040);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal-center .personal-center-portrait .username-text {
+    color: #ff4235;
+    font-size: 0.3rem;
+}
+
+.personal-center .personal-center-portrait .portrait-img {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    border: 0.02rem solid #cbcbcb;
+}
+
+.personal-center-my-correlation {
+    background-color: #404040;
+    border-top: 0.01rem solid #898989;
+    padding: 0.32rem 0;
+}
+
+.personal-center-my-correlation .my-correlation-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.personal-center-my-correlation .my-correlation-ul .my-correlation-list {
+    width: 28%;
+    text-align: center;
+}
+
+.personal-center-my-correlation .my-correlation-ul .my-correlation-vertical-line {
+    height: auto;
+    width: 0.01rem;
+    background-color: #898989;
+    display: block;
+}
+
+.personal-center-my-correlation .my-correlation-link {
+    display: block;
+    text-align: center;
+}
+
+.personal-center-my-correlation .my-correlation-item-value {
+    color: #ff4235;
+    font-size: 0.3rem;
+    display: block;
+}
+
+.personal-center-my-correlation .my-correlation-item-name {
+    color: #fff;
+    font-size: 0.24rem;
+    display: block;
+}
+
+.personal-center-my-activities {
+    background-color: #404040;
+    border-top: 0.01rem solid #898989;
+    margin-bottom: 0.08rem;
+    padding-bottom: 0.3rem;
+}
+
+.personal-center-my-activities .my-activities-title {
+    color: #ff4235;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 3;
+}
+
+.personal-center-my-activities .my-activities-vertical-line {
+    height: auto;
+    width: 0.01rem;
+    background-color: #898989;
+    display: block;
+}
+
+.personal-center-my-activities .my-activities-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    line-height: 2;
+}
+
+.personal-center-my-activities .my-activities-ul .my-activities-list {
+    width: 48%;
+    text-align: center;
+}
+
+.personal-center-my-activities .my-activities-ul .my-activities-link {
+    display: block;
+}
+
+.personal-center .personal-list-item {
+    background-color: #404040;
+    border-radius: 0.15rem;
+    overflow: hidden;
+    margin-bottom: 0.1rem;
+    box-shadow: 0 0 0.02rem rgba(59, 59, 59, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.28rem;
+}
+
+.personal-center .personal-list-item .personal-list-item-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal-center .personal-list-item .item-text {
+    font-size: 0.3rem;
+    line-height: 3;
+    margin-left: 0.1rem;
+}
+
+.personal-center .personal-list-item-right .personal-list-item-right-link {
+    width: 0.33rem;
+    height: 0.24rem;
+    display: block;
+}
+
+.personal-center .personal-list-item-right .personal-list-item-right-link .empty-arrow-icon {
+    width: 100%;
+    display: block;
+}
