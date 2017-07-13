@@ -1199,13 +1199,15 @@ a {
 .discount-coupon .discount-coupon-list .item-right {
     width: 60%;
     height: 100%;
-    font-size: 0.28rem;
+    font-size: 0.3rem;
     background: url("../images/discount_bg.png") no-repeat center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 0.3rem;
-
+    border: 0.01rem solid #ddd;
+    border-top-right-radius: 0.18rem;
+    border-bottom-right-radius: 0.18rem;
 }
 
 .points-mall {
@@ -1269,7 +1271,7 @@ a {
 .account-balance .amount-part .amount-text {
     font-size: 0.36rem;
     color: #fff;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 .account-balance .balance-action {
@@ -1278,8 +1280,9 @@ a {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-size: 0.3rem;
-    line-height: 3;
+    font-size: 0.34rem;
+    line-height: 2;
+    padding: 0.4rem 0;
 }
 
 .account-balance .balance-action .balance-action-item {
@@ -1288,8 +1291,10 @@ a {
 }
 
 .account-balance .balance-action .vertical-line {
-    font-size: 0.5rem;
-    color: #b1b1b1;
+    height: auto;
+    width: 0.01rem;
+    background-color: #898989;
+    display: block;
 }
 
 .account-balance .expense-list {
@@ -1311,7 +1316,7 @@ a {
 
 .account-appointment-timetable .account-appointment-title .appoint-course-title {
     color: #ff4235;
-    font-size: 0.36rem;
+    font-size: 0.4rem;
     line-height: 1.5;
 }
 
@@ -1332,13 +1337,13 @@ a {
 }
 
 .account-appointment-timetable .timetable-subwrp {
-    background: url("../images/appointment_bg.png") no-repeat center center;
+    background: url("../images/appointment_bg.png") no-repeat center center #3b3b3b;
     background-size: cover;
     margin-bottom: 0.15rem;
 }
 
 .account-appointment-timetable table {
-    font-size: 0.3rem;
+    font-size: 0.32rem;
 }
 
 .account-appointment-timetable table tr:first-child td {
@@ -1358,7 +1363,7 @@ a {
 }
 
 .account-appointment-timetable table tr:last-child {
-    font-size: 0.28rem;
+    font-size: 0.3rem;
 }
 
 .account-appointment-timetable tr:nth-child(2) {
@@ -1429,13 +1434,13 @@ a {
 
 .personal-center-my-correlation .my-correlation-item-value {
     color: #ff4235;
-    font-size: 0.3rem;
+    font-size: 0.35rem;
     display: block;
 }
 
 .personal-center-my-correlation .my-correlation-item-name {
     color: #fff;
-    font-size: 0.24rem;
+    font-size: 0.28rem;
     display: block;
 }
 
@@ -1444,11 +1449,12 @@ a {
     border-top: 0.01rem solid #898989;
     margin-bottom: 0.08rem;
     padding-bottom: 0.3rem;
+    font-size: 0.28rem;
 }
 
 .personal-center-my-activities .my-activities-title {
     color: #ff4235;
-    font-size: 0.24rem;
+    /*font-size: 0.24rem;*/
     text-align: center;
     line-height: 3;
 }
@@ -1514,6 +1520,40 @@ a {
 .personal-center .personal-list-item-right .personal-list-item-right-link .empty-arrow-icon {
     width: 100%;
     display: block;
+}
+
+/*积分使用规则*/
+.points-use-rule {
+    padding: 0.2rem 0 0.3rem;
+    border-top: 1px solid #b7b7b7;
+}
+
+.points-use-rule .points-use-rule-title {
+    color: #fff;
+    text-align: center;
+    font-size: 0.34rem;
+    line-height: 3;
+}
+
+.points-use-rule .points-use-rule-ul {
+    color: #fff;
+    opacity: 0.6;
+    font-size: 0.26rem;
+    padding: 0 0.2rem;
+    line-height: 1.8;
+}
+
+.points-use-rule .points-use-rule-ul li {
+    display: table;
+}
+
+.points-use-rule .points-use-rule-ul li .small-dot {
+    width: 0.6em;
+    display: table-cell;
+}
+
+.points-use-rule .points-use-rule-ul li span {
+    display: table-cell;
 }
 
 /*场地详细信息*/
