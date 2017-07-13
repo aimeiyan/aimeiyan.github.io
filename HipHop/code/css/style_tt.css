@@ -1108,6 +1108,10 @@ a {
 }
 
 /*优惠券*/
+.discount-coupon {
+    margin-bottom: 1.3rem;
+}
+
 .discount-coupon .discount-coupon-title-wrp {
     position: relative;
     text-align: center;
