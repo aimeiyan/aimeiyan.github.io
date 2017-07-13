@@ -1257,11 +1257,15 @@ a {
 .amount-part .balance-bg-left {
     top: 0;
     left: 0;
+    display: block;
+    width: 28%;
 }
 
 .amount-part .balance-bg-right {
     top: 0;
     right: 0;
+    display: block;
+    width: 28%;
 }
 
 .account-balance .amount-part .amount-value {
