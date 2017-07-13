@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课次详细页</title>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_tt.css"/>
+    <style>
+        .place-appointment-payment {
+            margin-top: 1.18rem;
+            padding: 0.1rem 0.2rem 1.1rem;
+        }
+
+        .place-appointment-payment .place-lease-time {
+            background-color: #3b3b3b;
+            border-radius: 0.08rem;
+            box-shadow: 0 0 0.1rem rgba(59, 59, 59, 0.8);
+            padding: 0 0.2rem 0.15rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .place-appointment-payment .place-lease-time .place-lease-time-title {
+            font-size: 0.36rem;
+            color: #ff4235;
+            text-align: center;
+            font-weight: bolder;
+            line-height: 3;
+        }
+
+        .place-appointment-payment .place-lease-time .place-lease-time-table {
+            color: #fff;
+            font-size: 0.3rem;
+            width: 100%;
+            line-height: 2.5;
+            text-align: center;
+            border: 0.02rem solid #a3a4a5;
+            border-radius: 0.1rem;
+        }
+
+        .place-appointment-payment .place-lease-time .place-lease-time-table tr td:first-child {
+            border-right: 0.02rem dashed #f6f6f6;
+        }
+        .place-appointment-payment .place-lease-time .place-lease-time-table tr td {
+            border-top: 0.02rem dashed #f6f6f6;
+        }
+        .place-appointment-payment .place-lease-time .place-lease-time-table tr:first-child td {
+            border-top: 0;
+        }
+
+        .place-appointment-payment .place-lease-time .place-lease-time-table .place-lease-time-select {
+            display: block;
+        }
+
+        .place-appointment-payment .place-lease-time .place-lease-time-table .place-lease-time-select.active {
+            color: #ff4235;
+        }
+    </style>
+</head>
+<body>
+<div class="webapp">
+    <div class="theader-wrp smaller-height">
+        <div class="theader">
+        <span class="left-address"><img class="address-icon" src="../images/address_icon.png"
+                                        alt=""/>&nbsp;<span>北京</span></span>
+            <img class="logo-img" src="../images/VyouClub.png" alt=""/>
+    <span class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
+            class="arrow-down"></i>
+    <span class="head-popup">
+        <ul>
+            <li>个人主页</li>
+            <li>刷新</li>
+            <li>重新授权登陆</li>
+        </ul>
+    </span>
+    </span>
+
+        </div>
+    </div>
+
+    <div class="place-appointment-payment">
+        <div class="place-lease-time">
+            <h4 class="place-lease-time-title">场地可租凭时间</h4>
+            <table class="place-lease-time-table">
+                <tbody>
+                <tr>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月6号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月7号</a></td>
+                </tr>
+                <tr>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月6号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月7号</a></td>
+                </tr>
+                <tr>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月13号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月14号</a></td>
+                </tr>
+                <tr>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月20号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月21号</a></td>
+                </tr>
+                <tr>
+                    <td><a class="place-lease-time-select active" href="javascript:void(0);">5月27号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月28号</a></td>
+                </tr>
+                <tr>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月29号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月30号</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="place-notice place-intro-notice">
+            <h4 class="content-title">场地预约与使用须知</h4>
+            <ul class="content-ul">
+                <li><i class="small-dot">•</i><span>所有活动不支持任何形式的现金退款，只可退至本平台余额账户。</span>
+                </li>
+                <li><i class="small-dot">•</i><span>开课前24小时以上取消预定，费用将100%退还至本平台余额账户。开课前24小时以内，1小时以上取消预定，费用退还90%至本平台余额账户。开课前1小时以内，费用退还80%至本平台余额账户。开课后未取消预定将不予退还课时费用。</span>
+                </li>
+                <li><i class="small-dot">•</i><span>本课程对成人开放，未满14岁不可报名。</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/zepto/zepto.js"></script>
+<script type="text/javascript" src="../js/zepto/event.js"></script>
+<script type="text/javascript" src="../js/zepto/touch.js"></script>
+<script type="text/javascript" src="../js/custom_a.js"></script>
+<script>
+    $(function () {
+        $(".entry-num .add-btn").click(function () {
+            var $num = $(".entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+            $num.text(currentNum + 1);
+        });
+
+        $(".entry-num .plus-btn").click(function () {
+            var $num = $(".entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+
+            if (currentNum < 2) {
+                $num.text(1);
+            } else {
+                $num.text(currentNum - 1);
+            }
+        })
+    })
+</script>
+</body>
+</html>
