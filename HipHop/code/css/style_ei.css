@@ -570,7 +570,7 @@ a {
     text-align: center;
     width: 100%;
     /*padding: 0.16rem;*/
-    line-height: 4.5;
+    line-height: 3.5;
     border: 0.01rem solid #3b3b3b;
 }
 
@@ -584,7 +584,7 @@ a {
 }
 
 .timetable table tr:nth-child(2) {
-    line-height: 2.8;
+    line-height: 2.2;
 }
 
 .timetable table tr th:first-child {
@@ -1175,6 +1175,7 @@ a {
     border-top-left-radius: 0.18rem;
     border-bottom-left-radius: 0.18rem;
     text-align: center;
+    position: relative;
 }
 
 .discount-coupon .discount-coupon-list .item-left .money-part {
@@ -1206,6 +1207,7 @@ a {
     justify-content: center;
     padding-left: 0.3rem;
     border: 0.01rem solid #ddd;
+    box-shadow: 0 0 0.1rem #ebebeb;
     border-top-right-radius: 0.18rem;
     border-bottom-right-radius: 0.18rem;
 }
@@ -1231,7 +1233,7 @@ a {
 }
 
 .account-balance .amount-wrp {
-    border-radius: 0.08rem;
+    border-radius: 0.12rem;
     box-shadow: 0 0 0.2rem #555;
     overflow: hidden;
     background-color: #3b3b3b;
@@ -1266,6 +1268,7 @@ a {
     font-size: 1rem;
     color: #f44336;
     line-height: 1;
+    font-weight: bolder;
 }
 
 .account-balance .amount-part .amount-text {
@@ -1293,15 +1296,15 @@ a {
 .account-balance .balance-action .vertical-line {
     height: auto;
     width: 0.01rem;
-    background-color: #898989;
+    background-color: #b0b0b0;
     display: block;
 }
 
 .account-balance .expense-list {
     background-color: #3b3b3b;
     color: #f44336;
-    border-radius: 0.08rem;
-    font-size: 0.3rem;
+    border-radius: 0.12rem;
+    font-size: 0.32rem;
     text-align: center;
     line-height: 3;
     box-shadow: 0 0 0.2rem #555;
@@ -1343,7 +1346,7 @@ a {
 }
 
 .account-appointment-timetable table {
-    font-size: 0.32rem;
+    font-size: 0.35rem;
 }
 
 .account-appointment-timetable table tr:first-child td {
@@ -1360,6 +1363,7 @@ a {
 
 .account-appointment-timetable table tr:nth-child(2) td:first-child {
     border-bottom: 0;
+    width: 6em;
 }
 
 .account-appointment-timetable table tr:last-child {
@@ -1371,7 +1375,7 @@ a {
 }
 
 .account-appointment-timetable tr:last-child {
-    line-height: 3;
+    line-height: 2.5;
 }
 
 /*个人中心*/
@@ -1393,7 +1397,8 @@ a {
 
 .personal-center .personal-center-portrait .username-text {
     color: #ff4235;
-    font-size: 0.3rem;
+    font-size: 0.32rem;
+    line-height: 2;
 }
 
 .personal-center .personal-center-portrait .portrait-img {
@@ -1401,6 +1406,8 @@ a {
     height: 1.4rem;
     border-radius: 50%;
     border: 0.02rem solid #cbcbcb;
+    margin: 0 auto;
+    display: block;
 }
 
 .personal-center-my-correlation {
@@ -1434,7 +1441,7 @@ a {
 
 .personal-center-my-correlation .my-correlation-item-value {
     color: #ff4235;
-    font-size: 0.35rem;
+    font-size: 0.4rem;
     display: block;
 }
 
@@ -1506,14 +1513,14 @@ a {
 }
 
 .personal-center .personal-list-item .item-text {
-    font-size: 0.3rem;
+    font-size: 0.35rem;
     line-height: 3;
     margin-left: 0.1rem;
 }
 
 .personal-center .personal-list-item-right .personal-list-item-right-link {
-    width: 0.33rem;
-    height: 0.24rem;
+    width: 0.38rem;
+    /*height: 0.24rem;*/
     display: block;
 }
 
@@ -1524,7 +1531,7 @@ a {
 
 /*积分使用规则*/
 .points-use-rule {
-    padding: 0.2rem 0 0.3rem;
+    padding: 0.3rem 0 0.3rem;
     border-top: 1px solid #b7b7b7;
 }
 
@@ -1538,8 +1545,8 @@ a {
 .points-use-rule .points-use-rule-ul {
     color: #fff;
     opacity: 0.6;
-    font-size: 0.3rem;
-    padding: 0 0.2rem;
+    font-size: 0.28rem;
+    padding: 0 0.25rem;
     line-height: 1.8;
 }
 
