@@ -1241,7 +1241,7 @@ a {
 }
 
 .account-balance .amount-part {
-    height: 4.55rem;
+    height: 5rem;
     text-align: center;
     position: relative;
     border-radius: 0.08rem;
@@ -1258,14 +1258,14 @@ a {
     top: 0;
     left: 0;
     display: block;
-    width: 28%;
+    width: 27%;
 }
 
 .amount-part .balance-bg-right {
     top: 0;
     right: 0;
     display: block;
-    width: 28%;
+    width: 27%;
 }
 
 .account-balance .amount-part .amount-value {
