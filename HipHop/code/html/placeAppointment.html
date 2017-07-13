@@ -121,6 +121,14 @@
             </ul>
         </div>
     </div>
+    <div class="course-detail-entry-action place-appointment-payment-btn">
+        <div class="entry-num">
+            <span class="plus-btn"><img src="../images/plus_icon.png" alt=""></span>
+            <span class="entry-num-show">￥<span class="entry-figure">100</span></span>
+            <span class="add-btn"><img src="../images/add_icon.png" alt=""></span>
+        </div>
+        <div class="entry-btn">立即预定</div>
+    </div>
 </div>
 <script type="text/javascript" src="../js/zepto/zepto.js"></script>
 <script type="text/javascript" src="../js/zepto/event.js"></script>
@@ -128,22 +136,22 @@
 <script type="text/javascript" src="../js/custom_a.js"></script>
 <script>
     $(function () {
-        $(".entry-num .add-btn").click(function () {
-            var $num = $(".entry-num .entry-figure");
-            var currentNum = parseInt($num.text());
-            $num.text(currentNum + 1);
-        });
-
-        $(".entry-num .plus-btn").click(function () {
-            var $num = $(".entry-num .entry-figure");
-            var currentNum = parseInt($num.text());
-
-            if (currentNum < 2) {
-                $num.text(1);
-            } else {
-                $num.text(currentNum - 1);
-            }
-        })
+//        $(".entry-num .add-btn").click(function () {
+//            var $num = $(".entry-num .entry-figure");
+//            var currentNum = parseInt($num.text());
+//            $num.text(currentNum + 1);
+//        });
+//
+//        $(".entry-num .plus-btn").click(function () {
+//            var $num = $(".entry-num .entry-figure");
+//            var currentNum = parseInt($num.text());
+//
+//            if (currentNum < 2) {
+//                $num.text(1);
+//            } else {
+//                $num.text(currentNum - 1);
+//            }
+//        })
     })
 </script>
 </body>
