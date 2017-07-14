@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>庆典活动报名</title>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_mnk.css"/>
+</head>
+<body>
+<div class="webapp activity-appointment-wrp">
+    <div class="theader-wrp smaller-height">
+        <div class="theader">
+        <span class="left-address"><img class="address-icon" src="../images/address_icon.png"
+                                        alt=""/>&nbsp;<span>北京</span></span>
+            <img class="logo-img" src="../images/VyouClub.png" alt=""/>
+    <span class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
+            class="arrow-down"></i>
+    <span class="head-popup">
+        <ul>
+            <li>个人主页</li>
+            <li>刷新</li>
+            <li>重新授权登陆</li>
+        </ul>
+    </span>
+    </span>
+
+        </div>
+    </div>
+    <div class="course-detail-content">
+        <div class="course-detail-part course-detail-time-address">
+            <div class="course-title-wrp">
+                <div class="course-title">Sunny Day</div>
+            </div>
+            <div class="course-img">
+                <img src="../images/activity_01.jpg" alt="">
+            </div>
+            <ul class="course-time-address-ul">
+                <li>
+                    <div class="left-part course-calendar">
+                        <img src="../images/calendar_icon.png" class="img-icon" alt=""/>
+                        <span class="item-name">活动日期：<span class="item-date">2017/06/06</span><span class="item-week">星期二</span></span>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="left-part course-time">
+                        <img src="../images/time_icon.png" class="img-icon" alt=""/>
+                        <span class="item-name">活动时间：<span class="item-time">15:00~20:00</span></span>
+
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h4 class="registration-infomation">报名人数<span class="registration-number">60/100</span></h4>
+
+                        <div class="long-progress-bar">
+                            <div class="long-progress">&nbsp;</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="left-part course-address">
+                        <img src="../images/address_bigger_icon.png" class="img-icon" alt=""/>
+                        <span class="item-name">上课地点：</span>
+                    </div>
+                    <div class="course-address-detail">北京市 朝阳区阜通东大街悠乐汇610号楼A座2层202 Vyouclub生活艺术体验馆</div>
+                    <div class="right-part">
+                        <img src="../images/arrow_right_icon.png" class="img-icon" alt=""/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="course-detail-part course-detail-notice">
+            <h4 class="course-title">活动介绍</h4>
+            <ul class="course-item-ul">
+                <li><i class="small-dot">&bull;</i><span>所有活动不支持任何形式的现金退款，只可退至本平台余额账户。</span>
+                </li>
+                <li><i class="small-dot">&bull;</i><span>开课前24小时以上取消预定，费用将100%退还至本平台余额账户。开课前24小时以内，1小时以上取消预定，费用退还90%至本平台余额账户。开课前1小时以内，费用退还80%至本平台余额账户。开课后未取消预定将不予退还课时费用。</span>
+                </li>
+                <li><i class="small-dot">&bull;</i><span>本课程对成人开放，未满14岁不可报名。</span></li>
+            </ul>
+        </div>
+        <div class="course-detail-part course-detail-notice">
+            <h4 class="course-title">参加须知</h4>
+            <ul class="course-item-ul">
+                <li><i class="small-dot">&bull;</i><span>所有活动不支持任何形式的现金退款，只可退至本平台余额账户。</span>
+                </li>
+                <li><i class="small-dot">&bull;</i><span>开课前24小时以上取消预定，费用将100%退还至本平台余额账户。开课前24小时以内，1小时以上取消预定，费用退还90%至本平台余额账户。开课前1小时以内，费用退还80%至本平台余额账户。开课后未取消预定将不予退还课时费用。</span>
+                </li>
+                <li><i class="small-dot">&bull;</i><span>本课程对成人开放，未满14岁不可报名。</span></li>
+            </ul>
+        </div>
+        <div class="course-detail-share">
+            <div class="share-btn">发送给朋友</div>
+            <div class="share-btn">分享到朋友圈</div>
+        </div>
+
+    </div>
+    <div class="course-detail-entry-action">
+        <div class="entry-num">
+            <span class="plus-btn"><img src="../images/plus_icon.png" alt=""/></span>
+            <span class="entry-num-show"><span class="entry-figure">1</span>人</span>
+            <span class="add-btn"><img src="../images/add_icon.png" alt=""/></span>
+        </div>
+        <div class="entry-btn">立即报名</div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/zepto/zepto.js"></script>
+<script type="text/javascript" src="../js/zepto/event.js"></script>
+<script type="text/javascript" src="../js/zepto/touch.js"></script>
+<script type="text/javascript" src="../js/custom_a.js"></script>
+<script>
+    $(function () {
+//        庆典活动报名
+        $(".activity-appointment-wrp .entry-num .add-btn").click(function () {
+            var $num = $(".activity-appointment-wrp .entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+            $num.text(currentNum + 1);
+        });
+
+        $(".activity-appointment-wrp .entry-num .plus-btn").click(function () {
+            var $num = $(".activity-appointment-wrp .entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+
+            if (currentNum < 2) {
+                $num.text(1);
+            } else {
+                $num.text(currentNum - 1);
+            }
+        })
+    })
+</script>
+</body>
+</html>

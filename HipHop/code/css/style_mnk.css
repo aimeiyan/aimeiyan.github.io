@@ -1052,6 +1052,7 @@ a {
     width: 100%;
     border-top: 0.01rem solid #ccc;
     position: fixed;
+    left: 0;
     bottom: 0;
     z-index: 3;
     background-color: #fff;
@@ -1516,7 +1517,7 @@ a {
     justify-content: center;
 }
 
-.personal-center .personal-list-item .personal-list-item-left .icon-img{
+.personal-center .personal-list-item .personal-list-item-left .icon-img {
     width: 0.35rem;
 }
 
@@ -1659,4 +1660,114 @@ a {
     color: #fff;
     font-size: 0.36rem;
     text-align: center;
+}
+
+/*场地预约支付*/
+.place-appointment-payment {
+    margin-top: 1.18rem;
+    padding: 0.1rem 0.2rem 1.1rem;
+}
+
+.place-appointment-payment .place-lease-time {
+    border-radius: 0.08rem;
+    box-shadow: 0 0 0.1rem rgba(59, 59, 59, 0.8);
+    padding: 0 0.2rem 0.15rem;
+    margin-bottom: 0.1rem;
+    background: url("../images/place_appointment_table_bg.jpg") no-repeat 0 0 #3b3b3b;
+    background-size: cover;
+}
+
+.place-appointment-payment .place-lease-time .place-lease-time-title {
+    font-size: 0.36rem;
+    color: #ff4235;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 3;
+}
+
+.place-appointment-payment .place-lease-time .place-lease-time-table {
+    color: #fff;
+    font-size: 0.3rem;
+    width: 100%;
+    line-height: 2.5;
+    text-align: center;
+    border: 0.02rem solid #a3a4a5;
+    border-radius: 0.1rem;
+}
+
+.place-appointment-payment .place-lease-time .place-lease-time-table tr td:first-child {
+    border-right: 0.02rem dashed #f6f6f6;
+}
+
+.place-appointment-payment .place-lease-time .place-lease-time-table tr td {
+    border-top: 0.02rem dashed #f6f6f6;
+}
+
+.place-appointment-payment .place-lease-time .place-lease-time-table tr:first-child td {
+    border-top: 0;
+}
+
+.place-appointment-payment .place-lease-time .place-lease-time-table .place-lease-time-select {
+    display: block;
+}
+
+.place-appointment-payment .place-lease-time .place-lease-time-table .place-lease-time-select.active {
+    color: #ff4235;
+}
+
+/*庆典活动报名*/
+.activity-appointment-wrp .course-detail-content .course-detail-time-address .course-img {
+    height: 3.8rem;
+    overflow: hidden;
+}
+
+.activity-appointment-wrp .course-detail-content .course-time-address-ul .registration-infomation {
+    text-align: left;
+    position: relative;
+    font-size: 0.3rem;
+    margin-bottom: 0.05rem;
+}
+
+.activity-appointment-wrp .course-detail-content .course-time-address-ul .registration-infomation .registration-number {
+    position: absolute;
+    right: 10%;
+    top: 0;
+    font-size: 0.25rem;
+}
+
+.activity-appointment-wrp .course-detail-content .course-time-address-ul .long-progress-bar {
+    position: relative;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #ccc;
+    border-radius: 0.1rem;
+    overflow: hidden;
+}
+
+.activity-appointment-wrp .course-detail-content .course-time-address-ul .long-progress {
+    position: absolute;
+    width: 60%;
+    height: 0.1rem;
+    left: 0;
+    top: 0;
+    background-color: #24c789;
+}
+
+.activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul .left-part .item-name {
+    width: 100%;
+}
+
+.activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul .left-part .item-name .item-date {
+    margin-left: 0.1rem;
+}
+
+.activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul .left-part .item-name .item-week {
+    margin-left: 0.4rem;
+}
+.activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul .left-part .item-name .item-time {
+    margin-left: 0.1rem;
+}
+
+.activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul .left-part.course-address .item-name {
+    width: 5em;
 }

@@ -7,16 +7,89 @@
     <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style_mnk.css"/>
     <style>
+        /*派对庆典、场地预约*/
+        .party-celebration-webapp .main-content .main-content-item {
+            padding: 0 0.18rem 0.18rem;
+        }
 
+        .party-celebration-webapp .main-content .main-content-item .item-title {
+            line-height: 2.5;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detal-content {
+            top: 70%;
+            height: 30%;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detail {
+            height: auto;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time {
+            font-size: 0.3rem;
+            padding: 0.1rem 0;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content {
+            padding: 0 0.1rem;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address {
+            font-size: 0.23rem;
+            position: relative;
+            padding-right: 8em;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address .activity-signup-now {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5.5em;
+            display: block;
+            padding: 0.5em 0;
+            background: url("../images/sign_up_now.png") no-repeat 0 0 #ff4235;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            text-align: center;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-date {
+            margin-left: 0.1rem;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-week {
+            margin-left: 0.4rem;
+        }
+
+        .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-time {
+            margin-left: 0.4rem;
+        }
+
+        .party-celebration-webapp .main-content .party-celebration-place-appointment .main-content-item {
+            padding: 0.18rem;
+        }
+
+        .party-celebration-webapp .main-content .party-celebration-place-appointment .main-content-item .item-detal-content {
+            top: 85%;
+            height: 15%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .party-celebration-webapp .main-content .party-celebration-place-appointment .main-content-item .item-detal-content .activity-place-address {
+            padding: 0;
+            font-size: 0.25rem;
+        }
     </style>
 </head>
 <body>
-<div class="webapp">
-<div class="theader-wrp">
-    <div class="theader">
+<div class="webapp party-celebration-webapp">
+    <div class="theader-wrp">
+        <div class="theader">
         <span class="left-address"><img class="address-icon" src="../images/address_icon.png"
                                         alt=""/>&nbsp;<span>北京</span></span>
-        <img class="logo-img" src="../images/VyouClub.png" alt=""/>
+            <img class="logo-img" src="../images/VyouClub.png" alt=""/>
     <span class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
             class="arrow-down"></i>
     <span class="head-popup">
@@ -28,207 +101,76 @@
     </span>
     </span>
 
+        </div>
+        <div class="sort-switch">
+            <div class="sort-item switch-course-type"><span>派对庆典</span></div>
+            <div class="sort-item switch-time-arrangement"><span>场地预约</span></div>
+        </div>
     </div>
-    <div class="sort-switch">
-        <div class="sort-item switch-course-type"><span>课程类型</span>&nbsp;<i class="sort-icon"></i></div>
-        <div class="sort-item switch-time-arrangement"><span>时间安排</span>&nbsp<i class="sort-icon"></i></div>
-    </div>
-</div>
-<div class="main-content">
-    <div class="main-content-item">
-        <h4 class="item-title">Dust My Shoulders Off</h4>
+    <div class="main-content">
+        <!--活动发布-->
+        <div class="party-celebration-activity-publish" style="display: none;">
+            <div class="main-content-item">
+                <h4 class="item-title">6月6 吉祥节主题 party</h4>
 
-        <div class="item-detail">
-            <img src="../images/coureImg/course_01.png" alt=""/>
+                <div class="item-detail">
+                    <img src="../images/activity_01.jpg" alt=""/>
 
-            <div class="item-detal-content">
-                <div class="item-type"><span class="type-name">类型：</span><span class="type-content">Jazz</span>
-                </div>
-                <div class="item-intro"><span class="intro-name">介绍：</span><span class="intro-content">这只舞蹈作品透露着性感与热情，是时尚女性展现自我的工具。</span>
-                </div>
-                <div class="class-hour">
-                    <ul>
-                        <li><span class="class-hour-num">1</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">2</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">3</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">4</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">5</span><span class="class-hour-text">课时</span></li>
-                    </ul>
+                    <div class="item-detal-content">
+                        <div class="item-activity-time"><span class="activity-time-name">活动时间：</span><span
+                                class="activity-time-date">2017/6/6</span><span
+                                class="activity-time-week">星期二</span><span
+                                class="activity-time-time">15:30~20:00</span></div>
+                        <div class="activity-place-address">
+                        <span class="activity-place-address-wrp">
+                            <span>地&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
+                            <span>北京市 朝阳区阜通东大街610号悠乐汇A1座 2层 202 Vyou Club 艺术生活体验馆</span>
+                        </span>
+                            <a class="activity-signup-now" href="javascript:void(0);">立即报名</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="main-content-item">
-        <h4 class="item-title">Sunny Day</h4>
+        <!--场地预约-->
+        <div class="party-celebration-place-appointment" style="display: block;">
+            <div class="main-content-item">
+                <a href="placeDetail.html">
+                    <div class="item-detail">
+                        <img src="../images/activity_01.jpg" alt=""/>
 
-        <div class="item-detail">
-            <img src="../images/coureImg/course_02.png" alt=""/>
-
-            <div class="item-detal-content">
-                <div class="item-type"><span class="type-name">类型：</span><span class="type-content">亚健康复</span>
-                </div>
-                <div class="item-intro"><span class="intro-name">介绍：</span><span class="intro-content">针对广大白领人士的健康问题结合Hip-Hop舞蹈元素创
-           作的健身操舞。</span>
-                </div>
-                <div class="class-hour">
-                    <ul>
-                        <li><span class="class-hour-num">1</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">2</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">3</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">4</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">5</span><span class="class-hour-text">课时</span></li>
-                    </ul>
-                </div>
+                        <div class="item-detal-content">
+                            <div class="activity-place-address">
+                                地 址：北京市朝阳区望京国际研发园F左B2 Vyou Club
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-    <div class="main-content-item">
-        <h4 class="item-title">Dust My Shoulders Off</h4>
-
-        <div class="item-detail">
-            <img src="../images/coureImg/course_03.png" alt=""/>
-
-            <div class="item-detal-content">
-                <div class="item-type"><span class="type-name">类型：</span><span class="type-content">Hip-Hop</span>
-                </div>
-                <div class="item-intro"><span class="intro-name">介绍：</span><span class="intro-content">这是一只热情动感、韵律性强、并附有年代感的Hip-Hop舞蹈。</span>
-                </div>
-                <div class="class-hour">
-                    <ul>
-                        <li><span class="class-hour-num">1</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">2</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">3</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">4</span><span class="class-hour-text">课时</span></li>
-                        <li><span class="class-hour-num">5</span><span class="class-hour-text">课时</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <div class="bnav">
+        <a class="bnav-tab bnav-course" href="#">
+            <span class="bnv-img">&nbsp;</span>
+            <span>舞蹈课程</span>
+        </a>
+        <a class="bnav-tab bnav-party bnav-active" href="#">
+            <span class="bnv-img">&nbsp;</span>
+            <span>派对庆典</span>
+        </a>
+        <a class="bnav-tab bnav-news" href="#">
+            <span class="bnv-img">&nbsp;</span>
+            <span>动态资讯</span>
+        </a>
+        <a class="bnav-tab bnav-attention" href="#">
+            <span class="bnv-img">&nbsp;</span>
+            <span>我的关注</span>
+        </a>
+        <a class="bnav-tab bnav-my" href="#">
+            <span class="bnv-img">&nbsp;</span>
+            <span>我的Vyou</span>
+        </a>
     </div>
-</div>
-<div class="bnav">
-    <a class="bnav-tab bnav-course bnav-active" href="#">
-        <span class="bnv-img">&nbsp;</span>
-        <span>舞蹈课程</span>
-    </a>
-    <a class="bnav-tab bnav-party" href="#">
-        <span class="bnv-img">&nbsp;</span>
-        <span>派对庆典</span>
-    </a>
-    <a class="bnav-tab bnav-news" href="#">
-        <span class="bnv-img">&nbsp;</span>
-        <span>动态资讯</span>
-    </a>
-    <a class="bnav-tab bnav-attention" href="#">
-        <span class="bnv-img">&nbsp;</span>
-        <span>我的关注</span>
-    </a>
-    <a class="bnav-tab bnav-my" href="#">
-        <span class="bnv-img">&nbsp;</span>
-        <span>我的Vyou</span>
-    </a>
-</div>
-
-<div class="course-type">
-    <div class="course-type-item">
-        <div class="course-type-title">
-            <img class="course-type-title-img" src="../images/courseType/course_type_title_01.png" alt=""/>
-
-            <div class="course-type-title-text">健身功能类</div>
-        </div>
-        <ul class="course-type-list">
-            <li>
-                <div class="course-type-img"><img src="../images/courseType/course_type_01.jpg" alt=""/></div>
-                <div class="course-type-text">亚健康复</div>
-            </li>
-            <li>
-                <div class="course-type-img"><img src="../images/courseType/course_type_02.jpg" alt=""/></div>
-                <div class="course-type-text">瘦身塑形</div>
-            </li>
-            <li>
-                <div class="course-type-img"><img src="../images/courseType/course_type_03.jpg" alt=""/></div>
-                <div class="course-type-text">协调柔韧</div>
-            </li>
-        </ul>
-    </div>
-    <div class="course-type-item">
-        <div class="course-type-title">
-            <img class="course-type-title-img" src="../images/courseType/course_type_title_02.png" alt=""/>
-
-            <div class="course-type-title-text">舞蹈类</div>
-        </div>
-        <ul class="course-type-list">
-            <li>
-                <div class="course-type-img"><img src="../images/courseType/course_type_04.jpg" alt=""/></div>
-                <div class="course-type-text">Hip-Hop</div>
-            </li>
-            <li>
-                <div class="course-type-img"><img src="../images/courseType/course_type_05.jpg" alt=""/></div>
-                <div class="course-type-text">House</div>
-            </li>
-            <li>
-                <div class="course-type-img"><img src="../images/courseType/course_type_06.jpg" alt=""/></div>
-                <div class="course-type-text">Jazz</div>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="time-arrangement">
-    <div class="time-arrangement-subwrp">
-        <div class="course-date">
-            <h4 class="time-title">上课日期</h4>
-            <ul class="course-date-list">
-                <li>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月2日</a></div>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月3日</a></div>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月4日</a></div>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月5日</a></div>
-                </li>
-                <li>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月6日</a></div>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月7日</a></div>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月8日</a></div>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月9日</a></div>
-                </li>
-                <li>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月10日</a></div>
-                    <div class="course-date-text-wrp"><a class="course-date-text">5月11日</a></div>
-                    <div class="course-date-text-wrp">&nbsp;</div>
-                    <div class="course-date-text-wrp">&nbsp;</div>
-                </li>
-            </ul>
-        </div>
-        <div class="course-time">
-            <h4 class="time-title">授课时间</h4>
-            <ul class="course-time-list">
-                <li>
-                    <a class="course-time-text">上午(10:00-11:30AM)</a>
-                </li>
-                <li>
-                    <a class="course-time-text">中午(13:30-15:00PM)</a>
-                </li>
-                <li>
-                    <a class="course-time-text">下午(15:10-16:40PM)</a>
-                </li>
-                <li>
-                    <a class="course-time-text">傍晚(16:50-18:20PM)</a>
-                </li>
-                <li>
-                    <a class="course-time-text">前晚(18:30-20:00PM)</a>
-                </li>
-                <li>
-                    <a class="course-time-text">晚间(20:10-21:40PM)</a>
-                </li>
-            </ul>
-        </div>
-        <div class="time-note">
-            <span class="note-title">提示：</span><span>请任意选择其中一项功能类别进行点击；
-两项功能之间没有任何联系。</span>
-        </div>
-    </div>
-</div>
-<div class="overlay"></div>
 
 </div>
 <script type="text/javascript" src="../js/zepto/zepto.js"></script>
