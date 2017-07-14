@@ -65,6 +65,10 @@
             margin-left: 0.4rem;
         }
 
+        .party-celebration-webapp .main-content .party-celebration-place-appointment {
+            display: none;
+        }
+
         .party-celebration-webapp .main-content .party-celebration-place-appointment .main-content-item {
             padding: 0.18rem;
         }
@@ -81,6 +85,11 @@
             padding: 0;
             font-size: 0.25rem;
         }
+
+        .party-celebration-webapp .sort-switch .sort-item.active {
+            color: #df3d32;
+        }
+
     </style>
 </head>
 <body>
@@ -103,13 +112,13 @@
 
         </div>
         <div class="sort-switch">
-            <div class="sort-item switch-course-type"><span>派对庆典</span></div>
-            <div class="sort-item switch-time-arrangement"><span>场地预约</span></div>
+            <div class="sort-item switch-party-celebration active"><span>派对庆典</span></div>
+            <div class="sort-item switch-place-appointment"><span>场地预约</span></div>
         </div>
     </div>
     <div class="main-content">
         <!--活动发布-->
-        <div class="party-celebration-activity-publish" style="display: none;">
+        <div class="party-celebration-main-content party-celebration-activity-publish">
             <div class="main-content-item">
                 <h4 class="item-title">6月6 吉祥节主题 party</h4>
 
@@ -126,14 +135,14 @@
                             <span>地&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
                             <span>北京市 朝阳区阜通东大街610号悠乐汇A1座 2层 202 Vyou Club 艺术生活体验馆</span>
                         </span>
-                            <a class="activity-signup-now" href="javascript:void(0);">立即报名</a>
+                            <a class="activity-signup-now" href="activityApply.html">立即报名</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--场地预约-->
-        <div class="party-celebration-place-appointment" style="display: block;">
+        <div class="party-celebration-main-content party-celebration-place-appointment">
             <div class="main-content-item">
                 <a href="placeDetail.html">
                     <div class="item-detail">
@@ -177,5 +186,18 @@
 <script type="text/javascript" src="../js/zepto/event.js"></script>
 <script type="text/javascript" src="../js/zepto/touch.js"></script>
 <script type="text/javascript" src="../js/custom_a.js"></script>
+<script>
+    $(function () {
+        var $partyCelebrationPart = $(".party-celebration-webapp .party-celebration-main-content");
+        var $switchBtn = $(".party-celebration-webapp .sort-switch .sort-item");
+        $switchBtn.tap(function () {
+            var idx = $(this).index();
+            $switchBtn.removeClass("active");
+            $(this).addClass("active");
+            $partyCelebrationPart.hide();
+            $partyCelebrationPart.eq(idx).show();
+        })
+    })
+</script>
 </body>
 </html>
