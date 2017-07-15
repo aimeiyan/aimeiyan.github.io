@@ -1387,6 +1387,7 @@ a {
 /*个人中心*/
 .personal-center {
     margin-top: 1.12rem;
+    margin-bottom: 1.2rem;
 }
 
 .personal-center .personal-center-portrait {
@@ -1674,7 +1675,7 @@ a {
     font-weight: bolder;
 }
 
-.place-appoint-btn a{
+.place-appoint-btn a {
     display: block;
 }
 
@@ -1838,7 +1839,7 @@ a {
 
 .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address .activity-signup-now {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
     width: 5em;
     display: block;
@@ -1852,7 +1853,6 @@ a {
 .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address .activity-signup-now:visited {
     color: #fff;
 }
-
 
 .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address .activity-signup-now:focus {
     color: #fff;
