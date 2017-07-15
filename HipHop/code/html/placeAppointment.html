@@ -5,7 +5,7 @@
     <title>场地预约支付</title>
     <script type="text/javascript" src="../js/layout.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/style_mnk.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_9k.css"/>
 </head>
 <body>
 <div class="webapp">
@@ -34,24 +34,24 @@
             <table class="place-lease-time-table">
                 <tbody>
                 <tr>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月6号</a></td>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月7号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月6日</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月7日</a></td>
                 </tr>
                 <tr>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月13号</a></td>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月14号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月13日</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月14日</a></td>
                 </tr>
                 <tr>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月20号</a></td>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月21号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月20日</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月21日</a></td>
                 </tr>
                 <tr>
-                    <td><a class="place-lease-time-select active" href="javascript:void(0);">5月27号</a></td>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月28号</a></td>
+                    <td><a class="place-lease-time-select active" href="javascript:void(0);">5月27日</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月28日</a></td>
                 </tr>
                 <tr>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月29号</a></td>
-                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月30号</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月29日</a></td>
+                    <td><a class="place-lease-time-select" href="javascript:void(0);">5月30日</a></td>
                 </tr>
                 </tbody>
             </table>
@@ -82,22 +82,33 @@
 <script type="text/javascript" src="../js/custom_a.js"></script>
 <script>
     $(function () {
-//        $(".entry-num .add-btn").click(function () {
-//            var $num = $(".entry-num .entry-figure");
-//            var currentNum = parseInt($num.text());
-//            $num.text(currentNum + 1);
-//        });
-//
-//        $(".entry-num .plus-btn").click(function () {
-//            var $num = $(".entry-num .entry-figure");
-//            var currentNum = parseInt($num.text());
-//
-//            if (currentNum < 2) {
-//                $num.text(1);
-//            } else {
-//                $num.text(currentNum - 1);
-//            }
-//        })
+
+        // 场地预约支付,日期选择
+        $dateTd = $(".place-lease-time-table td");
+        $dateTd.tap(function () {
+            $dateTd.find("a").removeClass("active");
+            $(this).find("a").addClass("active");
+        });
+
+
+        // 场地预约支付,日期选择,"+","-"操作
+        var step=10;
+        $(".place-appointment-payment-btn .add-btn").click(function () {
+            var $num = $(".entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+            $num.text(currentNum + step);
+        });
+
+        $(".place-appointment-payment-btn .plus-btn").click(function () {
+            var $num = $(".entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+
+            if (currentNum === 100) {
+                $num.text(100);
+            } else {
+                $num.text(currentNum - step);
+            }
+        })
     })
 </script>
 </body>

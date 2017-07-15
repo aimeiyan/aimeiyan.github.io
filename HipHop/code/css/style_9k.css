@@ -140,10 +140,10 @@ a {
 .sort-switch {
     display: flex;
     flex-direction: row;
-    padding-top: 0.16rem;
+    padding-top: 0.2rem;
     color: #dfdfdf;
-    height: 0.5rem;
-    font-size: 0.3rem;
+    height: 0.6rem;
+    font-size: 0.32rem;
 }
 
 .sort-switch .sort-item {
@@ -303,13 +303,14 @@ a {
 
 .main-content .main-content-item .item-detal-content {
     position: absolute;
-    top: 46%;
+    /*top: 46%;*/
+    bottom: 0;
     left: 0;
-    height: 54%;
+    /*height: 54%;*/
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    padding-top: 0.05rem;
+    padding:0.05rem 0 0.05rem;
 }
 
 .main-content .main-content-item .item-detal-content .item-type, .main-content .main-content-item .item-detal-content .item-intro {
@@ -1576,7 +1577,7 @@ a {
 
 .place-detail {
     margin: 1.15rem 0 1rem;
-    padding: 0.2rem;
+    padding: 0.2rem 0.2rem 0.1rem;
 }
 
 .place-detail .place-detail-addresss-img {
@@ -1585,21 +1586,30 @@ a {
     border-radius: 0.18rem;
     box-shadow: 0 0 0.2rem #555;
     overflow: hidden;
-    padding: 0.2rem;
+    padding: 0.2rem 0.2rem 0;
     margin-bottom: 0.1rem;
 
 }
 
+.place-detail .place-detail-addresss-img .place-detail-show .item-img-wrp .item-img-img {
+    display: block;
+    width: 100%;
+}
+
+.place-detail .place-detail-addresss-img .place-detail-show .item-img-wrp .item-img-ul .item-img-li {
+    margin-bottom: 0.2rem;
+}
+
 .place-detail .place-detail-addresss-img .place-detail-title {
     color: #ff4235;
-    font-size: 0.36rem;
+    font-size: 0.4rem;
     text-align: center;
     font-weight: bolder;
 }
 
 .place-detail .place-detail-addresss-img .place-detail-address-name {
     color: #fff;
-    font-size: 0.3rem;
+    font-size: 0.32rem;
     text-align: center;
     font-weight: bolder;
 }
@@ -1609,7 +1619,7 @@ a {
     font-size: 0.3rem;
     text-align: center;
     font-weight: bolder;
-    margin: 1em 0 0.5em;
+    margin: 1.2em 0 0.4em;
 }
 
 .place-intro-notice {
@@ -1627,7 +1637,8 @@ a {
     color: #ff4235;
     text-align: left;
     font-weight: bolder;
-    line-height: 3;
+    line-height: 2;
+    padding-top: 0.2rem;
 }
 
 .place-intro-notice .content-ul {
@@ -1660,6 +1671,7 @@ a {
     color: #fff;
     font-size: 0.36rem;
     text-align: center;
+    font-weight: bolder;
 }
 
 /*场地预约支付*/
@@ -1687,9 +1699,9 @@ a {
 
 .place-appointment-payment .place-lease-time .place-lease-time-table {
     color: #fff;
-    font-size: 0.3rem;
+    font-size: 0.35rem;
     width: 100%;
-    line-height: 2.5;
+    line-height: 2.3;
     text-align: center;
     border: 0.02rem solid #a3a4a5;
     border-radius: 0.1rem;
@@ -1716,6 +1728,14 @@ a {
 }
 
 /*庆典活动报名*/
+.activity-appointment-wrp .course-detail-share {
+    padding: 0.2rem 0;
+}
+
+.activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul > li {
+    padding: 0.2rem 0;
+}
+
 .activity-appointment-wrp .course-detail-content .course-detail-time-address .course-img {
     height: 3.8rem;
     overflow: hidden;
@@ -1764,10 +1784,103 @@ a {
 .activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul .left-part .item-name .item-week {
     margin-left: 0.4rem;
 }
+
 .activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul .left-part .item-name .item-time {
     margin-left: 0.1rem;
 }
 
 .activity-appointment-wrp .course-detail-content .course-detail-time-address .course-time-address-ul .left-part.course-address .item-name {
     width: 5em;
+}
+
+.activity-appointment-wrp .course-detail-content .course-detail-time-address .course-title {
+    font-size: 0.38rem;
+}
+
+/*派对庆典、场地预约*/
+.party-celebration-webapp .main-content .main-content-item {
+    padding: 0 0.18rem 0.18rem;
+    border-radius: 0.12rem;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-title {
+    line-height: 2.5;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-detal-content {
+    /*top: 65%;*/
+    /*height: 35%;*/
+    bottom: 0;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-detail {
+    height: auto;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time {
+    font-size: 0.3rem;
+    padding: 0.1rem 0;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content {
+    padding: 0 0.1rem;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address {
+    font-size: 0.25rem;
+    position: relative;
+    padding-right: 7em;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address .activity-signup-now {
+    position: absolute;
+    top: 0.1rem;
+    right: 0;
+    width: 5em;
+    display: block;
+    padding: 0.5em 0;
+    background: url("../images/sign_up_now.png") no-repeat 0 0 #ff4235;
+    border-radius: 0.1rem;
+    font-size: 0.3rem;
+    text-align: center;
+}
+
+/*.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-date {*/
+    /*margin-left: 0.1rem;*/
+/*}*/
+
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-week {
+    margin-left: 0.2rem;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-time {
+    margin-left: 0.2rem;
+}
+
+.party-celebration-webapp .main-content .party-celebration-place-appointment {
+    display: none;
+}
+
+.party-celebration-webapp .main-content .party-celebration-place-appointment .main-content-item {
+    padding: 0.18rem;
+}
+
+.party-celebration-webapp .main-content .party-celebration-place-appointment .main-content-item .item-detal-content {
+    /*top: 85%;*/
+    /*height: 15%;*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.party-celebration-webapp .main-content .party-celebration-place-appointment .main-content-item .item-detal-content .activity-place-address {
+    font-size: 0.25rem;
+    padding: 0.2rem 0;
+}
+
+.party-celebration-webapp .sort-switch .sort-item.active {
+    color: #df3d32;
 }
