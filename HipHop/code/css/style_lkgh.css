@@ -1849,6 +1849,15 @@ a {
     color: #fff;
 }
 
+
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address .activity-signup-now:focus {
+    color: #fff;
+}
+
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address .activity-signup-now:active {
+    color: #fff;
+}
+
 /*.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-date {*/
 /*margin-left: 0.1rem;*/
 /*}*/
