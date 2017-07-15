@@ -1674,6 +1674,10 @@ a {
     font-weight: bolder;
 }
 
+.place-appoint-btn a{
+    display: block;
+}
+
 /*场地预约支付*/
 .place-appointment-payment {
     margin-top: 1.18rem;
