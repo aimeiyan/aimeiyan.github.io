@@ -310,7 +310,7 @@ a {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    padding:0.05rem 0 0.05rem;
+    padding: 0.05rem 0 0.05rem;
 }
 
 .main-content .main-content-item .item-detal-content .item-type, .main-content .main-content-item .item-detal-content .item-intro {
@@ -1845,8 +1845,12 @@ a {
     text-align: center;
 }
 
+.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .activity-place-address .activity-signup-now:visited {
+    color: #fff;
+}
+
 /*.party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-date {*/
-    /*margin-left: 0.1rem;*/
+/*margin-left: 0.1rem;*/
 /*}*/
 
 .party-celebration-webapp .main-content .main-content-item .item-detail .item-detal-content .item-activity-time .activity-time-week {
