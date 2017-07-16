@@ -2106,3 +2106,19 @@ a {
 .teacher-detail-info .course-arrangement tbody tr td:first-child {
     line-height: 1.5;
 }
+
+/*课次教学内容*/
+.class-time-content .my-attention-webapp {
+    margin-bottom: 0.1rem;
+}
+
+.class-time-content .attention-course-list .attention-course-title {
+    color: #fff;
+    font-size: 0.36rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.class-time-content .course-detail-intro .course-intro-item .course-intro-subtitle {
+    line-height: 2;
+}
