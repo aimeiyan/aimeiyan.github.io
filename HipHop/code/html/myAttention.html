@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的关注</title>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_cvv.css"/>
+</head>
+<body>
+<div class="webapp my-attention-webapp">
+    <div class="theader-wrp">
+        <div class="theader">
+        <span class="left-address"><img class="address-icon" src="../images/address_icon.png"
+                                        alt=""/>&nbsp;<span>北京</span></span>
+            <img class="logo-img" src="../images/VyouClub.png" alt=""/>
+    <span class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
+            class="arrow-down"></i>
+    <span class="head-popup">
+        <ul>
+            <li>个人主页</li>
+            <li>刷新</li>
+            <li>重新授权登陆</li>
+        </ul>
+    </span>
+    </span>
+        </div>
+        <div class="sort-switch">
+            <div class="sort-item switch-party-celebration active"><span>关注导师</span></div>
+            <div class="sort-item switch-place-appointment"><span>关注课程</span></div>
+        </div>
+    </div>
+    <div class="main-content">
+        <!--关注导师-->
+        <div class="my-attention-part my-attention-teacher">
+            <div class="attention-teacher-list">
+                <a href="teacherInfomation.html">
+                    <div class="attention-teacher-head">
+                        <img class="attention-teacher-img" src="../images/headPortrait/teacher_02.jpg" alt=""/>
+                    </div>
+                    <div class="attention-teacher-table">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Salra</td>
+                                <td><span class="m-r-2em">舞</span>龄：</td>
+                                <td>5年</td>
+                            </tr>
+                            <tr>
+                                <td><img src="../images/star_icon.png" alt=""/>&nbsp;<span>5.0</span></td>
+                                <td>主修风格：</td>
+                                <td>Hip-Hop、House</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </a>
+            </div>
+            <div class="attention-teacher-list">
+                <a href="teacherInfomation.html">
+                    <div class="attention-teacher-head">
+                        <img class="attention-teacher-img" src="../images/headPortrait/teacher_01.jpg" alt=""/>
+                    </div>
+                    <div class="attention-teacher-table">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Salra</td>
+                                <td><span class="m-r-2em">舞</span>龄：</td>
+                                <td>5年</td>
+                            </tr>
+                            <tr>
+                                <td><img src="../images/star_icon.png" alt=""/>&nbsp;<span>5.0</span></td>
+                                <td>主修风格：</td>
+                                <td>Hip-Hop、House</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!--关注课程-->
+        <div class="my-attention-part my-attention-course">
+            <div class="attention-course-list">
+                <div class="attention-course-img-wrp">
+                    <h4 class="attenttion-course-title">Sunny day</h4>
+                    <img class="attention-course-img" src="../images/courseType/course_type_07.jpg" alt=""/>
+                </div>
+                <ul class="attention-course-intro">
+                    <li><span>课程类型：</span><span>亚健康复</span></li>
+                    <li><span>课次：</span><span>第一节</span></li>
+                    <li><span>功能主题：</span><span>颈部调理</span></li>
+                    <li><span>技术主题：</span><span>Head Swing</span></li>
+                </ul>
+            </div>
+            <div class="attention-course-list">
+                <div class="attention-course-img-wrp">
+                    <h4 class="attenttion-course-title">Sunny day</h4>
+                    <img class="attention-course-img" src="../images/courseType/course_type_07.jpg" alt=""/>
+                </div>
+                <ul class="attention-course-intro">
+                    <li><span>课程类型：</span><span>亚健康复</span></li>
+                    <li><span>课次：</span><span>第一节</span></li>
+                    <li><span>功能主题：</span><span>颈部调理</span></li>
+                    <li><span>技术主题：</span><span>Head Swing</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="bnav">
+    <a class="bnav-tab bnav-course" href="index.html">
+        <span class="bnv-img">&nbsp;</span>
+        <span>舞蹈课程</span>
+    </a>
+    <a class="bnav-tab bnav-party" href="#">
+        <span class="bnv-img">&nbsp;</span>
+        <span>派对庆典</span>
+    </a>
+    <a class="bnav-tab bnav-news" href="#">
+        <span class="bnv-img">&nbsp;</span>
+        <span>动态资讯</span>
+    </a>
+    <a class="bnav-tab bnav-attention bnav-active" href="#">
+        <span class="bnv-img">&nbsp;</span>
+        <span>我的关注</span>
+    </a>
+    <a class="bnav-tab bnav-my" href="personalCenter.html">
+        <span class="bnv-img">&nbsp;</span>
+        <span>我的Vyou</span>
+    </a>
+</div>
+<script type="text/javascript" src="../js/zepto/zepto.js"></script>
+<script type="text/javascript" src="../js/zepto/event.js"></script>
+<script type="text/javascript" src="../js/zepto/touch.js"></script>
+<script type="text/javascript" src="../js/custom_a.js"></script>
+<script>
+    $(function () {
+
+        //“我的关注”中“关注导师”和“关注课程”的TAB切换
+        var $myAttentionPart = $(".my-attention-webapp .my-attention-part");
+        var $switchBtn = $(".my-attention-webapp .sort-switch .sort-item");
+        $switchBtn.tap(function () {
+            var idx = $(this).index();
+            $switchBtn.removeClass("active");
+            $(this).addClass("active");
+            $myAttentionPart.hide();
+            $myAttentionPart.eq(idx).show();
+        })
+    })
+</script>
+</body>
+</html>

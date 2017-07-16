@@ -1901,3 +1901,208 @@ a {
 .party-celebration-webapp .sort-switch .sort-item.active {
     color: #df3d32;
 }
+
+/*我的关注*/
+/*关注导师*/
+.my-attention-webapp .my-attention-teacher .attention-teacher-list {
+    position: relative;
+    background-color: #3b3b3b;
+    border-radius: 0.12rem;
+    box-shadow: 0 0 0.1rem rgba(59, 59, 59, 0.8);
+    padding: 0.25rem 0.15rem 0.25rem 1.35rem;
+    margin-bottom: 0.1rem;
+}
+
+.my-attention-webapp .my-attention-teacher .attention-teacher-list .attention-teacher-head {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 0.15rem;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.my-attention-webapp .my-attention-teacher .attention-teacher-list .attention-teacher-head .attention-teacher-img {
+    display: block;
+    width: 100%;
+}
+
+.my-attention-webapp .my-attention-teacher .attention-teacher-list .attention-teacher-table table {
+    color: #fff;
+    width: 100%;
+    font-size: 0.28rem;
+}
+
+.my-attention-webapp .my-attention-teacher .attention-teacher-list .attention-teacher-table table tr td:nth-child(2) {
+    width: 5em;
+}
+
+.my-attention-webapp .my-attention-teacher .attention-teacher-list .attention-teacher-table table tr td:nth-child(1) {
+    color: #ff4235;
+    width: 25%;
+}
+
+.my-attention-webapp .my-attention-teacher .attention-teacher-list .attention-teacher-table .m-r-2em {
+    margin-right: 2em;
+}
+
+.my-attention-webapp .sort-switch .sort-item.active {
+    color: #df3d32;
+}
+
+/*关注课程*/
+.my-attention-webapp .attention-course-list {
+    border-radius: 0.12rem;
+    box-shadow: 0 0 0.1rem rgba(59, 59, 59, 0.8);
+    background-color: #3b3b3b;
+    margin-bottom: 0.1rem;
+}
+
+.my-attention-webapp .attention-course-list:last-child {
+    margin-bottom: 0;
+}
+
+.my-attention-webapp .attention-course-img-wrp {
+    position: relative;
+    margin: 0 0.2rem 0.2rem;
+    padding-top: 0.2rem;
+    /*height: 4rem;*/
+    overflow: hidden;
+}
+
+.my-attention-webapp .attention-course-img-wrp .attention-course-img {
+    display: block;
+    width: 100%;
+}
+
+.my-attention-webapp .attention-course-img-wrp .attenttion-course-title {
+    position: absolute;
+    color: #ff4235;
+    font-size: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    line-height: 2.5;
+    text-align: center;
+}
+
+.my-attention-webapp .attention-course-intro {
+    color: #fff;
+    padding: 0 0.1rem;
+    margin-top: 0.15rem;
+}
+
+.my-attention-webapp .attention-course-intro li {
+    border-bottom: 0.01rem solid #7f7f7f;
+    line-height: 2.5;
+    font-size: 0.3rem;
+    padding: 0 0.1rem;
+}
+
+.my-attention-webapp .attention-course-intro li:last-child {
+    border-bottom: 0;
+}
+
+.my-attention-webapp .my-attention-course {
+    display: none;
+}
+/*导师详细信息*/
+.white-frame {
+    margin: 0.1rem 0.2rem;
+    background-color: #3b3b3b;
+    border-radius: 0.12rem;
+    box-shadow: 0 0 0.1rem rgba(59, 59, 59, 0.8);
+}
+
+.white-frame .dark-frame {
+    padding: 0.2rem;
+}
+
+.teacher-detail-info {
+    margin-top: 1.25rem;
+}
+
+.teacher-detail-info .teacher-img-wrp img {
+    width: 100%;
+    display: block;
+}
+
+.teacher-detail-info .teacher-name {
+    font-size: 0.36rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2.5;
+}
+
+.teacher-detail-info .teacher-resume-abstract {
+    color: #fff;
+    font-size: 0.28rem;
+    line-height: 2.5;
+}
+
+.teacher-detail-info .teacher-resume-abstract li {
+    width: 48%;
+    display: inline-block;
+    line-height: 2;
+}
+
+.teacher-detail-info .teacher-resume-abstract li .star-icon, .teacher-detail-info .teacher-resume-abstract li .teacher-score {
+    color: #ff4235;
+}
+
+.teacher-detail-info .teacher-resume-abstract li .star-icon {
+    margin: 0 0.15rem;
+}
+
+.teacher-detail-info .teacher-resume {
+    color: #fff;
+    font-size: 0.25rem;
+    line-height: 1.6;
+}
+
+.teacher-detail-info .teacher-resume li {
+    border-top: 0.01rem solid #7f7f7f;
+    padding: 0.15rem 0;
+}
+
+.teacher-detail-info .teacher-resume .star-icon {
+    margin-right: 0.05rem;
+}
+
+.teacher-detail-info .teacher-resume .resume-title {
+    font-size: 0.28rem;
+    line-height: 2;
+}
+
+.teacher-detail-info .course-arrangement {
+    color: #fff;
+    width: 100%;
+    border: 0.02rem solid #acacaf;
+    text-align: center;
+    border-radius: 0.12rem;
+    line-height: 2.5;
+}
+
+.teacher-detail-info .course-arrangement td {
+    vertical-align: middle;
+    font-size: 0.24rem;
+}
+
+.teacher-detail-info .course-arrangement tbody tr td {
+    border-right: 0.01rem dashed #f1f1f5;
+    border-top: 0.01rem dashed #f1f1f5;
+}
+
+.teacher-detail-info .course-arrangement thead tr td {
+    font-size: 0.3rem;
+}
+
+.teacher-detail-info .course-arrangement tbody tr td:last-child {
+    border-right: 0;
+}
+.teacher-detail-info .course-arrangement tbody tr td:first-child {
+    line-height: 1.5;
+}
