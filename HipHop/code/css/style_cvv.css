@@ -2195,3 +2195,26 @@ a {
 .dynamic-info .sort-switch .sort-item.active {
     color: #df3d32;
 }
+
+.dynamic-webcast .course-list-wrp .course-class-status-icon {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    z-index: 10;
+    border: 0.01rem solid #fff;
+    color: #fff;
+    padding: 0.05rem 0.15rem 0.05rem 0.35rem;
+    font-size: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.dynamic-webcast .course-list-wrp .course-class-status-icon .dot-icon {
+    width: 0.15rem;
+    height: 0.15rem;
+    position: absolute;
+    left: 0.15rem;
+    top: 50%;
+    margin-top: -0.08rem;
+    background-color: #ffa42f;
+    border-radius: 50%;
+}
