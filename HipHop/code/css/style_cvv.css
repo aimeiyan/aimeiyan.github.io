@@ -2009,6 +2009,7 @@ a {
 .my-attention-webapp .my-attention-course {
     display: none;
 }
+
 /*导师详细信息*/
 .white-frame {
     margin: 0.1rem 0.2rem;
@@ -2017,7 +2018,7 @@ a {
     box-shadow: 0 0 0.1rem rgba(59, 59, 59, 0.8);
 }
 
-.white-frame .dark-frame {
+.dark-frame {
     padding: 0.2rem;
 }
 
@@ -2103,6 +2104,7 @@ a {
 .teacher-detail-info .course-arrangement tbody tr td:last-child {
     border-right: 0;
 }
+
 .teacher-detail-info .course-arrangement tbody tr td:first-child {
     line-height: 1.5;
 }
@@ -2121,4 +2123,75 @@ a {
 
 .class-time-content .course-detail-intro .course-intro-item .course-intro-subtitle {
     line-height: 2;
+}
+
+/*动态资讯*/
+.main-content .white-frame {
+    margin: 0 0 0.1rem;
+    overflow: hidden;
+}
+
+.dynamic-trivia .course-title {
+    line-height: 1.5;
+    margin-bottom: 0.15rem;
+}
+
+.dynamic-webcast {
+    display: none;
+}
+
+.dynamic-webcast .course-list-wrp {
+    position: relative;
+}
+
+.dynamic-webcast .course-list-wrp .mask-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.dynamic-webcast .course-list-wrp .show-course-img {
+    width: 100%;
+    display: block;
+}
+
+.dynamic-webcast .course-list-wrp .course-detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dynamic-webcast .course-list-wrp .course-detail .course-title {
+    font-size: 0.36rem;
+    color: #ff4235;
+    font-weight: bolder;
+}
+
+.dynamic-webcast .course-list-wrp .course-detail .course-class-time {
+    margin-bottom: 0.1rem;
+    font-size: 0.22rem;
+}
+
+.dynamic-webcast .course-list-wrp .course-detail .course-class-status-wrp {
+    font-size: 0.24rem;
+}
+
+.dynamic-webcast .course-list-wrp .course-detail .course-class-status {
+    margin-left: 0.25rem;
+}
+
+.dynamic-info .sort-switch .sort-item.active {
+    color: #df3d32;
 }
