@@ -6,6 +6,31 @@
     <script type="text/javascript" src="../js/layout.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style_cvv.css"/>
+
+    <style>
+        .dynamic-webcast .course-list-wrp .course-class-status-icon {
+            position: absolute;
+            top: 0.3rem;
+            right: 0.3rem;
+            z-index: 10;
+            border: 0.01rem solid #fff;
+            color: #fff;
+            padding: 0.05rem 0.15rem 0.05rem 0.35rem;
+            font-size: 0.25rem;
+            border-radius: 0.25rem;
+        }
+
+        .dynamic-webcast .course-list-wrp .course-class-status-icon .dot-icon {
+            width: 0.15rem;
+            height: 0.15rem;
+            position: absolute;
+            left: 0.15rem;
+            top: 50%;
+            margin-top: -0.08rem;
+            background-color: #ffa42f;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
 <div class="webapp dynamic-info">
@@ -33,7 +58,7 @@
 
     <div class="main-content">
         <!--动态花絮列表-->
-        <div class="dynamic-info-part dynamic-trivia">
+        <div class="dynamic-info-part dynamic-trivia" style="display: none">
             <div class="white-frame">
                 <div class="dark-frame">
                     <div class="course-detail-part course-detail-intro">
@@ -76,13 +101,17 @@
         </div>
 
         <!--活动直播列表-->
-        <div class="dynamic-info-part dynamic-webcast">
+        <div class="dynamic-info-part dynamic-webcast" style="display: block">
             <div class="white-frame">
                 <a href="">
                     <div class="course-list-wrp">
                         <div class="mask-layer">&nbsp;</div>
                         <img class="show-course-img" src="../images/liveWebcast/live_webcast_01.jpg" alt=""/>
 
+                        <div class="course-class-status-icon">
+                            <span class="dot-icon">&nbsp;</span>
+                            <span>直播中</span>
+                        </div>
                         <div class="course-detail">
                             <h4 class="course-title">POP健身操</h4>
 
@@ -98,7 +127,10 @@
                     <div class="course-list-wrp">
                         <div class="mask-layer">&nbsp;</div>
                         <img class="show-course-img" src="../images/liveWebcast/live_webcast_02.jpg" alt=""/>
-
+                        <div class="course-class-status-icon">
+                            <span class="dot-icon">&nbsp;</span>
+                            <span>直播中</span>
+                        </div>
                         <div class="course-detail">
                             <h4 class="course-title">Hip - Hop舞蹈</h4>
 
@@ -114,7 +146,10 @@
                     <div class="course-list-wrp">
                         <div class="mask-layer">&nbsp;</div>
                         <img class="show-course-img" src="../images/liveWebcast/live_webcast_03.jpg" alt=""/>
-
+                        <div class="course-class-status-icon">
+                            <span class="dot-icon">&nbsp;</span>
+                            <span>直播中</span>
+                        </div>
                         <div class="course-detail">
                             <h4 class="course-title">Apple健身操</h4>
 
