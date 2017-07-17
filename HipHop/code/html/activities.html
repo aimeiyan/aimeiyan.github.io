@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style_cvv.css"/>
     <style>
+        /*活动花絮*/
         .top-small-header {
             margin-top: 1.18rem;
             padding-top: 0.1rem;
@@ -80,6 +81,13 @@
         .activities-wrp .activities-comment .activities-comment-title h4 {
             border-bottom: 0.02rem solid #f44336;
             display: inline-block;
+            padding: 0 0.1rem;
+        }
+
+        .activities-wrp .activities-comment .activities-comment-content-ul {
+            height: 5rem;
+            overflow-y: auto;
+            border-top: 0.01rem solid #cecece;
         }
 
         .activities-wrp .activities-comment .activities-comment-content-li {
@@ -88,7 +96,7 @@
         }
 
         .activities-wrp .activities-comment .activities-comment-content-li:first-child {
-            margin-top: -0.01rem;
+            border-top: 0;
         }
 
         .activities-wrp .activities-comment .activities-comment-content-li .activities-comment-content-li-subwrp {
@@ -132,16 +140,75 @@
         }
 
         .comment-input-wrp {
-            background-color: #ddd;
+            background-color: #f4f5f6;
+            color: #656565;
+            font-size: 0.28rem;
+            position: relative;
+            padding: 0.1rem 9em 0.1rem 0.2rem;
+            height: 0.9rem;
+            line-height: 0.9rem;
+            /*margin: 0 -0.2rem;*/
+            border-top: 0.01rem solid #cecece;
         }
 
         .comment-input-wrp .comment-input {
-            font-size: 0.3rem;
             border: 0.01rem solid #cbcbcb;
             border-radius: 0.3rem;
-            background-color: #fff;
-            outline: none;
+            background-color: #f4f5f6;
+            height: 0.6rem;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            top: 0.04rem;
         }
+
+        .comment-input-wrp .comment-input textarea {
+            width: 100%;
+            height: 100%;
+            font-size: 0.3rem;
+            background-color: #f4f5f6;
+            border: 0;
+            outline: none;
+            padding: 0.1rem 0.15rem 0;
+
+        }
+
+        .comment-input-wrp .comment-action {
+            width: 8em;
+            height: 100%;
+            line-height: 0.9rem;
+            position: absolute;
+            right: 0.2rem;
+            top: 0;
+            text-align: right;
+        }
+
+        .comment-input-wrp .comment-action .comment-sumit-btn {
+            display: inline-block;
+            padding: 0 0.1rem;
+        }
+
+        .comment-input-wrp .comment-action .comment-like-action {
+            display: inline-block;
+        }
+
+        .comment-input-wrp .comment-action .comment-like-action .comment-like-icon {
+            width: 0.4rem;
+            position: relative;
+            top: 0.08rem;
+            display: inline-block;
+        }
+
+        .comment-input-wrp .comment-action .vertical-line {
+            display: inline-block;
+            width: 0.01rem;
+            height: 60%;
+            background-color: #bbb;
+            margin: 0 0.1rem 0 0;
+            position: relative;
+            top: 0.15rem;
+        }
+
 
     </style>
 </head>
@@ -315,14 +382,21 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="comment-input-wrp">
-                            <textarea class="comment-input" name="comment-input" placeholder="写评论..."></textarea>
-                            <span class="comment-sumit-btn">评论</span>
-                            <span class="vertical-line">&nbsp;</span>
-                            <img class="comment-like-icon" src="../images/heart-shape.png" alt=""/>
-                            <span class="comment-num">456</span>
-                        </div>
+
                     </div>
+                </div>
+            </div>
+            <div class="comment-input-wrp">
+                <div class="comment-input">
+                    <textarea name="" placeholder="写评论..."></textarea>
+                </div>
+                <div class="comment-action">
+                    <span class="comment-sumit-btn">评论</span>
+                    <span class="vertical-line">&nbsp;</span>
+                                <span class="comment-like-action">
+                                <img class="comment-like-icon" src="../images/heart-shape.png" alt=""/>
+                                <span class="comment-num">456</span>
+                                </span>
                 </div>
             </div>
         </div>
