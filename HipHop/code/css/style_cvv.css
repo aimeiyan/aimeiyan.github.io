@@ -840,7 +840,7 @@ a {
     margin: 0 0.1rem 0 0.2rem;
 }
 
-.course-detail-teacher .teacher-situdation-right .class-room {
+.course-detail-teacher .teacher-situation-right .class-room {
     font-size: 0.3rem;
 }
 
@@ -2217,4 +2217,206 @@ a {
     margin-top: -0.08rem;
     background-color: #ffa42f;
     border-radius: 50%;
+}
+
+/*活动花絮*/
+.top-small-header {
+    margin-top: 1.18rem;
+    padding-top: 0.1rem;
+}
+
+.top-small-header .white-frame {
+    margin-top: 0;
+}
+
+.activities .title-addr-time {
+    text-align: center;
+    color: #fff;
+}
+
+.activities .title-addr-time .activities-title {
+    font-size: 0.36rem;
+    color: #ff4235;
+    font-weight: bolder;
+}
+
+.activities .title-addr-time .activities-date {
+    font-size: 0.3rem;
+    font-weight: bolder;
+}
+
+.activities .title-addr-time .activities-addr {
+    font-size: 0.25rem;
+    margin: 0.2rem 0 0.4rem;
+}
+
+.activities .activities-list .show-activity-img-wrp .show-activity-img {
+    display: block;
+    width: 100%;
+}
+
+.activities .activities-list .activity-title {
+    color: #fff;
+    font-size: 0.3rem;
+    line-height: 2;
+}
+
+.activities .activities-list {
+    margin-bottom: 0.2rem;
+}
+
+.activities .activities-list:last-child {
+    margin-bottom: 0;
+}
+
+.activities .activities-like {
+    margin: 0.4rem 0 0;
+}
+
+.activities .activities-like .activities-like-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+.activities .activities-like .activities-like-num {
+    text-align: center;
+    font-size: 0.3rem;
+    color: #fff;
+    line-height: 2;
+}
+
+.activities-wrp .activities-comment .activities-comment-title {
+    font-size: 0.3rem;
+    color: #212121;
+}
+
+.activities-wrp .activities-comment .activities-comment-title h4 {
+    border-bottom: 0.02rem solid #f44336;
+    display: inline-block;
+    padding: 0 0.1rem;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-ul {
+    height: 5rem;
+    overflow-y: auto;
+    border-top: 0.01rem solid #cecece;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-li {
+    border-top: 0.01rem solid #cecece;
+    padding: 0.15rem 0;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-li:first-child {
+    border-top: 0;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-li .activities-comment-content-li-subwrp {
+    position: relative;
+    padding-left: 0.9rem;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-li .comment-head {
+    position: absolute;
+    left: 0.1rem;
+    top: 0;
+    width: 0.65rem;
+    height: 0.65rem;
+    border: 0.01rem solid #cecece;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-li .comment-head .comment-head-img {
+    display: block;
+    width: 100%;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-li .comment-name {
+    color: #949494;
+    font-size: 0.3rem;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-li .comment-time {
+    position: absolute;
+    right: 0.1rem;
+    top: 0.05rem;
+    color: #949494;
+    font-size: 0.22rem;
+}
+
+.activities-wrp .activities-comment .activities-comment-content-li .commtent-content {
+    color: #393939;
+    font-size: 0.32rem;
+    padding: 0.1rem 0;
+}
+
+.comment-input-wrp {
+    background-color: #f4f5f6;
+    color: #656565;
+    font-size: 0.28rem;
+    position: relative;
+    padding: 0.1rem 9em 0.1rem 0.2rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    /*margin: 0 -0.2rem;*/
+    border-top: 0.01rem solid #cecece;
+}
+
+.comment-input-wrp .comment-input {
+    border: 0.01rem solid #cbcbcb;
+    border-radius: 0.3rem;
+    background-color: #f4f5f6;
+    height: 0.6rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0.04rem;
+}
+
+.comment-input-wrp .comment-input textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 0.3rem;
+    background-color: #f4f5f6;
+    border: 0;
+    outline: none;
+    padding: 0.1rem 0.15rem 0;
+
+}
+
+.comment-input-wrp .comment-action {
+    width: 8em;
+    height: 100%;
+    line-height: 0.9rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0;
+    text-align: right;
+}
+
+.comment-input-wrp .comment-action .comment-sumit-btn {
+    display: inline-block;
+    padding: 0 0.1rem;
+}
+
+.comment-input-wrp .comment-action .comment-like-action {
+    display: inline-block;
+}
+
+.comment-input-wrp .comment-action .comment-like-action .comment-like-icon {
+    width: 0.4rem;
+    position: relative;
+    top: 0.08rem;
+    display: inline-block;
+}
+
+.comment-input-wrp .comment-action .vertical-line {
+    display: inline-block;
+    width: 0.01rem;
+    height: 60%;
+    background-color: #bbb;
+    margin: 0 0.1rem 0 0;
+    position: relative;
+    top: 0.15rem;
 }
