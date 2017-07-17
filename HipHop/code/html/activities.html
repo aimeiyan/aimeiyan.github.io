@@ -130,6 +130,16 @@
             font-size: 0.32rem;
             padding: 0.1rem 0;
         }
+        .comment-input-wrp{
+            background-color: #ddd;
+        }
+        .comment-input-wrp .comment-input {
+            font-size: 0.3rem;
+            border: 0.01rem solid #cbcbcb;
+            border-radius: 0.3rem;
+            background-color: #fff;
+            outline: none;
+        }
 
     </style>
 </head>
@@ -303,10 +313,12 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="comment-input">
-                            <div class="comment-">
-
-                            </div>
+                        <div class="comment-input-wrp">
+                            <textarea class="comment-input" name="comment-input" placeholder="写评论..."></textarea>
+                            <span class="comment-sumit-btn">评论</span>
+                            <span class="vertical-line">&nbsp;</span>
+                            <img class="comment-like-icon" src="../images/heart-shape.png" alt=""/>
+                            <span class="comment-num">456</span>
                         </div>
                     </div>
                 </div>
