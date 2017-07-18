@@ -2451,6 +2451,7 @@ a {
     flex-direction: row;
     align-items: center;
     height: 2.7rem;
+    /*padding-right: 0.5rem;*/
 }
 
 .goods-list .goods-item .goods-img-wrp .goods-img {
@@ -2528,6 +2529,10 @@ a {
     margin-top: 0.2rem;
 }
 
+.goods-detail-wrp .goods-intro-text .original-price .em-width {
+    margin-right: 1em;
+}
+
 .goods-detail-wrp .goods-intro-text .vip-price {
     color: #ff4235;
     font-size: 0.32rem;
@@ -2536,6 +2541,5 @@ a {
 }
 
 .goods-detail-wrp .course-detail-part .course-title {
-    line-height: 1;
-    margin-bottom: 0.2rem;
+    margin-top: -0.2rem;
 }
