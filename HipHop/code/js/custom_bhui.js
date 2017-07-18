@@ -15,7 +15,7 @@ $(function () {
     });
 
     //点击空白处隐藏右上角头像弹出框
-    $(document).click(function (e) {
+    $(document).tap(function (e) {
         var $topRightHead = $(".theader .right-portrait");
         if (!$(e.target).hasClass("right-portrait")) {
             if ($topRightHead.hasClass("open")) {
