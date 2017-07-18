@@ -2420,3 +2420,72 @@ a {
     position: relative;
     top: 0.15rem;
 }
+
+/*产品货架*/
+.goods-list .goods-item {
+    background-color: #3b3b3b;
+    border-radius: 0.08rem;
+    box-shadow: 0 0 0.1rem rgba(59, 59, 59, 0.8);
+    padding: 0.2rem;
+    margin-bottom: 0.1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2.7rem;
+}
+
+.goods-list .goods-item .goods-img-wrp {
+    width: 2.3rem;
+}
+
+.goods-list .goods-item .goods-img-wrp .goods-img {
+    display: block;
+    width: 100%;
+    color: #fff;
+}
+
+.goods-list .goods-item .goods-intro-text {
+    color: #fff;
+    font-size: 0.3rem;
+    margin-left: 0.25rem;
+}
+
+.goods-list .goods-item .goods-intro-text .goods-price {
+    color: #ff4235;
+    margin-top: 0.1rem;
+    font-weight: bold;
+}
+
+.goods-shelves .slide-switch-tab {
+    padding-top: 0.2rem;
+    color: #dfdfdf;
+    height: 0.6rem;
+    font-size: 0.32rem;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.goods-shelves .slide-switch-tab .tab-item {
+    width: 33%;
+    display: inline-block;
+    border-right: 0.02rem solid #909090;
+    text-align: center;
+}
+
+.goods-shelves .slide-switch-tab .tab-item.active {
+    color: #df3d32;
+}
+
+.goods-shelves .slide-switch-tab .tab-item .good-detail-link {
+    display: inline-block;
+    width: 100%;
+}
+
+.goods-shelves .slide-switch-tab .tab-item:last-child {
+    border-right: 0;
+}
+
+.goods-shelves .main-content {
+    margin-bottom: 0;
+}
