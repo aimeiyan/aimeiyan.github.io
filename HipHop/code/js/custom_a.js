@@ -56,7 +56,7 @@ $(function () {
     // 时间安排页面选项点击高亮
     // 上课日期
     $(".course-date-list a").tap(function (e) {
-        event.stopPropagation();
+//        event.stopPropagation();
         $(".course-time-list li").removeClass("active");  //去掉时间安排选项
 
         var $this = $(this);
@@ -72,11 +72,10 @@ $(function () {
 
     //授课时间
     $(".course-time-list a").tap(function (e) {
-        event.stopPropagation();
+//        event.stopPropagation();
         $(".course-date-list .course-date-text-wrp").removeClass("active");  //去掉上课日期选项
         var $this = $(this);
         var $parent = $this.parent();
-//        $this.parent().siblings().removeClass("active");
         if ($parent.hasClass("active")) {
             $this.parent().removeClass("active");
         } else {
