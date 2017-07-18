@@ -1932,7 +1932,7 @@ a {
 .my-attention-webapp .my-attention-teacher .attention-teacher-list .attention-teacher-table table {
     color: #fff;
     width: 100%;
-    font-size: 0.28rem;
+    font-size: 0.3rem;
 }
 
 .my-attention-webapp .my-attention-teacher .attention-teacher-list .attention-teacher-table table tr td:nth-child(2) {
@@ -1992,7 +1992,7 @@ a {
 .my-attention-webapp .attention-course-intro {
     color: #fff;
     padding: 0 0.1rem;
-    margin-top: 0.15rem;
+    /*margin-top: 0.15rem;*/
 }
 
 .my-attention-webapp .attention-course-intro li {
@@ -2045,11 +2045,16 @@ a {
     color: #fff;
     text-align: center;
     line-height: 2.5;
+    margin-bottom: -0.2rem;
+}
+
+.teacher-detail-info .teacher-title {
+    font-size: 0.32rem;
 }
 
 .teacher-detail-info .teacher-resume-abstract {
     color: #fff;
-    font-size: 0.28rem;
+    font-size: 0.3rem;
     line-height: 2.5;
 }
 
@@ -2083,7 +2088,7 @@ a {
 }
 
 .teacher-detail-info .teacher-resume .resume-title {
-    font-size: 0.28rem;
+    font-size: 0.30rem;
     line-height: 2;
 }
 
@@ -2104,10 +2109,12 @@ a {
 .teacher-detail-info .course-arrangement tbody tr td {
     border-right: 0.01rem dashed #f1f1f5;
     border-top: 0.01rem dashed #f1f1f5;
+    font-size: 0.28rem;
 }
 
 .teacher-detail-info .course-arrangement thead tr td {
-    font-size: 0.3rem;
+    font-size: 0.32rem;
+    font-weight: bolder;
 }
 
 .teacher-detail-info .course-arrangement tbody tr td:last-child {
@@ -2132,6 +2139,10 @@ a {
 
 .class-time-content .course-detail-intro .course-intro-item .course-intro-subtitle {
     line-height: 2;
+}
+
+.course-movement-step-intro .course-detail-intro .course-title {
+    line-height: 2.5;
 }
 
 /*动态资讯*/
