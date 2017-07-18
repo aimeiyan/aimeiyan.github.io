@@ -38,6 +38,7 @@ $(function () {
     // 课程类型页面点击选择项
     $(".course-type .course-type-img").tap(function (e) {
         console.log("课程类型页面点击选择项");
+        event.stopPropagation();
     });
 
     // 时间安排出现
@@ -56,7 +57,7 @@ $(function () {
     // 时间安排页面选项点击高亮
     // 上课日期
     $(".course-date-list a").tap(function (e) {
-//        event.stopPropagation();
+        event.stopPropagation();
         $(".course-time-list li").removeClass("active");  //去掉时间安排选项
 
         var $this = $(this);
@@ -66,13 +67,16 @@ $(function () {
             $this.parent().removeClass("active");
         } else {
             $this.parent().addClass("active");
+            setTimeout(function(){
+                location.href="oneDayTimetable.html";
+            },100);
         }
 
     });
 
     //授课时间
     $(".course-time-list a").tap(function (e) {
-//        event.stopPropagation();
+        event.stopPropagation();
         $(".course-date-list .course-date-text-wrp").removeClass("active");  //去掉上课日期选项
         var $this = $(this);
         var $parent = $this.parent();
@@ -80,6 +84,9 @@ $(function () {
             $this.parent().removeClass("active");
         } else {
             $this.parent().addClass("active");
+            setTimeout(function(){
+                location.href="hourTimetable.html";
+            },100);
         }
     });
 

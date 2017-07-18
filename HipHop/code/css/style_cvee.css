@@ -2074,7 +2074,7 @@ a {
 
 .teacher-detail-info .teacher-resume {
     color: #fff;
-    font-size: 0.25rem;
+    font-size: 0.28rem;
     line-height: 1.6;
 }
 
@@ -2482,6 +2482,7 @@ a {
     color: #fff;
     font-size: 0.3rem;
     margin-left: 0.25rem;
+    width: 4rem;
 }
 
 .goods-list .goods-item .goods-intro-text .goods-price {
