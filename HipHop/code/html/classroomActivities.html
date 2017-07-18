@@ -146,21 +146,21 @@
                         <div class="activities-list-wrp">
                             <div class="activities-list">
                                 <div class="show-activity-img-wrp">
-                                    <img class="show-activity-img" src="../images/activities/activities_01.jpg" alt=""/>
+                                    <img class="show-activity-img" src="../images/activities/activities_02.jpg" alt=""/>
                                 </div>
                                 <h4 class="activity-title">舞蹈动作 Happy Feet
                                     Basic爵士舞即美国现代舞，是一种急促又富动感的节奏型舞蹈，是属于一种外放性的舞蹈，不像古典芭蕾舞或现代舞所表现的一种内敛性的舞蹈。</h4>
                             </div>
                             <div class="activities-list">
                                 <div class="show-activity-img-wrp">
-                                    <img class="show-activity-img" src="../images/activities/activities_01.jpg" alt=""/>
+                                    <img class="show-activity-img" src="../images/activities/activities_02.jpg" alt=""/>
                                 </div>
                                 <h4 class="activity-title">舞蹈动作 Happy Feet
                                     Basic爵士舞即美国现代舞，是一种急促又富动感的节奏型舞蹈，是属于一种外放性的舞蹈，不像古典芭蕾舞或现代舞所表现的一种内敛性的舞蹈。</h4>
                             </div>
                             <div class="activities-list">
                                 <div class="show-activity-img-wrp">
-                                    <img class="show-activity-img" src="../images/activities/activities_01.jpg" alt=""/>
+                                    <img class="show-activity-img" src="../images/activities/activities_02.jpg" alt=""/>
                                 </div>
                                 <h4 class="activity-title">舞蹈动作 Happy Feet
                                     Basic爵士舞即美国现代舞，是一种急促又富动感的节奏型舞蹈，是属于一种外放性的舞蹈，不像古典芭蕾舞或现代舞所表现的一种内敛性的舞蹈。</h4>
@@ -303,5 +303,15 @@
 <script type="text/javascript" src="../js/zepto/event.js"></script>
 <script type="text/javascript" src="../js/zepto/touch.js"></script>
 <script type="text/javascript" src="../js/custom_a.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //点赞增加1
+        $(".comment-like-icon").click(function(){
+            var $nextNum=$(this).next();
+            var likeNum=parseInt($nextNum.text());
+            $nextNum.text(likeNum+1);
+        })
+    })
+</script>
 </body>
 </html>

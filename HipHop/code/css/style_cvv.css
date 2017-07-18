@@ -2194,7 +2194,7 @@ a {
 }
 
 .dynamic-webcast .course-list-wrp .course-detail .course-title {
-    font-size: 0.36rem;
+    font-size: 0.38rem;
     color: #ff4235;
     font-weight: bolder;
 }
@@ -2302,7 +2302,7 @@ a {
 }
 
 .activities-wrp .activities-comment .activities-comment-title {
-    font-size: 0.3rem;
+    font-size: 0.32rem;
     color: #212121;
 }
 
@@ -2367,13 +2367,17 @@ a {
     padding: 0.1rem 0;
 }
 
+.activities-wrp .course-detail-share {
+    padding: 0.1rem 0;
+}
+
 .comment-input-wrp {
     background-color: #f4f5f6;
     color: #656565;
-    font-size: 0.28rem;
+    font-size: 0.3rem;
     position: relative;
-    padding: 0.1rem 9em 0.1rem 0.2rem;
-    height: 0.9rem;
+    padding: 0.1rem 8em 0.1rem 0.2rem;
+    height: 1.1rem;
     line-height: 0.9rem;
     /*margin: 0 -0.2rem;*/
     border-top: 0.01rem solid #cecece;
@@ -2383,11 +2387,11 @@ a {
     border: 0.01rem solid #cbcbcb;
     border-radius: 0.3rem;
     background-color: #f4f5f6;
-    height: 0.6rem;
+    height: 0.7rem;
     width: 100%;
     overflow: hidden;
     position: relative;
-    top: 0.04rem;
+    top: 0.08rem;
 }
 
 .comment-input-wrp .comment-input textarea {
@@ -2397,14 +2401,14 @@ a {
     background-color: #f4f5f6;
     border: 0;
     outline: none;
-    padding: 0.1rem 0.15rem 0;
+    padding: 0.15rem 0.15rem 0;
 
 }
 
 .comment-input-wrp .comment-action {
     width: 8em;
     height: 100%;
-    line-height: 0.9rem;
+    line-height: 1.1rem;
     position: absolute;
     right: 0.2rem;
     top: 0;
@@ -2432,9 +2436,9 @@ a {
     width: 0.01rem;
     height: 60%;
     background-color: #bbb;
-    margin: 0 0.1rem 0 0;
+    margin: 0 0.1rem 0 0.05rem;
     position: relative;
-    top: 0.15rem;
+    top: 0.2rem;
 }
 
 /*课堂花絮*/
@@ -2449,6 +2453,9 @@ a {
 
 .classroom-activities-wrp .activities .activities-list {
     margin-bottom: 0.3rem;
+}
+.classroom-activities-wrp .course-detail-content .course-detail-time-address .course-title-wrp{
+    margin-top: -0.2rem;
 }
 
 /*产品货架*/

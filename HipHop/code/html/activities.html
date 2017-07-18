@@ -202,5 +202,15 @@
 <script type="text/javascript" src="../js/zepto/event.js"></script>
 <script type="text/javascript" src="../js/zepto/touch.js"></script>
 <script type="text/javascript" src="../js/custom_a.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //点赞增加1
+        $(".comment-like-icon").click(function(){
+            var $nextNum=$(this).next();
+            var likeNum=parseInt($nextNum.text());
+            $nextNum.text(likeNum+1);
+        })
+    })
+</script>
 </body>
 </html>
