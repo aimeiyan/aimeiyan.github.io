@@ -2022,6 +2022,15 @@ a {
     padding: 0.2rem;
 }
 
+.top-small-header {
+    margin-top: 1.18rem;
+    padding-top: 0.1rem;
+}
+
+.fixed-foot-bottom {
+    padding-bottom: 1.1rem;
+}
+
 .teacher-detail-info {
     margin-top: 1.25rem;
 }
@@ -2220,10 +2229,6 @@ a {
 }
 
 /*活动花絮*/
-.top-small-header {
-    margin-top: 1.18rem;
-    padding-top: 0.1rem;
-}
 
 .top-small-header .white-frame {
     margin-top: 0;
@@ -2421,6 +2426,20 @@ a {
     top: 0.15rem;
 }
 
+/*课堂花絮*/
+.classroom-activities-wrp .course-detail-content {
+    margin: 0;
+    padding: 0;
+}
+
+.classroom-activities-wrp .activities .activities-list .activity-title {
+    line-height: 1.5;
+}
+
+.classroom-activities-wrp .activities .activities-list {
+    margin-bottom: 0.3rem;
+}
+
 /*产品货架*/
 .goods-list .goods-item {
     background-color: #3b3b3b;
@@ -2434,14 +2453,10 @@ a {
     height: 2.7rem;
 }
 
-.goods-list .goods-item .goods-img-wrp {
-    width: 2.3rem;
-}
-
 .goods-list .goods-item .goods-img-wrp .goods-img {
     display: block;
-    width: 100%;
     color: #fff;
+    width: 2.3rem;
 }
 
 .goods-list .goods-item .goods-intro-text {
@@ -2488,4 +2503,39 @@ a {
 
 .goods-shelves .main-content {
     margin-bottom: 0;
+}
+
+/*商城产品详情页面*/
+/*.goods-detail-wrp .dark-frame{*/
+/*padding: 0.2rem;*/
+/*}*/
+.goods-detail-wrp .goods-img-wrp .goods-img {
+    display: block;
+    width: 100%;
+}
+
+.goods-detail-wrp .goods-intro-text {
+    color: #fff;
+    font-size: 0.3rem;
+    margin-top: 0.2rem;
+    line-height: 1.2;
+}
+
+.goods-detail-wrp .goods-intro-text .original-price {
+    color: #ff4235;
+    font-size: 0.32rem;
+    font-weight: bolder;
+    margin-top: 0.2rem;
+}
+
+.goods-detail-wrp .goods-intro-text .vip-price {
+    color: #ff4235;
+    font-size: 0.32rem;
+    font-weight: bolder;
+    margin-top: 0.2rem;
+}
+
+.goods-detail-wrp .course-detail-part .course-title {
+    line-height: 1;
+    margin-bottom: 0.2rem;
 }

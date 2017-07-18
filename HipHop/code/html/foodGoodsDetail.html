@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>食品饮料产品详细</title>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_cvv.css"/>
+
+</head>
+<body>
+<div class="webapp">
+    <div class="theader-wrp smaller-height">
+        <div class="theader">
+        <span class="left-address"><img class="address-icon" src="../images/address_icon.png"
+                                        alt=""/>&nbsp;<span>北京</span></span>
+            <img class="logo-img" src="../images/VyouClub.png" alt=""/>
+    <span class="right-portrait"><img class="head-img" src="../images/portrait.png" alt=""/>&nbsp;<i
+            class="arrow-down"></i>
+    <span class="head-popup">
+        <ul>
+            <li>个人主页</li>
+            <li>刷新</li>
+            <li>重新授权登陆</li>
+        </ul>
+    </span>
+    </span>
+        </div>
+    </div>
+    <div class="top-small-header fixed-foot-bottom">
+        <div class="goods-detail-wrp">
+            <div class="white-frame">
+                <div class="dark-frame">
+                    <div class="goods-img-wrp">
+                        <img class="goods-img" src="../images/shoppingMall/goods_big_02.jpg" alt=""/>
+                    </div>
+                    <div class="goods-intro-text">
+                        <p>听装可口可乐330ml  可乐汽水碳酸罐装饮料</p>
+
+                        <p class="original-price"><span>￥5.0/听</span></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="course-detail-entry-action goods-purchase">
+        <div class="entry-num">
+            <span class="plus-btn"><img src="../images/plus_icon.png" alt=""></span>
+            <span class="entry-num-show"><span class="entry-figure">1</span>人</span>
+            <span class="add-btn"><img src="../images/add_icon.png" alt=""></span>
+        </div>
+        <div class="entry-btn">立即报名</div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/zepto/zepto.js"></script>
+<script type="text/javascript" src="../js/zepto/event.js"></script>
+<script type="text/javascript" src="../js/zepto/touch.js"></script>
+<script type="text/javascript" src="../js/custom_a.js"></script>
+<script>
+    $(function () {
+        // 商城产品详情页“购买”
+        $(".goods-purchase .entry-num .add-btn").click(function () {
+            var $num = $(".goods-purchase .entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+            $num.text(currentNum + 1);
+        });
+
+        $(".goods-purchase .entry-num .plus-btn").click(function () {
+            var $num = $(".goods-purchase .entry-num .entry-figure");
+            var currentNum = parseInt($num.text());
+
+            if (currentNum < 2) {
+                $num.text(1);
+            } else {
+                $num.text(currentNum - 1);
+            }
+        })
+    })
+</script>
+</body>
+</html>
