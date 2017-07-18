@@ -15,14 +15,14 @@ $(function () {
     });
 
     //点击空白处隐藏右上角头像弹出框
-    $("body").tap(function (e) {
-        var $topRightHead = $(".theader .right-portrait");
-        if (!$(e.target).hasClass("right-portrait")) {
-            if ($topRightHead.hasClass("open")) {
-                $topRightHead.removeClass("open");
-            }
-        }
-    });
+    //$("body").tap(function (e) {
+    //    var $topRightHead = $(".theader .right-portrait");
+    //    if (!$(e.target).hasClass("right-portrait")) {
+    //        //if ($topRightHead.hasClass("open")) {
+    //            $topRightHead.removeClass("open");
+    //        //}
+    //    }
+    //});
 
 
     // 控制课程类型和时间安排内容的出现和消失
