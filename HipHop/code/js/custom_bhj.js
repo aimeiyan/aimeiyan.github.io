@@ -20,8 +20,6 @@ $(function () {
         if (!$(e.target).hasClass("right-portrait")) {
             if ($topRightHead.hasClass("open")) {
                 $topRightHead.removeClass("open");
-            } else {
-                $topRightHead.addClass("open");
             }
         }
     });
