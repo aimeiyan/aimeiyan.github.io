@@ -4,13 +4,25 @@ $(function () {
         $(this).addClass("bnav-active");
     });
 
-    //click top head img popup box
+    //右上角头像弹出框效果
     $(".theader .right-portrait").tap(function () {
         var $this = $(this);
         if ($this.hasClass("open")) {
             $this.removeClass("open");
         } else {
             $this.addClass("open");
+        }
+    });
+
+    //点击空白处隐藏右上角头像弹出框
+    $(document).click(function (e) {
+        var $topRightHead = $(".theader .right-portrait");
+        if (!$(e.target).hasClass("right-portrait")) {
+            if ($topRightHead.hasClass("open")) {
+                $topRightHead.removeClass("open");
+            } else {
+                $topRightHead.addClass("open");
+            }
         }
     });
 
@@ -67,9 +79,9 @@ $(function () {
             $this.parent().removeClass("active");
         } else {
             $this.parent().addClass("active");
-            setTimeout(function(){
-                location.href="oneDayTimetable.html";
-            },100);
+            setTimeout(function () {
+                location.href = "oneDayTimetable.html";
+            }, 100);
         }
 
     });
@@ -84,9 +96,9 @@ $(function () {
             $this.parent().removeClass("active");
         } else {
             $this.parent().addClass("active");
-            setTimeout(function(){
-                location.href="hourTimetable.html";
-            },100);
+            setTimeout(function () {
+                location.href = "hourTimetable.html";
+            }, 100);
         }
     });
 
