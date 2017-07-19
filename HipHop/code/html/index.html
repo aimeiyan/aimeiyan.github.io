@@ -283,7 +283,7 @@
         // 上课日期
         $(".course-date-list a").tap(function (e) {
             event.stopPropagation();
-            $(".course-time-list li").removeClass("active");  //去掉时间安排选项
+            $(".course-time-list li").removeClass("active");  //去掉时间安排选中的项
 
             var $this = $(this);
             var $parent = $this.parent();
@@ -291,6 +291,7 @@
             if ($parent.hasClass("active")) {
                 $this.parent().removeClass("active");
             } else {
+                $this.parent().siblings().removeClass("active");
                 $this.parent().addClass("active");
                 setTimeout(function () {
                     location.href = "oneDayTimetable.html";
@@ -302,12 +303,13 @@
         //授课时间
         $(".course-time-list a").tap(function (e) {
             event.stopPropagation();
-            $(".course-date-list .course-date-text-wrp").removeClass("active");  //去掉上课日期选项
+            $(".course-date-list .course-date-text-wrp").removeClass("active");  //去掉上课日期选中的项
             var $this = $(this);
             var $parent = $this.parent();
             if ($parent.hasClass("active")) {
                 $this.parent().removeClass("active");
             } else {
+                $this.parent().siblings().removeClass("active");
                 $this.parent().addClass("active");
                 setTimeout(function () {
                     location.href = "hourTimetable.html";
