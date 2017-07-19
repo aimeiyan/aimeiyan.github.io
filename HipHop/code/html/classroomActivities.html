@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>课堂花絮</title>
     <script type="text/javascript" src="../js/layout.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/style_cvee.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style_uiui.css"/>
 </head>
 <body>
 <div class="webapp activity-appointment-wrp classroom-activities-wrp">
@@ -304,7 +304,7 @@
 <script type="text/javascript">
     $(function(){
         //点赞增加1
-        $(".comment-like-icon").click(function(){
+        $(".activities-like .activities-like-icon").click(function(){
             var $nextNum=$(this).next();
             var likeNum=parseInt($nextNum.text());
             $nextNum.text(likeNum+1);
