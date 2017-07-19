@@ -9,6 +9,7 @@ $(function () {
     //右上角头像弹出框效果
     $(".theader .right-portrait .head-img").tap(function (e) {
         e.stopPropagation();
+//        console.log(e.target,"target---");
         var $this = $(this);
         var $parent = $this.parent();
         if ($parent.hasClass("open")) {
